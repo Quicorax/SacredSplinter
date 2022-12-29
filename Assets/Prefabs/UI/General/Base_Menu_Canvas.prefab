@@ -121,7 +121,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8392478117856342017}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 60674855}
+        m_TargetAssemblyTypeName: MenuCanvasController, Assembly-CSharp
+        m_MethodName: OpenAdventureSelector
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6986606759669300868
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +146,7 @@ GameObject:
   - component: {fileID: 6337975763254631748}
   - component: {fileID: 2913763231401695682}
   - component: {fileID: 6979215238085738474}
+  - component: {fileID: 60674855}
   m_Layer: 5
   m_Name: Base_Menu_Canvas
   m_TagString: Untagged
@@ -150,7 +163,7 @@ RectTransform:
   m_GameObject: {fileID: 6986606759669300868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6789084369174677636}
@@ -223,6 +236,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &60674855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986606759669300868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f5467e7f0ac2e4890bf7ca419975c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _adventureSelectorPopUp: {fileID: -2732218642447135965, guid: e5407c4ab67b41a4087c4ab846e5b5dd, type: 3}
+  _openPopUpButton: {fileID: 4352006417448746422}
 --- !u!1 &7538849162457004724
 GameObject:
   m_ObjectHideFlags: 0
