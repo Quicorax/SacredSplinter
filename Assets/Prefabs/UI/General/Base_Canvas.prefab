@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 1290617095584478042}
   - component: {fileID: 2178248580847885767}
   m_Layer: 5
-  m_Name: Currency
+  m_Name: Resources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -411,7 +411,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1148606890022445546}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3061522311400507430}
+        m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
+        m_MethodName: OpenResources
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2178248580847885767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,8 +564,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cac8d506541a984e94585ebd2e57f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _configPopUp: {fileID: 3952808861149700775, guid: 78f0fa743af3d10429ad97ad6fbccbf3, type: 3}
-  _openPopUpButton: {fileID: 4556295584842778554}
+  _config:
+    PopUp: {fileID: 3952808861149700775, guid: 78f0fa743af3d10429ad97ad6fbccbf3, type: 3}
+    Button: {fileID: 4556295584842778554}
+  _resources:
+    PopUp: {fileID: 5491644426858811045, guid: 2a7c0a32e417251409eece23d59f155d, type: 3}
+    Button: {fileID: 1290617095584478042}
 --- !u!1001 &5305469904324533518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -651,7 +667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6800967940754624434, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_Name
-      value: ACurrency (1)
+      value: AResource (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
@@ -757,7 +773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6800967940754624434, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_Name
-      value: ACurrency
+      value: AResource
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}

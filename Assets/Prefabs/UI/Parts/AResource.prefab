@@ -93,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 63
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -221,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3999980638960955434}
   m_Layer: 5
-  m_Name: ACurrency
+  m_Name: AResource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

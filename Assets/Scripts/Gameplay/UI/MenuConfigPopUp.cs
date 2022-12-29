@@ -1,20 +1,19 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-public class MenuConfigPopUp : BasePopUp
+
+public class MenuConfigPopUp : BaseConfigPopUp
 {
     [SerializeField]
-    private BasePopUp _creditsPopUp;
+    private TMP_Text _languageDisplay;
 
     [SerializeField]
-    private Button _openPopUpButton;
-
-    private void ActivateButton(bool activate) => _openPopUpButton.interactable = activate;
+    private PopUpLauncher _credits;
 
     public void OpenCredits()
     {
-        ActivateButton(false);
-
-        Instantiate(_creditsPopUp, transform).Initialize(OnPopUpClose);
+        ActivateButton(_credits.Button, false);
+        Instantiate(_credits.PopUp, transform).Initialize(_credits.Button, OnPopUpClose);
     }
 
     public void Save()
@@ -22,8 +21,11 @@ public class MenuConfigPopUp : BasePopUp
         Debug.Log("SAVE");
     }
 
-    private void OnPopUpClose()
+    public void ChangeLanguage(bool next)
     {
-        ActivateButton(true);
+        Debug.Log("LANGUAGE");
     }
+
+    private void OnPopUpClose(Button button) => ActivateButton(button, true);
+    private void ActivateButton(Button button, bool activate) => button.interactable = activate;
 }

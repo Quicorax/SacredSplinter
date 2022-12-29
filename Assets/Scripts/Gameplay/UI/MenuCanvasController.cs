@@ -1,25 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
-
 public class MenuCanvasController : MonoBehaviour
 {
     [SerializeField]
-    private BasePopUp _adventureSelectorPopUp;
-
-    [SerializeField]
-    private Button _openPopUpButton;
-
-    private void ActivateButton(bool activate) => _openPopUpButton.interactable = activate;
+    private PopUpLauncher _adventureSelector;
 
     public void OpenAdventureSelector()
     {
-        ActivateButton(false);
-
-        Instantiate(_adventureSelectorPopUp, transform).Initialize(OnPopUpClose);
+        ActivateButton(_adventureSelector.Button, false);
+        Instantiate(_adventureSelector.PopUp, transform).Initialize(_adventureSelector.Button, OnPopUpClose);
     }
 
-    private void OnPopUpClose()
-    {
-        ActivateButton(true);
-    }
+    private void OnPopUpClose(Button button) => ActivateButton(button, true);
+    private void ActivateButton(Button button, bool activate) => button.interactable = activate;
+
 }

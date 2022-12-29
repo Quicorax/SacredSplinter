@@ -4,22 +4,21 @@ using UnityEngine.UI;
 public class CanvasController : MonoBehaviour
 {
     [SerializeField]
-    private BasePopUp _configPopUp;
-
-    [SerializeField]
-    private Button _openPopUpButton;
-
-    private void ActivateButton(bool activate) => _openPopUpButton.interactable = activate;
+    private PopUpLauncher _config, _resources;
 
     public void OpenConfiguration()
     {
-        ActivateButton(false);
-
-        Instantiate(_configPopUp, transform).Initialize(OnPopUpClose);
+        ActivateLauncherButton(_config.Button, false);
+        Instantiate(_config.PopUp, transform).Initialize(_config.Button, OnPopUpClose);
     }
 
-    private void OnPopUpClose()
+    public void OpenResources()
     {
-        ActivateButton(true);
+        ActivateLauncherButton(_resources.Button, false);
+        Instantiate(_resources.PopUp, transform).Initialize(_resources.Button, OnPopUpClose);
     }
+
+    private void OnPopUpClose(Button button) => ActivateLauncherButton(button, true);
+    private void ActivateLauncherButton(Button button, bool activate) => button.interactable = activate;
+
 }
