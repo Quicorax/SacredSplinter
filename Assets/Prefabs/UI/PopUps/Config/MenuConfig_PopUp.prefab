@@ -734,6 +734,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7703523976545226505, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+--- !u!224 &1569357865508388 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4581012417779045142, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+  m_PrefabInstance: {fileID: 4582014422809496882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1569357865508389 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4581012417779045143, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
@@ -753,6 +758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sfxMuted: {fileID: 6202165318571618774}
   _musicMuted: {fileID: 6687252333501895718}
+  _spawnParent: {fileID: 1569357865508388}
   _languageDisplay: {fileID: 115813175397446862}
   _credits:
     PopUp: {fileID: -7343584447077849752, guid: 0aca2c1af2eca144791962a2388b8297, type: 3}

@@ -360,6 +360,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 121359024}
     - target: {fileID: 3061522311400507430, guid: 21c4b9681a5378a4dae2b5ee303741a6, type: 3}
+      propertyPath: _spawnParent
+      value: 
+      objectReference: {fileID: 121359024}
+    - target: {fileID: 3061522311400507430, guid: 21c4b9681a5378a4dae2b5ee303741a6, type: 3}
       propertyPath: _config.PopUp
       value: 
       objectReference: {fileID: -8281234133462627394, guid: 2c52f70f6be857b4b899708910781b21, type: 3}
@@ -666,6 +670,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257791141593461581, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
       propertyPath: _popUpCanvas
+      value: 
+      objectReference: {fileID: 121359024}
+    - target: {fileID: 7257791141593461581, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
+      propertyPath: _spawnParent
       value: 
       objectReference: {fileID: 121359024}
     - target: {fileID: 7257791141593461581, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}

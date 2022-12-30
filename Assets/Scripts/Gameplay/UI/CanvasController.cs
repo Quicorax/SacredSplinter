@@ -1,5 +1,5 @@
 using UnityEngine;
-public class CanvasController : WithPopUp
+public class CanvasController : CanvasWithPopUp
 {
     [SerializeField]
     private PopUpLauncher _config, _resources;

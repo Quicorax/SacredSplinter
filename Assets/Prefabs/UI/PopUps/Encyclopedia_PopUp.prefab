@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 529868722, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_text
-      value: Library
+      value: Encyclopedia
       objectReference: {fileID: 0}
     - target: {fileID: 2142229585986928154, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -113,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581012417779045143, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_Name
-      value: Library_PopUp
+      value: Encyclopedia_PopUp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}

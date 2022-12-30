@@ -1,8 +1,7 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class MenuConfigPopUp : BaseConfigPopUp
+public class MenuConfigPopUp : PopUpWithPopUp
 {
     [SerializeField]
     private TMP_Text _languageDisplay;
@@ -10,11 +9,7 @@ public class MenuConfigPopUp : BaseConfigPopUp
     [SerializeField]
     private PopUpLauncher _credits;
 
-    public void OpenCredits()
-    {
-        ActivateButton(_credits.Button, false);
-        Instantiate(_credits.PopUp, transform).Initialize(_credits.Button, OnPopUpClose);
-    }
+    public void OpenCredits() => OnPopUpOpen(_credits);
 
     public void Save()
     {
@@ -25,7 +20,4 @@ public class MenuConfigPopUp : BaseConfigPopUp
     {
         Debug.Log("LANGUAGE");
     }
-
-    private void OnPopUpClose(Button button) => ActivateButton(button, true);
-    private void ActivateButton(Button button, bool activate) => button.interactable = activate;
 }
