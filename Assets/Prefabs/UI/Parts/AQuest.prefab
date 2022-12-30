@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _header: {fileID: 5120732972061752215}
-  _rewardAmound: {fileID: 5516174504468998983}
+  _rewardAmount: {fileID: 5516174504468998983}
   _progressionPerCent: {fileID: 2429115110055179491}
   _rewardIcon: {fileID: 7889089103262275901}
 --- !u!1 &5142248713895348345

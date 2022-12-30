@@ -452,6 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f5467e7f0ac2e4890bf7ca419975c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spawnParent: {fileID: 0}
   _adventureSelector:
     PopUp: {fileID: -2732218642447135965, guid: e5407c4ab67b41a4087c4ab846e5b5dd, type: 3}
     Button: {fileID: 4352006417448746422}
@@ -459,9 +460,9 @@ MonoBehaviour:
     PopUp: {fileID: 1887557127133788029, guid: bfc2e2307b27d3a4e90aed42c7558a9c, type: 3}
     Button: {fileID: 6171139891502703708}
   _shop:
-    PopUp: {fileID: -319380396686096265, guid: 2da49b01d2faf1a44ad1db48d4f09ee8, type: 3}
+    PopUp: {fileID: 6214795756460460314, guid: 09cd54a3d94070e41bc0d39bbf9eb5fc, type: 3}
     Button: {fileID: 2675349899951380545}
-  _library:
+  _encyclopedia:
     PopUp: {fileID: 6047510094785837639, guid: a35513e251bec5e45b0e24c38cc2843a, type: 3}
     Button: {fileID: 2107639537469123409}
 --- !u!1 &7538849162457004724

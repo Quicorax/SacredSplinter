@@ -22,28 +22,30 @@ public class Reward
 public class Quest : MonoBehaviour
 {
     [SerializeField]
-    private TMP_Text _header, _rewardAmound, _progressionPerCent;
+    private TMP_Text _header, _rewardAmount, _progressionPerCent;
     [SerializeField]
     private Image _rewardIcon;
 
-    private Reward RewardOnClaim;
+    private Reward _rewardOnClaim;
 
     public void Initialize(QuestData data)
     {
-        RewardOnClaim = data.Reward;
+        _rewardOnClaim = data.Reward;
 
         _header.text = data.QuestHeader;
-        _rewardAmound.text = data.Reward.Amount.ToString();
+        _rewardAmount.text = data.Reward.Amount.ToString();
         _rewardIcon.sprite = data.Reward.Icon;
         _progressionPerCent.text = GetProgression();
     }
+
     private string GetProgression()
     {
         return "?";
     }
+
     public void CollectReward()
     {
-        Debug.Log("CLAIMED REWARD");
+        Debug.Log("CLAIMED REWARD: " + _rewardOnClaim.Kind);
     }
 
 }

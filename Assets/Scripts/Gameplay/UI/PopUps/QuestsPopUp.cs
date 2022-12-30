@@ -19,6 +19,7 @@ public class QuestsPopUp : BasePopUp
     {
         SpawnQuests();
     }
+
     private void SpawnQuests()
     {
         foreach (QuestData quest in _questModel.Quests)
