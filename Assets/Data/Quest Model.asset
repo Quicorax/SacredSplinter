@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9403acc56f0014ebc6b10edb642d41, type: 3}
+  m_Name: Quest Model
+  m_EditorClassIdentifier: 
+  Quests:
+  - QuestHeader: Kill 1 monster
+    Reward:
+      Amount: 10
+      Kind: Coins
+      Icon: {fileID: 21300000, guid: 6cc5103edc9f0dd4f80e8274c73dfeac, type: 3}
+  - QuestHeader: Kill 10 monster
+    Reward:
+      Amount: 100
+      Kind: Coins
+      Icon: {fileID: 21300000, guid: 6cc5103edc9f0dd4f80e8274c73dfeac, type: 3}
+  - QuestHeader: Kill 100 monster
+    Reward:
+      Amount: 1000
+      Kind: Coins
+      Icon: {fileID: 21300000, guid: 6cc5103edc9f0dd4f80e8274c73dfeac, type: 3}
