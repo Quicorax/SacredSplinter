@@ -3,35 +3,25 @@ using UnityEngine;
 public class BaseConfigPopUp : BasePopUp
 {
     [SerializeField]
-    private GameObject _sfxMuted, _musicMuted;
+    private GameObject _audioON;
 
     private void Start()
     {
-        TurnSound("MusicMute", PlayerPrefs.GetInt("MusicMute") == 0);
-        TurnSound("SFXMute", PlayerPrefs.GetInt("SFXMute") == 0);
+        TurnAudio(PlayerPrefs.GetInt("AudioMute") == 0);
     }
 
-    public void ToggleSound(string element)
+    public void ToggleAudio()
     {
-        int music = PlayerPrefs.GetInt(element);
+        int music = PlayerPrefs.GetInt("AudioMute");
 
-        TurnSound(element, music == 1);
+        TurnAudio(music == 1);
 
-        PlayerPrefs.SetInt(element, music == 0 ? 1 : 0);
+        PlayerPrefs.SetInt("AudioMute", music == 0 ? 1 : 0);
     }
 
-    private void TurnSound(string element, bool isOn)
+    private void TurnAudio(bool isOn)
     {
-        //GameManager.Instance.TurnSFXON(element, isOn);
-
-        switch (element)
-        {
-            case "SFXMute":
-                _sfxMuted.SetActive(!isOn);
-                break;
-            case "MusicMute":
-                _musicMuted.SetActive(!isOn);
-                break;
-        }
+        //GameManager.Instance.TurnAudioON(isOn);
+        _audioON.SetActive(isOn);
     }
 }

@@ -18,12 +18,12 @@ MonoBehaviour:
       Amount: 10
       Kind: Coins
       Icon: {fileID: 21300000, guid: 6cc5103edc9f0dd4f80e8274c73dfeac, type: 3}
-  - QuestHeader: Kill 10 monster
+  - QuestHeader: Kill 10 monsters
     Reward:
       Amount: 100
       Kind: Coins
       Icon: {fileID: 21300000, guid: 6cc5103edc9f0dd4f80e8274c73dfeac, type: 3}
-  - QuestHeader: Kill 100 monster
+  - QuestHeader: Kill 100 monsters
     Reward:
       Amount: 1000
       Kind: Coins
