@@ -17,7 +17,7 @@ public class EncyclopediaPopUp : BasePopUp
     private EncyclopediaModel _encyclopediaModel;
 
     [SerializeField]
-    private TMP_Text _header, _description;
+    private TMP_Text _header, _description, _index;
     [SerializeField]
     private Image _entryImage;
 
@@ -61,6 +61,7 @@ public class EncyclopediaPopUp : BasePopUp
     {
         EntryData data = _encyclopedia[_actualEntryIndex];
 
+        _index.text = _actualEntryIndex.ToString();
         _header.text = data.Header;
         _description.text = data.Description;
         _entryImage.sprite = data.Image;

@@ -323,15 +323,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 60674855, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
-      propertyPath: _popUpCanvas
-      value: 
-      objectReference: {fileID: 1304599352}
-    - target: {fileID: 60674855, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
       propertyPath: _spawnParent
-      value: 
-      objectReference: {fileID: 1304599352}
-    - target: {fileID: 60674855, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
-      propertyPath: PopUpCanvasTransform
       value: 
       objectReference: {fileID: 1304599352}
     - target: {fileID: 2107639537469123404, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
@@ -349,14 +341,6 @@ PrefabInstance:
     - target: {fileID: 2107639537469123404, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107639537469123405, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
-      propertyPath: m_Name
-      value: Encyclopedia_Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107639537469123409, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenEncyclopedia
       objectReference: {fileID: 0}
     - target: {fileID: 2675349899951380572, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
       propertyPath: m_AnchorMax.y
@@ -393,10 +377,6 @@ PrefabInstance:
     - target: {fileID: 6986606759669300868, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
       propertyPath: m_Name
       value: Base_Menu_Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6986606759669300868, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7161853074590757613, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
       propertyPath: m_Pivot.x
