@@ -652,7 +652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Artifact:'
+  m_text: 'Completed: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0fb406a69224af64089f92ebf23fbe25, type: 2}
   m_sharedMaterial: {fileID: -8024867205206567246, guid: 0fb406a69224af64089f92ebf23fbe25, type: 2}
@@ -679,7 +679,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 69
+  m_fontSize: 56.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -687,7 +687,7 @@ MonoBehaviour:
   m_fontSizeMax: 100
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
+  m_ShowMaskGraphic: 0
 --- !u!222 &805302410485255308
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1136,11 +1136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5377071239561479806, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectLocation
+      value: SelectElement
       objectReference: {fileID: 0}
     - target: {fileID: 5377071239561479806, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DungeonSelectorPopUp, Assembly-CSharp
+      value: SelectorPopUp, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5377071239561479806, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1273,11 +1273,11 @@ PrefabInstance:
       objectReference: {fileID: 158168444277797920}
     - target: {fileID: 3384294727377245144, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeDungeon
+      value: ChangeElement
       objectReference: {fileID: 0}
     - target: {fileID: 3384294727377245144, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DungeonSelectorPopUp, Assembly-CSharp
+      value: SelectorPopUp, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5097677389685178966, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_Name
@@ -1289,11 +1289,11 @@ PrefabInstance:
       objectReference: {fileID: 158168444277797920}
     - target: {fileID: 6993545399986486190, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeDungeon
+      value: ChangeElement
       objectReference: {fileID: 0}
     - target: {fileID: 6993545399986486190, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DungeonSelectorPopUp, Assembly-CSharp
+      value: SelectorPopUp, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8054928794556157476, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_Color.b
@@ -1488,11 +1488,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0c1bec44b41a54eb3349c98783807d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dungeonModel: {fileID: 11400000, guid: 5d532120bd831a54797354e505abb32e, type: 2}
+  _model: {fileID: 11400000, guid: 5d532120bd831a54797354e505abb32e, type: 2}
   _header: {fileID: 857717860437859749}
   _description: {fileID: 3891704147727512183}
   _index: {fileID: 8605202826231529382}
-  _dungeonImage: {fileID: 1739694907479748480}
+  _image: {fileID: 1739694907479748480}
   _artifactCheck: {fileID: 8367602466288883480}
 --- !u!224 &7668103929076798876 stripped
 RectTransform:
