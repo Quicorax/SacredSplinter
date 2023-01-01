@@ -677,7 +677,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 40832a86ec222f642af963a541eda2ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9cdb9cc3ff3911e4795081d66cad9837, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1415,19 +1415,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec0da4711a1a1a46a26e5d0ca8a0291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvasGroup: {fileID: 6440468336172182926}
   _heroSelector:
     ElementImage: {fileID: 8655934159130668304}
     UnknownElementImage: {fileID: 9089707916238863943}
     PopUp: {fileID: 7644073357130152823, guid: 8907a6cc0d4cedf42966fd96172372b1, type: 3}
-    Launcher: {fileID: 5392626805746831686}
+    Button: {fileID: 5392626805746831686}
   _dungeonSelector:
     ElementImage: {fileID: 89329598024588377}
     UnknownElementImage: {fileID: 5308873683045025887}
     PopUp: {fileID: 158168444277797920, guid: 44291e9ed630ea548badae7ef40b9f94, type: 3}
-    Launcher: {fileID: 2813776381146036707}
+    Button: {fileID: 2813776381146036707}
 --- !u!224 &3442521451290317035 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1175684496277937625, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+  m_PrefabInstance: {fileID: 4582014422809496882}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &6440468336172182926 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 7419599036995821756, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
   m_PrefabInstance: {fileID: 4582014422809496882}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7895860696949194653
@@ -1555,7 +1561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7483472847076041082, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
       propertyPath: m_text
-      value: Select Dungeon
+      value: Select Location
       objectReference: {fileID: 0}
     - target: {fileID: 7483472847076041082, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
       propertyPath: m_fontSize

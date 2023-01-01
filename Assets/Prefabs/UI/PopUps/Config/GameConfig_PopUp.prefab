@@ -384,10 +384,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f16d499d04ed8b54aa1f7219cf26c288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvasGroup: {fileID: 6440468336172182926}
   _audioON: {fileID: 5353485505297664314}
 --- !u!224 &3442521451290317035 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1175684496277937625, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+  m_PrefabInstance: {fileID: 4582014422809496882}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &6440468336172182926 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 7419599036995821756, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
   m_PrefabInstance: {fileID: 4582014422809496882}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6124764411518669939

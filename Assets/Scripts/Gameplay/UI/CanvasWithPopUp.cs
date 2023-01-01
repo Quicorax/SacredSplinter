@@ -7,11 +7,15 @@ public class CanvasWithPopUp : MonoBehaviour, IWithPopUp
     private Transform _spawnParent;
     public Transform SpawnParent => _spawnParent;
 
+    private Button _launcherButton;
+
     public void OnPopUpOpen(PopUpLauncher popUpBundle)
     {
+        _launcherButton = popUpBundle.Button;
+
         ActivateButton(popUpBundle.Button, false);
-        Instantiate(popUpBundle.PopUp, SpawnParent).Initialize(popUpBundle.Button, OnPopUpClose);
+        Instantiate(popUpBundle.PopUp, SpawnParent).Initialize(OnPopUpClose);
     }
-    public void OnPopUpClose(Button button) => ActivateButton(button, true);
+    public void OnPopUpClose() => ActivateButton(_launcherButton, true);
     public void ActivateButton(Button button, bool activate) => button.interactable = activate;
 }

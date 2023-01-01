@@ -548,7 +548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 529868722, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294967295
+      value: 4291611852
       objectReference: {fileID: 0}
     - target: {fileID: 349244092358513489, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -839,6 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9594a0f7ac17ac4580affeefb6340a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvasGroup: {fileID: 6440468336172182926}
   _audioON: {fileID: 4096995078297001268}
   _spawnParent: {fileID: 1569357865508388}
   _languageDisplay: {fileID: 115813175397446862}
@@ -848,6 +849,11 @@ MonoBehaviour:
 --- !u!224 &3442521451290317035 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1175684496277937625, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+  m_PrefabInstance: {fileID: 4582014422809496882}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &6440468336172182926 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 7419599036995821756, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
   m_PrefabInstance: {fileID: 4582014422809496882}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7661885337117009178

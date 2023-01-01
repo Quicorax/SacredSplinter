@@ -28,9 +28,9 @@ public class SelectorPopUp : BasePopUp
 
     private int _actualElementIndex = 0;
 
-    public void Initialize(Button laucherButton, Action<Button> onClosePopUp, Action<BaseData> onElementSelected)
+    public void Initialize(Action onClosePopUp, Action<BaseData> onElementSelected)
     {
-        base.Initialize(laucherButton, onClosePopUp);
+        base.Initialize(onClosePopUp);
 
         _onElementSelected = onElementSelected;
 

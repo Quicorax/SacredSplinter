@@ -9,11 +9,11 @@ public class SelectablePack
     public GameObject UnknownElementImage;
 
     public SelectorPopUp PopUp;
-    public Button Launcher;
+    public Button Button;
 }
 public class AdventureSelectorPopUp : BasePopUp
 {
-       [SerializeField]
+    [SerializeField]
     private SelectablePack _heroSelector, _dungeonSelector;
 
     private SelectablePack _actualSelectable;
@@ -35,8 +35,8 @@ public class AdventureSelectorPopUp : BasePopUp
     {
         _actualSelectable = selectable;
 
-        ActivateButton(selectable.Launcher, false);
-        Instantiate(selectable.PopUp, transform).Initialize(selectable.Launcher, OnPopUpClose, OnSelectableSelected);
+        ActivateButton(selectable.Button, false);
+        Instantiate(selectable.PopUp, transform).Initialize(OnPopUpClose, OnSelectableSelected);
     }
     public void EngageOnAdventure()
     {
@@ -51,7 +51,7 @@ public class AdventureSelectorPopUp : BasePopUp
         _actualSelectable.ElementImage.sprite = data.Image;
     }
 
-    private void OnPopUpClose(Button button) => ActivateButton(button, true);
+    private void OnPopUpClose() => ActivateButton(_actualSelectable.Button, true);
     private void ActivateButton(Button button, bool activate) => button.interactable = activate;
     private void TurnObjectOn(GameObject gameObject, bool on) => gameObject.SetActive(on);
 }

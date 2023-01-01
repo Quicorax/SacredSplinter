@@ -1,22 +1,26 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BasePopUp : MonoBehaviour
 {
-    private Action<Button> _onClosePopUp;
-    private Button _laucherButton;
-    
-    public void Initialize(Button laucherButton, Action<Button> onClosePopUp)
+    [SerializeField]
+    private CanvasGroup _canvasGroup;
+
+    private Action _onClosePopUp;
+
+    public void Initialize(Action onClosePopUp)
     {
         _onClosePopUp = onClosePopUp;
-        _laucherButton = laucherButton;
+        _canvasGroup.DOFade(0, 0.2f).From();
     }
-
     public void CloseSelf()
     {
-        _onClosePopUp.Invoke(_laucherButton);
+        _canvasGroup.DOFade(0, 0.2f).OnComplete(() =>
+        {
+            Destroy(gameObject);
+        });
 
-        Destroy(gameObject);
+        _onClosePopUp.Invoke();
     }
 }
