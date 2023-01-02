@@ -9,12 +9,12 @@ public class BasePopUp : MonoBehaviour
 
     private Action _onClosePopUp;
 
-    public void Initialize(Action onClosePopUp)
+    public virtual void Initialize(Action onClosePopUp, Action<BaseData> onElementSelected = null)
     {
         _onClosePopUp = onClosePopUp;
         _canvasGroup.DOFade(0, 0.2f).From();
     }
-    public void CloseSelf()
+    public virtual void CloseSelf()
     {
         _canvasGroup.DOFade(0, 0.2f).OnComplete(() =>
         {

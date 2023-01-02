@@ -28,9 +28,11 @@ public class SelectorPopUp : BasePopUp
 
     private int _actualElementIndex = 0;
 
-    public void Initialize(Action onClosePopUp, Action<BaseData> onElementSelected)
+    public BaseData CurrentElement;
+
+    public override void Initialize(Action onClosePopUp, Action<BaseData> onElementSelected)
     {
-        base.Initialize(onClosePopUp);
+        base.Initialize(onClosePopUp, onElementSelected);
 
         _onElementSelected = onElementSelected;
 
@@ -62,21 +64,18 @@ public class SelectorPopUp : BasePopUp
 
     private void PrintElementData()
     {
-        BaseData data = _elements[_actualElementIndex];
+        CurrentElement = _elements[_actualElementIndex];
 
         _index.text = _actualElementIndex.ToString();
 
-        _header.text = data.Header;
-        _description.text = data.Description;
-        _image.sprite = data.Image;
+        _header.text = CurrentElement.Header;
+        _description.text = CurrentElement.Description;
+        _image.sprite = CurrentElement.Image;
     }
 
-    public void SelectElement()
+    public virtual void SelectElement()
     {
-        Debug.Log("Element SELECTED");
-
         _onElementSelected?.Invoke(_model.Entries[_actualElementIndex]);
-
         CloseSelf();
     }
 }

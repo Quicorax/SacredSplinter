@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(menuName = "Quicorax/Data/EncyclopediaModel")]
-public class EncyclopediaModel : ScriptableObject
+public class EncyclopediaModel : BaseModel
 {
-    public List<EntryData> Entries = new();
 }

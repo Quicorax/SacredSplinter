@@ -10,6 +10,10 @@ public class DungeonSelectorPopUp : SelectorPopUp
 {
     [SerializeField]
     private GameObject _artifactCheck;
-    
-    
+
+    public override void SelectElement()
+    {
+        MenuManager.Instance.DungeonLocationSelected = CurrentElement.Header;
+        base.SelectElement();
+    }
 }

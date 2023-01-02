@@ -19,3 +19,6 @@ MonoBehaviour:
   - Header: Dark Knight
     Description: lorem ipsulorem ipsulorem ipsulorem ipsulorem ipsu
     Image: {fileID: 21300000, guid: 9cdb9cc3ff3911e4795081d66cad9837, type: 3}
+  - Header: Dark Archer
+    Description: lorem ipsulorem ipsulorem ipsulorem ipsulorem ipsu
+    Image: {fileID: 21300000, guid: 11f974bb50da27b4aafae514b743e4f8, type: 3}
