@@ -565,12 +565,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnParent: {fileID: 0}
+  _onResourcesUpdated: {fileID: 11400000, guid: 3d97e89007f25c749a675386ba5a9e14, type: 2}
+  _userProgression: {fileID: 11400000, guid: 62ac326a7a585a94d83e3bcf2bbd3a0b, type: 2}
   _config:
     PopUp: {fileID: 3952808861149700775, guid: 78f0fa743af3d10429ad97ad6fbccbf3, type: 3}
     Button: {fileID: 4556295584842778554}
   _resources:
     PopUp: {fileID: 5491644426858811045, guid: 2a7c0a32e417251409eece23d59f155d, type: 3}
     Button: {fileID: 1290617095584478042}
+  _coinsAmount: {fileID: 4686023516242807211}
+  _cristalsAmount: {fileID: 6874336480884882148}
 --- !u!1001 &5305469904324533518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -592,7 +596,7 @@ PrefabInstance:
       objectReference: {fileID: -8024867205206567246, guid: 0fb406a69224af64089f92ebf23fbe25, type: 2}
     - target: {fileID: 2388829041573473057, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3999980638960955434, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_Pivot.x
@@ -702,6 +706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background
       objectReference: {fileID: 0}
+    - target: {fileID: 5692432192824908298, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6800967940754624434, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_Name
       value: AResource (1)
@@ -732,6 +740,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+--- !u!114 &4686023516242807211 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 623969875622991013, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+  m_PrefabInstance: {fileID: 5305469904324533518}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &9088855544227114276 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3999980638960955434, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
@@ -750,7 +769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2388829041573473057, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3999980638960955434, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_Pivot.x
@@ -872,6 +891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background
       objectReference: {fileID: 0}
+    - target: {fileID: 5692432192824908298, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6800967940754624434, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_Name
       value: AResource
@@ -902,6 +925,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+--- !u!114 &6874336480884882148 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 623969875622991013, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+  m_PrefabInstance: {fileID: 6327071287410388545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6939076030562721387 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3999980638960955434, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}

@@ -3,6 +3,9 @@
 public class ShopPopUp : BasePopUp
 {
     [SerializeField]
+    private UserModel _userProgression;
+
+    [SerializeField]
     private ProductModel _productModel;
 
     [SerializeField]
@@ -23,6 +26,6 @@ public class ShopPopUp : BasePopUp
     private void SpawnProducts()
     {
         foreach (ProductData product in _productModel.Products)
-            Instantiate(_productView, _productHolder).Initialize(product);
+            Instantiate(_productView, _productHolder).Initialize(transform, product, _userProgression);
     }
 }

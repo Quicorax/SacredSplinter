@@ -193,7 +193,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 0}
+  m_BackGroundColor: {r: 0.09411766, g: 0.09411766, b: 0.09411766, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -377,6 +377,10 @@ PrefabInstance:
     - target: {fileID: 6986606759669300868, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
       propertyPath: m_Name
       value: Base_Menu_Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6986606759669300868, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7161853074590757613, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
       propertyPath: m_Pivot.x
@@ -591,6 +595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Base_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8916358291178325271, guid: 21c4b9681a5378a4dae2b5ee303741a6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9088855544227114276, guid: 21c4b9681a5378a4dae2b5ee303741a6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -647,7 +655,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2059654463
 MonoBehaviour:
@@ -684,7 +692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
       propertyPath: m_AnchorMax.x

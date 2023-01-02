@@ -5,7 +5,7 @@ using UnityEngine;
 public class BasePopUp : MonoBehaviour
 {
     [SerializeField]
-    private CanvasGroup _canvasGroup;
+    internal CanvasGroup _canvasGroup;
 
     private Action _onClosePopUp;
 
@@ -21,6 +21,6 @@ public class BasePopUp : MonoBehaviour
             Destroy(gameObject);
         });
 
-        _onClosePopUp.Invoke();
+        _onClosePopUp?.Invoke();
     }
 }

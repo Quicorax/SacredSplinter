@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 2628687863454569922}
+  _userProgression: {fileID: 11400000, guid: 62ac326a7a585a94d83e3bcf2bbd3a0b, type: 2}
   _productModel: {fileID: 11400000, guid: 30eb83923043c3241ad5f6c4150c696f, type: 2}
   _productView: {fileID: 7708804457615744805, guid: 6dc515bae9029a24487922f08dd1a480, type: 3}
   _productHolder: {fileID: 3377959522541819298}

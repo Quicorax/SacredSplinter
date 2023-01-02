@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -66,13 +67,20 @@ public class SelectorPopUp : BasePopUp
     {
         CurrentElement = _elements[_actualElementIndex];
 
-        _index.text = _actualElementIndex.ToString();
-
-        _header.text = CurrentElement.Header;
-        _description.text = CurrentElement.Description;
-        _image.sprite = CurrentElement.Image;
+        FadeAnim(_index, ()=> _index.text = _actualElementIndex.ToString());
+        FadeAnim(_header, ()=> _header.text = CurrentElement.Header);
+        FadeAnim(_description , ()=>_description.text = CurrentElement.Description);
+        FadeAnim(_image, () => _image.sprite = CurrentElement.Image);
     }
 
+    private void FadeAnim(MaskableGraphic objectToFade, Action onFullFaded)
+    {
+        objectToFade.DOFade(0, 0.2f).OnComplete(() =>
+        {
+            onFullFaded?.Invoke();
+            objectToFade.DOFade(1, 0.2f);
+        });
+    }
     public virtual void SelectElement()
     {
         _onElementSelected?.Invoke(_model.Entries[_actualElementIndex]);
