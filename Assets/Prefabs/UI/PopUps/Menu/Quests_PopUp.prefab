@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 2628687863454569922}
-  _progression: {fileID: 11400000, guid: 62ac326a7a585a94d83e3bcf2bbd3a0b, type: 2}
+  _onResourcesUpdated: {fileID: 11400000, guid: 3d97e89007f25c749a675386ba5a9e14, type: 2}
   _questModel: {fileID: 11400000, guid: 9809d54e71c1795488c4791ad1b676d1, type: 2}
   _questView: {fileID: 405276905016025909, guid: f89271a30723a8743abe55e9408f2edb, type: 3}
   _questHolder: {fileID: 3377959522541819298}

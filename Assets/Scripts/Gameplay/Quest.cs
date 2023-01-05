@@ -35,14 +35,16 @@ public class Quest : MonoBehaviour
 
     private bool _completed;
 
+    private Action _onTransactionCompleted;
+
     private GameProgressionService _progression;
 
-
-    public void Initialize(QuestData data)
+    public void Initialize(QuestData data, Action onTransactionCompleted)
     {
         _progression = ServiceLocator.GetService<GameProgressionService>();
 
         _quest = data;
+        _onTransactionCompleted = onTransactionCompleted;
 
         _header.text = data.QuestHeader;
         _rewardAmount.text = data.Reward.Amount.ToString();
@@ -70,6 +72,7 @@ public class Quest : MonoBehaviour
             _progression.SetQuestCompleted(_quest.QuestIndex);
             _progression.SetAmoutOfResource(_quest.Reward.Item.Name, _quest.Reward.Amount);
 
+            _onTransactionCompleted?.Invoke();
             SetInteractable(false);
         }
     }

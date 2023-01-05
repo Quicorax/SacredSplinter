@@ -11,10 +11,7 @@ public class MenuConfigPopUp : BaseConfigPopUp
 
     public void OpenCredits() => ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp(_credits);
 
-    public void Save()
-    {
-        Debug.Log("SAVE");
-    }
+    public void Save() => ServiceLocator.GetService<SaveLoadService>().Save();
 
     public void ChangeLanguage(bool next)
     {
