@@ -1,13 +1,10 @@
 using Quicorax;
 using TMPro;
 using UnityEngine;
-public class CanvasController : CanvasWithPopUp
+public class CanvasController : MonoBehaviour
 {
     [SerializeField]
     private SimpleEventBus _onResourcesUpdated;
-
-    [SerializeField]
-    private UserModel _userProgression;
 
     [SerializeField]
     private PopUpLauncher _config, _resources;
@@ -15,11 +12,14 @@ public class CanvasController : CanvasWithPopUp
     [SerializeField]
     private TMP_Text _coinsAmount, _cristalsAmount;
 
-    public void OpenConfiguration() => OnPopUpOpen(_config);
-    public void OpenResources() => OnPopUpOpen(_resources);
+    private PopUpSpawnerService _popUpSpawner;
+    private GameProgressionService _gameProgression;
 
     private void Start()
     {
+        _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
+        _gameProgression = ServiceLocator.GetService<GameProgressionService>();
+
         SetItemAmount();
     }
 
@@ -32,10 +32,13 @@ public class CanvasController : CanvasWithPopUp
     {
         _onResourcesUpdated.Event -= SetItemAmount;
     }
+    
+    public void OpenConfiguration() => _popUpSpawner.SpawnPopUp(_config);
+    public void OpenResources() => _popUpSpawner.SpawnPopUp(_resources);
 
     private void SetItemAmount()
     {
-        _coinsAmount.text = _userProgression.GetAmountOfResource("Gold Coin").ToString();
-        _cristalsAmount.text = _userProgression.GetAmountOfResource("Blue Cristal").ToString();
+        _coinsAmount.text = _gameProgression.CheckElement("Gold Coin").ToString();
+        _cristalsAmount.text = _gameProgression.CheckElement("Blue Cristal").ToString();
     }
 }

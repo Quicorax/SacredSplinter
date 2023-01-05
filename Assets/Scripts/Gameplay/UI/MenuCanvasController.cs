@@ -1,11 +1,22 @@
 using UnityEngine;
-public class MenuCanvasController : CanvasWithPopUp
+public class MenuCanvasController : MonoBehaviour
 {
+    private PopUpSpawnerService _popUpSpawner;
+
     [SerializeField]
     private PopUpLauncher _adventureSelector, _quests, _shop, _encyclopedia;
 
-    public void OpenAdventureSelector() => OnPopUpOpen(_adventureSelector);
-    public void OpenQuests() => OnPopUpOpen(_quests);
-    public void OpenShop() => OnPopUpOpen(_shop);
-    public void OpenEncyclopedia() => OnPopUpOpen(_encyclopedia);
+    private void Start()
+    {
+        _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
+    }
+
+    public void OpenAdventureSelector() =>
+        _popUpSpawner.SpawnPopUp(_adventureSelector);
+    public void OpenQuests() => 
+        _popUpSpawner.SpawnPopUp(_quests);
+    public void OpenShop() => 
+        _popUpSpawner.SpawnPopUp(_shop);
+    public void OpenEncyclopedia() =>
+        _popUpSpawner.SpawnPopUp(_encyclopedia);
 }

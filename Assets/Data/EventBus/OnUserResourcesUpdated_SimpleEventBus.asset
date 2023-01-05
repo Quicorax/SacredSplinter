@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebb9d46885b68e24b9f1ce287e786d3e, type: 3}
-  m_Name: OnUserrResourcesUpdated_SimpleEventBus
+  m_Name: OnUserResourcesUpdated_SimpleEventBus
   m_EditorClassIdentifier: 

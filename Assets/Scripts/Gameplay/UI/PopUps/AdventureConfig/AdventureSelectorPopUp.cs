@@ -51,7 +51,7 @@ public class AdventureSelectorPopUp : BasePopUp
     }
     public void EngageOnAdventure()
     {
-        StaticNavigation.NavigateToScene("01_Game");
+        ServiceLocator.GetService<NavigationService>().NavigateToScene("01_Game");
     }
 
     private void OnSelectableSelected(BaseData data)

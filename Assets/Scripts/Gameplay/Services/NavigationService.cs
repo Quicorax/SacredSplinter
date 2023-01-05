@@ -1,21 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public static class StaticNavigation
+public class NavigationService : IService
 {
-    public static void NavigateToScene(string sceneName) =>
+    public void NavigateToScene(string sceneName) => 
         SceneManager.LoadScene(sceneName);
 
-    public static void ReloadActualScene() =>
+    public void ReloadActualScene() => 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
-    public static void ExitGame()
+    public void ExitGame()
     {
 #if (UNITY_EDITOR || UNITY_WEBGL)
         Debug.Log("Application Quit!");
         return;
 #endif
-
         Application.Quit();
     }
 }

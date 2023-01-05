@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [Serializable]
 public class QuestData
 {
-    public bool Claimed; //TODO: this should not be stored here!
+    public int QuestIndex;
 
     public string QuestHeader;
     public int AmountToComplete;
@@ -47,7 +47,7 @@ public class Quest : MonoBehaviour
         _rewardIcon.sprite = data.Reward.Item.Image;
         _progressionPerCent.text = GetProgression();
 
-        SetInteractable(!_quest.Claimed);
+        SetInteractable(!_progression.GetQuestCompleted(_quest.QuestIndex));
     }
 
     private string GetProgression()
@@ -65,8 +65,9 @@ public class Quest : MonoBehaviour
     {
         if (_completed)
         {
+            _progression.SetQuestCompleted(_quest.QuestIndex);
             _progression.SetAmoutOfItem(_quest.Reward.Item.Name, _quest.Reward.Amount);
-            _quest.Claimed = true;
+
             SetInteractable(false);
         }
     }

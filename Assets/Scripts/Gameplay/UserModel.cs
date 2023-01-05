@@ -21,9 +21,11 @@ public class UserModel : ScriptableObject
     private List<Reward> _resources = new();
     [SerializeField]
     private List<string> _heros = new();
+    [SerializeField]
+    private List<int> _completedQuestIndex = new();
 
     [SerializeField]
-    private ProgressionOnLevel[] _levelProgression = new ProgressionOnLevel[3];
+    private ProgressionOnLevel[] _levelsProgression = new ProgressionOnLevel[3];
     [SerializeField]
     private int _monstersKilled;
 
@@ -49,8 +51,12 @@ public class UserModel : ScriptableObject
         _onResourcesUpdated.NotifyEvent();
     }
 
+    public void SetQuestCompleted(int i) => _completedQuestIndex.Add(i);
+    public bool GetQuestCompleted(int i) => _completedQuestIndex.Contains(i);
+
     public void SetMonterKilled() => _monstersKilled++;
     public int GetKilledMonsters() => _monstersKilled;
+
     public int GetAmountOfPregression(string concept) 
     {
         switch (concept)
@@ -74,7 +80,7 @@ public class UserModel : ScriptableObject
     {
         int higherLevel = 0;
 
-        foreach (var item in _levelProgression)
+        foreach (var item in _levelsProgression)
         {
             if (item.MaxLevel > higherLevel)
                 higherLevel = item.MaxLevel;
@@ -85,7 +91,7 @@ public class UserModel : ScriptableObject
 
     private int GetLocationCompleted(string locationName)
     {
-        foreach (var item in _levelProgression)
+        foreach (var item in _levelsProgression)
         {
             if (item.LevelName == locationName && item.Completed)
                 return 1;

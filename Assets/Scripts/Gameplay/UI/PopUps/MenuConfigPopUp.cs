@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class MenuConfigPopUp : PopUpWithPopUp
+public class MenuConfigPopUp : BaseConfigPopUp
 {
     [SerializeField]
     private TMP_Text _languageDisplay;
@@ -9,7 +9,7 @@ public class MenuConfigPopUp : PopUpWithPopUp
     [SerializeField]
     private PopUpLauncher _credits;
 
-    public void OpenCredits() => OnPopUpOpen(_credits);
+    public void OpenCredits() => ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp(_credits);
 
     public void Save()
     {

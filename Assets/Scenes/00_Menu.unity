@@ -669,6 +669,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf728e07cccdc4caee25976960b5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _servicesElements:
+    initialResources: {fileID: 11400000, guid: 1d003afc06b98984ab4322164a68956b, type: 2}
+    popUpTransformParent: {fileID: 1304599352}
   HeroSelected: 0
   DungeonSelected: 0
 --- !u!1001 &3158981324008113575

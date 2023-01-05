@@ -2,6 +2,6 @@
 {
     public void Exit()
     {
-        StaticNavigation.NavigateToScene("00_Menu");
+        ServiceLocator.GetService<NavigationService>().NavigateToScene("00_Menu");
     }
 }

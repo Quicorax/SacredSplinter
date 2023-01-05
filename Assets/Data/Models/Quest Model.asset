@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Quests:
   - Claimed: 0
+    QuestIndex: 0
     QuestHeader: Kill 1 monster
     AmountToComplete: 1
     ConceptToComplete: Monster
@@ -21,6 +22,7 @@ MonoBehaviour:
       Amount: 10
       Item: {fileID: 11400000, guid: c02c0a6f478efa045adf11088bc5adb6, type: 2}
   - Claimed: 0
+    QuestIndex: 1
     QuestHeader: Kill 10 monsters
     AmountToComplete: 10
     ConceptToComplete: Monster
@@ -28,6 +30,7 @@ MonoBehaviour:
       Amount: 100
       Item: {fileID: 11400000, guid: c02c0a6f478efa045adf11088bc5adb6, type: 2}
   - Claimed: 0
+    QuestIndex: 2
     QuestHeader: Kill 100 monsters
     AmountToComplete: 100
     ConceptToComplete: Monster
@@ -35,6 +38,7 @@ MonoBehaviour:
       Amount: 1000
       Item: {fileID: 11400000, guid: c02c0a6f478efa045adf11088bc5adb6, type: 2}
   - Claimed: 0
+    QuestIndex: 3
     QuestHeader: Reach Level 3 of any Dungeon
     AmountToComplete: 3
     ConceptToComplete: Dungeon
@@ -42,6 +46,7 @@ MonoBehaviour:
       Amount: 10
       Item: {fileID: 11400000, guid: 6aec446ee4886024e9a80926517c1065, type: 2}
   - Claimed: 0
+    QuestIndex: 4
     QuestHeader: Reach Level 9 of any Dungeon
     AmountToComplete: 9
     ConceptToComplete: Dungeon
@@ -49,6 +54,7 @@ MonoBehaviour:
       Amount: 50
       Item: {fileID: 11400000, guid: 6aec446ee4886024e9a80926517c1065, type: 2}
   - Claimed: 0
+    QuestIndex: 5
     QuestHeader: Reach Level 12 of any Dungeon
     AmountToComplete: 12
     ConceptToComplete: Dungeon
@@ -56,6 +62,7 @@ MonoBehaviour:
       Amount: 100
       Item: {fileID: 11400000, guid: 6aec446ee4886024e9a80926517c1065, type: 2}
   - Claimed: 0
+    QuestIndex: 6
     QuestHeader: Complete the Village dungeon
     AmountToComplete: 1
     ConceptToComplete: Boss_Village
@@ -63,6 +70,7 @@ MonoBehaviour:
       Amount: 1
       Item: {fileID: 11400000, guid: ae5d680a85e572144b9f96dd380747d3, type: 2}
   - Claimed: 0
+    QuestIndex: 7
     QuestHeader: Complete the Sewers dungeon
     AmountToComplete: 1
     ConceptToComplete: Boss_Sewer
@@ -70,6 +78,7 @@ MonoBehaviour:
       Amount: 1
       Item: {fileID: 11400000, guid: ae5d680a85e572144b9f96dd380747d3, type: 2}
   - Claimed: 0
+    QuestIndex: 8
     QuestHeader: Complete the Dungeon dungeon
     AmountToComplete: 1
     ConceptToComplete: Boss_Dungeon
