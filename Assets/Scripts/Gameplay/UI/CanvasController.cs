@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Quicorax;
 using TMPro;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class CanvasController : MonoBehaviour
 
     private PopUpSpawnerService _popUpSpawner;
     private GameProgressionService _gameProgression;
+
+    private bool _onTween;
 
     private void Start()
     {
@@ -40,5 +43,14 @@ public class CanvasController : MonoBehaviour
     {
         _coinsAmount.text = _gameProgression.CheckAmountOfResource("Gold Coin").ToString();
         _cristalsAmount.text = _gameProgression.CheckAmountOfResource("Blue Cristal").ToString();
+
+        if (!_onTween)
+        {
+            _onTween = true;
+
+            _cristalsAmount.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f);
+            _coinsAmount.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f)
+                .OnComplete(()=> _onTween = false);
+        }
     }
 }

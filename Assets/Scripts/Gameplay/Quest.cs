@@ -25,6 +25,9 @@ public class Reward
 public class Quest : MonoBehaviour
 {
     [SerializeField]
+    private GameObject _claimeable;
+
+    [SerializeField]
     private TMP_Text _header, _rewardAmount, _progressionPerCent;
     [SerializeField]
     private Button _button;
@@ -34,6 +37,7 @@ public class Quest : MonoBehaviour
     private QuestData _quest;
 
     private bool _completed;
+    private bool _claimed;
 
     private Action _onTransactionCompleted;
 
@@ -51,7 +55,11 @@ public class Quest : MonoBehaviour
         _rewardIcon.sprite = data.Reward.Item.Image;
         _progressionPerCent.text = GetProgression();
 
-        SetInteractable(!_progression.GetQuestCompleted(_quest.QuestIndex));
+        _claimed = _progression.GetQuestCompleted(_quest.QuestIndex);
+
+        SetInteractable(!_claimed);
+        SetClaimeable(_completed && !_claimed);
+
     }
 
     private string GetProgression()
@@ -62,6 +70,7 @@ public class Quest : MonoBehaviour
 
         _completed = resultPercent >= 100;
 
+
         return resultPercent.ToString();
     }
 
@@ -69,13 +78,18 @@ public class Quest : MonoBehaviour
     {
         if (_completed)
         {
+            _claimed = true;
+
             _progression.SetQuestCompleted(_quest.QuestIndex);
             _progression.SetAmoutOfResource(_quest.Reward.Item.Name, _quest.Reward.Amount);
 
             _onTransactionCompleted?.Invoke();
+
+            SetClaimeable(false);
             SetInteractable(false);
         }
     }
 
-    private void SetInteractable(bool interactable) => _button.interactable = interactable;
+    private void SetClaimeable(bool claimeable) => _claimeable.SetActive(claimeable);
+    private void SetInteractable(bool interactable)  => _button.interactable = interactable;
 }

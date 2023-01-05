@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: Shop Model
   m_EditorClassIdentifier: 
   Products:
+  - ProductHeader: Hero License
+    Price:
+      Amount: 1000
+      Item: {fileID: 11400000, guid: 6aec446ee4886024e9a80926517c1065, type: 2}
+    Reward:
+      Amount: 1
+      Item: {fileID: 11400000, guid: ae5d680a85e572144b9f96dd380747d3, type: 2}
   - ProductHeader: Blue Cristal
     Price:
       Amount: 100
@@ -41,10 +48,3 @@ MonoBehaviour:
     Reward:
       Amount: 100
       Item: {fileID: 11400000, guid: 6aec446ee4886024e9a80926517c1065, type: 2}
-  - ProductHeader: Hero License
-    Price:
-      Amount: 2000
-      Item: {fileID: 11400000, guid: 6aec446ee4886024e9a80926517c1065, type: 2}
-    Reward:
-      Amount: 1
-      Item: {fileID: 11400000, guid: ae5d680a85e572144b9f96dd380747d3, type: 2}
