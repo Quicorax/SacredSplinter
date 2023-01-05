@@ -123,108 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &121359023
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3158981322980613779, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_Name
-      value: PopUp_Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
---- !u!224 &121359024 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3158981322980613791, guid: a8005ba9e06cc9a46a813f0cfc2d7496, type: 3}
-  m_PrefabInstance: {fileID: 121359023}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &557480359
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,11 +256,11 @@ PrefabInstance:
     - target: {fileID: 3061522311400507430, guid: 21c4b9681a5378a4dae2b5ee303741a6, type: 3}
       propertyPath: _popUpCanvas
       value: 
-      objectReference: {fileID: 121359024}
+      objectReference: {fileID: 0}
     - target: {fileID: 3061522311400507430, guid: 21c4b9681a5378a4dae2b5ee303741a6, type: 3}
       propertyPath: _spawnParent
       value: 
-      objectReference: {fileID: 121359024}
+      objectReference: {fileID: 0}
     - target: {fileID: 3061522311400507430, guid: 21c4b9681a5378a4dae2b5ee303741a6, type: 3}
       propertyPath: _config.PopUp
       value: 
@@ -370,7 +268,7 @@ PrefabInstance:
     - target: {fileID: 3061522311400507430, guid: 21c4b9681a5378a4dae2b5ee303741a6, type: 3}
       propertyPath: PopUpCanvasTransform
       value: 
-      objectReference: {fileID: 121359024}
+      objectReference: {fileID: 0}
     - target: {fileID: 5236378127860979031, guid: 21c4b9681a5378a4dae2b5ee303741a6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -671,15 +569,15 @@ PrefabInstance:
     - target: {fileID: 7257791141593461581, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
       propertyPath: _popUpCanvas
       value: 
-      objectReference: {fileID: 121359024}
+      objectReference: {fileID: 0}
     - target: {fileID: 7257791141593461581, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
       propertyPath: _spawnParent
       value: 
-      objectReference: {fileID: 121359024}
+      objectReference: {fileID: 0}
     - target: {fileID: 7257791141593461581, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
       propertyPath: PopUpCanvasTransform
       value: 
-      objectReference: {fileID: 121359024}
+      objectReference: {fileID: 0}
     - target: {fileID: 7257791141593461590, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
       propertyPath: m_Name
       value: Base_Game_Canvas

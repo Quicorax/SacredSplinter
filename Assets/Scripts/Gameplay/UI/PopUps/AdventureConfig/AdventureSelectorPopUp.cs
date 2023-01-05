@@ -51,6 +51,7 @@ public class AdventureSelectorPopUp : BasePopUp
     }
     public void EngageOnAdventure()
     {
+        CloseSelf();
         ServiceLocator.GetService<NavigationService>().NavigateToScene("01_Game");
     }
 
