@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PopUpSpawnerService : IService
@@ -17,16 +18,20 @@ public class PopUpSpawnerService : IService
 
         ActivateButton(popUpBundle.Button, false);
 
-        Object.Instantiate(popUpBundle.PopUp, _parent).BaseInitialize(DeSpawnPopUp);
+        UnityEngine.Object.Instantiate(popUpBundle.PopUp, _parent).BaseInitialize(DeSpawnPopUp);
     }
     public T SpawnPopUp<T>(BasePopUp popUp) where T : BasePopUp
     {
-        var newPopUp = Object.Instantiate(popUp, _parent);
+        var newPopUp = UnityEngine.Object.Instantiate(popUp, _parent);
         newPopUp.BaseInitialize(DeSpawnPopUp);
 
         return (T)newPopUp;
     }
 
+    public void SpawnPopUp(BasePopUp popUp, Action action, Action<BaseData> baseDataAction)
+    {
+        UnityEngine.Object.Instantiate(popUp, _parent).BaseInitialize(action, baseDataAction);
+    }
 
     private void DeSpawnPopUp() => ActivateButton(_launcherButton, true);
     private void ActivateButton(Button button, bool activate) => button.interactable = activate;

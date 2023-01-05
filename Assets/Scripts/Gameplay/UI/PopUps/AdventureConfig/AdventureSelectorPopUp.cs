@@ -47,7 +47,8 @@ public class AdventureSelectorPopUp : BasePopUp
         _actualSelectable = selectable;
 
         ActivateButton(selectable.Button, false);
-        Instantiate(selectable.PopUp, transform).BaseInitialize(OnPopUpClose, OnSelectableSelected);
+
+        ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp(selectable.PopUp, OnPopUpClose, OnSelectableSelected);
     }
     public void EngageOnAdventure()
     {
@@ -62,14 +63,11 @@ public class AdventureSelectorPopUp : BasePopUp
 
         _actualSelectable.ElementImage.sprite = data.Image;
 
-        if(MenuManager.Instance.ReadyToEngage())
+        if (MenuManager.Instance.ReadyToEngage())
             ActivateButton(_engageOnAdventureButton, true);
     }
 
-    private void OnPopUpClose() 
-    {
-        ActivateButton(_actualSelectable.Button, true);
-    }
+    private void OnPopUpClose() => ActivateButton(_actualSelectable.Button, true);
     private void ActivateButton(Button button, bool activate) => button.interactable = activate;
     private void TurnObjectOn(GameObject gameObject, bool on) => gameObject.SetActive(on);
 }

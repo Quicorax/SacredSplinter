@@ -7,7 +7,6 @@ using UnityEngine.UI;
 [Serializable]
 public class EntryData : BaseData
 {
-    public string Location;
 }
 
 public class EncyclopediaPopUp : SelectorPopUp
@@ -58,6 +57,4 @@ public class EncyclopediaPopUp : SelectorPopUp
 
         }
     }
-
-
 }

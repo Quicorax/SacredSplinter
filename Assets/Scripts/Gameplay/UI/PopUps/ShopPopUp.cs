@@ -27,7 +27,7 @@ public class ShopPopUp : BasePopUp
     private void SpawnProducts()
     {
         foreach (ProductData product in _productModel.Products)
-            Instantiate(_productView, _productHolder).Initialize(transform, product, UpdateUI);
+            Instantiate(_productView, _productHolder).Initialize(product, UpdateUI);
     }
 
     private void UpdateUI()

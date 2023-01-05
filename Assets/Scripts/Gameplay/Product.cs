@@ -25,18 +25,17 @@ public class Product : MonoBehaviour
 
     private ProductData _product;
 
-    private Transform _parent;
-
     private GameProgressionService _progression;
+    private PopUpSpawnerService _popUpSpawner;
 
     private Action _onTransactionCompleted;
 
-    public void Initialize(Transform parent, ProductData data, Action onTransactionCompleted)
+    public void Initialize(ProductData data, Action onTransactionCompleted)
     {
         _progression = ServiceLocator.GetService<GameProgressionService>();
+        _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
 
         _product = data;
-        _parent = parent;
         _onTransactionCompleted = onTransactionCompleted;
 
         _header.text = _product.ProductHeader;
@@ -46,9 +45,10 @@ public class Product : MonoBehaviour
         _rewardIcon.sprite = _product.Reward.Item.Image;
     }
 
-    public void TryBuy() //TODO: use the popUpSpawner Service
+    public void TryBuy()
     {
-        Instantiate(_confirmPurchasePopUp, _parent).Initialize(_product, PurchaseConfirmed);
+        _popUpSpawner.SpawnPopUp<ConfirmPurchasePopUp>(_confirmPurchasePopUp)
+            .Initialize(_product, PurchaseConfirmed);
     }
 
     private void PurchaseConfirmed()
@@ -60,7 +60,7 @@ public class Product : MonoBehaviour
 
             _onTransactionCompleted?.Invoke();
         }
-        else //TODO: use the popUpSpawner Service
-            Instantiate(_notEnoughtResourcesPopUp, _parent).BaseInitialize(null, null);
+        else
+            _popUpSpawner.SpawnPopUp<NotEnoughtResources>(_notEnoughtResourcesPopUp);
     }
 }
