@@ -5,28 +5,28 @@ public class SaveLoadService : IService
 {
     private static string _kSavePath = Application.persistentDataPath + "/_gameProgression.json";
 
-    private GameProgressionService _gameProgression;
-    private GameConfigService _config;
+    private GameProgressionService _progression;
+    private GameConfigService _initialConfig;
 
     public void Initialize(GameConfigService config, GameProgressionService gameProgression)
     {
         Debug.Log(_kSavePath);
 
-        _gameProgression = gameProgression;
-        _config = config;
+        _progression = gameProgression;
+        _initialConfig = config;
         Load();
     }
 
-    public void Save() => File.WriteAllText(_kSavePath, JsonUtility.ToJson(_gameProgression));
+    public void Save() => File.WriteAllText(_kSavePath, JsonUtility.ToJson(_progression));
 
     private void Load()
     {
         string data = File.Exists(_kSavePath) ? File.ReadAllText(_kSavePath) : string.Empty;
 
         if (string.IsNullOrEmpty(data))
-            _gameProgression.LoadInitialResources(_config);
+            _progression.LoadInitialResources(_initialConfig);
         else
-            JsonUtility.FromJsonOverwrite(data, _gameProgression);
+            JsonUtility.FromJsonOverwrite(data, _progression);
     }
     public void DeleteLocalFiles()
     {

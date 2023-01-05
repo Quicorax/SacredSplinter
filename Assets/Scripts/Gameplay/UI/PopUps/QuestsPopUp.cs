@@ -2,9 +2,6 @@
 public class QuestsPopUp : BasePopUp
 {
     [SerializeField]
-    private UserModel _progression;
-
-    [SerializeField]
     private QuestModel _questModel;
 
     [SerializeField]
@@ -26,6 +23,6 @@ public class QuestsPopUp : BasePopUp
     private void SpawnQuests()
     {
         foreach (QuestData quest in _questModel.Quests)
-            Instantiate(_questView, _questHolder).Initialize(quest, _progression);
+            Instantiate(_questView, _questHolder).Initialize(quest);
     }
 }

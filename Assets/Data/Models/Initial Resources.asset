@@ -17,6 +17,8 @@ MonoBehaviour:
     Amount: 100
   - Key: Blue Cristal
     Amount: 1000
+  - Key: Hero License
+    Amount: 1
   UnlockedHeros:
   - Beggar
   CompletedQuestIndex: 

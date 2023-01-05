@@ -1,3 +1,4 @@
+using Quicorax;
 using System;
 using TMPro;
 using UnityEngine;
@@ -24,15 +25,19 @@ public class Product : MonoBehaviour
 
     private ProductData _product;
 
-    private UserModel _userProgression;
-
     private Transform _parent;
 
-    public void Initialize(Transform parent, ProductData data, UserModel progression)
+    private GameProgressionService _progression;
+
+    private Action _onTransactionCompleted;
+
+    public void Initialize(Transform parent, ProductData data, Action onTransactionCompleted)
     {
+        _progression = ServiceLocator.GetService<GameProgressionService>();
+
         _product = data;
-        _userProgression = progression;
         _parent = parent;
+        _onTransactionCompleted = onTransactionCompleted;
 
         _header.text = _product.ProductHeader;
         _priceAmount.text = _product.Price.Amount.ToString();
@@ -48,10 +53,12 @@ public class Product : MonoBehaviour
 
     private void PurchaseConfirmed()
     {
-        if (_userProgression.GetAmountOfResource(_product.Price.Item.Name) >= _product.Price.Amount)
+        if (_progression.CheckAmountOfResource(_product.Price.Item.Name) >= _product.Price.Amount)
         {
-            _userProgression.SetAmoutOfItem(_product.Price.Item.Name, -_product.Price.Amount);
-            _userProgression.SetAmoutOfItem(_product.Reward.Item.Name, _product.Reward.Amount);
+            _progression.SetAmoutOfResource(_product.Price.Item.Name, -_product.Price.Amount);
+            _progression.SetAmoutOfResource(_product.Reward.Item.Name, _product.Reward.Amount);
+
+            _onTransactionCompleted?.Invoke();
         }
         else
             Instantiate(_notEnoughtResourcesPopUp, _parent).Initialize(null, null);

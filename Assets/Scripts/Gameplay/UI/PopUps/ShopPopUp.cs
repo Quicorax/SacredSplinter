@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using Quicorax;
+using UnityEngine;
 
 public class ShopPopUp : BasePopUp
 {
     [SerializeField]
-    private UserModel _userProgression;
+    private SimpleEventBus _onResourcesUpdated;
 
     [SerializeField]
     private ProductModel _productModel;
@@ -26,6 +27,11 @@ public class ShopPopUp : BasePopUp
     private void SpawnProducts()
     {
         foreach (ProductData product in _productModel.Products)
-            Instantiate(_productView, _productHolder).Initialize(transform, product, _userProgression);
+            Instantiate(_productView, _productHolder).Initialize(transform, product, UpdateUI);
+    }
+
+    private void UpdateUI()
+    {
+        _onResourcesUpdated.NotifyEvent();
     }
 }

@@ -38,7 +38,7 @@ public class CanvasController : MonoBehaviour
 
     private void SetItemAmount()
     {
-        _coinsAmount.text = _gameProgression.CheckElement("Gold Coin").ToString();
-        _cristalsAmount.text = _gameProgression.CheckElement("Blue Cristal").ToString();
+        _coinsAmount.text = _gameProgression.CheckAmountOfResource("Gold Coin").ToString();
+        _cristalsAmount.text = _gameProgression.CheckAmountOfResource("Blue Cristal").ToString();
     }
 }

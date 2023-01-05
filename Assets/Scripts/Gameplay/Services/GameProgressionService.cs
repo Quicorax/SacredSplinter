@@ -27,7 +27,7 @@ public class GameProgressionService : IService
 
     public void LoadInitialResources(GameConfigService config)
     {
-        _resources = config.InitialResources;
+        _resources = config.Resources;
         _unlockedHeros = config.UnlockedHeros;
         _completedQuestIndex = config.CompletedQuestIndex;
         _levelsProgression = config.LevelsProgression;
@@ -35,7 +35,7 @@ public class GameProgressionService : IService
         _saveLoadService.Save();
     }
 
-    public void UpdateElement(string resourceId, int elementAmount, bool save = true)
+    public void SetAmoutOfResource(string resourceId, int elementAmount, bool save = true)
     {
         foreach (var resourcePack in _resources)
         {
@@ -46,7 +46,7 @@ public class GameProgressionService : IService
         if (save)
             _saveLoadService.Save();
     }
-    public int CheckElement(string resourceId)
+    public int CheckAmountOfResource(string resourceId)
     {
         int amount = -1;
 
@@ -62,6 +62,50 @@ public class GameProgressionService : IService
         return amount;
     }
 
+    public void SetQuestCompleted(int i) => _completedQuestIndex.Add(i);
+    public bool GetQuestCompleted(int i) => _completedQuestIndex.Contains(i);
+
+    public int GetAmountOfPregression(string concept)
+    {
+        switch (concept)
+        {
+            case "Monster":
+                return _totalMonstersKilled;
+            case "Dungeon":
+                return GetHigherLevelReached();
+            case "Boss_Village":
+                return GetLocationCompleted("Village");
+            case "Boss_Sewer":
+                return GetLocationCompleted("Sewers");
+            case "Boss_Dungeon":
+                return GetLocationCompleted("Dungeons");
+        }
+    
+        return 0;
+    }
+    private int GetHigherLevelReached()
+    {
+        int higherLevel = 0;
+    
+        foreach (var item in _levelsProgression)
+        {
+            if (item.MaxLevel > higherLevel)
+                higherLevel = item.MaxLevel;
+        }
+    
+        return higherLevel;
+    }
+    
+    private int GetLocationCompleted(string locationName)
+    {
+        foreach (var item in _levelsProgression)
+        {
+            if (item.LevelName == locationName && item.Completed)
+                return 1;
+        }
+    
+        return 0;
+    }
     public void SetSFXOff(bool off)
     {
         _sfxOff = off;
