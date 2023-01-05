@@ -31,9 +31,9 @@ public class SelectorPopUp : BasePopUp
 
     public BaseData CurrentElement;
 
-    public override void Initialize(Action onClosePopUp, Action<BaseData> onElementSelected)
+    public override void BaseInitialize(Action onClosePopUp, Action<BaseData> onElementSelected)
     {
-        base.Initialize(onClosePopUp, onElementSelected);
+        base.BaseInitialize(onClosePopUp, onElementSelected);
 
         _onElementSelected = onElementSelected;
 
@@ -77,6 +77,7 @@ public class SelectorPopUp : BasePopUp
     {
         objectToFade.DOFade(0, 0.2f).OnComplete(() =>
         {
+            OnMiddleOfFade();
             onFullFaded?.Invoke();
             objectToFade.DOFade(1, 0.2f);
         });
@@ -86,4 +87,6 @@ public class SelectorPopUp : BasePopUp
         _onElementSelected?.Invoke(_model.Entries[_actualElementIndex]);
         CloseSelf();
     }
+
+    public virtual void OnMiddleOfFade() { }
 }

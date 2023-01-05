@@ -13,18 +13,21 @@ MonoBehaviour:
   m_Name: Hero Model
   m_EditorClassIdentifier: 
   Entries:
-  - Header: Knight
-    Description: A dark watercolor draw of an old empty backstore dark alley, Dark
-      Souls styleA dark watercolor draw of an old empty backstore dark alley, Dark
-      Souls style
-    Image: {fileID: 21300000, guid: 9cdb9cc3ff3911e4795081d66cad9837, type: 3}
-  - Header: Assassin
-    Description: A dark watercolor draw of an old empty backstore dark alley, Dark
-      Souls styleA dark watercolor draw of an old empty backstore dark alley, Dark
-      Souls style
-    Image: {fileID: 21300000, guid: f2665ca4dc7b37541ac6b5d91433a910, type: 3}
-  - Header: Archer
-    Description: A dark watercolor draw of an old empty backstore dark alley, Dark
-      Souls styleA dark watercolor draw of an old empty backstore dark alley, Dark
-      Souls style
-    Image: {fileID: 21300000, guid: 11f974bb50da27b4aafae514b743e4f8, type: 3}
+  - Header: Errant
+    Description: A wandering soul, exploring the unknown reaches of the world in
+      search of treasure and the thrill of discovery.
+    Image: {fileID: 21300000, guid: 40832a86ec222f642af963a541eda2ea, type: 3}
+  - Header: Brute
+    Description: A brute of a man, relying on strength and brawn rather than wit
+      and cunning as he sought out treasure and glory in the far-flung corners of
+      the world.
+    Image: {fileID: 21300000, guid: 40832a86ec222f642af963a541eda2ea, type: 3}
+  - Header: Thief
+    Description: A sly thief, using stealth and deception to pilfer valuable goods
+      and riches from those foolish enough to underestimate her.
+    Image: {fileID: 21300000, guid: 40832a86ec222f642af963a541eda2ea, type: 3}
+  - Header: Cultist
+    Description: A devout cultist, seeking out forbidden knowledge and ancient relics
+      in the hopes of summoning powerful deities and unlocking the secrets of the
+      universe.
+    Image: {fileID: 21300000, guid: 40832a86ec222f642af963a541eda2ea, type: 3}

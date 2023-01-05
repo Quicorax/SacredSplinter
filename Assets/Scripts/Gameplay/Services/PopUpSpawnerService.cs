@@ -17,8 +17,16 @@ public class PopUpSpawnerService : IService
 
         ActivateButton(popUpBundle.Button, false);
 
-        Object.Instantiate(popUpBundle.PopUp, _parent).Initialize(DeSpawnPopUp);
+        Object.Instantiate(popUpBundle.PopUp, _parent).BaseInitialize(DeSpawnPopUp);
     }
+    public T SpawnPopUp<T>(BasePopUp popUp) where T : BasePopUp
+    {
+        var newPopUp = Object.Instantiate(popUp, _parent);
+        newPopUp.BaseInitialize(DeSpawnPopUp);
+
+        return (T)newPopUp;
+    }
+
 
     private void DeSpawnPopUp() => ActivateButton(_launcherButton, true);
     private void ActivateButton(Button button, bool activate) => button.interactable = activate;

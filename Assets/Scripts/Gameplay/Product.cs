@@ -46,7 +46,7 @@ public class Product : MonoBehaviour
         _rewardIcon.sprite = _product.Reward.Item.Image;
     }
 
-    public void TryBuy()
+    public void TryBuy() //TODO: use the popUpSpawner Service
     {
         Instantiate(_confirmPurchasePopUp, _parent).Initialize(_product, PurchaseConfirmed);
     }
@@ -55,12 +55,12 @@ public class Product : MonoBehaviour
     {
         if (_progression.CheckAmountOfResource(_product.Price.Item.Name) >= _product.Price.Amount)
         {
-            _progression.SetAmoutOfResource(_product.Price.Item.Name, -_product.Price.Amount);
-            _progression.SetAmoutOfResource(_product.Reward.Item.Name, _product.Reward.Amount);
+            _progression.SetAmountOfResource(_product.Price.Item.Name, -_product.Price.Amount);
+            _progression.SetAmountOfResource(_product.Reward.Item.Name, _product.Reward.Amount);
 
             _onTransactionCompleted?.Invoke();
         }
-        else
-            Instantiate(_notEnoughtResourcesPopUp, _parent).Initialize(null, null);
+        else //TODO: use the popUpSpawner Service
+            Instantiate(_notEnoughtResourcesPopUp, _parent).BaseInitialize(null, null);
     }
 }

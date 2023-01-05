@@ -15,7 +15,7 @@ public class ConfirmPurchasePopUp : BasePopUp
     
     public void Initialize(ProductData product, Action onConfirm)
     {
-        base.Initialize(null, null);
+        base.BaseInitialize(null, null);
 
         _onConfirm = onConfirm;
         _product = product;

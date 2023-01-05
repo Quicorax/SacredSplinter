@@ -55,7 +55,7 @@ public class Quest : MonoBehaviour
         _rewardIcon.sprite = data.Reward.Item.Image;
         _progressionPerCent.text = GetProgression();
 
-        _claimed = _progression.GetQuestCompleted(_quest.QuestIndex);
+        _claimed = _progression.CheckQuestCompleted(_quest.QuestIndex);
 
         SetInteractable(!_claimed);
         SetClaimeable(_completed && !_claimed);
@@ -64,7 +64,7 @@ public class Quest : MonoBehaviour
 
     private string GetProgression()
     {
-        int percent = _progression.GetAmountOfPregression(_quest.ConceptToComplete) * 100 / _quest.AmountToComplete;
+        int percent = _progression.CheckAmountOfPregression(_quest.ConceptToComplete) * 100 / _quest.AmountToComplete;
 
         int resultPercent = Mathf.Clamp(percent, 0, 100);
 
@@ -81,7 +81,7 @@ public class Quest : MonoBehaviour
             _claimed = true;
 
             _progression.SetQuestCompleted(_quest.QuestIndex);
-            _progression.SetAmoutOfResource(_quest.Reward.Item.Name, _quest.Reward.Amount);
+            _progression.SetAmountOfResource(_quest.Reward.Item.Name, _quest.Reward.Amount);
 
             _onTransactionCompleted?.Invoke();
 

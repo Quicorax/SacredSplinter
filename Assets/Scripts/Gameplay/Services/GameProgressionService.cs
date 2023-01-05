@@ -16,12 +16,13 @@ public class GameProgressionService : IService
 
     [SerializeField] private List<ResourceElement> _resources = new();
     [SerializeField] private List<string> _unlockedHeros = new();
+    [SerializeField] private List<string> _discoveredEnemies = new();
     [SerializeField] private List<int> _completedQuestIndex = new();
     [SerializeField] private List<ProgressionOnLevel> _levelsProgression = new();
 
     [SerializeField] private int _totalMonstersKilled = 0;
 
-    [SerializeField] private bool _sfxOff, _musicOff = false;
+    [SerializeField] private bool _soundOff = false;
 
     public void Initialize(SaveLoadService saveLoadService) => _saveLoadService = saveLoadService;
 
@@ -29,13 +30,12 @@ public class GameProgressionService : IService
     {
         _resources = config.Resources;
         _unlockedHeros = config.UnlockedHeros;
-        _completedQuestIndex = config.CompletedQuestIndex;
         _levelsProgression = config.LevelsProgression;
 
         _saveLoadService.Save();
     }
 
-    public void SetAmoutOfResource(string resourceId, int elementAmount, bool save = true)
+    public void SetAmountOfResource(string resourceId, int elementAmount, bool save = true)
     {
         foreach (var resourcePack in _resources)
         {
@@ -62,60 +62,74 @@ public class GameProgressionService : IService
         return amount;
     }
 
-    public void SetQuestCompleted(int i) => _completedQuestIndex.Add(i);
-    public bool GetQuestCompleted(int i) => _completedQuestIndex.Contains(i);
+    public void SetQuestCompleted(int i)
+    {
+        _completedQuestIndex.Add(i);
+        _saveLoadService.Save();
+    }
+    public bool CheckQuestCompleted(int i) => _completedQuestIndex.Contains(i);
 
-    public int GetAmountOfPregression(string concept)
+    public void SetHeroUnlocked(string heroClass)
+    {
+        _unlockedHeros.Add(heroClass);
+        _saveLoadService.Save();
+    }
+    public bool CheckHeroUnlocked(string heroClass) => _unlockedHeros.Contains(heroClass);
+    public void SetEnemyDiscovered(string enemyKind)
+    {
+        _discoveredEnemies.Add(enemyKind);
+        _saveLoadService.Save();
+    }
+    public bool CheckEnemyDiscovered(string heroClass) => _discoveredEnemies.Contains(heroClass);
+    public int CheckAmountOfPregression(string concept)
     {
         switch (concept)
         {
             case "Monster":
                 return _totalMonstersKilled;
             case "Dungeon":
-                return GetHigherLevelReached();
+                return CheckHigherLevelReached();
             case "Boss_Village":
-                return GetLocationCompleted("Village");
+                return CheckLocationCompleted("Village");
             case "Boss_Sewer":
-                return GetLocationCompleted("Sewers");
+                return CheckLocationCompleted("Sewers");
             case "Boss_Dungeon":
-                return GetLocationCompleted("Dungeons");
+                return CheckLocationCompleted("Dungeons");
         }
-    
+
         return 0;
     }
-    private int GetHigherLevelReached()
+
+    private int CheckHigherLevelReached()
     {
         int higherLevel = 0;
-    
+
         foreach (var item in _levelsProgression)
         {
             if (item.MaxLevel > higherLevel)
                 higherLevel = item.MaxLevel;
         }
-    
+
         return higherLevel;
     }
-    
-    private int GetLocationCompleted(string locationName)
+
+    private int CheckLocationCompleted(string locationName)
     {
         foreach (var item in _levelsProgression)
         {
             if (item.LevelName == locationName && item.Completed)
                 return 1;
         }
-    
+
         return 0;
     }
-    public void SetSFXOff(bool off)
+
+
+
+    public void SetSoundOff(bool off)
     {
-        _sfxOff = off;
+        _soundOff = off;
         _saveLoadService.Save();
     }
-    public void SetMusicOff(bool off)
-    {
-        _musicOff = off;
-        _saveLoadService.Save();
-    }
-    public bool CheckSFXOff() => _sfxOff;
-    public bool CheckMusicOff() => _musicOff;
+    public bool CheckSoundOff() => _soundOff;
 }

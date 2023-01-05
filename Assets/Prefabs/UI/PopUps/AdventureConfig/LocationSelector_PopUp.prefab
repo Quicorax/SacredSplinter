@@ -708,6 +708,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AtifactTaken
       objectReference: {fileID: 0}
+    - target: {fileID: 1841018402243815360, guid: f920f0ad90e07184fbc624231ce40cd7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0129f4f9dad1dea45aacbe8a68e57f21, type: 3}
     - target: {fileID: 3289322118161680182, guid: f920f0ad90e07184fbc624231ce40cd7, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -1094,7 +1098,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 529868722, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_text
-      value: Select Dungeon
+      value: Select Location
       objectReference: {fileID: 0}
     - target: {fileID: 529868722, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -1226,7 +1230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581012417779045143, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_Name
-      value: DungeonSelector_PopUp
+      value: LocationSelector_PopUp
       objectReference: {fileID: 0}
     - target: {fileID: 6539691850248847232, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_Enabled

@@ -47,7 +47,7 @@ public class AdventureSelectorPopUp : BasePopUp
         _actualSelectable = selectable;
 
         ActivateButton(selectable.Button, false);
-        Instantiate(selectable.PopUp, transform).Initialize(OnPopUpClose, OnSelectableSelected);
+        Instantiate(selectable.PopUp, transform).BaseInitialize(OnPopUpClose, OnSelectableSelected);
     }
     public void EngageOnAdventure()
     {

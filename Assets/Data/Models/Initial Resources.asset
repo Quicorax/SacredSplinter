@@ -20,7 +20,7 @@ MonoBehaviour:
   - Key: Hero License
     Amount: 1
   UnlockedHeros:
-  - Beggar
+  - Errant
   CompletedQuestIndex: 
   LevelsProgression:
   - LevelName: Village
