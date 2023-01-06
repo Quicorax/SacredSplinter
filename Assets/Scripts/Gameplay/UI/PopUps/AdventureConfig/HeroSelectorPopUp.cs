@@ -1,11 +1,5 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-
-[Serializable]
-public class HeroData : BaseData
-{
-}
 
 public class HeroSelectorPopUp : SelectorPopUp
 {
@@ -15,27 +9,24 @@ public class HeroSelectorPopUp : SelectorPopUp
     private ConfirmHeroUnlockPopUp _unlockHeroPopUp;
 
     [SerializeField]
+    private PopUpLauncher _heroStats;
+
+    [SerializeField]
     private TMP_Text _selectText;
 
     private bool _elementUnlocked;
 
     private GameProgressionService _progress;
-
-    private Action<BaseData> _onSelect;
-    private Action _onCancel;
+    private PopUpSpawnerService _popUpSpawner;
 
     private void Start()
     {
         _progress = ServiceLocator.GetService<GameProgressionService>();
+        _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
 
         ElementChanged();
     }
-
-    public void Initialize(Action<BaseData> onSelect, Action onCancel)
-    {
-        _onSelect = onSelect;
-        _onCancel = onCancel;
-    }
+       
 
     public void ElementChanged()
     {
@@ -48,26 +39,24 @@ public class HeroSelectorPopUp : SelectorPopUp
     public void ShowHeroStats()
     {
         Debug.Log("Open Hero Stats PopUp");
+
+        //TODO: design Hero combat stats system
+
+        //_popUpSpawner.SpawnPopUp(_heroStats); 
     }
 
     public void SelectElement()
     {
         if (_elementUnlocked)
         {
-            _onSelect?.Invoke(Model.Entries[ActualIndex]);
+            OnSelect?.Invoke(Model.Entries[ActualIndex]);
             CloseSelf();
         }
         else
         {
-            ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp<ConfirmHeroUnlockPopUp>(_unlockHeroPopUp)
+            _popUpSpawner.SpawnPopUp<ConfirmHeroUnlockPopUp>(_unlockHeroPopUp)
                 .Initialize(CurrentElement.Header, OnHeroUnlocked);
         }
-    }
-
-    public override void CloseSelf()
-    {
-        _onCancel?.Invoke();
-        base.CloseSelf();
     }
 
     private void OnHeroUnlocked()

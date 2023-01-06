@@ -28,6 +28,20 @@ public class SelectorPopUp : BasePopUp
 
     internal BaseData CurrentElement;
 
+    internal Action<BaseData> OnSelect;
+    private Action _onCancel;
+
+    public void Initialize(Action<BaseData> onSelect, Action onCancel)
+    {
+        OnSelect = onSelect;
+        _onCancel = onCancel;
+    }
+    public override void CloseSelf()
+    {
+        _onCancel?.Invoke();
+        base.CloseSelf();
+    }
+
     public override void BaseInitialize(Action onClosePopUp)
     {
         base.BaseInitialize(onClosePopUp);
@@ -79,4 +93,6 @@ public class SelectorPopUp : BasePopUp
     }
 
     public virtual void OnMiddleOfFade() { }
+
+
 }
