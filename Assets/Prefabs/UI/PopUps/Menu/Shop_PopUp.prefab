@@ -387,6 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 2628687863454569922}
   _onResourcesUpdated: {fileID: 11400000, guid: 3d97e89007f25c749a675386ba5a9e14, type: 2}
+  View: {fileID: 3263222719077715367, guid: 6dc515bae9029a24487922f08dd1a480, type: 3}
+  _elementsHolder: {fileID: 3377959522541819298}
   _productModel: {fileID: 11400000, guid: 30eb83923043c3241ad5f6c4150c696f, type: 2}
-  _productView: {fileID: 7708804457615744805, guid: 6dc515bae9029a24487922f08dd1a480, type: 3}
   _productHolder: {fileID: 3377959522541819298}

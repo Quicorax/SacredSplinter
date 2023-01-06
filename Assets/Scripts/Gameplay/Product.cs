@@ -1,4 +1,3 @@
-using Quicorax;
 using System;
 using TMPro;
 using UnityEngine;

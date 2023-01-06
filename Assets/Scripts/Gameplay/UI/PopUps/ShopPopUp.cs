@@ -1,31 +1,17 @@
-﻿using Quicorax;
-using UnityEngine;
-public class ShopPopUp : BasePopUp
+﻿using UnityEngine;
+
+public class ShopPopUp : VerticalSelectablePopUp
 {
-    [SerializeField]
-    private SimpleEventBus _onResourcesUpdated;
 
     [SerializeField]
     private ProductModel _productModel;
 
     [SerializeField]
-    private Product _productView;
-
-    [SerializeField]
     private Transform _productHolder;
 
-    public void Initialize()
-    {
-        SpawnProducts();
-    }
-    private void SpawnProducts()
+    internal override void SpawnElements()
     {
         foreach (ProductData product in _productModel.Products)
-            Instantiate(_productView, _productHolder).Initialize(product, UpdateUI);
-    }
-
-    private void UpdateUI()
-    {
-        _onResourcesUpdated.NotifyEvent();
+            InstanceElement<Product>(View).Initialize(product, UpdateUI);
     }
 }

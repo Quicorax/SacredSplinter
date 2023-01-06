@@ -46,7 +46,7 @@ public class AdventureSelectorPopUp : BasePopUp
     public void OpenHeroSelector() => 
         OpenSelector<HeroSelectorPopUp>(x => _adventureConfig.SetHero(x.Header), _heroSelectionPack);
 
-    private void OpenSelector<T>(Action<BaseData> setData,SelectorPack elements) where T: SelectorPopUp
+    private void OpenSelector<T>(Action<BaseData> setData,SelectorPack elements) where T: HorizontalSelectablePopUp
     {
         ActivateButton(elements.Launcher.Button, false);
         _popUpSpawner.SpawnPopUp<T>(elements.Launcher)

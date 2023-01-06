@@ -13,7 +13,7 @@ public class BaseData
     public Sprite Image;
 }
 
-public class SelectorPopUp : BasePopUp
+public class HorizontalSelectablePopUp : BasePopUp
 {
     public BaseModel Model;
 

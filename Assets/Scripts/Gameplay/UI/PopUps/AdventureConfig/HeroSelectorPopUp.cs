@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class HeroSelectorPopUp : SelectorPopUp
+public class HeroSelectorPopUp : HorizontalSelectablePopUp
 {
     [SerializeField]
     private GameObject _selectable;

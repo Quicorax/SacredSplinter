@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class LocationSelectorPopUp : SelectorPopUp
+public class LocationSelectorPopUp : HorizontalSelectablePopUp
 {
     [SerializeField]
     private GameObject _artifactCheck;

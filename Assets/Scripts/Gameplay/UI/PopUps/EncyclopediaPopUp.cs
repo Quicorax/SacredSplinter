@@ -9,7 +9,7 @@ public class EntryData : BaseData
 {
 }
 
-public class EncyclopediaPopUp : SelectorPopUp
+public class EncyclopediaPopUp : HorizontalSelectablePopUp
 {
     [SerializeField]
     private TMP_Text _location, _descriptionText, _unknownDescriptionText;
