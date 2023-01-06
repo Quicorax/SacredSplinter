@@ -36,15 +36,16 @@ public class SelectorPopUp : BasePopUp
         OnSelect = onSelect;
         _onCancel = onCancel;
     }
+
     public override void CloseSelf()
     {
         _onCancel?.Invoke();
         base.CloseSelf();
     }
 
-    public override void BaseInitialize(Action onClosePopUp)
+    public override void Initialize(PopUpLauncher popUpBundle, Action<Button> onClosePopUp)
     {
-        base.BaseInitialize(onClosePopUp);
+        base.Initialize(popUpBundle, onClosePopUp);
 
         for (int i = 0; i < Model.Entries.Count; i++)
             _elements.Add(i, Model.Entries[i]);

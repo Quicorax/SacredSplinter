@@ -14,9 +14,7 @@ public class ProductData
 public class Product : MonoBehaviour
 {
     [SerializeField]
-    private ConfirmPurchasePopUp _confirmPurchasePopUp;
-    [SerializeField]
-    private NotEnoughtResources _notEnoughtResourcesPopUp;
+    private PopUpLauncher _confirmPurchasePopUp, _notEnoughtResourcesPopUp;
 
     [SerializeField]
     private TMP_Text _header, _priceAmount, _rewardAmount;
@@ -61,6 +59,6 @@ public class Product : MonoBehaviour
             _onTransactionCompleted?.Invoke();
         }
         else
-            _popUpSpawner.SpawnPopUp<NotEnoughtResources>(_notEnoughtResourcesPopUp);
+            _popUpSpawner.SpawnPopUp<NotEnoughtResources>(_notEnoughtResourcesPopUp).Initialize();
     }
 }

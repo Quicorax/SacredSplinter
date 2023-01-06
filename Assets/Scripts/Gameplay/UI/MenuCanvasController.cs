@@ -12,11 +12,11 @@ public class MenuCanvasController : MonoBehaviour
     }
 
     public void OpenAdventureSelector() =>
-        _popUpSpawner.SpawnPopUp(_adventureSelector);
+        _popUpSpawner.SpawnPopUp<AdventureSelectorPopUp>(_adventureSelector).Initialize();
     public void OpenQuests() => 
-        _popUpSpawner.SpawnPopUp(_quests);
+        _popUpSpawner.SpawnPopUp<QuestsPopUp>(_quests).Initialize();
     public void OpenShop() => 
-        _popUpSpawner.SpawnPopUp(_shop);
+        _popUpSpawner.SpawnPopUp<ShopPopUp>(_shop).Initialize();
     public void OpenEncyclopedia() =>
-        _popUpSpawner.SpawnPopUp(_encyclopedia);
+        _popUpSpawner.SpawnPopUp<EncyclopediaPopUp>(_encyclopedia).Initialize(null, null);
 }

@@ -3,8 +3,6 @@ using UnityEngine.UI;
 
 public class PopUpSpawnerService : IService
 {
-    private Button _launcherButton;
-
     private Transform _parent;
 
     public void Initialize(Transform parent)
@@ -14,21 +12,27 @@ public class PopUpSpawnerService : IService
 
     public void SpawnPopUp(PopUpLauncher popUpBundle)
     {
-        _launcherButton = popUpBundle.Button;
+        if (popUpBundle.Button != null)
+            ActivateButton(popUpBundle.Button, false);
 
-        ActivateButton(popUpBundle.Button, false);
-
-        UnityEngine.Object.Instantiate(popUpBundle.PopUp, _parent).BaseInitialize(DeSpawnPopUp);
+        Object.Instantiate(popUpBundle.PopUp, _parent).Initialize(popUpBundle, x => DeSpawnPopUp(x));
     }
 
-    public T SpawnPopUp<T>(BasePopUp popUp) where T : BasePopUp
+    public T SpawnPopUp<T>(PopUpLauncher popUpBundle) where T : BasePopUp
     {
-        var newPopUp = UnityEngine.Object.Instantiate(popUp, _parent);
-        newPopUp.BaseInitialize(DeSpawnPopUp);
+        if(popUpBundle.Button != null)
+            ActivateButton(popUpBundle.Button, false);
+
+        var newPopUp = Object.Instantiate(popUpBundle.PopUp, _parent);
+        newPopUp.Initialize(popUpBundle, x => DeSpawnPopUp(x));
 
         return (T)newPopUp;
     }
 
-    private void DeSpawnPopUp() => ActivateButton(_launcherButton, true);
+    private void DeSpawnPopUp(Button button) 
+    {
+        if(button != null)
+            ActivateButton(button, true);
+    }
     private void ActivateButton(Button button, bool activate) => button.interactable = activate;
 }

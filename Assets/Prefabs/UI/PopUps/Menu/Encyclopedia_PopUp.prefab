@@ -329,15 +329,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 2628687863454569922}
-  _model: {fileID: 11400000, guid: cb151b5115a6d0247a71b2590b0d628d, type: 2}
+  Model: {fileID: 11400000, guid: cb151b5115a6d0247a71b2590b0d628d, type: 2}
   _header: {fileID: 2366243052904110662}
   _description: {fileID: 4982499028577913323}
   _index: {fileID: 2287856226259538539}
   _image: {fileID: 934843440369103498}
-  CurrentElement:
-    Header: 
-    Description: 
-    Image: {fileID: 0}
   _location: {fileID: 6228458280442896817}
   _descriptionText: {fileID: 4982499028577913323}
   _unknownDescriptionText: {fileID: 1193590684052021793}

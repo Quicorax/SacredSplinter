@@ -1,6 +1,5 @@
 ﻿using Quicorax;
 using UnityEngine;
-
 public class ShopPopUp : BasePopUp
 {
     [SerializeField]
@@ -14,11 +13,6 @@ public class ShopPopUp : BasePopUp
 
     [SerializeField]
     private Transform _productHolder;
-
-    private void Start()
-    {
-        Initialize();
-    }
 
     public void Initialize()
     {

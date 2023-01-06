@@ -6,10 +6,7 @@ public class HeroSelectorPopUp : SelectorPopUp
     [SerializeField]
     private GameObject _selectable;
     [SerializeField]
-    private ConfirmHeroUnlockPopUp _unlockHeroPopUp;
-
-    [SerializeField]
-    private PopUpLauncher _heroStats;
+    private PopUpLauncher _unlockHeroPopUp, _heroStats;
 
     [SerializeField]
     private TMP_Text _selectText;

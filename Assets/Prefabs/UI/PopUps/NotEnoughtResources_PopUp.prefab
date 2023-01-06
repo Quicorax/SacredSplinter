@@ -266,6 +266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NotEnoughtResources_PopUp
       objectReference: {fileID: 0}
+    - target: {fileID: 7419599036995821756, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8533298623921526031, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_SizeDelta.x
       value: 850

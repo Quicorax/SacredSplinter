@@ -14,11 +14,6 @@ public class QuestsPopUp : BasePopUp
     [SerializeField]
     private Transform _questHolder;
 
-    private void Start()
-    {
-        Initialize();
-    }
-
     public void Initialize()
     {
         SpawnQuests();

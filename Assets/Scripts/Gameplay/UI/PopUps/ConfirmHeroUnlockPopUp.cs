@@ -5,7 +5,7 @@ using UnityEngine;
 public class ConfirmHeroUnlockPopUp : BasePopUp
 {
     [SerializeField]
-    private NotEnoughtResources _notEnoughtResourcesPopUp;
+    private PopUpLauncher _notEnoughtResourcesPopUp;
 
     [SerializeField]
     private TMP_Text _heroClass, _availableHeroLicenses;

@@ -128,8 +128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d794ab30c3a7e6f40aa9dae9756d6845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _confirmPurchasePopUp: {fileID: 6340855719593345623, guid: ce5221d7c19fd484786f477e07ee5e1c, type: 3}
-  _notEnoughtResourcesPopUp: {fileID: -8800489713506235594, guid: b41bca536c66a114fbede4a9ac787e41, type: 3}
+  _confirmPurchasePopUp:
+    PopUp: {fileID: 6340855719593345623, guid: ce5221d7c19fd484786f477e07ee5e1c, type: 3}
+    Button: {fileID: 0}
+  _notEnoughtResourcesPopUp:
+    PopUp: {fileID: -8800489713506235594, guid: b41bca536c66a114fbede4a9ac787e41, type: 3}
+    Button: {fileID: 0}
   _header: {fileID: 288332314024372375}
   _priceAmount: {fileID: 6484330174705148428}
   _rewardAmount: {fileID: 1807100962622533468}

@@ -18,7 +18,6 @@ public class QuestData
 public class Reward
 {
     public int Amount;
-
     public Item Item;
 }
 
