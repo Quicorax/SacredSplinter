@@ -1393,7 +1393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 2075591204145572089}
-  _model: {fileID: 11400000, guid: b160b285e13a84f4c960016332fc3dd1, type: 2}
+  Model: {fileID: 11400000, guid: b160b285e13a84f4c960016332fc3dd1, type: 2}
   _header: {fileID: 857717860437859749}
   _description: {fileID: 3891704147727512183}
   _index: {fileID: 8605202826231529382}

@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
+
     private void Awake()
     {
         Singletonize();
@@ -23,7 +24,13 @@ public class GameManager : MonoBehaviour
     {
         SetServicesUninitialized();
     }
+    private void Singletonize()
+    {
+        if (Instance == null)
+            Instance = this;
 
+        DontDestroyOnLoad(this);
+    }
 
     private void InitializeServiceLocator()
     {
@@ -31,14 +38,6 @@ public class GameManager : MonoBehaviour
 
         ServiceFeeder serviceLoader = new();
         serviceLoader.LoadSevices(_servicesElements);
-    }
-
-    private void Singletonize()
-    {
-        if (Instance == null)
-            Instance = this;
-
-        DontDestroyOnLoad(this);
     }
 
     private void SetServicesUninitialized() => PlayerPrefs.SetInt("ServicesInitialized", 0);

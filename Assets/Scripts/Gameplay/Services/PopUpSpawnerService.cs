@@ -28,9 +28,9 @@ public class PopUpSpawnerService : IService
         return (T)newPopUp;
     }
 
-    public void SpawnPopUp(BasePopUp popUp, Action action, Action<BaseData> baseDataAction)
+    public void SpawnPopUp(BasePopUp popUp, Action action)
     {
-        UnityEngine.Object.Instantiate(popUp, _parent).BaseInitialize(action, baseDataAction);
+        UnityEngine.Object.Instantiate(popUp, _parent).BaseInitialize(action);
     }
 
     private void DeSpawnPopUp() => ActivateButton(_launcherButton, true);

@@ -1,73 +1,100 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-[Serializable]
-public class SelectablePack
-{
-    public Image ElementImage;
-    public GameObject UnknownElementImage;
-
-    public SelectorPopUp PopUp;
-    public Button Button;
-}
 public class AdventureSelectorPopUp : BasePopUp
 {
-    [SerializeField]
-    private SelectablePack _heroSelector, _dungeonSelector;
+    public Image HeroImage;
+    public GameObject UnknownHeroImage;
+    public HeroSelectorPopUp HeroSelector;
+    public Button HeroButton;
 
-    private SelectablePack _actualSelectable;
+    public Image LocationImage;
+    public GameObject UnknownLocationImage;
+    public LocationSelectorPopUp LocationSelector;
+    public Button LocationButton;
 
     [SerializeField]
     private Button _engageOnAdventureButton;
 
+    private PopUpSpawnerService _popUpSpawner;
+    private AdventureConfigurationService _adventureConfig;
+
+
     private void Start()
     {
+        _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
+        _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
+
         Initialize();
     }
 
     public void Initialize()
     {
-        TurnObjectOn(_dungeonSelector.ElementImage.gameObject, false);
-        TurnObjectOn(_heroSelector.ElementImage.gameObject, false);
+        _adventureConfig.ResetSelection();
+
+        TurnObjectOn(LocationImage.gameObject, false);
+        TurnObjectOn(HeroImage.gameObject, false);
 
         ActivateButton(_engageOnAdventureButton, false);
     }
-    public void OpenDungeonSelector() => OpenSelectablePopUp(_dungeonSelector);
-    public void OpenHeroSelector() => OpenSelectablePopUp(_heroSelector);
-
-    public override void CloseSelf()
+    public void OpenLocationSelector()
     {
-        MenuManager.Instance.CancelSelection();
-        base.CloseSelf();
+        ActivateButton(LocationButton, false);
+
+        _popUpSpawner.SpawnPopUp<LocationSelectorPopUp>(LocationSelector)
+            .Initialize(OnLocationSelected, OnLocationSelectionCancelled);
+    }
+    public void OpenHeroSelector()
+    {
+        ActivateButton(HeroButton, false);
+
+        _popUpSpawner.SpawnPopUp<HeroSelectorPopUp>(HeroSelector)
+            .Initialize(OnHeroSelected, OnHeroSelectionCancelled);
     }
 
-    private void OpenSelectablePopUp(SelectablePack selectable)
-    {
-        _actualSelectable = selectable;
-
-        ActivateButton(selectable.Button, false);
-
-        ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp(selectable.PopUp, OnPopUpClose, OnSelectableSelected);
-    }
     public void EngageOnAdventure()
     {
         CloseSelf();
         ServiceLocator.GetService<NavigationService>().NavigateToScene("01_Game");
     }
 
-    private void OnSelectableSelected(BaseData data)
+    private void OnLocationSelected(BaseData data)
     {
-        TurnObjectOn(_actualSelectable.ElementImage.gameObject, true);
-        TurnObjectOn(_actualSelectable.UnknownElementImage, false);
+        _adventureConfig.SetLocation(data.Header);
 
-        _actualSelectable.ElementImage.sprite = data.Image;
+        LocationImage.sprite = data.Image;
 
-        if (MenuManager.Instance.ReadyToEngage())
-            ActivateButton(_engageOnAdventureButton, true);
+        TurnObjectOn(LocationImage.gameObject, true);
+        TurnObjectOn(UnknownLocationImage, false);
+
+        ActivateButton(LocationButton, true);
+
+        CheckReadyToEngage();
+    }
+    private void OnHeroSelected(BaseData data)
+    {
+        _adventureConfig.SetHero(data.Header);
+
+        HeroImage.sprite = data.Image;
+
+        TurnObjectOn(HeroImage.gameObject, true);
+        TurnObjectOn(UnknownHeroImage, false);
+
+        ActivateButton(HeroButton, true);
+
+        CheckReadyToEngage();
     }
 
-    private void OnPopUpClose() => ActivateButton(_actualSelectable.Button, true);
+    private void OnHeroSelectionCancelled() => ActivateButton(HeroButton, true);
+    private void OnLocationSelectionCancelled() => ActivateButton(LocationButton, true);
+
+    private void CheckReadyToEngage()
+    {
+        if (_adventureConfig.ReadyToEngage())
+            ActivateButton(_engageOnAdventureButton, true);
+    }
+    public void CancelSelection() => _adventureConfig.ResetSelection();
+
     private void ActivateButton(Button button, bool activate) => button.interactable = activate;
     private void TurnObjectOn(GameObject gameObject, bool on) => gameObject.SetActive(on);
 }

@@ -21,12 +21,22 @@ public class HeroSelectorPopUp : SelectorPopUp
 
     private GameProgressionService _progress;
 
+    private Action<BaseData> _onSelect;
+    private Action _onCancel;
+
     private void Start()
     {
         _progress = ServiceLocator.GetService<GameProgressionService>();
 
         ElementChanged();
     }
+
+    public void Initialize(Action<BaseData> onSelect, Action onCancel)
+    {
+        _onSelect = onSelect;
+        _onCancel = onCancel;
+    }
+
     public void ElementChanged()
     {
         _elementUnlocked = _progress.CheckHeroUnlocked(CurrentElement.Header);
@@ -40,18 +50,24 @@ public class HeroSelectorPopUp : SelectorPopUp
         Debug.Log("Open Hero Stats PopUp");
     }
 
-    public override void SelectElement()
+    public void SelectElement()
     {
         if (_elementUnlocked)
         {
-            MenuManager.Instance.HeroClassSelected = CurrentElement.Header;
-            base.SelectElement();
+            _onSelect?.Invoke(Model.Entries[ActualIndex]);
+            CloseSelf();
         }
         else
         {
             ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp<ConfirmHeroUnlockPopUp>(_unlockHeroPopUp)
                 .Initialize(CurrentElement.Header, OnHeroUnlocked);
         }
+    }
+
+    public override void CloseSelf()
+    {
+        _onCancel?.Invoke();
+        base.CloseSelf();
     }
 
     private void OnHeroUnlocked()

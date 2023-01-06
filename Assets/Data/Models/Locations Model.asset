@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30cf744e6e381fd4e8c68fddea9594db, type: 3}
-  m_Name: Dungeon Model
+  m_Name: Locations Model
   m_EditorClassIdentifier: 
   Entries:
   - Header: Village

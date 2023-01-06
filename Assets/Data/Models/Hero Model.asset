@@ -16,18 +16,18 @@ MonoBehaviour:
   - Header: Errant
     Description: A wandering soul, exploring the unknown reaches of the world in
       search of treasure and the thrill of discovery.
-    Image: {fileID: 21300000, guid: 40832a86ec222f642af963a541eda2ea, type: 3}
+    Image: {fileID: 0}
   - Header: Brute
     Description: A brute of a man, relying on strength and brawn rather than wit
       and cunning as he sought out treasure and glory in the far-flung corners of
       the world.
-    Image: {fileID: 21300000, guid: 40832a86ec222f642af963a541eda2ea, type: 3}
+    Image: {fileID: 0}
   - Header: Thief
     Description: A sly thief, using stealth and deception to pilfer valuable goods
       and riches from those foolish enough to underestimate her.
-    Image: {fileID: 21300000, guid: 40832a86ec222f642af963a541eda2ea, type: 3}
+    Image: {fileID: 0}
   - Header: Cultist
     Description: A devout cultist, seeking out forbidden knowledge and ancient relics
       in the hopes of summoning powerful deities and unlocking the secrets of the
       universe.
-    Image: {fileID: 21300000, guid: 40832a86ec222f642af963a541eda2ea, type: 3}
+    Image: {fileID: 0}

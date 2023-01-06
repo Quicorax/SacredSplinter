@@ -87,7 +87,7 @@ public class GameProgressionService : IService
         {
             case "Monster":
                 return _totalMonstersKilled;
-            case "Dungeon":
+            case "Location":
                 return CheckHigherLevelReached();
             case "Boss_Village":
                 return CheckLocationCompleted("Village");

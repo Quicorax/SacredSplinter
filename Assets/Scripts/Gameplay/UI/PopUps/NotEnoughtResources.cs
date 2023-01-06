@@ -3,9 +3,9 @@ using System;
 
 public class NotEnoughtResources : BasePopUp
 {
-    public override void BaseInitialize(Action onClosePopUp, Action<BaseData> onElementSelected = null)
+    public override void BaseInitialize(Action onClosePopUp)
     {
-        base.BaseInitialize(onClosePopUp, onElementSelected);
+        base.BaseInitialize(onClosePopUp);
         Invoke(nameof(StartFade), 0.5f);
     }
 

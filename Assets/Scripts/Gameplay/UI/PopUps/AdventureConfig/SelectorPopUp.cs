@@ -15,8 +15,7 @@ public class BaseData
 
 public class SelectorPopUp : BasePopUp
 {
-    [SerializeField]
-    private BaseModel _model;
+    public BaseModel Model;
 
     [SerializeField]
     private TMP_Text _header, _description, _index;
@@ -25,20 +24,16 @@ public class SelectorPopUp : BasePopUp
 
     private Dictionary<int, BaseData> _elements = new();
 
-    private Action<BaseData> _onElementSelected;
+    internal int ActualIndex = 0;
 
-    private int _actualElementIndex = 0;
+    internal BaseData CurrentElement;
 
-    public BaseData CurrentElement;
-
-    public override void BaseInitialize(Action onClosePopUp, Action<BaseData> onElementSelected)
+    public override void BaseInitialize(Action onClosePopUp)
     {
-        base.BaseInitialize(onClosePopUp, onElementSelected);
+        base.BaseInitialize(onClosePopUp);
 
-        _onElementSelected = onElementSelected;
-
-        for (int i = 0; i < _model.Entries.Count; i++)
-            _elements.Add(i, _model.Entries[i]);
+        for (int i = 0; i < Model.Entries.Count; i++)
+            _elements.Add(i, Model.Entries[i]);
 
         PrintElementData();
     }
@@ -47,17 +42,17 @@ public class SelectorPopUp : BasePopUp
     {
         if (next)
         {
-            if (_actualElementIndex < _elements.Count - 1)
-                _actualElementIndex++;
+            if (ActualIndex < _elements.Count - 1)
+                ActualIndex++;
             else
-                _actualElementIndex = 0;
+                ActualIndex = 0;
         }
         else
         {
-            if (_actualElementIndex > 0)
-                _actualElementIndex--;
+            if (ActualIndex > 0)
+                ActualIndex--;
             else
-                _actualElementIndex = _elements.Count - 1;
+                ActualIndex = _elements.Count - 1;
         }
 
         PrintElementData();
@@ -65,9 +60,9 @@ public class SelectorPopUp : BasePopUp
 
     private void PrintElementData()
     {
-        CurrentElement = _elements[_actualElementIndex];
+        CurrentElement = _elements[ActualIndex];
 
-        FadeAnim(_index, ()=> _index.text = _actualElementIndex.ToString());
+        FadeAnim(_index, ()=> _index.text = ActualIndex.ToString());
         FadeAnim(_header, ()=> _header.text = CurrentElement.Header);
         FadeAnim(_description , ()=>_description.text = CurrentElement.Description);
         FadeAnim(_image, () => _image.sprite = CurrentElement.Image);
@@ -81,11 +76,6 @@ public class SelectorPopUp : BasePopUp
             onFullFaded?.Invoke();
             objectToFade.DOFade(1, 0.2f);
         });
-    }
-    public virtual void SelectElement()
-    {
-        _onElementSelected?.Invoke(_model.Entries[_actualElementIndex]);
-        CloseSelf();
     }
 
     public virtual void OnMiddleOfFade() { }
