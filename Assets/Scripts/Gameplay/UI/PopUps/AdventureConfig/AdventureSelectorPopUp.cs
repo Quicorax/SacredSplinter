@@ -1,17 +1,25 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
+[Serializable]
+public struct SelectorPack
+{
+    public Image Image;
+    public GameObject Unselected;
+    public Button Button;
+}
 public class AdventureSelectorPopUp : BasePopUp
 {
-    public Image HeroImage;
-    public GameObject UnknownHeroImage;
-    public HeroSelectorPopUp HeroSelector;
-    public Button HeroButton;
+    [SerializeField]
+    private SelectorPack _heroSelectionPack;
+    [SerializeField]
+    private HeroSelectorPopUp HeroSelector;
 
-    public Image LocationImage;
-    public GameObject UnknownLocationImage;
-    public LocationSelectorPopUp LocationSelector;
-    public Button LocationButton;
+    [SerializeField]
+    private SelectorPack _locationSelectionPack;
+    [SerializeField]
+    private LocationSelectorPopUp LocationSelector;
 
     [SerializeField]
     private Button _engageOnAdventureButton;
@@ -32,24 +40,10 @@ public class AdventureSelectorPopUp : BasePopUp
     {
         _adventureConfig.ResetSelection();
 
-        TurnObjectOn(LocationImage.gameObject, false);
-        TurnObjectOn(HeroImage.gameObject, false);
+        TurnObjectOn(_locationSelectionPack.Image.gameObject, false);
+        TurnObjectOn(_heroSelectionPack.Image.gameObject, false);
 
         ActivateButton(_engageOnAdventureButton, false);
-    }
-    public void OpenLocationSelector()
-    {
-        ActivateButton(LocationButton, false);
-
-        _popUpSpawner.SpawnPopUp<LocationSelectorPopUp>(LocationSelector)
-            .Initialize(OnLocationSelected, OnLocationSelectionCancelled);
-    }
-    public void OpenHeroSelector()
-    {
-        ActivateButton(HeroButton, false);
-
-        _popUpSpawner.SpawnPopUp<HeroSelectorPopUp>(HeroSelector)
-            .Initialize(OnHeroSelected, OnHeroSelectionCancelled);
     }
 
     public void EngageOnAdventure()
@@ -58,41 +52,37 @@ public class AdventureSelectorPopUp : BasePopUp
         ServiceLocator.GetService<NavigationService>().NavigateToScene("01_Game");
     }
 
-    private void OnLocationSelected(BaseData data)
+
+    public void OpenLocationSelector() => 
+        OpenSelector<LocationSelectorPopUp>(x => _adventureConfig.SetLocation(x.Header), LocationSelector, _locationSelectionPack);
+
+    public void OpenHeroSelector() => 
+        OpenSelector<HeroSelectorPopUp>(x => _adventureConfig.SetHero(x.Header), HeroSelector, _heroSelectionPack);
+
+    private void OpenSelector<T>(Action<BaseData> setData, BasePopUp popUp, SelectorPack elements) where T: SelectorPopUp
     {
-        _adventureConfig.SetLocation(data.Header);
-
-        LocationImage.sprite = data.Image;
-
-        TurnObjectOn(LocationImage.gameObject, true);
-        TurnObjectOn(UnknownLocationImage, false);
-
-        ActivateButton(LocationButton, true);
-
-        CheckReadyToEngage();
-    }
-    private void OnHeroSelected(BaseData data)
-    {
-        _adventureConfig.SetHero(data.Header);
-
-        HeroImage.sprite = data.Image;
-
-        TurnObjectOn(HeroImage.gameObject, true);
-        TurnObjectOn(UnknownHeroImage, false);
-
-        ActivateButton(HeroButton, true);
-
-        CheckReadyToEngage();
+        ActivateButton(elements.Button, false);
+        _popUpSpawner.SpawnPopUp<T>(popUp)
+            .Initialize(data => OnSelectionSucced(setData, data, elements), ()=> OnSelectionFailed(elements));
     }
 
-    private void OnHeroSelectionCancelled() => ActivateButton(HeroButton, true);
-    private void OnLocationSelectionCancelled() => ActivateButton(LocationButton, true);
-
-    private void CheckReadyToEngage()
+    private void OnSelectionSucced(Action<BaseData> setData, BaseData data, SelectorPack elements)
     {
+        setData?.Invoke(data);
+
+        elements.Image.sprite = data.Image;
+
+        TurnObjectOn(elements.Image.gameObject, true);
+        TurnObjectOn(elements.Unselected, false);
+
+        ActivateButton(elements.Button, true);
+
         if (_adventureConfig.ReadyToEngage())
             ActivateButton(_engageOnAdventureButton, true);
     }
+
+    private void OnSelectionFailed(SelectorPack elements) => ActivateButton(elements.Button, true);
+
     public void CancelSelection() => _adventureConfig.ResetSelection();
 
     private void ActivateButton(Button button, bool activate) => button.interactable = activate;

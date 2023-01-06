@@ -1455,14 +1455,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 6440468336172182926}
-  HeroImage: {fileID: 8655934159130668304}
-  UnknownHeroImage: {fileID: 9089707916238863943}
+  _heroSelectionPack:
+    Image: {fileID: 8655934159130668304}
+    Unselected: {fileID: 9089707916238863943}
+    Button: {fileID: 5392626805746831686}
   HeroSelector: {fileID: 7644073357130152823, guid: 8907a6cc0d4cedf42966fd96172372b1, type: 3}
-  HeroButton: {fileID: 5392626805746831686}
-  LocationImage: {fileID: 89329598024588377}
-  UnknownLocationImage: {fileID: 5308873683045025887}
+  _locationSelectionPack:
+    Image: {fileID: 89329598024588377}
+    Unselected: {fileID: 5308873683045025887}
+    Button: {fileID: 2813776381146036707}
   LocationSelector: {fileID: 158168444277797920, guid: 44291e9ed630ea548badae7ef40b9f94, type: 3}
-  LocationButton: {fileID: 2813776381146036707}
   _engageOnAdventureButton: {fileID: 8209649076242695701}
 --- !u!224 &3442521451290317035 stripped
 RectTransform:
