@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SimpleScreenShot : MonoBehaviour
 {
-    private string Platform = "Generic";
+    private string Platform = "Android";
     private int Index = 0;
 
     void Update()
@@ -14,7 +14,7 @@ public class SimpleScreenShot : MonoBehaviour
     void ResolutionScreenShot()
     {
         Debug.Log("ScreenShot!");
-        ScreenCapture.CaptureScreenshot("AmanitaBoy_"+ Platform + "_Screenshot_"+ Index + ".png", 4);
+        ScreenCapture.CaptureScreenshot("SacredSplinter_"+ Platform + "_Screenshot_"+ Index + ".png", 4);
         Index++;
     }
 }
