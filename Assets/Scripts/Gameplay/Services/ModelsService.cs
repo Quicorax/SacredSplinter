@@ -1,51 +1,36 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable] public class BaseModel { public List<BaseData> Entries = new(); }
-[Serializable] public class QuestModel /*: BaseModel*/ { public List<QuestData> Quests = new(); }
-[Serializable] public class ShopModel { public List<ProductData> Shop = new(); }
-[Serializable] public class LocationModel : BaseModel { }
-[Serializable] public class HeroModel : BaseModel { }
-[Serializable] public class EncyclopediaModel : BaseModel { }
+#region Cached Remote Models
+public interface IModel { }
+public class QuestModel : IModel { public List<QuestData> Quests = new(); }
+public class ShopModel : IModel { public List<ProductData> Shop = new(); }
+
+public class BaseModel : IModel { public List<BaseData> Entries = new(); }
+public class LocationModel : BaseModel { }
+public class HeroModel : BaseModel { }
+public class EncyclopediaModel : BaseModel { }
+#endregion
 
 public class ModelsService : IService
 {
-    private QuestModel _questsModel;
-    private ShopModel _shopModel;
-    private LocationModel _locationModel;
-    private HeroModel _heroModel;
-    private EncyclopediaModel _encyclopediaModel;
+    private Dictionary<Type, IModel> _models = new();
 
     public void Initialize() => LoadModels();
 
+    public T GetModel<T>() => (T)_models[typeof(T)];
+
     private void LoadModels()
     {
-        //LoadModel<QuestModel>(_questsModel, "QuestsModel");
-        LoadQuestsModel();
-        LoadShopModel();
-        LoadLocationsModel();
-        LoadHeroModel();
-        LoadEncyclopediaModel();
+        _models.Add(typeof(QuestModel), DeSerializeModel<QuestModel>("QuestsModel"));
+        _models.Add(typeof(ShopModel), DeSerializeModel<ShopModel>("ShopModel"));
+        _models.Add(typeof(LocationModel), DeSerializeModel<LocationModel>("LocationsModel"));
+        _models.Add(typeof(HeroModel), DeSerializeModel<HeroModel>("HeroesModel"));
+        _models.Add(typeof(EncyclopediaModel), DeSerializeModel<EncyclopediaModel>("EncyclopediaModel"));
+        //Add new Model here
     }
 
-    private void LoadQuestsModel() =>
-        _questsModel = JsonUtility.FromJson<QuestModel>(Resources.Load<TextAsset>("QuestsModel").text);
-    private void LoadShopModel() =>
-        _shopModel = JsonUtility.FromJson<ShopModel>(Resources.Load<TextAsset>("ShopModel").text);
-    private void LoadLocationsModel() =>
-        _locationModel = JsonUtility.FromJson<LocationModel>(Resources.Load<TextAsset>("LocationsModel").text);
-    private void LoadHeroModel() =>
-        _heroModel = JsonUtility.FromJson<HeroModel>(Resources.Load<TextAsset>("HeroesModel").text);
-    private void LoadEncyclopediaModel() =>
-        _encyclopediaModel = JsonUtility.FromJson<EncyclopediaModel>(Resources.Load<TextAsset>("EncyclopediaModel").text);
-
-    //private void LoadModel<T>(BaseModel model, string modelConcept) where T : BaseModel =>
-    //    model = JsonUtility.FromJson<T>(Resources.Load<TextAsset>(modelConcept).text);
-
-    public QuestModel GetQuestsModel() => _questsModel;
-    public ShopModel GetShopModel() => _shopModel;
-    public LocationModel GetLocationModel() => _locationModel;
-    public HeroModel GetHeroesModel() => _heroModel;
-    public EncyclopediaModel GetEncyclopediaModel() => _encyclopediaModel;
+    private T DeSerializeModel<T>(string modelConcept) where T : class =>
+        JsonUtility.FromJson<T>(Resources.Load<TextAsset>(modelConcept).text);
 }

@@ -45,10 +45,10 @@ public class AdventureSelectorPopUp : BasePopUp
 
 
     public void OpenLocationSelector() => 
-        OpenSelector<LocationSelectorPopUp>(_models.GetLocationModel(), x => _adventureConfig.SetLocation(x.Header), _locationSelectionPack);
+        OpenSelector<LocationSelectorPopUp>(_models.GetModel<LocationModel>(), x => _adventureConfig.SetLocation(x.Header), _locationSelectionPack);
 
     public void OpenHeroSelector() => 
-        OpenSelector<HeroSelectorPopUp>(_models.GetHeroesModel(), x => _adventureConfig.SetHero(x.Header), _heroSelectionPack);
+        OpenSelector<HeroSelectorPopUp>(_models.GetModel<HeroModel>(), x => _adventureConfig.SetHero(x.Header), _heroSelectionPack);
 
     private void OpenSelector<T>(BaseModel model, Action<BaseData> setData,SelectorPack elements) where T: HorizontalSelectablePopUp
     {

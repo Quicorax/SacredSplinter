@@ -15,5 +15,5 @@ public class MenuCanvasController : MonoBehaviour
     public void OpenQuests() => _popUpSpawner.SpawnPopUp<QuestsPopUp>(_quests).Initialize();
     public void OpenShop() => _popUpSpawner.SpawnPopUp<ShopPopUp>(_shop).Initialize();
     public void OpenEncyclopedia() => _popUpSpawner.SpawnPopUp<EncyclopediaPopUp>(_encyclopedia)
-            .Initialize(ServiceLocator.GetService<ModelsService>().GetEncyclopediaModel(), null, null);
+            .Initialize(ServiceLocator.GetService<ModelsService>().GetModel<EncyclopediaModel>(), null, null);
 }

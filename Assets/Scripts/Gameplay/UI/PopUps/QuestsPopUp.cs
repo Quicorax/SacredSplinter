@@ -3,7 +3,7 @@ public class QuestsPopUp : VerticalSelectablePopUp
 {
     internal override void SpawnElements()
     {
-        QuestModel quests = ServiceLocator.GetService<ModelsService>().GetQuestsModel();
+        QuestModel quests = ServiceLocator.GetService<ModelsService>().GetModel<QuestModel>();
 
         foreach (QuestData quest in quests.Quests)
             InstanceElement<Quest>(View).Initialize(quest, UpdateUI);

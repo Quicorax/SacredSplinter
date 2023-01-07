@@ -20,7 +20,7 @@ public class EncyclopediaPopUp : HorizontalSelectablePopUp
     private void Start()
     {
         _progress = ServiceLocator.GetService<GameProgressionService>();
-        Model = ServiceLocator.GetService<ModelsService>().GetEncyclopediaModel();
+        Model = ServiceLocator.GetService<ModelsService>().GetModel<EncyclopediaModel>();
 
         ElementChanged();
     }
