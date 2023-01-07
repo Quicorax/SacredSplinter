@@ -4,12 +4,14 @@ using UnityEngine;
 [Serializable]
 public class ServiceElements
 {
-    public InitialResources initialResources;
-    public Transform popUpTransformParent;
+    public ViewElementsModel ViewElements;
+    public InitialResources InitialResources;
+    public Transform PopUpTransformParent;
 
-    public ServiceElements(InitialResources initialResources, Transform popUpTransformParent)
+    public ServiceElements(InitialResources initialResources, Transform popUpTransformParent, ViewElementsModel viewElements)
     {
-        this.initialResources = initialResources;
-        this.popUpTransformParent = popUpTransformParent;
+        InitialResources = initialResources;
+        PopUpTransformParent = popUpTransformParent;
+        ViewElements = viewElements;
     }
 }

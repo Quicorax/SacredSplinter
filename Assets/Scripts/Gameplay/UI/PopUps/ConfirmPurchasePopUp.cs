@@ -12,9 +12,13 @@ public class ConfirmPurchasePopUp : BasePopUp
 
     private Action _onConfirm;
     private ProductData _product;
-    
+
+    private ImagesService _imageService;
+
     public void Initialize(ProductData product, Action onConfirm)
     {
+        _imageService = ServiceLocator.GetService<ImagesService>();
+
         _onConfirm = onConfirm;
         _product = product;
 
@@ -23,11 +27,11 @@ public class ConfirmPurchasePopUp : BasePopUp
 
     private void PrintData()
     {
-        _priceAmount.text = (-_product.Price.Amount).ToString();
-        _rewardAmount.text = _product.Reward.Amount.ToString();
+        _priceAmount.text = (-_product.PriceAmount).ToString();
+        _rewardAmount.text = _product.RewardAmount.ToString();
 
-        _priceImage.sprite = _product.Price.Item.Image;
-        _rewardImage.sprite = _product.Reward.Item.Image;
+        _priceImage.sprite = _imageService.GetViewImage(_product.Price);
+        _rewardImage.sprite = _imageService.GetViewImage(_product.Reward);
     }
 
     public void OnConfirm()

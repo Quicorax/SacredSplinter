@@ -1,17 +1,11 @@
-﻿using UnityEngine;
-
+﻿
 public class ShopPopUp : VerticalSelectablePopUp
 {
-
-    [SerializeField]
-    private ProductModel _productModel;
-
-    [SerializeField]
-    private Transform _productHolder;
-
     internal override void SpawnElements()
     {
-        foreach (ProductData product in _productModel.Products)
+        ShopModel shop = ServiceLocator.GetService<ModelsService>().GetShopModel();
+
+        foreach (ProductData product in shop.Shop)
             InstanceElement<Product>(View).Initialize(product, UpdateUI);
     }
 }

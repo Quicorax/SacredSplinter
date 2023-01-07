@@ -21,7 +21,7 @@ public class BaseConfigPopUp : BasePopUp
 
     private void TurnAudio(bool isOn)
     {
-        //GameManager.Instance.TurnAudioON(isOn);
+        //TODO: GameManager.Instance.TurnAudioON(isOn);
         _audioON.SetActive(isOn);
     }
 }

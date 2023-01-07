@@ -373,5 +373,3 @@ MonoBehaviour:
   _onResourcesUpdated: {fileID: 11400000, guid: 3d97e89007f25c749a675386ba5a9e14, type: 2}
   View: {fileID: 4051233375045403884, guid: f89271a30723a8743abe55e9408f2edb, type: 3}
   _elementsHolder: {fileID: 3377959522541819298}
-  _questModel: {fileID: 11400000, guid: 9809d54e71c1795488c4791ad1b676d1, type: 2}
-  _questHolder: {fileID: 3377959522541819298}

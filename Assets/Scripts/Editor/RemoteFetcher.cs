@@ -5,9 +5,12 @@ using UnityEngine.Networking;
 public class RemoteFetcher
 {
     private const string _questsModelURL = "https://script.google.com/macros/s/AKfycbxGbmnS-GeqQjTv_ZaGBcVgm1bImkV_Urs8DVQh1NCc0OCJ13dvTEoxXrF2qhwUJL6f/exec";
+    private const string _shopModelURL = "https://script.google.com/macros/s/AKfycbw32OqovbZFHjLL8orXVDUm1-jV-jMYkG6Gk8Ldr1CaIRzrls7qo6ykd3ERSBfU8xDG/exec";
 
     [MenuItem("Quicorax/RemoteData/Update Quests Model")]
     public static void UpdateQuests() => UpdateRemoteResource("QuestsModel", _questsModelURL);
+    [MenuItem("Quicorax/RemoteData/Update Shop Model")]
+    public static void UpdateShop() => UpdateRemoteResource("ShopModel", _shopModelURL);
 
     private static void UpdateRemoteResource(string resource, string url)
     {

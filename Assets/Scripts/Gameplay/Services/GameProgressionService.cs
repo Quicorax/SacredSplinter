@@ -128,6 +128,7 @@ public class GameProgressionService : IService
 
     public void SetSoundOff(bool off)
     {
+        Debug.Log("Sound muted: " + off);
         _soundOff = off;
         _saveLoadService.Save();
     }

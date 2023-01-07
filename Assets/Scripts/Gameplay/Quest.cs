@@ -16,13 +16,6 @@ public class QuestData
     public int RewardAmount;
 }
 
-[Serializable]
-public class Reward
-{
-    public int Amount;
-    public Item Item;
-}
-
 public class Quest : MonoBehaviour
 {
     [SerializeField]
@@ -52,8 +45,10 @@ public class Quest : MonoBehaviour
         _onTransactionCompleted = onTransactionCompleted;
 
         _header.text = data.Header;
-        _rewardAmount.text = data.Reward;
-        //_rewardIcon.sprite = data.Reward.Item.Image; //TODO: link reward name with image
+
+        _rewardAmount.text = data.RewardAmount.ToString();
+        _rewardIcon.sprite = ServiceLocator.GetService<ImagesService>().GetViewImage(data.Reward);
+
         _progressionPerCent.text = GetProgression();
 
         _claimed = _progression.CheckQuestCompleted(_quest.Index);

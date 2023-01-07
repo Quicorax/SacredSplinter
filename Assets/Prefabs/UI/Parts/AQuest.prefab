@@ -346,6 +346,7 @@ MonoBehaviour:
   _progressionPerCent: {fileID: 2429115110055179491}
   _button: {fileID: 3009245668138237060}
   _rewardIcon: {fileID: 7889089103262275901}
+  _items: {fileID: 11400000, guid: 6e00bb63ee8ed0841b9e3e398ce094a0, type: 2}
 --- !u!114 &3009245668138237060
 MonoBehaviour:
   m_ObjectHideFlags: 0

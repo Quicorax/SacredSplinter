@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367f2cb4e8c1d9f4394e7f88f23ac50f, type: 3}
   m_Name: Coin
   m_EditorClassIdentifier: 
-  Name: Gold Coin
+  Element: Gold Coin
   Image: {fileID: 21300000, guid: 616ac74e513f59042a60945ea8102869, type: 3}

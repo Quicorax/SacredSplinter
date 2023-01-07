@@ -1,7 +1,4 @@
-﻿using System;
-using UnityEngine;
-
-public class ServiceFeeder
+﻿public class ServiceFeeder
 {
     public void LoadSevices(ServiceElements elements)
     {
@@ -9,6 +6,7 @@ public class ServiceFeeder
         GameProgressionService gameProgression = new();
         SaveLoadService saveLoad = new();
         ModelsService models = new();
+        ImagesService viewElements = new();
 
         NavigationService navigation = new();
         PopUpSpawnerService popUpSpawner = new();
@@ -22,12 +20,14 @@ public class ServiceFeeder
         ServiceLocator.RegisterService(popUpSpawner);
         ServiceLocator.RegisterService(adventure);
         ServiceLocator.RegisterService(models);
+        ServiceLocator.RegisterService(viewElements);
 
-        gameConfig.Initialize(elements.initialResources);
+        gameConfig.Initialize(elements.InitialResources);
         gameProgression.Initialize(saveLoad);
         saveLoad.Initialize(gameConfig, gameProgression);
 
-        popUpSpawner.Initialize(elements.popUpTransformParent);
+        popUpSpawner.Initialize(elements.PopUpTransformParent);
         models.Initialize();
+        viewElements.Initialize(elements.ViewElements);
     }
 }
