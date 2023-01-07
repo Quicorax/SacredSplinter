@@ -14,6 +14,8 @@ public class MenuConfigPopUp : BaseConfigPopUp
     private void Start()
     {
         _saveLoad = ServiceLocator.GetService<SaveLoadService>();
+
+        SetSound(ServiceLocator.GetService<GameProgressionService>());
     }
     public void OpenCredits() => ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp(_credits);
 

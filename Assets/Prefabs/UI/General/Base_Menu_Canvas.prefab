@@ -368,7 +368,6 @@ GameObject:
   - component: {fileID: 2913763231401695682}
   - component: {fileID: 6979215238085738474}
   - component: {fileID: 60674855}
-  - component: {fileID: 1636286507789699907}
   m_Layer: 5
   m_Name: Base_Menu_Canvas
   m_TagString: Untagged
@@ -485,18 +484,6 @@ MonoBehaviour:
   _encyclopedia:
     PopUp: {fileID: 6047510094785837639, guid: a35513e251bec5e45b0e24c38cc2843a, type: 3}
     Button: {fileID: 2107639537469123409}
---- !u!114 &1636286507789699907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6986606759669300868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96f83e237dad22b42ab4b9b303222cad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8983565603863016280
 GameObject:
   m_ObjectHideFlags: 0

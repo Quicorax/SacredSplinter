@@ -5,23 +5,23 @@ public class BaseConfigPopUp : BasePopUp
     [SerializeField]
     private GameObject _audioON;
 
-    private void Start()
+    private GameProgressionService _progression;
+
+    internal void SetSound(GameProgressionService progression)
     {
-        TurnAudio(PlayerPrefs.GetInt("AudioMute") == 0);
+        _progression = progression;
+
+        TurnAudio(_progression.CheckSoundOff());
     }
 
     public void ToggleAudio()
     {
-        int music = PlayerPrefs.GetInt("AudioMute");
+        bool audio = !_progression.CheckSoundOff();
 
-        TurnAudio(music == 1);
+        _progression.SetSoundOff(audio);
 
-        PlayerPrefs.SetInt("AudioMute", music == 0 ? 1 : 0);
+        TurnAudio(audio);
     }
 
-    private void TurnAudio(bool isOn)
-    {
-        //TODO: GameManager.Instance.TurnAudioON(isOn);
-        _audioON.SetActive(isOn);
-    }
+    private void TurnAudio(bool isOn) => _audioON.SetActive(isOn);
 }
