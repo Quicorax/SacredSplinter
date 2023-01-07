@@ -41,5 +41,4 @@ public class GameManager : MonoBehaviour
     }
 
     private void SetServicesUninitialized() => PlayerPrefs.SetInt("ServicesInitialized", 0);
-
 }

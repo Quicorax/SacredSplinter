@@ -6,12 +6,14 @@ using UnityEngine.UI;
 [Serializable]
 public class QuestData
 {
-    public int QuestIndex;
+    public int Index;
+    public string Concept;
 
-    public string QuestHeader;
-    public int AmountToComplete;
-    public string ConceptToComplete;
-    public Reward Reward;
+    public string Header;
+    public int Amount;
+
+    public string Reward;
+    public int RewardAmount;
 }
 
 [Serializable]
@@ -49,12 +51,12 @@ public class Quest : MonoBehaviour
         _quest = data;
         _onTransactionCompleted = onTransactionCompleted;
 
-        _header.text = data.QuestHeader;
-        _rewardAmount.text = data.Reward.Amount.ToString();
-        _rewardIcon.sprite = data.Reward.Item.Image;
+        _header.text = data.Header;
+        _rewardAmount.text = data.Reward;
+        //_rewardIcon.sprite = data.Reward.Item.Image; //TODO: link reward name with image
         _progressionPerCent.text = GetProgression();
 
-        _claimed = _progression.CheckQuestCompleted(_quest.QuestIndex);
+        _claimed = _progression.CheckQuestCompleted(_quest.Index);
 
         SetInteractable(!_claimed);
         SetClaimeable(_completed && !_claimed);
@@ -63,12 +65,10 @@ public class Quest : MonoBehaviour
 
     private string GetProgression()
     {
-        int percent = _progression.CheckAmountOfPregression(_quest.ConceptToComplete) * 100 / _quest.AmountToComplete;
-
+        int percent = _progression.CheckAmountOfPregression(_quest.Concept) * 100 / _quest.Amount;
         int resultPercent = Mathf.Clamp(percent, 0, 100);
 
         _completed = resultPercent >= 100;
-
 
         return resultPercent.ToString();
     }
@@ -79,8 +79,8 @@ public class Quest : MonoBehaviour
         {
             _claimed = true;
 
-            _progression.SetQuestCompleted(_quest.QuestIndex);
-            _progression.SetAmountOfResource(_quest.Reward.Item.Name, _quest.Reward.Amount);
+            _progression.SetQuestCompleted(_quest.Index);
+            _progression.SetAmountOfResource(_quest.Reward, _quest.RewardAmount);
 
             _onTransactionCompleted?.Invoke();
 

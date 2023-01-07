@@ -85,15 +85,15 @@ public class GameProgressionService : IService
     {
         switch (concept)
         {
-            case "Monster":
+            case "Hunt":
                 return _totalMonstersKilled;
-            case "Location":
+            case "Adventure":
                 return CheckHigherLevelReached();
-            case "Boss_Village":
+            case "Complete_Village":
                 return CheckLocationCompleted("Village");
-            case "Boss_Sewer":
+            case "Complete_Sewer":
                 return CheckLocationCompleted("Sewers");
-            case "Boss_Dungeon":
+            case "Complete_Dungeon":
                 return CheckLocationCompleted("Dungeons");
         }
 

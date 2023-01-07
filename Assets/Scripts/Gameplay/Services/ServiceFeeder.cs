@@ -8,6 +8,7 @@ public class ServiceFeeder
         GameConfigService gameConfig = new();
         GameProgressionService gameProgression = new();
         SaveLoadService saveLoad = new();
+        ModelsService models = new();
 
         NavigationService navigation = new();
         PopUpSpawnerService popUpSpawner = new();
@@ -20,11 +21,13 @@ public class ServiceFeeder
         ServiceLocator.RegisterService(navigation);
         ServiceLocator.RegisterService(popUpSpawner);
         ServiceLocator.RegisterService(adventure);
+        ServiceLocator.RegisterService(models);
 
         gameConfig.Initialize(elements.initialResources);
         gameProgression.Initialize(saveLoad);
         saveLoad.Initialize(gameConfig, gameProgression);
 
         popUpSpawner.Initialize(elements.popUpTransformParent);
+        models.Initialize();
     }
 }
