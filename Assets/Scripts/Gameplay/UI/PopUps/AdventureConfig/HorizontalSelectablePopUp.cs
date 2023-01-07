@@ -10,12 +10,12 @@ public class BaseData
 {
     public string Header;
     public string Description;
-    public Sprite Image;
 }
 
 public class HorizontalSelectablePopUp : BasePopUp
 {
-    public BaseModel Model;
+    internal BaseModel Model;
+    internal int ActualIndex = 0;
 
     [SerializeField]
     private TMP_Text _header, _description, _index;
@@ -24,33 +24,28 @@ public class HorizontalSelectablePopUp : BasePopUp
 
     private Dictionary<int, BaseData> _elements = new();
 
-    internal int ActualIndex = 0;
-
     internal BaseData CurrentElement;
 
     internal Action<BaseData> OnSelect;
     private Action _onCancel;
 
-    public void Initialize(Action<BaseData> onSelect, Action onCancel)
+    public void Initialize(BaseModel model, Action<BaseData> onSelect, Action onCancel)    
     {
+        Model = model;
         OnSelect = onSelect;
         _onCancel = onCancel;
+
+
+        for (int i = 0; i < model.Entries.Count; i++)
+            _elements.Add(i, model.Entries[i]);
+
+        PrintElementData();
     }
 
     public override void CloseSelf()
     {
         _onCancel?.Invoke();
         base.CloseSelf();
-    }
-
-    public override void Initialize(PopUpLauncher popUpBundle, Action<Button> onClosePopUp)
-    {
-        base.Initialize(popUpBundle, onClosePopUp);
-
-        for (int i = 0; i < Model.Entries.Count; i++)
-            _elements.Add(i, Model.Entries[i]);
-
-        PrintElementData();
     }
 
     public void ChangeElement(bool next)
@@ -80,7 +75,7 @@ public class HorizontalSelectablePopUp : BasePopUp
         FadeAnim(_index, ()=> _index.text = ActualIndex.ToString());
         FadeAnim(_header, ()=> _header.text = CurrentElement.Header);
         FadeAnim(_description , ()=>_description.text = CurrentElement.Description);
-        FadeAnim(_image, () => _image.sprite = CurrentElement.Image);
+        FadeAnim(_image, () => _image.sprite = ServiceLocator.GetService<ImagesService>().GetViewImage(CurrentElement.Header));
     }
 
     private void FadeAnim(MaskableGraphic objectToFade, Action onFullFaded)

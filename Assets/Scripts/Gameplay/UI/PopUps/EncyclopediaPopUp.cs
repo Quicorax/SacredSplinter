@@ -1,13 +1,7 @@
 ﻿using DG.Tweening;
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
-[Serializable]
-public class EntryData : BaseData
-{
-}
 
 public class EncyclopediaPopUp : HorizontalSelectablePopUp
 {
@@ -21,18 +15,18 @@ public class EncyclopediaPopUp : HorizontalSelectablePopUp
 
     private GameProgressionService _progress;
 
-    private Color _darkGray = new(0.05f, 0.05f, 0.05f);
+    private Color _darkGray = new(0.12f, 0.12f, 0.12f);
 
     private void Start()
     {
         _progress = ServiceLocator.GetService<GameProgressionService>();
+        Model = ServiceLocator.GetService<ModelsService>().GetEncyclopediaModel();
 
         ElementChanged();
     }
-    public void ElementChanged()
-    {
+
+    public void ElementChanged() =>
         _elementDiscovered = _progress.CheckEnemyDiscovered(CurrentElement.Header);
-    }
 
     public override void OnMiddleOfFade()
     {

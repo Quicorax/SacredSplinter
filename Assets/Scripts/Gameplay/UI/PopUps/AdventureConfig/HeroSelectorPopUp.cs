@@ -38,7 +38,6 @@ public class HeroSelectorPopUp : HorizontalSelectablePopUp
         Debug.Log("Open Hero Stats PopUp");
 
         //TODO: design Hero combat stats system
-
         //_popUpSpawner.SpawnPopUp(_heroStats); 
     }
 
