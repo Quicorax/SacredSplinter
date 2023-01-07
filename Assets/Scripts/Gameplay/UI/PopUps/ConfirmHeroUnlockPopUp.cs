@@ -35,7 +35,7 @@ public class ConfirmHeroUnlockPopUp : BasePopUp
         else
         {
             ServiceLocator.GetService<PopUpSpawnerService>()
-                .SpawnPopUp<NotEnoughtResources>(_notEnoughtResourcesPopUp);
+                .SpawnPopUp<NotEnoughtResources>(_notEnoughtResourcesPopUp).Initialize();
 
             CloseSelf();
         }

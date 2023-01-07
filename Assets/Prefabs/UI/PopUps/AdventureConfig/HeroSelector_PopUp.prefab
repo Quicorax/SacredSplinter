@@ -1398,12 +1398,13 @@ MonoBehaviour:
   _description: {fileID: 3891704147727512183}
   _index: {fileID: 8605202826231529382}
   _image: {fileID: 1739694907479748480}
-  CurrentElement:
-    Header: 
-    Description: 
-    Image: {fileID: 0}
   _selectable: {fileID: 1787397502037478951}
-  _unlockHeroPopUp: {fileID: 2347601186589964159, guid: 9c2db5f5a0085a440945acca034131cb, type: 3}
+  _unlockHeroPopUp:
+    PopUp: {fileID: 2347601186589964159, guid: 9c2db5f5a0085a440945acca034131cb, type: 3}
+    Button: {fileID: 0}
+  _heroStats:
+    PopUp: {fileID: 0}
+    Button: {fileID: 0}
   _selectText: {fileID: 90402085527896849}
 --- !u!224 &7668103929076798876 stripped
 RectTransform:

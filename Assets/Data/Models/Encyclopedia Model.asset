@@ -16,12 +16,12 @@ MonoBehaviour:
   - Header: Rat
     Description: A vicious creature, with sharp teeth and razor-like claws to defend
       itself against larger predators.
-    Image: {fileID: 21300000, guid: 40832a86ec222f642af963a541eda2ea, type: 3}
+    Image: {fileID: 21300000, guid: 170aa2261b872904da7cc5dc50504856, type: 3}
   - Header: Dog
     Description: A dangerous beast, its teeth bared and ready to rip into the flesh
       of any who dared to cross its path.
-    Image: {fileID: 21300000, guid: 40832a86ec222f642af963a541eda2ea, type: 3}
+    Image: {fileID: 21300000, guid: d767666f36c77b74eada945d5357e3ac, type: 3}
   - Header: Bandit
     Description: A ruthless thief, preying on the weak and vulnerable as he roamed
       the land in search of plunder and riches.
-    Image: {fileID: 21300000, guid: 40832a86ec222f642af963a541eda2ea, type: 3}
+    Image: {fileID: 21300000, guid: 1db95f0e2d1f38a42b011d9525d61a3e, type: 3}
