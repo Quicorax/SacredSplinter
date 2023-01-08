@@ -255,7 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -433,6 +433,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2058681057899019519, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2058681057899019519, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -8024867205206567246, guid: 0fb406a69224af64089f92ebf23fbe25, type: 2}
@@ -444,6 +448,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
+    - target: {fileID: 4424549424614592133, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5897128375787893926, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
       propertyPath: m_Name
       value: Reward_AReward
@@ -452,6 +460,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 374146a21d086624199d3de98e114cc5, type: 3}
+    - target: {fileID: 6610140080979725059, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6610140080979725059, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 5
@@ -557,6 +569,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8970502162875586381, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970502162875586381, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -8024867205206567246, guid: 0fb406a69224af64089f92ebf23fbe25, type: 2}
@@ -618,6 +634,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2058681057899019519, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2058681057899019519, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -8024867205206567246, guid: 0fb406a69224af64089f92ebf23fbe25, type: 2}
@@ -629,6 +649,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
+    - target: {fileID: 4424549424614592133, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5897128375787893926, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
       propertyPath: m_Name
       value: Price_AReward
@@ -637,6 +661,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 374146a21d086624199d3de98e114cc5, type: 3}
+    - target: {fileID: 6610140080979725059, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6610140080979725059, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 5
@@ -740,6 +768,10 @@ PrefabInstance:
     - target: {fileID: 8970502162875586381, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970502162875586381, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8970502162875586381, guid: ce6b3b0548f1e4248b6472f5119e1b16, type: 3}
       propertyPath: m_sharedMaterial

@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -273,13 +273,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9558ada6b575ace4a8ffbad64a1f0d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _roomInstance:
-  - Kind: Combat
-    RoomPopUp:
-      PopUp: {fileID: -7343584447077849752, guid: 0aca2c1af2eca144791962a2388b8297, type: 3}
-      Button: {fileID: 1850676013605238208}
-  - Kind: Event
-    RoomPopUp:
-      PopUp: {fileID: -7343584447077849752, guid: 0aca2c1af2eca144791962a2388b8297, type: 3}
-      Button: {fileID: 1850676013605238208}
   _roomIcon: {fileID: 1850676012219991477}

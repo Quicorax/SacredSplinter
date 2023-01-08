@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 2388829041573473057, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3999980638960955434, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -115,6 +119,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: bf3fa70d93f8dff44bd1fbc397c0139e, type: 3}
+    - target: {fileID: 4655705372863084017, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5692432192824908298, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -267,6 +275,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -663.75
       objectReference: {fileID: 0}
+    - target: {fileID: 3170740458757926057, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3369252863399040172, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3717836551057656833, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -375,6 +391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resources_PopUp
       objectReference: {fileID: 0}
+    - target: {fileID: 5183772254872834190, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6137656350785953910, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -386,6 +406,14 @@ PrefabInstance:
     - target: {fileID: 6539691850248847232, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_Padding.m_Bottom
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562748691779284567, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7280461272455964627, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8260077695099849746, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_AnchorMax.y
@@ -440,7 +468,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 6440468336172182926}
-  _userProgression: {fileID: 11400000, guid: 62ac326a7a585a94d83e3bcf2bbd3a0b, type: 2}
   _cristalsAmount: {fileID: 3933629022806638180}
   _coinsAmount: {fileID: 6619752596001929966}
   _heroLicense: {fileID: 5279243544904345451}
@@ -468,6 +495,10 @@ PrefabInstance:
     - target: {fileID: 623969875622991013, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2388829041573473057, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3999980638960955434, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_Pivot.x
@@ -557,6 +588,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7778a3a77caa17141b4c686d2d14abe1, type: 3}
+    - target: {fileID: 4655705372863084017, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5283592589612821487, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_SizeDelta.y
       value: -20
@@ -620,6 +655,10 @@ PrefabInstance:
     - target: {fileID: 623969875622991013, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2388829041573473057, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3999980638960955434, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_Pivot.x
@@ -709,6 +748,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 616ac74e513f59042a60945ea8102869, type: 3}
+    - target: {fileID: 4655705372863084017, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5283592589612821487, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_SizeDelta.y
       value: -20

@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -147,6 +147,10 @@ PrefabInstance:
       value: Encyclopedia
       objectReference: {fileID: 0}
     - target: {fileID: 529868722, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 529868722, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4291611852
       objectReference: {fileID: 0}
@@ -189,6 +193,14 @@ PrefabInstance:
     - target: {fileID: 3062217854265493009, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -72.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170740458757926057, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3369252863399040172, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4581012417779045142, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_Pivot.x
@@ -286,6 +298,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6562748691779284567, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7280461272455964627, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8533298623921526031, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1000
@@ -329,7 +349,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 2628687863454569922}
-  Model: {fileID: 11400000, guid: cb151b5115a6d0247a71b2590b0d628d, type: 2}
   _header: {fileID: 2366243052904110662}
   _description: {fileID: 4982499028577913323}
   _index: {fileID: 2287856226259538539}
@@ -427,6 +446,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1441411368732990010, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2937458432368381777, guid: 619a43764353e844fa53860f357140e1, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313079588454630419, guid: 619a43764353e844fa53860f357140e1, type: 3}
@@ -533,6 +556,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8054928794556157476, guid: 619a43764353e844fa53860f357140e1, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 619a43764353e844fa53860f357140e1, type: 3}
 --- !u!1001 &6595214093649025103
@@ -542,8 +569,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5971088652824275111}
     m_Modifications:
+    - target: {fileID: 1002338474239080958, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207762387132748196, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
+      propertyPath: m_fontSize
+      value: 68.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2207762387132748196, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
       propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2207762387132748196, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2207762387132748196, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
@@ -659,11 +698,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4919885019495008804, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919885019495008804, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 16777215
       objectReference: {fileID: 0}
     - target: {fileID: 6304990419496495813, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
       propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304990419496495813, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7076981911031730218, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
@@ -678,8 +725,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8287225478941064751, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8381014924171666830, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8885740343304929801, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
       propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885740343304929801, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8885740343304929801, guid: 0682c6a687a0ac547b7e81aeafa8def1, type: 3}

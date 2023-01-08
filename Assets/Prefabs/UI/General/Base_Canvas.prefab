@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -564,9 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cac8d506541a984e94585ebd2e57f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnParent: {fileID: 0}
   _onResourcesUpdated: {fileID: 11400000, guid: 3d97e89007f25c749a675386ba5a9e14, type: 2}
-  _userProgression: {fileID: 11400000, guid: 62ac326a7a585a94d83e3bcf2bbd3a0b, type: 2}
   _config:
     PopUp: {fileID: 3952808861149700775, guid: 78f0fa743af3d10429ad97ad6fbccbf3, type: 3}
     Button: {fileID: 4556295584842778554}
@@ -594,6 +592,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -8024867205206567246, guid: 0fb406a69224af64089f92ebf23fbe25, type: 2}
+    - target: {fileID: 2388829041573473057, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2388829041573473057, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 15
@@ -686,6 +688,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 616ac74e513f59042a60945ea8102869, type: 3}
+    - target: {fileID: 4655705372863084017, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5283592589612821487, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_SizeDelta.x
       value: -11
