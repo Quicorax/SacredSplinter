@@ -197,7 +197,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1850676013605238210}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7046784374782803161}
+        m_TargetAssemblyTypeName: BaseRoom, Assembly-CSharp
+        m_MethodName: OnSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7615560898157315153
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,3 +273,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9558ada6b575ace4a8ffbad64a1f0d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _roomInstance:
+  - Kind: Combat
+    RoomPopUp:
+      PopUp: {fileID: -7343584447077849752, guid: 0aca2c1af2eca144791962a2388b8297, type: 3}
+      Button: {fileID: 1850676013605238208}
+  - Kind: Event
+    RoomPopUp:
+      PopUp: {fileID: -7343584447077849752, guid: 0aca2c1af2eca144791962a2388b8297, type: 3}
+      Button: {fileID: 1850676013605238208}
+  _roomIcon: {fileID: 1850676012219991477}

@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _background: {fileID: 7041029970058223258}
+  _hero: {fileID: 6799040701581268996}
   _header: {fileID: 496940105390265137}
   _floorNumber: {fileID: 7041029968476064434}
 --- !u!1001 &3543768399569171223
@@ -343,6 +344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Adventure_Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 2834549481652220942, guid: ba80db3abc0a8854e9210108c6e6baeb, type: 3}
+      propertyPath: m_Name
+      value: Hero_Icon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba80db3abc0a8854e9210108c6e6baeb, type: 3}
 --- !u!114 &496940105390265137 stripped
@@ -354,6 +359,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6799040701581268996 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2834549481652220940, guid: ba80db3abc0a8854e9210108c6e6baeb, type: 3}
+  m_PrefabInstance: {fileID: 8722730043979688968}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &7041029968476064434 stripped

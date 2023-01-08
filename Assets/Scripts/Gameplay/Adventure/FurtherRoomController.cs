@@ -1,9 +1,8 @@
-using UnityEngine;
 
-public class FurtherRoomController : MonoBehaviour
+public class FurtherRoomController : BaseRoom
 {
     public void Initialize()
     {
-        
+        SetRoomKind("Unknown");
     }
 }
