@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Combat
   m_EditorClassIdentifier: 
   Element: Combat
-  Image: {fileID: 21300000, guid: a0ce74484b4fa2342af6a19b8c36e365, type: 3}
+  Image: {fileID: 21300000, guid: 64288ea5e41168c4ea0de94831d99bc1, type: 3}

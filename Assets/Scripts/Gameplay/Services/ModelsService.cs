@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 #region Cached Remote Models
 public interface IModel { }
 public class QuestModel : IModel { public List<QuestData> Quests = new(); }
 public class ShopModel : IModel { public List<ProductData> Shop = new(); }
+public class EventsModel : IModel { public List<EventData> Events = new(); }
 
 public class BaseModel : IModel { public List<BaseData> Entries = new(); }
 public class LocationModel : BaseModel { }
@@ -28,6 +30,7 @@ public class ModelsService : IService
         _models.Add(typeof(LocationModel), DeSerializeModel<LocationModel>("LocationsModel"));
         _models.Add(typeof(HeroModel), DeSerializeModel<HeroModel>("HeroesModel"));
         _models.Add(typeof(EncyclopediaModel), DeSerializeModel<EncyclopediaModel>("EncyclopediaModel"));
+        _models.Add(typeof(EventsModel), DeSerializeModel<EventsModel>("EventsModel"));
         //Add new Model here
     }
 

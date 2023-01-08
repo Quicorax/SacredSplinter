@@ -5,13 +5,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[Serializable]
-public class BaseData
-{
-    public string Header;
-    public string Description;
-}
-
 public class HorizontalSelectablePopUp : BasePopUp
 {
     internal BaseModel Model;

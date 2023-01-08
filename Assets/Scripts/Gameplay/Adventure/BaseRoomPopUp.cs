@@ -14,10 +14,10 @@ public class BaseRoomPopUp : BasePopUp
 
     private void Start()
     {
-        Invoke(nameof(Complete), 1f);
+        //Invoke(nameof(Complete), 1f);
     }
 
-    public void Complete()
+    internal void Complete()
     {
         _onComplete?.Invoke(_furtherRooms);
         CloseSelf();

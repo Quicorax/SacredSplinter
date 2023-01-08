@@ -2,18 +2,6 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
-[Serializable]
-public class ProductData
-{
-    public string Header;
-
-    public string Price;
-    public int PriceAmount;
-
-    public string Reward;
-    public int RewardAmount;
-}
 public class Product : MonoBehaviour
 {
     [SerializeField]

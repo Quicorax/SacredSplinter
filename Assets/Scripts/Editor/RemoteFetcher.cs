@@ -9,18 +9,27 @@ public class RemoteFetcher
     private const string _locationsModelURL = "https://script.google.com/macros/s/AKfycbzXcPAfu6Dy9Rn5FwpXXJxHqqZ86q36vxcTelhm7RlODXl-vPZ4_xNqtUi6ebn5kUGPFQ/exec";
     private const string _heroesModelURL = "https://script.google.com/macros/s/AKfycbzTjE_0rfjTXXisaGzS1reMcXHGTZI-01GOztCzj5FzFR2NZUZ-XGt6Twj40O867Maq/exec";
     private const string _encyclopediaModelURL = "https://script.google.com/macros/s/AKfycbxuuy6tkUqver0jy5CFK-DMc1kV2BZuKvLm9czItyHw3G_TipeHa6taFS5nOMrjA8bg/exec";
+    private const string _eventsModelURL = "https://script.google.com/macros/s/AKfycbwq7UJVLNq-1NUF2uvuq18wAf0G-0a6JblLlBYJvW9B9GfGPeOfpXolgkLLv0OrT6RHBg/exec";
 
-    [MenuItem("Quicorax/RemoteData/Update Quests Model")]
+    private const string _editorWindow = "Quicorax/RemoteData/Update ";
+
+    [MenuItem(_editorWindow + "Quests Model")]
     public static void UpdateQuests() => UpdateRemoteResource("QuestsModel", _questsModelURL);
-    [MenuItem("Quicorax/RemoteData/Update Shop Model")]
+
+    [MenuItem(_editorWindow + "Shop Model")]
     public static void UpdateShop() => UpdateRemoteResource("ShopModel", _shopModelURL);
-    [MenuItem("Quicorax/RemoteData/Update Locations Model")]
+    
+    [MenuItem(_editorWindow + "Locations Model")]
     public static void UpdateLocations() => UpdateRemoteResource("LocationsModel", _locationsModelURL);
 
-    [MenuItem("Quicorax/RemoteData/Update Heroes Model")]
+    [MenuItem(_editorWindow + "Heroes Model")]
     public static void UpdateHeroes() => UpdateRemoteResource("HeroesModel", _heroesModelURL);
-    [MenuItem("Quicorax/RemoteData/Update Encyclopedia Model")]
+    
+    [MenuItem(_editorWindow + "Encyclopedia Model")]
     public static void UpdateEncyclopedia() => UpdateRemoteResource("EncyclopediaModel", _encyclopediaModelURL);
+    
+    [MenuItem(_editorWindow + "Events Model")]
+    public static void UpdateEvents() => UpdateRemoteResource("EventsModel", _eventsModelURL);
 
     private static void UpdateRemoteResource(string resource, string url)
     {

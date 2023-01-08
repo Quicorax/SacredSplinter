@@ -3,19 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[Serializable]
-public class QuestData
-{
-    public int Index;
-    public string Concept;
-
-    public string Header;
-    public int Amount;
-
-    public string Reward;
-    public int RewardAmount;
-}
-
 public class Quest : MonoBehaviour
 {
     [SerializeField]
