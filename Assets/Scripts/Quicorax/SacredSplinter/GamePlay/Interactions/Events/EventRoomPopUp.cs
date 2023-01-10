@@ -44,7 +44,6 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
                 {
                     dataSelected = true;
                 }
-
             }
             return data;
         }
