@@ -1,9 +1,9 @@
+using Quicorax.SacredSplinter.Services;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    private ServiceElements _servicesElements;
+    [SerializeField] private ServiceElements _servicesElements;
 
     public static GameManager Instance;
 
@@ -19,10 +19,12 @@ public class GameManager : MonoBehaviour
     {
         SetServicesUninitialized();
     }
+
     private void OnApplicationQuit()
     {
         SetServicesUninitialized();
     }
+
     private void Singletonize()
     {
         if (Instance == null)
@@ -36,7 +38,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("ServicesInitialized", 1);
 
         ServiceFeeder serviceLoader = new();
-        serviceLoader.LoadSevices(_servicesElements);
+        ServiceFeeder.LoadServices(_servicesElements);
     }
 
     private void SetServicesUninitialized() => PlayerPrefs.SetInt("ServicesInitialized", 0);

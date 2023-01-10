@@ -347,5 +347,5 @@ MonoBehaviour:
     RoomPopUp:
       PopUp: {fileID: -9108862488584507960, guid: 980b68ccd02f5e4409923d17c5c04f27, type: 3}
       Button: {fileID: 173304999794253662}
-  FurtherRoom: {fileID: 7046784374782803161, guid: 47009a70d220117438fd69fa81c50645, type: 3}
-  RoomHolder: {fileID: 7233717970956185350}
+  _furtherRoom: {fileID: 7046784374782803161, guid: 47009a70d220117438fd69fa81c50645, type: 3}
+  _roomHolder: {fileID: 7233717970956185350}
