@@ -4,13 +4,15 @@ using System.Linq;
 using Quicorax.SacredSplinter.GamePlay.Interactions;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
+
 
 namespace Quicorax.SacredSplinter.GamePlay.Rooms
 {
     public class RoomController : BaseRoom
     {
-        [SerializeField] private List<RoomInstance> _roomInstance = new();
+        [SerializeField] private AvailableRoomKinds _roomsData;
 
         [SerializeField] private FurtherRoomController _furtherRoom;
 
@@ -41,7 +43,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Rooms
         {
             _onRoomSelected?.Invoke();
 
-            foreach (var item in _roomInstance.Where(item => item.Kind == RoomKind))
+            foreach (var item in _roomsData.Rooms.Where(item => item.Kind == RoomKind))
             {
                 _popUpSpawner.SpawnPopUp<BaseRoomPopUp>(item.RoomPopUp).SetData(_furtherRooms, _onRoomComplete);
                 return;

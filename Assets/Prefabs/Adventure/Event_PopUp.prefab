@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 6440468336172182926}
+  _onResourcesUpdated: {fileID: 11400000, guid: 3d97e89007f25c749a675386ba5a9e14, type: 2}
   _header: {fileID: 8978694304619585292}
   _action: {fileID: 6371541884749297705}
   _image: {fileID: 8535249038909747884}
@@ -629,7 +630,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0

@@ -11,16 +11,18 @@
             var viewElements = new ElementImages();
             var navigation = new NavigationService();
             var popUpSpawner = new PopUpSpawnerService();
-            var adventure = new AdventureConfigurationService();
+            var adventureConfig = new AdventureConfigurationService();
+            var adventureProgress = new AdventureProgressionService();
 
             ServiceLocator.RegisterService(gameConfig);
             ServiceLocator.RegisterService(gameProgression);
             ServiceLocator.RegisterService(saveLoad);
             ServiceLocator.RegisterService(navigation);
             ServiceLocator.RegisterService(popUpSpawner);
-            ServiceLocator.RegisterService(adventure);
+            ServiceLocator.RegisterService(adventureConfig);
             ServiceLocator.RegisterService(models);
             ServiceLocator.RegisterService(viewElements);
+            ServiceLocator.RegisterService(adventureProgress);
 
             gameConfig.Initialize(elements.InitialResources);
             gameProgression.Initialize(saveLoad);

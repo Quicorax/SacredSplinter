@@ -5,6 +5,8 @@ namespace Quicorax.SacredSplinter.Models
     [Serializable]
     public class EventData
     {
+        public bool Active;
+        
         public string Concept;
 
         public string Header;

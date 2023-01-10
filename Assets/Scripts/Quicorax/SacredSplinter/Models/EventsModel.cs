@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
-using Quicorax.SacredSplinter.GamePlay.Interactions.Events;
-using Quicorax.SacredSplinter.Models;
+﻿using UnityEngine;
+using System.Collections.Generic;
 
-namespace Quicorax.SacredSplinter.Services
+namespace Quicorax.SacredSplinter.Models
 {
     public class EventsModel : IModel
     {
         public List<EventData> Events = new();
+
+        public EventData GetRandomEvent() => Events[Random.Range(0, Events.Count)];
     }
 }
