@@ -11,12 +11,12 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         [SerializeField] private TMP_Text _header, _floorNumber;
 
         private AdventureConfigurationService _adventureConfig;
-        private ElementImages _elementImages;
+        private ElementImagesService _elementImages;
 
         private void Start()
         {
             _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
-            _elementImages = ServiceLocator.GetService<ElementImages>();
+            _elementImages = ServiceLocator.GetService<ElementImagesService>();
 
             SetLevelVisualData();
         }

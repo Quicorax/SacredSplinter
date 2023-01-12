@@ -34,7 +34,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Quests
             _header.text = data.Header;
 
             _rewardAmount.text = data.RewardAmount.ToString();
-            _rewardIcon.sprite = ServiceLocator.GetService<ElementImages>().GetViewImage(data.Reward);
+            _rewardIcon.sprite = ServiceLocator.GetService<ElementImagesService>().GetViewImage(data.Reward);
 
             _progressionPerCent.text = GetProgression();
 

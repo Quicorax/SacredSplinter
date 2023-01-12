@@ -1279,9 +1279,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BasePopUp, Assembly-CSharp
       objectReference: {fileID: 0}
-    - target: {fileID: 3170740458757926057, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
+    - target: {fileID: 2784956636482949060, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3369252863399040172, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_RaycastTarget
@@ -1434,7 +1434,7 @@ MonoBehaviour:
     PopUp: {fileID: 2347601186589964159, guid: 9c2db5f5a0085a440945acca034131cb, type: 3}
     Button: {fileID: 0}
   _heroStats:
-    PopUp: {fileID: 0}
+    PopUp: {fileID: 1435419954439330040, guid: 5ee609d3ea9e23140929ce75a13c5f3e, type: 3}
     Button: {fileID: 0}
   _selectText: {fileID: 90402085527896849}
 --- !u!224 &7668103929076798876 stripped

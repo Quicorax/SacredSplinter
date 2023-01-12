@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Quicorax.SacredSplinter.Services
 {
-    public class ElementImages : IService
+    public class ElementImagesService : IService
     {
         private ViewElementsModel _viewElements;
 

@@ -8,7 +8,7 @@
             var gameProgression = new GameProgressionService();
             var saveLoad = new SaveLoadService();
             var models = new ModelsService();
-            var viewElements = new ElementImages();
+            var viewElements = new ElementImagesService();
             var navigation = new NavigationService();
             var popUpSpawner = new PopUpSpawnerService();
             var adventureConfig = new AdventureConfigurationService();

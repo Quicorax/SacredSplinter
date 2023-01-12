@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 529868722, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_text
-      value: Credits
+      value: Stats
+      objectReference: {fileID: 0}
+    - target: {fileID: 529868722, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_fontSize
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 791597907499617352, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_IsActive
@@ -42,14 +46,14 @@ PrefabInstance:
     - target: {fileID: 2142229585986928154, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: -7343584447077849752}
+      objectReference: {fileID: 1435419954439330040}
     - target: {fileID: 2142229585986928154, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CloseSelf
       objectReference: {fileID: 0}
     - target: {fileID: 2142229585986928154, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BasePopUp, Assembly-CSharp
+      value: Quicorax.SacredSplinter.MetaGame.UI.PopUps.BasePopUp, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2567102605931817393, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_AnchorMax.y
@@ -205,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581012417779045143, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_Name
-      value: Credits_PopUp
+      value: HeroStats_PopUp
       objectReference: {fileID: 0}
     - target: {fileID: 6137656350785953910, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_IsActive
@@ -259,7 +263,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4581012417779045143, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
   m_PrefabInstance: {fileID: 4582014422809496882}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-7343584447077849752
+--- !u!114 &1435419954439330040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,7 +272,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1569357865508389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3626a8144700344a7cf0592675f65f, type: 3}
+  m_Script: {fileID: 11500000, guid: 33231afa0edcf794e97912ee7834a135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 6440468336172182926}

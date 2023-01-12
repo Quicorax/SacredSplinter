@@ -990,9 +990,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: BasePopUp, Assembly-CSharp
       objectReference: {fileID: 0}
-    - target: {fileID: 3170740458757926057, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
+    - target: {fileID: 2784956636482949060, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3369252863399040172, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_RaycastTarget

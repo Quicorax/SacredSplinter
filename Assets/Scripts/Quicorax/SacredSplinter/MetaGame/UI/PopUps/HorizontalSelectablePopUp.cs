@@ -71,7 +71,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
             FadeAnim(_header, () => _header.text = CurrentElement.Header);
             FadeAnim(_description, () => _description.text = CurrentElement.Description);
             FadeAnim(_image,
-                () => _image.sprite = ServiceLocator.GetService<ElementImages>().GetViewImage(CurrentElement.Header));
+                () => _image.sprite = ServiceLocator.GetService<ElementImagesService>().GetViewImage(CurrentElement.Header));
         }
 
         private void FadeAnim(MaskableGraphic objectToFade, Action onFullFaded)

@@ -24,7 +24,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Rooms
         protected void SetRoomKind(string forceKind = null)
         {
             RoomKind = !string.IsNullOrEmpty(forceKind) ? forceKind : ChooseRandomKind();
-            _roomIcon.sprite = ServiceLocator.GetService<ElementImages>().GetViewImage(RoomKind);
+            _roomIcon.sprite = ServiceLocator.GetService<ElementImagesService>().GetViewImage(RoomKind);
         }
 
         private string ChooseRandomKind() => _roomKinds[Random.Range(0, _roomKinds.Count)];

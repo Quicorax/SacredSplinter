@@ -16,11 +16,11 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
         private Action _onConfirm;
         private ProductData _product;
 
-        private ElementImages _elementImage;
+        private ElementImagesService _elementImage;
 
         public void Initialize(ProductData product, Action onConfirm)
         {
-            _elementImage = ServiceLocator.GetService<ElementImages>();
+            _elementImage = ServiceLocator.GetService<ElementImagesService>();
 
             _onConfirm = onConfirm;
             _product = product;

@@ -19,7 +19,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
 
         private GameProgressionService _progression;
         private PopUpSpawnerService _popUpSpawner;
-        private ElementImages _elementImage;
+        private ElementImagesService _elementImage;
 
         private Action _onTransactionCompleted;
 
@@ -27,7 +27,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
         {
             _progression = ServiceLocator.GetService<GameProgressionService>();
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
-            _elementImage = ServiceLocator.GetService<ElementImages>();
+            _elementImage = ServiceLocator.GetService<ElementImagesService>();
 
             _product = data;
             _onTransactionCompleted = onTransactionCompleted;

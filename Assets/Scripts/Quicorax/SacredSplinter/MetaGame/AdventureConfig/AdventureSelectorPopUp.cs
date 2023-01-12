@@ -15,14 +15,14 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         private PopUpSpawnerService _popUpSpawner;
         private AdventureConfigurationService _adventureConfig;
-        private ElementImages _elementImages;
+        private ElementImagesService _elementImages;
         private ModelsService _models;
 
         public void Initialize()
         {
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
             _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
-            _elementImages = ServiceLocator.GetService<ElementImages>();
+            _elementImages = ServiceLocator.GetService<ElementImagesService>();
             _models = ServiceLocator.GetService<ModelsService>();
 
             _adventureConfig.ResetSelection();

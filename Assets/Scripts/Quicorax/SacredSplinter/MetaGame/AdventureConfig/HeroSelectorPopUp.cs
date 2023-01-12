@@ -36,10 +36,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         public void ShowHeroStats()
         {
-            Debug.Log("Open Hero Stats PopUp");
-
-            //TODO: design Hero combat stats system
-            //_popUpSpawner.SpawnPopUp(_heroStats); 
+            _popUpSpawner.SpawnPopUp(_heroStats); 
         }
 
         public void SelectElement()
