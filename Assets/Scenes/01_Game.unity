@@ -249,6 +249,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 967413733}
     m_Modifications:
+    - target: {fileID: 7041029968508873799, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6117647
+      objectReference: {fileID: 0}
     - target: {fileID: 7257791141593461578, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -340,6 +344,14 @@ PrefabInstance:
     - target: {fileID: 7257791141593461590, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
       propertyPath: m_Name
       value: Game_Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964644780444915598, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8964644780444915598, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}

@@ -26,6 +26,10 @@ namespace Quicorax.Editor
                 "https://script.google.com/macros/s/AKfycbzTjE_0rfjTXXisaGzS1reMcXHGTZI-01GOztCzj5FzFR2NZUZ-XGt6Twj40O867Maq/exec"
             },
             {
+                "HeroesDataModel",
+                "https://script.google.com/macros/s/AKfycbzTT1V7ossRWyxm5_EqmXEXs6UwFUsJFf_siHH6qy12SvMrWeywTPlmiCcreIwjA2KMcg/exec"
+            },
+            {
                 "EncyclopediaModel",
                 "https://script.google.com/macros/s/AKfycbxuuy6tkUqver0jy5CFK-DMc1kV2BZuKvLm9czItyHw3G_TipeHa6taFS5nOMrjA8bg/exec"
             },
@@ -57,6 +61,9 @@ namespace Quicorax.Editor
 
         [MenuItem(EditorWindow + "HeroesModel")]
         public static void UpdateHeroes() => UpdateRemoteResource("HeroesModel");
+        
+        [MenuItem(EditorWindow + "HeroesDataModel")]
+        public static void UpdateHeroesData() => UpdateRemoteResource("HeroesDataModel");
 
         [MenuItem(EditorWindow + "EncyclopediaModel")]
         public static void UpdateEncyclopedia() => UpdateRemoteResource("EncyclopediaModel");

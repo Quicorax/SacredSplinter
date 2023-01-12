@@ -42,18 +42,20 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         public void OpenLocationSelector() =>
             OpenSelector<LocationSelectorPopUp>(_models.GetModel<BaseModel>("Locations"),
-                x => _adventureConfig.SetLocation(x.Header), _locationSelectionPack);
+                data => _adventureConfig.SetLocation(data.Header), _locationSelectionPack);
 
         public void OpenHeroSelector() =>
-            OpenSelector<HeroSelectorPopUp>(_models.GetModel<BaseModel>("Heroes"), x => _adventureConfig.SetHero(x.Header),
+            OpenSelector<HeroSelectorPopUp>(_models.GetModel<BaseModel>("Heroes"),
+                data => _adventureConfig.SetHero(data.Header),
                 _heroSelectionPack);
 
         private void OpenSelector<T>(BaseModel model, Action<BaseData> setData, SelectorPack elements)
             where T : HorizontalSelectablePopUp
         {
             ActivateButton(elements.Launcher.Button, false);
-            _popUpSpawner.SpawnPopUp<T>(elements.Launcher)
-                .Initialize(model, data => OnSelectionSuccess(setData, data, elements), () => OnSelectionFailed(elements));
+            _popUpSpawner.SpawnPopUp<T>(elements.Launcher).Initialize(model, data =>
+                OnSelectionSuccess(setData, data, elements), () =>
+                OnSelectionFailed(elements));
         }
 
         private void OnSelectionSuccess(Action<BaseData> setData, BaseData data, SelectorPack elements)

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Quicorax.SacredSplinter.Models;
 using UnityEngine;
 
@@ -18,14 +17,14 @@ namespace Quicorax.SacredSplinter.Services
             _models.Add("Quests", DeSerializeModel<QuestModel>("QuestsModel"));
             _models.Add("Shop", DeSerializeModel<ShopModel>("ShopModel"));
             _models.Add("Events", DeSerializeModel<EventsModel>("EventsModel"));
-
-            _models.Add("Locations", DeSerializeModel<BaseModel>("LocationsModel"));
+            _models.Add("HeroesData", DeSerializeModel<HeroesDataModel>("HeroesDataModel"));
             _models.Add("Heroes", DeSerializeModel<BaseModel>("HeroesModel"));
+            _models.Add("Locations", DeSerializeModel<BaseModel>("LocationsModel"));
             _models.Add("Encyclopedia", DeSerializeModel<BaseModel>("EncyclopediaModel"));
             //Add new Model here
         }
 
-        private T DeSerializeModel<T>(string modelConcept) where T : class =>
+        private T DeSerializeModel<T>(string modelConcept) where T : class, IModel =>
             JsonUtility.FromJson<T>(Resources.Load<TextAsset>(modelConcept).text);
     }
 }

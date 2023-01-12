@@ -1,35 +1,42 @@
-﻿namespace Quicorax.SacredSplinter.Services
+﻿using System;
+using Quicorax.SacredSplinter.Models;
+using UnityEngine;
+
+namespace Quicorax.SacredSplinter.Services
 {
     public class AdventureProgressionService : IService
     {
-        private int _maxHealth;
-        
-        private int _currentHealth;
+        private HeroesData _selectedHero;
 
-        public void StartAdventure()
+        private int _currentHealth;
+        private Action _onHealthUpdate;
+
+        public void StartAdventure(HeroesData selectedHero, Action onHealthUpdate)
         {
-            _currentHealth = _maxHealth;
+            _selectedHero = selectedHero;
+            _onHealthUpdate = onHealthUpdate;
+
+            _currentHealth = _selectedHero.MaxHealth;
         }
+
+        public int GetMaxHealth() => _selectedHero.MaxHealth;
+        public int GetCurrentHealth() => _currentHealth;
 
         public void UpdateHealth(int amount)
         {
-            if (_currentHealth + amount > _maxHealth)
-            {
-                _currentHealth = _maxHealth;
-            }
-            else if (_currentHealth <= 0)
+            _currentHealth = Mathf.Clamp(_currentHealth + amount, 0, _selectedHero.MaxHealth);
+
+           if (_currentHealth == 0)
             {
                 PlayerDead();
             }
-            else
-            {
-                _currentHealth += amount;
-            }
+
+            _onHealthUpdate?.Invoke();
         }
 
         private void PlayerDead()
         {
-            
+            Debug.Log("DEAD");
         }
     }
 }

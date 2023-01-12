@@ -1,18 +1,33 @@
-﻿namespace Quicorax.SacredSplinter.Services
+﻿using Quicorax.SacredSplinter.Models;
+using UnityEngine;
+
+namespace Quicorax.SacredSplinter.Services
 {
     public class AdventureConfigurationService : IService
     {
-        private string _hero, _location = string.Empty;
+        private HeroesData _heroesData;
+        private string _location = string.Empty;
 
-        public void SetHero(string hero) => _hero = hero;
+        public void SetHero(string heroName)
+        {
+            foreach (var heroData in ServiceLocator.GetService<ModelsService>().GetModel<HeroesDataModel>("HeroesData").HeroesData)
+            {
+                if (heroData.Name == heroName)
+                {
+                    _heroesData = heroData;
+                    return;
+                }
+            }
+        }
         public void SetLocation(string location) => _location = location;
-        public string GetHero() => _hero;
+        
         public string GetLocation() => _location;
-        public bool ReadyToEngage() => _hero != string.Empty && _location != string.Empty;
+        public HeroesData GetHeroData() => _heroesData;
+        public bool ReadyToEngage() => _heroesData != null && _location != string.Empty;
 
         public void ResetSelection()
         {
-            _hero = string.Empty;
+            _heroesData = null;
             _location = string.Empty;
         }
     }
