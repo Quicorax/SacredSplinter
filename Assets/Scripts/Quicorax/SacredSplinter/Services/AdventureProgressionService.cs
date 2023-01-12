@@ -22,16 +22,26 @@ namespace Quicorax.SacredSplinter.Services
         public int GetMaxHealth() => _selectedHero.MaxHealth;
         public int GetCurrentHealth() => _currentHealth;
 
-        public void UpdateHealth(int amount)
+        public void UpdateRawHealth(int amount)
         {
             _currentHealth = Mathf.Clamp(_currentHealth + amount, 0, _selectedHero.MaxHealth);
 
-           if (_currentHealth == 0)
+            if (_currentHealth == 0)
             {
                 PlayerDead();
             }
 
             _onHealthUpdate?.Invoke();
+            
+            Debug.Log(_currentHealth);
+        }
+
+        public void UpdateProportionalHealth(int percent)
+        {
+            var damage = ((float)percent / 100) * _selectedHero.MaxHealth;
+            Debug.Log(damage);
+
+            UpdateRawHealth(Mathf.RoundToInt(damage));
         }
 
         private void PlayerDead()

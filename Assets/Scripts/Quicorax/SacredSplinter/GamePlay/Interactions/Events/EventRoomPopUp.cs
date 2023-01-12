@@ -75,7 +75,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
             var image = ServiceLocator.GetService<ElementImagesService>().GetViewImage(kind);
 
             _popUpSpawner.SpawnPopUp<EventResultPopUp>(_eventResultPopUp)
-                .SetData(header, amount.ToString(), image);
+                .SetData(header, amount.ToString(), image, kind == "Health");
 
             Complete();
 
@@ -90,7 +90,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
                     _onResourcesUpdated.NotifyEvent();
                     break;
                 case "Health":
-                    _adventureProgression.UpdateHealth(amount);
+                    _adventureProgression.UpdateProportionalHealth(amount);
                     break;
             }
         }
