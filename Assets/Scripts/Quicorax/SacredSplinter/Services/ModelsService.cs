@@ -21,6 +21,7 @@ namespace Quicorax.SacredSplinter.Services
             _models.Add("Heroes", DeSerializeModel<BaseModel>("HeroesModel"));
             _models.Add("Locations", DeSerializeModel<BaseModel>("LocationsModel"));
             _models.Add("Encyclopedia", DeSerializeModel<BaseModel>("EncyclopediaModel"));
+            _models.Add("EnemiesData", DeSerializeModel<EnemiesDataModel>("EnemiesDataModel"));
             //Add new Model here
         }
 

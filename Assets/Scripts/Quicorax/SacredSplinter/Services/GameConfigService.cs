@@ -12,7 +12,7 @@ namespace Quicorax.SacredSplinter.Services
         public void Initialize(InitialResources resources)
         {
             Resources = resources.Resources;
-            UnlockedHeroes = resources.UnlockedHeros;
+            UnlockedHeroes = resources.UnlockedHeroes;
             LevelsProgression = resources.LevelsProgression;
         }
     }

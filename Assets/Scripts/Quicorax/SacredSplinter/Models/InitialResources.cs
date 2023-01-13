@@ -7,7 +7,7 @@ namespace Quicorax.SacredSplinter.Models
     public class InitialResources : ScriptableObject
     {
         public List<ResourceElement> Resources = new();
-        public List<string> UnlockedHeros = new();
+        public List<string> UnlockedHeroes = new();
         public List<int> CompletedQuestIndex = new();
         public List<ProgressionOnLevel> LevelsProgression = new();
     }

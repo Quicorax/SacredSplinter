@@ -3,7 +3,7 @@ using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 
 namespace Quicorax.SacredSplinter.GamePlay.Interactions
 {
-    public class BaseRoomPopUp : BasePopUp
+    public abstract class BaseRoomPopUp : BasePopUp
     {
         private Action<int> _onComplete;
 

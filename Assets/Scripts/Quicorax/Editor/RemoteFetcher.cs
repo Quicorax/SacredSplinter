@@ -37,6 +37,10 @@ namespace Quicorax.Editor
                 "EventsModel",
                 "https://script.google.com/macros/s/AKfycbwq7UJVLNq-1NUF2uvuq18wAf0G-0a6JblLlBYJvW9B9GfGPeOfpXolgkLLv0OrT6RHBg/exec"
             },
+            {
+                "EnemiesDataModel",
+                "https://script.google.com/macros/s/AKfycbw-27VHNzG7-HKbnXKPDhpXAKxokD8tJGtf18UfKkVw0BfbqJYI4DeG6F5NHOW9Xjh1/exec"
+            },
         };
 
         private const string EditorWindow = "Quicorax/RemoteData/Update ";
@@ -70,7 +74,10 @@ namespace Quicorax.Editor
 
         [MenuItem(EditorWindow + "EventsModel")]
         public static void UpdateEvents() => UpdateRemoteResource("EventsModel");
-
+        
+        [MenuItem(EditorWindow + "EnemiesDataModel")]
+        public static void UpdateEnemiesData() => UpdateRemoteResource("EnemiesDataModel");
+        
         private static void UpdateRemoteResource(string resource)
         {
             var request = WebRequest(Urls[resource]);

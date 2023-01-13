@@ -19,7 +19,7 @@ MonoBehaviour:
     Amount: 1000
   - Key: Hero License
     Amount: 1
-  UnlockedHeros:
+  UnlockedHeroes:
   - Errant
   CompletedQuestIndex: 
   LevelsProgression:

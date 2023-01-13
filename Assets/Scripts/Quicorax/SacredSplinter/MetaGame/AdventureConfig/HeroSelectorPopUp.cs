@@ -14,12 +14,12 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         private bool _elementUnlocked;
 
-        private GameProgressionService _progress;
+        private GameProgressionService _progression;
         private PopUpSpawnerService _popUpSpawner;
 
         private void Start()
         {
-            _progress = ServiceLocator.GetService<GameProgressionService>();
+            _progression = ServiceLocator.GetService<GameProgressionService>();
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
 
             ElementChanged();
@@ -28,7 +28,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         public void ElementChanged()
         {
-            _elementUnlocked = _progress.GetHeroUnlocked(CurrentElement.Header);
+            _elementUnlocked = _progression.GetHeroUnlocked(CurrentElement.Header);
 
             _selectable.SetActive(_elementUnlocked);
             _selectText.text = _elementUnlocked ? "Select" : "Unlock";
@@ -55,8 +55,8 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         private void OnHeroUnlocked()
         {
-            _progress.SetAmountOfResource("Hero License", -1);
-            _progress.SetHeroUnlocked(CurrentElement.Header);
+            _progression.SetAmountOfResource("Hero License", -1);
+            _progression.SetHeroUnlocked(CurrentElement.Header);
 
             ElementChanged();
             SelectElement();

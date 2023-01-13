@@ -7,5 +7,7 @@ namespace Quicorax.SacredSplinter.Models
     {
         public string Name;
         public int MaxHealth;
+        public bool CanIgnoreEvents;
+        public bool CanEscapeCombats;
     }
 }

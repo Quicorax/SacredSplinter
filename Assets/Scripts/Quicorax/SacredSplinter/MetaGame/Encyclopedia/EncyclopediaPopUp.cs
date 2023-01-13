@@ -15,20 +15,20 @@ namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
 
         private bool _elementDiscovered;
 
-        private GameProgressionService _progress;
+        private GameProgressionService _gameProgression;
 
         private readonly Color _darkGray = new(0.12f, 0.12f, 0.12f);
 
         private void Start()
         {
-            _progress = ServiceLocator.GetService<GameProgressionService>();
+            _gameProgression = ServiceLocator.GetService<GameProgressionService>();
             Model = ServiceLocator.GetService<ModelsService>().GetModel<BaseModel>("Encyclopedia"); //TODO: ¿¿
 
             ElementChanged();
         }
 
         public void ElementChanged() =>
-            _elementDiscovered = _progress.GetEnemyDiscovered(CurrentElement.Header);
+            _elementDiscovered = _gameProgression.GetEnemyDiscovered(CurrentElement.Header);
 
         public override void OnMiddleOfFade()
         {

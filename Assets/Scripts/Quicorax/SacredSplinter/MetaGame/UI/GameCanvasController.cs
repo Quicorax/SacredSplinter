@@ -32,9 +32,10 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _elementImages = ServiceLocator.GetService<ElementImagesService>();
 
             _adventureProgress.StartAdventure(_adventureConfig.GetHeroData(), SetHealthData);
+            
+            SetMaxHealthData();
             SetLevelVisualData();
 
-            SetMaxHealthData();
         }
 
         private void SetLevelVisualData()
@@ -50,7 +51,8 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         private void SetMaxHealthData()
         {
             _healthSlider.maxValue = _adventureProgress.GetMaxHealth();
-            _healthSlider.value = _adventureProgress.GetMaxHealth();
+            
+            SetHealthData();
         }
 
         private void SetHealthData()

@@ -77,6 +77,9 @@ namespace Quicorax.SacredSplinter.Services
 
         public void SetEnemyDiscovered(string enemyKind)
         {
+            if (_discoveredEnemies.Contains(enemyKind)) 
+                return;
+            
             _discoveredEnemies.Add(enemyKind);
             _saveLoadService.Save();
         }
