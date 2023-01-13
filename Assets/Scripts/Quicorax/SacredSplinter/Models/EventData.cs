@@ -8,6 +8,8 @@ namespace Quicorax.SacredSplinter.Models
         public bool Active;
         
         public string Concept;
+        
+        public string Location;
 
         public string Header;
         public string Action;

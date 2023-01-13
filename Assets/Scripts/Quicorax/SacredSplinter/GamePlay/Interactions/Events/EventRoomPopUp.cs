@@ -20,12 +20,14 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 
         private GameProgressionService _gameProgression;
         private AdventureProgressionService _adventureProgression;
+        private AdventureConfigurationService _adventureConfig;
         private PopUpSpawnerService _popUpSpawner;
 
         public void Start()
         {
             _gameProgression = ServiceLocator.GetService<GameProgressionService>();
             _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
+            _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
 
             _model = ServiceLocator.GetService<ModelsService>().GetModel<EventsModel>("Events");
@@ -45,7 +47,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
             while (!dataSelected)
             {
                 data = _model.GetRandomEvent();
-                if (data.Active)
+                if (data.Active && (string.IsNullOrEmpty(data.Location) || data.Location.Equals(_adventureConfig.GetLocation())))
                 {
                     dataSelected = true;
                 }
