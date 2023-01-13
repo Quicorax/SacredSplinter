@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 6440468336172182926}
-  _cristalsAmount: {fileID: 3933629022806638180}
+  _crystalsAmount: {fileID: 3933629022806638180}
   _coinsAmount: {fileID: 6619752596001929966}
   _heroLicense: {fileID: 5279243544904345451}
 --- !u!224 &3442521451290317035 stripped

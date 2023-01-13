@@ -14,12 +14,12 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         {
             _progression = progression;
 
-            TurnAudio(_progression.CheckSoundOff());
+            TurnAudio(_progression.GetSoundOff());
         }
 
         public void ToggleAudio()
         {
-            var isOn = !_progression.CheckSoundOff();
+            var isOn = !_progression.GetSoundOff();
 
             _progression.SetSoundOff(isOn);
 

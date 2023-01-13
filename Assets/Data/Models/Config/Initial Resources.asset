@@ -15,7 +15,7 @@ MonoBehaviour:
   Resources:
   - Key: Gold Coin
     Amount: 100
-  - Key: Blue Cristal
+  - Key: Blue Crystal
     Amount: 1000
   - Key: Hero License
     Amount: 1

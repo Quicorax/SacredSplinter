@@ -1,5 +1,6 @@
 ﻿using System;
 using Quicorax.SacredSplinter.Models;
+using Quicorax.SacredSplinter.Services.EventBus;
 using UnityEngine;
 
 namespace Quicorax.SacredSplinter.Services
@@ -9,7 +10,20 @@ namespace Quicorax.SacredSplinter.Services
         private HeroesData _selectedHero;
 
         private int _currentHealth;
+        private int _currentFloor;
+        private int _initialGoldCoins, _initialBlueCrystals;
+
         private Action _onHealthUpdate;
+
+        private StringEventBus _onPlayerDeath;
+        
+        private GameProgressionService _gameProgression;
+
+        public void Initialize(GameProgressionService gameProgression, StringEventBus onPlayerDeath)
+        {
+            _gameProgression = gameProgression;
+            _onPlayerDeath = onPlayerDeath;
+        }
 
         public void StartAdventure(HeroesData selectedHero, Action onHealthUpdate)
         {
@@ -17,36 +31,46 @@ namespace Quicorax.SacredSplinter.Services
             _onHealthUpdate = onHealthUpdate;
 
             _currentHealth = _selectedHero.MaxHealth;
+
+            SetInitialResources();
         }
 
         public int GetMaxHealth() => _selectedHero.MaxHealth;
         public int GetCurrentHealth() => _currentHealth;
+        public int GetCurrentFloor() => _currentFloor;
+        public void AddFloor() => _currentFloor++;
 
-        public void UpdateRawHealth(int amount)
+        public void UpdateRawHealth(int amount, string damageReason)
         {
             _currentHealth = Mathf.Clamp(_currentHealth + amount, 0, _selectedHero.MaxHealth);
 
             if (_currentHealth == 0)
             {
-                PlayerDead();
+                PlayerDead(damageReason);
             }
 
             _onHealthUpdate?.Invoke();
-            
-            Debug.Log(_currentHealth);
         }
 
-        public void UpdateProportionalHealth(int percent)
+        public void UpdateProportionalHealth(int percent, string damageReason)
         {
             var damage = ((float)percent / 100) * _selectedHero.MaxHealth;
-            Debug.Log(damage);
 
-            UpdateRawHealth(Mathf.RoundToInt(damage));
+            UpdateRawHealth(Mathf.RoundToInt(damage), damageReason);
         }
 
-        private void PlayerDead()
+        public int GetGoldCoinsBalance() =>
+            _gameProgression.GetAmountOfResource("Gold Coin") - _initialGoldCoins;
+
+        public int GetBlueCrystalsBalance() =>
+            _gameProgression.GetAmountOfResource("Blue Crystal") - _initialBlueCrystals;
+
+        private void SetInitialResources()
         {
-            Debug.Log("DEAD");
+            _initialGoldCoins = _gameProgression.GetAmountOfResource("Gold Coin");
+            _initialBlueCrystals = _gameProgression.GetAmountOfResource("Blue Crystal");
         }
+
+        private void PlayerDead(string deathReason) => _onPlayerDeath.NotifyEvent(deathReason);
     }
 }

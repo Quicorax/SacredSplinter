@@ -7,7 +7,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 {
     public class ResourcesPopUp : BasePopUp
     {
-        [SerializeField] private TMP_Text _cristalsAmount, _coinsAmount, _heroLicense;
+        [SerializeField] private TMP_Text _crystalsAmount, _coinsAmount, _heroLicense;
 
         private GameProgressionService _progression;
 
@@ -20,9 +20,9 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 
         private void Initialize()
         {
-            _coinsAmount.text = _progression.CheckAmountOfResource("Gold Coin").ToString();
-            _cristalsAmount.text = _progression.CheckAmountOfResource("Blue Cristal").ToString();
-            _heroLicense.text = _progression.CheckAmountOfResource("Hero License").ToString();
+            _coinsAmount.text = _progression.GetAmountOfResource("Gold Coin").ToString();
+            _crystalsAmount.text = _progression.GetAmountOfResource("Blue Crystal").ToString();
+            _heroLicense.text = _progression.GetAmountOfResource("Hero License").ToString();
         }
     }
 }

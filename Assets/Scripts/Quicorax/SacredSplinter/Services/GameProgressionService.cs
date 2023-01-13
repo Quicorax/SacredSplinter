@@ -43,7 +43,7 @@ namespace Quicorax.SacredSplinter.Services
                 _saveLoadService.Save();
         }
 
-        public int CheckAmountOfResource(string resourceId)
+        public int GetAmountOfResource(string resourceId)
         {
             var amount = -1;
 
@@ -65,7 +65,7 @@ namespace Quicorax.SacredSplinter.Services
             _saveLoadService.Save();
         }
 
-        public bool CheckQuestCompleted(int i) => _completedQuestIndex.Contains(i);
+        public bool GetQuestCompleted(int i) => _completedQuestIndex.Contains(i);
 
         public void SetHeroUnlocked(string heroClass)
         {
@@ -73,7 +73,7 @@ namespace Quicorax.SacredSplinter.Services
             _saveLoadService.Save();
         }
 
-        public bool CheckHeroUnlocked(string heroClass) => _unlockedHeros.Contains(heroClass);
+        public bool GetHeroUnlocked(string heroClass) => _unlockedHeros.Contains(heroClass);
 
         public void SetEnemyDiscovered(string enemyKind)
         {
@@ -81,22 +81,22 @@ namespace Quicorax.SacredSplinter.Services
             _saveLoadService.Save();
         }
 
-        public bool CheckEnemyDiscovered(string heroClass) => _discoveredEnemies.Contains(heroClass);
+        public bool GetEnemyDiscovered(string heroClass) => _discoveredEnemies.Contains(heroClass);
 
-        public int CheckAmountOfProgression(string concept)
+        public int GetAmountOfProgression(string concept)
         {
             return concept switch
             {
                 "Hunt" => _totalMonstersKilled,
-                "Adventure" => CheckHigherLevelReached(),
-                "Complete_Village" => CheckLocationCompleted("Village"),
-                "Complete_Sewer" => CheckLocationCompleted("Sewers"),
-                "Complete_Dungeon" => CheckLocationCompleted("Dungeons"),
+                "Adventure" => GetHigherLevelReached(),
+                "Complete_Village" => GetLocationCompleted("Village"),
+                "Complete_Sewer" => GetLocationCompleted("Sewers"),
+                "Complete_Dungeon" => GetLocationCompleted("Dungeons"),
                 _ => 0
             };
         }
 
-        private int CheckHigherLevelReached()
+        private int GetHigherLevelReached()
         {
             var higherLevel = 0;
 
@@ -109,7 +109,7 @@ namespace Quicorax.SacredSplinter.Services
             return higherLevel;
         }
 
-        private int CheckLocationCompleted(string locationName)
+        private int GetLocationCompleted(string locationName)
         {
             foreach (var item in _levelsProgression)
             {
@@ -126,6 +126,6 @@ namespace Quicorax.SacredSplinter.Services
             _saveLoadService.Save();
         }
 
-        public bool CheckSoundOff() => _soundOff;
+        public bool GetSoundOff() => _soundOff;
     }
 }

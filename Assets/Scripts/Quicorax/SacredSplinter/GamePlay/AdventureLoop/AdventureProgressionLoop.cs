@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
 {
-    public class AdventureProgression : MonoBehaviour
+    public class AdventureProgressionLoop : MonoBehaviour
     {
         [SerializeField] private RoomController _room;
         [SerializeField] private Transform _roomHolder;

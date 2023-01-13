@@ -72,7 +72,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
                 Random.Range(_currentEvent.SuccedMinAmount, _currentEvent.SuccedMaxAmount) : 
                 _currentEvent.FailAmount;
 
-            OnEventResult(kind, amount);
+            OnEventResult(kind, amount, _currentEvent.DeathMotive);
 
             var image = ServiceLocator.GetService<ElementImagesService>().GetViewImage(kind);
 
@@ -83,7 +83,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 
         }
 
-        private void OnEventResult(string kind, int amount)
+        private void OnEventResult(string kind, int amount, string reason)
         {
             switch (kind)
             {
@@ -92,7 +92,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
                     _onResourcesUpdated.NotifyEvent();
                     break;
                 case "Health":
-                    _adventureProgression.UpdateProportionalHealth(amount);
+                    _adventureProgression.UpdateProportionalHealth(amount, reason);
                     break;
             }
         }

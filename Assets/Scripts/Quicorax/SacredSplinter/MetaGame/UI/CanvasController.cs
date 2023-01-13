@@ -13,7 +13,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 
         [SerializeField] private PopUpLauncher _config, _resources;
 
-        [SerializeField] private TMP_Text _coinsAmount, _cristalsAmount;
+        [SerializeField] private TMP_Text _coinsAmount, _crystalsAmount;
 
         private PopUpSpawnerService _popUpSpawner;
         private GameProgressionService _gameProgression;
@@ -43,14 +43,14 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 
         private void SetItemAmount()
         {
-            _coinsAmount.text = _gameProgression.CheckAmountOfResource("Gold Coin").ToString();
-            _cristalsAmount.text = _gameProgression.CheckAmountOfResource("Blue Cristal").ToString();
+            _coinsAmount.text = _gameProgression.GetAmountOfResource("Gold Coin").ToString();
+            _crystalsAmount.text = _gameProgression.GetAmountOfResource("Blue Crystal").ToString();
 
             if (!_onTween)
             {
                 _onTween = true;
 
-                _cristalsAmount.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f);
+                _crystalsAmount.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f);
                 _coinsAmount.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f)
                     .OnComplete(() => _onTween = false);
             }

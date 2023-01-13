@@ -28,7 +28,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
         }
 
         public void ElementChanged() =>
-            _elementDiscovered = _progress.CheckEnemyDiscovered(CurrentElement.Header);
+            _elementDiscovered = _progress.GetEnemyDiscovered(CurrentElement.Header);
 
         public override void OnMiddleOfFade()
         {

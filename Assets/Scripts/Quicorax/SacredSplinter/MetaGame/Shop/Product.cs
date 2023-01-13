@@ -49,7 +49,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
 
         private void PurchaseConfirmed()
         {
-            if (_progression.CheckAmountOfResource(_product.Price) >= _product.PriceAmount)
+            if (_progression.GetAmountOfResource(_product.Price) >= _product.PriceAmount)
             {
                 _progression.SetAmountOfResource(_product.Price, -_product.PriceAmount);
                 _progression.SetAmountOfResource(_product.Reward, _product.RewardAmount);

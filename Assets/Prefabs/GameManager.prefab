@@ -49,6 +49,7 @@ MonoBehaviour:
     ViewElements: {fileID: 11400000, guid: 6e00bb63ee8ed0841b9e3e398ce094a0, type: 2}
     InitialResources: {fileID: 11400000, guid: 1d003afc06b98984ab4322164a68956b, type: 2}
     PopUpTransformParent: {fileID: 8899156494309702426}
+    OnPlayerDeath: {fileID: 11400000, guid: 56cbaab1eb7846243934ac92cb1be261, type: 2}
 --- !u!1001 &5789046815528248709
 PrefabInstance:
   m_ObjectHideFlags: 0

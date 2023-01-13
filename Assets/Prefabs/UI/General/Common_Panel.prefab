@@ -508,7 +508,7 @@ MonoBehaviour:
     PopUp: {fileID: 5491644426858811045, guid: 2a7c0a32e417251409eece23d59f155d, type: 3}
     Button: {fileID: 1290617095584478042}
   _coinsAmount: {fileID: 4686023516242807211}
-  _cristalsAmount: {fileID: 6874336480884882148}
+  _crystalsAmount: {fileID: 6874336480884882148}
 --- !u!1001 &5305469904324533518
 PrefabInstance:
   m_ObjectHideFlags: 0

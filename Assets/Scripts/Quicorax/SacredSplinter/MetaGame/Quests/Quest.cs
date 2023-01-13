@@ -38,7 +38,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Quests
 
             _progressionPerCent.text = GetProgression();
 
-            _claimed = _progression.CheckQuestCompleted(_quest.Index);
+            _claimed = _progression.GetQuestCompleted(_quest.Index);
 
             SetInteractable(!_claimed);
             SetClaim(_completed && !_claimed);
@@ -46,7 +46,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Quests
 
         private string GetProgression()
         {
-            var percent = _progression.CheckAmountOfProgression(_quest.Concept) * 100 / _quest.Amount;
+            var percent = _progression.GetAmountOfProgression(_quest.Concept) * 100 / _quest.Amount;
             var resultPercent = Mathf.Clamp(percent, 0, 100);
 
             _completed = resultPercent >= 100;

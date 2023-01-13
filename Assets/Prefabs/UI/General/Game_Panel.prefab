@@ -58,6 +58,10 @@ MonoBehaviour:
   _floorNumber: {fileID: 7041029968476064434}
   _health: {fileID: 7845801342612344977}
   _healthSlider: {fileID: 8964644780423442632}
+  _deathPopUp:
+    PopUp: {fileID: 0}
+    Button: {fileID: 0}
+  _onPlayerDeath: {fileID: 11400000, guid: 56cbaab1eb7846243934ac92cb1be261, type: 2}
 --- !u!1001 &3543768399569171223
 PrefabInstance:
   m_ObjectHideFlags: 0

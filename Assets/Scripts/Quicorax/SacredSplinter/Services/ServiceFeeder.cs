@@ -30,6 +30,7 @@
             popUpSpawner.Initialize(elements.PopUpTransformParent);
             models.Initialize();
             viewElements.Initialize(elements.ViewElements);
+            adventureProgress.Initialize(gameProgression, elements.OnPlayerDeath);
         }
     }
 }

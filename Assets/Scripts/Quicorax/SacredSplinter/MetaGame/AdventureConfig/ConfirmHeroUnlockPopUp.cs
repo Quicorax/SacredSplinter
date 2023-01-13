@@ -23,7 +23,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
             _heroClass.text = product;
 
             _availableLicenses = ServiceLocator.GetService<GameProgressionService>()
-                .CheckAmountOfResource("Hero License");
+                .GetAmountOfResource("Hero License");
 
             _availableHeroLicenses.text = _availableLicenses.ToString();
         }

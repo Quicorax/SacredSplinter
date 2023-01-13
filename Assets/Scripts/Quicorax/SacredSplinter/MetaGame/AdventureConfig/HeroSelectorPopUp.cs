@@ -28,7 +28,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         public void ElementChanged()
         {
-            _elementUnlocked = _progress.CheckHeroUnlocked(CurrentElement.Header);
+            _elementUnlocked = _progress.GetHeroUnlocked(CurrentElement.Header);
 
             _selectable.SetActive(_elementUnlocked);
             _selectText.text = _elementUnlocked ? "Select" : "Unlock";
