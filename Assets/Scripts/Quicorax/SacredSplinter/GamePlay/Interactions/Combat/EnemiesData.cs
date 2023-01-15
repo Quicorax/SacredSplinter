@@ -3,9 +3,10 @@
 namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 {
     [Serializable]
-    public class EnemyData
+    public class EnemiesData
     {
-        public string Name;
+        public string Header;
+        public string Description;
         public string Location;
         public int MaxHealth;
     }

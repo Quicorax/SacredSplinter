@@ -16,14 +16,14 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         private PopUpSpawnerService _popUpSpawner;
         private AdventureConfigurationService _adventureConfig;
         private ElementImagesService _elementImages;
-        private ModelsService _models;
+
+        private SelectorPack _currentSelectorPack;
 
         public void Initialize()
         {
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
             _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
             _elementImages = ServiceLocator.GetService<ElementImagesService>();
-            _models = ServiceLocator.GetService<ModelsService>();
 
             _adventureConfig.ResetSelection();
 
@@ -36,44 +36,35 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         public void EngageOnAdventure()
         {
             CloseSelf();
-            ServiceLocator.GetService<NavigationService>().NavigateToScene("01_Game");
+            ServiceLocator.GetService<NavigationService>().NavigateToGame();
         }
 
+        public void OpenLocationSelector() => SpawnSelectorPopUp<LocationSelectorPopUp>(_locationSelectionPack);
+        public void OpenHeroSelector() => SpawnSelectorPopUp<HeroSelectorPopUp>(_heroSelectionPack);
 
-        public void OpenLocationSelector() =>
-            OpenSelector<LocationSelectorPopUp>(_models.GetModel<BaseModel>("Locations"),
-                data => _adventureConfig.SetLocation(data.Header), _locationSelectionPack);
-
-        public void OpenHeroSelector() =>
-            OpenSelector<HeroSelectorPopUp>(_models.GetModel<BaseModel>("Heroes"),
-                data => _adventureConfig.SetHero(data.Header),
-                _heroSelectionPack);
-
-        private void OpenSelector<T>(BaseModel model, Action<BaseData> setData, SelectorPack elements)
-            where T : HorizontalSelectablePopUp
+        private void SpawnSelectorPopUp<T>(SelectorPack pack) where T : HorizontalSelectablePopUp
         {
-            ActivateButton(elements.Launcher.Button, false);
-            _popUpSpawner.SpawnPopUp<T>(elements.Launcher).Initialize(model, data =>
-                OnSelectionSuccess(setData, data, elements), () =>
-                OnSelectionFailed(elements));
+            _currentSelectorPack = pack;
+
+            ActivateButton(pack.Launcher.Button, false);
+
+            _popUpSpawner.SpawnPopUp<T>(pack.Launcher).Initialize(OnSelectionSuccess, OnSelectionFailed);
         }
 
-        private void OnSelectionSuccess(Action<BaseData> setData, BaseData data, SelectorPack elements)
+        private void OnSelectionSuccess(string header)
         {
-            setData?.Invoke(data);
+            _currentSelectorPack.Image.sprite = _elementImages.GetViewImage(header);
 
-            elements.Image.sprite = _elementImages.GetViewImage(data.Header);
+            TurnObjectOn(_currentSelectorPack.Image.gameObject, true);
+            TurnObjectOn(_currentSelectorPack.Unselected, false);
 
-            TurnObjectOn(elements.Image.gameObject, true);
-            TurnObjectOn(elements.Unselected, false);
-
-            ActivateButton(elements.Launcher.Button, true);
+            ActivateButton(_currentSelectorPack.Launcher.Button, true);
 
             if (_adventureConfig.ReadyToEngage())
                 ActivateButton(_engageOnAdventureButton, true);
         }
 
-        private void OnSelectionFailed(SelectorPack elements) => ActivateButton(elements.Launcher.Button, true);
+        private void OnSelectionFailed() => ActivateButton(_currentSelectorPack.Launcher.Button, true);
 
         public void CancelSelection() => _adventureConfig.ResetSelection();
 

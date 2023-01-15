@@ -1,6 +1,6 @@
 ﻿using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
-using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
+using UnityEngine;
 
 namespace Quicorax.SacredSplinter.MetaGame.Quests
 {
@@ -8,9 +8,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Quests
     {
         protected override void SpawnElements()
         {
-            var quests = ServiceLocator.GetService<ModelsService>().GetModel<QuestModel>("Quests");
-
-            foreach (var quest in quests.Quests)
+            foreach (var quest in ServiceLocator.GetService<GameConfigService>().Quests)
                 InstanceElement<Quest>(View).Initialize(quest, UpdateUI);
         }
     }

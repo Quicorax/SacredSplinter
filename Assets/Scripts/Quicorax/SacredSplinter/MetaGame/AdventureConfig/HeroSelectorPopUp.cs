@@ -1,7 +1,11 @@
-﻿using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
+﻿using System;
+using System.Collections.Generic;
+using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
+using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 {
@@ -11,52 +15,70 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         [SerializeField] private PopUpLauncher _unlockHeroPopUp, _heroStats;
 
         [SerializeField] private TMP_Text _selectText;
+        [SerializeField] private Button _stats;
 
         private bool _elementUnlocked;
 
         private GameProgressionService _progression;
         private PopUpSpawnerService _popUpSpawner;
 
-        private void Start()
+        private Dictionary<int, HeroesData> _heroes = new();
+        private HeroesData _currentHero;
+
+        public override void Initialize(Action<string> onSelect, Action onCancel)
         {
             _progression = ServiceLocator.GetService<GameProgressionService>();
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
 
+            base.Initialize(onSelect, onCancel);
+
+            var heroes = ServiceLocator.GetService<GameConfigService>().Heroes;
+
+            SetListCount(heroes.Count);
+            _stats.onClick.AddListener(ShowHeroStats);
+
+            for (var i = 0; i < heroes.Count; i++)
+                _heroes.Add(i, heroes[i]);
+
             ElementChanged();
         }
 
-
-        public void ElementChanged()
+        protected override void ElementChanged()
         {
-            _elementUnlocked = _progression.GetHeroUnlocked(CurrentElement.Header);
+            _currentHero = _heroes[ActualIndex];
+            PrintElementData( _currentHero.Header, _currentHero.Description);
+
+            _elementUnlocked = _progression.GetHeroUnlocked(_currentHero);
 
             _selectable.SetActive(_elementUnlocked);
             _selectText.text = _elementUnlocked ? "Select" : "Unlock";
         }
 
-        public void ShowHeroStats()
-        {
-            _popUpSpawner.SpawnPopUp(_heroStats); 
-        }
+        public void ShowHeroStats() => _popUpSpawner.SpawnPopUp(_heroStats);
 
-        public void SelectElement()
+        protected override void SelectElement()
         {
             if (_elementUnlocked)
             {
-                OnSelect?.Invoke(Model.Entries[ActualIndex]);
+                _adventureConfiguration.SetHero(_currentHero.Header);
+                _onSelect?.Invoke(_currentHero.Header);
                 CloseSelf();
             }
             else
             {
                 _popUpSpawner.SpawnPopUp<ConfirmHeroUnlockPopUp>(_unlockHeroPopUp)
-                    .Initialize(CurrentElement.Header, OnHeroUnlocked);
+                    .Initialize(_currentHero.Header, OnHeroUnlocked);
             }
+        }
+
+        protected override void OnMiddleOfFade()
+        {
         }
 
         private void OnHeroUnlocked()
         {
-            _progression.SetAmountOfResource("Hero License", -1);
-            _progression.SetHeroUnlocked(CurrentElement.Header);
+            //_progression.SetAmountOfResource("Hero License", -1); //TODO: hero is now free!
+            _progression.SetHeroUnlocked(_currentHero);
 
             ElementChanged();
             SelectElement();

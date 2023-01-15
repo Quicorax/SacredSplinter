@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 1813245961469868787}
-  _notEnoughtResourcesPopUp:
+  _notEnoughResourcesPopUp:
     PopUp: {fileID: -8800489713506235594, guid: b41bca536c66a114fbede4a9ac787e41, type: 3}
     Button: {fileID: 0}
   _heroClass: {fileID: 875324481688744549}

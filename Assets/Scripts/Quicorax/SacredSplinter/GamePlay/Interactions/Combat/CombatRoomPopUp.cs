@@ -2,6 +2,7 @@ using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
@@ -17,7 +18,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         private GameProgressionService _gameProgression;
         private ElementImagesService _elementImages;
 
-        private EnemyData _enemyData;
+        private EnemiesData _enemiesData;
 
         private int _enemyCurrentHealth;
 
@@ -25,34 +26,37 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         {
             GetServices();
 
-            _enemyData = SetEnemy();
+            _enemiesData = SetEnemy();
 
-            _enemyName.text = _enemyData.Name;
-            _enemy.sprite = _elementImages.GetViewImage(_enemyData.Name);
-            _hero.sprite = _elementImages.GetViewImage(_adventureConfig.GetHeroData().Name);
+            _enemyName.text = _enemiesData.Header;
+            _enemy.sprite = _elementImages.GetViewImage(_enemiesData.Header);
+            _hero.sprite = _elementImages.GetViewImage(_adventureConfig.GetHeroData().Header);
 
-            _enemyCurrentHealth = _enemyData.MaxHealth;
-            _enemyHealth.maxValue = _enemyData.MaxHealth;
+            _enemyCurrentHealth = _enemiesData.MaxHealth;
+            _enemyHealth.maxValue = _enemiesData.MaxHealth;
 
-            _gameProgression.SetEnemyDiscovered(_enemyData.Name);
+            _gameProgression.SetEnemyDiscovered(_enemiesData);
             
             UpdateEnemyHealth();
             SetButtonLogic();
         }
 
-        private EnemyData SetEnemy()
+        private EnemiesData SetEnemy()
         {
-            EnemyData data = null;
+            EnemiesData data = null;
             var dataSelected = false;
+            
+            var dataList = ServiceLocator.GetService<GameConfigService>().Enemies;
             
             while (!dataSelected)
             {
-                data =  ServiceLocator.GetService<ModelsService>().GetModel<EnemiesDataModel>("EnemiesData").GetRandomEnemy();
+                data =  dataList[Random.Range(0, dataList.Count)];
                 if (string.IsNullOrEmpty(data.Location) || data.Location.Equals(_adventureConfig.GetLocation()))
                 {
                     dataSelected = true;
                 }
             }
+            
             return data;
         }
         private void SetButtonLogic()
@@ -75,7 +79,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         private void UpdateEnemyHealth()
         {
             _enemyHealth.value = _enemyCurrentHealth;
-            _enemyHealthDisplay.text = $"{_enemyCurrentHealth} / {_enemyData.MaxHealth}";
+            _enemyHealthDisplay.text = $"{_enemyCurrentHealth} / {_enemiesData.MaxHealth}";
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿using DG.Tweening;
+﻿using System;
+using System.Collections.Generic;
+using DG.Tweening;
+using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Services;
 using TMPro;
@@ -10,27 +13,42 @@ namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
     public class EncyclopediaPopUp : HorizontalSelectablePopUp
     {
         [SerializeField] private TMP_Text _descriptionText, _unknownDescriptionText;
-
         [SerializeField] private Image _artImage;
-
-        private bool _elementDiscovered;
 
         private GameProgressionService _gameProgression;
 
         private readonly Color _darkGray = new(0.12f, 0.12f, 0.12f);
 
-        private void Start()
+        private bool _elementDiscovered;
+
+        private Dictionary<int, EnemiesData> _enemies = new();
+        private EnemiesData _currentEnemy;
+
+        public override void Initialize(Action<string> onSelect = null, Action onCancel = null)
         {
             _gameProgression = ServiceLocator.GetService<GameProgressionService>();
-            Model = ServiceLocator.GetService<ModelsService>().GetModel<BaseModel>("Encyclopedia"); //TODO: ¿¿
+
+            base.Initialize(onSelect, onCancel);
+
+            var enemies = ServiceLocator.GetService<GameConfigService>().Enemies;
+
+            SetListCount(enemies.Count);
+
+            for (var i = 0; i < enemies.Count; i++)
+                _enemies.Add(i, enemies[i]);
 
             ElementChanged();
         }
 
-        public void ElementChanged() =>
-            _elementDiscovered = _gameProgression.GetEnemyDiscovered(CurrentElement.Header);
+        protected override void ElementChanged()
+        {
+            _elementDiscovered = _gameProgression.GetEnemyDiscovered(_currentEnemy);
+            
+            _currentEnemy = _enemies[ActualIndex];
+            PrintElementData(_currentEnemy.Header, _currentEnemy.Description);
+        }
 
-        public override void OnMiddleOfFade()
+        protected override void OnMiddleOfFade()
         {
             _artImage.color = _elementDiscovered ? Color.white : _darkGray;
 
@@ -51,6 +69,10 @@ namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
                 _descriptionText.DOFade(0, 0.2f).OnComplete(() =>
                     _descriptionText.gameObject.SetActive(false));
             }
+        }
+
+        protected override void SelectElement()
+        {
         }
     }
 }

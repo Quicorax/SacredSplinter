@@ -6,8 +6,8 @@ namespace Quicorax.SacredSplinter.Models
 {
     public class EnemiesDataModel: IModel
     {
-        public List<EnemyData> EnemiesData = new();
+        public List<EnemiesData> EnemiesData = new();
 
-        public EnemyData GetRandomEnemy() => EnemiesData[Random.Range(0, EnemiesData.Count)];
+        public EnemiesData GetRandomEnemy() => EnemiesData[Random.Range(0, EnemiesData.Count)];
     }
 }

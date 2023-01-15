@@ -28,7 +28,7 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
         private void Return()
         {
             base.CloseSelf();
-            ServiceLocator.GetService<NavigationService>().NavigateToScene("00_Menu");
+            ServiceLocator.GetService<NavigationService>().NavigateToMenu();
         }
     }
 }

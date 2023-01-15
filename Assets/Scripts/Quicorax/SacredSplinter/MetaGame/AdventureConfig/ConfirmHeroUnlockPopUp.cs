@@ -1,5 +1,4 @@
 using System;
-using Quicorax.SacredSplinter.MetaGame.Shop;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Services;
 using TMPro;
@@ -9,7 +8,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 {
     public class ConfirmHeroUnlockPopUp : BasePopUp
     {
-        [SerializeField] private PopUpLauncher _notEnoughtResourcesPopUp;
+        [SerializeField] private PopUpLauncher _notEnoughResourcesPopUp;
 
         [SerializeField] private TMP_Text _heroClass, _availableHeroLicenses;
 
@@ -30,18 +29,19 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         public void TryUnlock()
         {
-            if (_availableLicenses > 0)
-            {
-                _onConfirm?.Invoke();
-                CloseSelf();
-            }
-            else
-            {
-                ServiceLocator.GetService<PopUpSpawnerService>()
-                    .SpawnPopUp<NotEnoughResources>(_notEnoughtResourcesPopUp).Initialize();
+            _onConfirm?.Invoke();
+            CloseSelf();
 
-                CloseSelf();
-            }
+            //if (_availableLicenses > 0) //TODO: now hero is free!
+            //{
+            //    _onConfirm?.Invoke();
+            //}
+            //else
+            //{
+            //   ServiceLocator.GetService<PopUpSpawnerService>()
+            //       .SpawnPopUp<NotEnoughResources>(_notEnoughResourcesPopUp).Initialize();
+            //}
+            //    CloseSelf();
         }
     }
 }

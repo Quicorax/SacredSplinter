@@ -1,0 +1,309 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"c7adab55-68a1-4f31-ba4a-d65af8d1207b\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"InitialResources\",\r\n      \"type\":
+    \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {}\r\n    }\r\n  },\r\n 
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"44d83588-eecd-4656-840b-1243b85a773d\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
+    {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
+    Coin\",\r\n            \"PriceAmount\": 1000,\r\n            \"Reward\": \"Hero
+    License\",\r\n            \"RewardAmount\": 1\r\n          },\r\n          {\r\n           
+    \"Header\": \"Gold Coins\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
+    \"PriceAmount\": 10,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"RewardAmount\": 1\r\n          },\r\n          {\r\n            \"Header\":
+    \"Gold Coins x 10\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
+    \"PriceAmount\": 100,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"RewardAmount\": 10\r\n          },\r\n          {\r\n            \"Header\":
+    \"Gold Coins x 100\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
+    \"PriceAmount\": 1000,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"RewardAmount\": 100\r\n          },\r\n          {\r\n            \"Header\":
+    \"Gold Coins x 1000\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
+    \"PriceAmount\": 10000,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"RewardAmount\": 1000\r\n          },\r\n          {\r\n            \"Header\":
+    \"Blue Cristal\",\r\n            \"Price\": \"Gold Coin\",\r\n            \"PriceAmount\":
+    1,\r\n            \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\":
+    100\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"bfd884aa-7fd5-4d14-a093-7c35701a54da\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
+    {\r\n            \"Index\": 0,\r\n            \"Concept\": \"Hunt\",\r\n           
+    \"Header\": \"Kill 1 monster\",\r\n            \"Amount\": 1,\r\n           
+    \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\": 10\r\n         
+    },\r\n          {\r\n            \"Index\": 1,\r\n            \"Concept\": \"Hunt\",\r\n           
+    \"Header\": \"Kill 10 monster\",\r\n            \"Amount\": 10,\r\n           
+    \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\": 100\r\n         
+    },\r\n          {\r\n            \"Index\": 2,\r\n            \"Concept\": \"Hunt\",\r\n           
+    \"Header\": \"Kill 100 monster\",\r\n            \"Amount\": 100,\r\n           
+    \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\": 1000\r\n         
+    },\r\n          {\r\n            \"Index\": 3,\r\n            \"Concept\": \"Adventure\",\r\n           
+    \"Header\": \"Reach Level 3 on any adventure\",\r\n            \"Amount\": 3,\r\n           
+    \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 10\r\n          },\r\n         
+    {\r\n            \"Index\": 4,\r\n            \"Concept\": \"Adventure\",\r\n           
+    \"Header\": \"Reach Level 9 on any adventure\",\r\n            \"Amount\": 9,\r\n           
+    \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 50\r\n          },\r\n         
+    {\r\n            \"Index\": 5,\r\n            \"Concept\": \"Adventure\",\r\n           
+    \"Header\": \"Reach Level 12 on any adventure\",\r\n            \"Amount\": 21,\r\n           
+    \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 250\r\n         
+    },\r\n          {\r\n            \"Index\": 6,\r\n            \"Concept\": \"Complete_Village\",\r\n           
+    \"Header\": \"Complete the Village\",\r\n            \"Amount\": 1,\r\n           
+    \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
+    },\r\n          {\r\n            \"Index\": 7,\r\n            \"Concept\": \"Complete_Sewers\",\r\n           
+    \"Header\": \"Complete the Sewers\",\r\n            \"Amount\": 1,\r\n           
+    \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
+    },\r\n          {\r\n            \"Index\": 8,\r\n            \"Concept\": \"Complete_Dungeons\",\r\n           
+    \"Header\": \"Complete the Dungeons\",\r\n            \"Amount\": 1,\r\n           
+    \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
+    }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
+    \"entityId\": \"d333730f-4ecf-436b-85c2-f646b6569c86\"\r\n    },\r\n    \"rs\":
+    {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
+    null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
+    \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
+    the unknown reaches of the world in search of treasure and the thrill of discovery.\",\r\n           
+    \"MaxHealth\": 100,\r\n            \"CanIgnoreEvents\": true,\r\n           
+    \"CanEscapeCombats\": true\r\n          },\r\n          {\r\n            \"Header\":
+    \"Brute\",\r\n            \"Description\": \"A brute of a man, relying on strength
+    and brawn rather than wit and cunning as he sought out treasure and glory in
+    the far-flung corners of the world.\",\r\n            \"MaxHealth\": 125,\r\n           
+    \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\": false\r\n         
+    },\r\n          {\r\n            \"Header\": \"Thief\",\r\n            \"Description\":
+    \"A sly thief, using stealth and deception to pilfer valuable goods and riches
+    from those foolish enough to underestimate her.\",\r\n            \"MaxHealth\":
+    75,\r\n            \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\":
+    false\r\n          },\r\n          {\r\n            \"Header\": \"Cultist\",\r\n           
+    \"Description\": \"A devout cultist, seeking out forbidden knowledge and ancient
+    relics in the hopes of summoning powerful deities and unlocking the secrets of
+    the universe.\",\r\n            \"MaxHealth\": 80,\r\n            \"CanIgnoreEvents\":
+    false,\r\n            \"CanEscapeCombats\": true\r\n          }\r\n        ]\r\n     
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"84abb0e6-31b7-440e-97c1-acc8234a8885\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
+    {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
+    creature, with sharp teeth and razor-like claws to defend itself against larger
+    predators.\",\r\n            \"MaxHealth\": 15\r\n          },\r\n          {\r\n           
+    \"Header\": \"Dog\",\r\n            \"Description\": \"A dangerous beast, its
+    teeth bared and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
+    \"Location\": \"Village\",\r\n            \"MaxHealth\": 35\r\n          },\r\n         
+    {\r\n            \"Header\": \"Bandit\",\r\n            \"Description\": \"A
+    ruthless thief, preying on the weak and vulnerable as he roamed the land in search
+    of plunder and riches.\",\r\n            \"MaxHealth\": 75\r\n          }\r\n       
+    ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"62fa1903-7fce-4c9c-aa40-8169bcfb130d\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"LocationsModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
+    null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
+    \"Header\": \"Village\",\r\n            \"Description\": \"The village lay nestled
+    on the outskirts of the castle, shrouded in darkness and mystery. It is a place
+    where danger lurks at every turn, where old and decrepit houses seemed to whisper
+    secrets of a troubled past.\"\r\n          },\r\n          {\r\n            \"Header\":
+    \"Sewers\",\r\n            \"Description\": \"The sewers lay beneath the village,
+    a putrid and fetid place overrun with all manner of filth and vermin. It was
+    a place where the light of day never reached, where the shadows seemed to dance
+    and twist in the flickering glow of a handful of torches.\"\r\n          },\r\n         
+    {\r\n            \"Header\": \"Dungeons\",\r\n            \"Description\": \"The
+    dungeons of the castle were a place of torture and suffering, where the screams
+    of the damned echoed through the cold stone walls. It was a place where the darkness
+    seemed to seep into one's very soul, where the air was thick with the stench
+    of fear and death.\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"0f4544c4-af3d-4599-a187-ae2ca886e1cb\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\":
+    \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
+    [\r\n          {\r\n            \"Active\": false,\r\n            \"Concept\":
+    \"Insta Death\",\r\n            \"Header\": \"Insta Death\",\r\n            \"Action\":
+    \"Insta Death\",\r\n            \"Chance\": 0,\r\n            \"SuccedHeader\":
+    \"Insta Death\",\r\n            \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\":
+    0,\r\n            \"SuccedMaxAmount\": 0,\r\n            \"FailHeader\": \"Insta
+    Death\",\r\n            \"FailKind\": \"Health\",\r\n            \"FailAmount\":
+    -100,\r\n            \"DeathMotive\": \"God\"\r\n          },\r\n          {\r\n           
+    \"Active\": true,\r\n            \"Concept\": \"Event_Corpse\",\r\n           
+    \"Header\": \"You see a corpse liying on the ground.\",\r\n            \"Action\":
+    \"Loot corpse\",\r\n            \"Chance\": 40,\r\n            \"SuccedHeader\":
+    \"You find some coins in the dead's pocked.\",\r\n            \"SuccedKind\":
+    \"Gold Coin\",\r\n            \"SuccedMinAmount\": 1,\r\n            \"SuccedMaxAmount\":
+    10,\r\n            \"FailHeader\": \"The sleeping Undead awakes and in a quick
+    move scratches you! \",\r\n            \"FailKind\": \"Health\",\r\n           
+    \"FailAmount\": -10,\r\n            \"DeathMotive\": \"Undead\"\r\n         
+    },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
+    \"Event_GlowingFountain\",\r\n            \"Header\": \"You see a fountain with
+    glowing water.\",\r\n            \"Action\": \"Drink water\",\r\n           
+    \"Chance\": 50,\r\n            \"SuccedHeader\": \"You feel your body grow with
+    energy.\",\r\n            \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\":
+    15,\r\n            \"SuccedMaxAmount\": 25,\r\n            \"FailHeader\": \"The
+    water taster dirty...\",\r\n            \"FailKind\": \"Health\",\r\n           
+    \"FailAmount\": -15,\r\n            \"DeathMotive\": \"Poisoning\"\r\n         
+    },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
+    \"Event_Unknown\",\r\n            \"Header\": \"???\",\r\n            \"Action\":
+    \"?\",\r\n            \"Chance\": 50,\r\n            \"SuccedHeader\": \":)\",\r\n           
+    \"SuccedKind\": \"Blue Crystal\",\r\n            \"SuccedMinAmount\": 0,\r\n           
+    \"SuccedMaxAmount\": 999,\r\n            \"FailHeader\": \":(\",\r\n           
+    \"FailKind\": \"Health\",\r\n            \"FailAmount\": -99,\r\n           
+    \"DeathMotive\": \"?\"\r\n          },\r\n          {\r\n            \"Active\":
+    true,\r\n            \"Concept\": \"Event_InjuredDog\",\r\n            \"Location\":
+    \"Village\",\r\n            \"Header\": \"An injured dog approaches to you.\",\r\n           
+    \"Action\": \"Pet the dog\",\r\n            \"Chance\": 55,\r\n            \"SuccedHeader\":
+    \"The dog seems to be gratefull.\",\r\n            \"SuccedKind\": \"Blue Crystal\",\r\n           
+    \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 20,\r\n           
+    \"FailHeader\": \"---\",\r\n            \"FailKind\": \"Gold Coin\",\r\n           
+    \"FailAmount\": -13\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"c7adab55-68a1-4f31-ba4a-d65af8d1207b\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"InitialResources\",\r\n      \"type\":
+    \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {}\r\n    }\r\n  },\r\n 
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"44d83588-eecd-4656-840b-1243b85a773d\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
+    {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
+    Coin\",\r\n            \"PriceAmount\": 1000,\r\n            \"Reward\": \"Hero
+    License\",\r\n            \"RewardAmount\": 1\r\n          },\r\n          {\r\n           
+    \"Header\": \"Gold Coins\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
+    \"PriceAmount\": 10,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"RewardAmount\": 1\r\n          },\r\n          {\r\n            \"Header\":
+    \"Gold Coins x 10\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
+    \"PriceAmount\": 100,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"RewardAmount\": 10\r\n          },\r\n          {\r\n            \"Header\":
+    \"Gold Coins x 100\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
+    \"PriceAmount\": 1000,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"RewardAmount\": 100\r\n          },\r\n          {\r\n            \"Header\":
+    \"Gold Coins x 1000\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
+    \"PriceAmount\": 10000,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"RewardAmount\": 1000\r\n          },\r\n          {\r\n            \"Header\":
+    \"Blue Cristal\",\r\n            \"Price\": \"Gold Coin\",\r\n            \"PriceAmount\":
+    1,\r\n            \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\":
+    100\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"bfd884aa-7fd5-4d14-a093-7c35701a54da\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
+    {\r\n            \"Index\": 0,\r\n            \"Concept\": \"Hunt\",\r\n           
+    \"Header\": \"Kill 1 monster\",\r\n            \"Amount\": 1,\r\n           
+    \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\": 10\r\n         
+    },\r\n          {\r\n            \"Index\": 1,\r\n            \"Concept\": \"Hunt\",\r\n           
+    \"Header\": \"Kill 10 monster\",\r\n            \"Amount\": 10,\r\n           
+    \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\": 100\r\n         
+    },\r\n          {\r\n            \"Index\": 2,\r\n            \"Concept\": \"Hunt\",\r\n           
+    \"Header\": \"Kill 100 monster\",\r\n            \"Amount\": 100,\r\n           
+    \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\": 1000\r\n         
+    },\r\n          {\r\n            \"Index\": 3,\r\n            \"Concept\": \"Adventure\",\r\n           
+    \"Header\": \"Reach Level 3 on any adventure\",\r\n            \"Amount\": 3,\r\n           
+    \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 10\r\n          },\r\n         
+    {\r\n            \"Index\": 4,\r\n            \"Concept\": \"Adventure\",\r\n           
+    \"Header\": \"Reach Level 9 on any adventure\",\r\n            \"Amount\": 9,\r\n           
+    \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 50\r\n          },\r\n         
+    {\r\n            \"Index\": 5,\r\n            \"Concept\": \"Adventure\",\r\n           
+    \"Header\": \"Reach Level 12 on any adventure\",\r\n            \"Amount\": 21,\r\n           
+    \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 250\r\n         
+    },\r\n          {\r\n            \"Index\": 6,\r\n            \"Concept\": \"Complete_Village\",\r\n           
+    \"Header\": \"Complete the Village\",\r\n            \"Amount\": 1,\r\n           
+    \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
+    },\r\n          {\r\n            \"Index\": 7,\r\n            \"Concept\": \"Complete_Sewers\",\r\n           
+    \"Header\": \"Complete the Sewers\",\r\n            \"Amount\": 1,\r\n           
+    \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
+    },\r\n          {\r\n            \"Index\": 8,\r\n            \"Concept\": \"Complete_Dungeons\",\r\n           
+    \"Header\": \"Complete the Dungeons\",\r\n            \"Amount\": 1,\r\n           
+    \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
+    }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
+    \"entityId\": \"d333730f-4ecf-436b-85c2-f646b6569c86\"\r\n    },\r\n    \"rs\":
+    {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
+    null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
+    \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
+    the unknown reaches of the world in search of treasure and the thrill of discovery.\",\r\n           
+    \"MaxHealth\": 100,\r\n            \"CanIgnoreEvents\": true,\r\n           
+    \"CanEscapeCombats\": true\r\n          },\r\n          {\r\n            \"Header\":
+    \"Brute\",\r\n            \"Description\": \"A brute of a man, relying on strength
+    and brawn rather than wit and cunning as he sought out treasure and glory in
+    the far-flung corners of the world.\",\r\n            \"MaxHealth\": 125,\r\n           
+    \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\": false\r\n         
+    },\r\n          {\r\n            \"Header\": \"Thief\",\r\n            \"Description\":
+    \"A sly thief, using stealth and deception to pilfer valuable goods and riches
+    from those foolish enough to underestimate her.\",\r\n            \"MaxHealth\":
+    75,\r\n            \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\":
+    false\r\n          },\r\n          {\r\n            \"Header\": \"Cultist\",\r\n           
+    \"Description\": \"A devout cultist, seeking out forbidden knowledge and ancient
+    relics in the hopes of summoning powerful deities and unlocking the secrets of
+    the universe.\",\r\n            \"MaxHealth\": 80,\r\n            \"CanIgnoreEvents\":
+    false,\r\n            \"CanEscapeCombats\": true\r\n          }\r\n        ]\r\n     
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"84abb0e6-31b7-440e-97c1-acc8234a8885\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
+    {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
+    creature, with sharp teeth and razor-like claws to defend itself against larger
+    predators.\",\r\n            \"MaxHealth\": 15\r\n          },\r\n          {\r\n           
+    \"Header\": \"Dog\",\r\n            \"Description\": \"A dangerous beast, its
+    teeth bared and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
+    \"Location\": \"Village\",\r\n            \"MaxHealth\": 35\r\n          },\r\n         
+    {\r\n            \"Header\": \"Bandit\",\r\n            \"Description\": \"A
+    ruthless thief, preying on the weak and vulnerable as he roamed the land in search
+    of plunder and riches.\",\r\n            \"MaxHealth\": 75\r\n          }\r\n       
+    ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"62fa1903-7fce-4c9c-aa40-8169bcfb130d\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"LocationsModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
+    null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
+    \"Header\": \"Village\",\r\n            \"Description\": \"The village lay nestled
+    on the outskirts of the castle, shrouded in darkness and mystery. It is a place
+    where danger lurks at every turn, where old and decrepit houses seemed to whisper
+    secrets of a troubled past.\"\r\n          },\r\n          {\r\n            \"Header\":
+    \"Sewers\",\r\n            \"Description\": \"The sewers lay beneath the village,
+    a putrid and fetid place overrun with all manner of filth and vermin. It was
+    a place where the light of day never reached, where the shadows seemed to dance
+    and twist in the flickering glow of a handful of torches.\"\r\n          },\r\n         
+    {\r\n            \"Header\": \"Dungeons\",\r\n            \"Description\": \"The
+    dungeons of the castle were a place of torture and suffering, where the screams
+    of the damned echoed through the cold stone walls. It was a place where the darkness
+    seemed to seep into one's very soul, where the air was thick with the stench
+    of fear and death.\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"0f4544c4-af3d-4599-a187-ae2ca886e1cb\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\":
+    \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
+    [\r\n          {\r\n            \"Active\": false,\r\n            \"Concept\":
+    \"Insta Death\",\r\n            \"Header\": \"Insta Death\",\r\n            \"Action\":
+    \"Insta Death\",\r\n            \"Chance\": 0,\r\n            \"SuccedHeader\":
+    \"Insta Death\",\r\n            \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\":
+    0,\r\n            \"SuccedMaxAmount\": 0,\r\n            \"FailHeader\": \"Insta
+    Death\",\r\n            \"FailKind\": \"Health\",\r\n            \"FailAmount\":
+    -100,\r\n            \"DeathMotive\": \"God\"\r\n          },\r\n          {\r\n           
+    \"Active\": true,\r\n            \"Concept\": \"Event_Corpse\",\r\n           
+    \"Header\": \"You see a corpse liying on the ground.\",\r\n            \"Action\":
+    \"Loot corpse\",\r\n            \"Chance\": 40,\r\n            \"SuccedHeader\":
+    \"You find some coins in the dead's pocked.\",\r\n            \"SuccedKind\":
+    \"Gold Coin\",\r\n            \"SuccedMinAmount\": 1,\r\n            \"SuccedMaxAmount\":
+    10,\r\n            \"FailHeader\": \"The sleeping Undead awakes and in a quick
+    move scratches you! \",\r\n            \"FailKind\": \"Health\",\r\n           
+    \"FailAmount\": -10,\r\n            \"DeathMotive\": \"Undead\"\r\n         
+    },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
+    \"Event_GlowingFountain\",\r\n            \"Header\": \"You see a fountain with
+    glowing water.\",\r\n            \"Action\": \"Drink water\",\r\n           
+    \"Chance\": 50,\r\n            \"SuccedHeader\": \"You feel your body grow with
+    energy.\",\r\n            \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\":
+    15,\r\n            \"SuccedMaxAmount\": 25,\r\n            \"FailHeader\": \"The
+    water taster dirty...\",\r\n            \"FailKind\": \"Health\",\r\n           
+    \"FailAmount\": -15,\r\n            \"DeathMotive\": \"Poisoning\"\r\n         
+    },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
+    \"Event_Unknown\",\r\n            \"Header\": \"???\",\r\n            \"Action\":
+    \"?\",\r\n            \"Chance\": 50,\r\n            \"SuccedHeader\": \":)\",\r\n           
+    \"SuccedKind\": \"Blue Crystal\",\r\n            \"SuccedMinAmount\": 0,\r\n           
+    \"SuccedMaxAmount\": 999,\r\n            \"FailHeader\": \":(\",\r\n           
+    \"FailKind\": \"Health\",\r\n            \"FailAmount\": -99,\r\n           
+    \"DeathMotive\": \"?\"\r\n          },\r\n          {\r\n            \"Active\":
+    true,\r\n            \"Concept\": \"Event_InjuredDog\",\r\n            \"Location\":
+    \"Village\",\r\n            \"Header\": \"An injured dog approaches to you.\",\r\n           
+    \"Action\": \"Pet the dog\",\r\n            \"Chance\": 55,\r\n            \"SuccedHeader\":
+    \"The dog seems to be gratefull.\",\r\n            \"SuccedKind\": \"Blue Crystal\",\r\n           
+    \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 20,\r\n           
+    \"FailHeader\": \"---\",\r\n            \"FailKind\": \"Gold Coin\",\r\n           
+    \"FailAmount\": -13\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
+  _environments: "[\r\n  {\r\n    \"projectId\": \"12851c75-924b-434b-8415-bd82991e2400\",\r\n   
+    \"name\": \"production\",\r\n    \"id\": \"fab55fe1-3cf4-473c-a4ad-40e932e389f6\",\r\n   
+    \"isDefault\": true,\r\n    \"createdAt\": \"2023-01-15T09:15:51Z\",\r\n    \"updatedAt\":
+    \"2023-01-15T09:15:51Z\"\r\n  },\r\n  {\r\n    \"projectId\": \"12851c75-924b-434b-8415-bd82991e2400\",\r\n   
+    \"name\": \"development\",\r\n    \"id\": \"8b45dece-9500-4f4d-ae7c-15c09ebbfb65\",\r\n   
+    \"isDefault\": false,\r\n    \"createdAt\": \"2023-01-15T10:43:45Z\",\r\n   
+    \"updatedAt\": \"2023-01-15T10:43:45Z\"\r\n  }\r\n]"

@@ -1,13 +1,22 @@
-﻿namespace Quicorax.SacredSplinter.Services
+﻿using System.Threading.Tasks;
+
+namespace Quicorax.SacredSplinter.Services
 {
     public class ServiceFeeder
     {
-        public static void LoadServices(ServiceElements elements)
+        const string _enviroment = "development";
+        //const string _enviroment = "production";
+
+        public async Task LoadServices(ServiceElements elements)
         {
+            var servicesInitializer = new ServicesInitializer(_enviroment);
+
+            var loginService = new LoginGameService();
+            var remoteConfig = new RemoteConfigService();
+
             var gameConfig = new GameConfigService();
             var gameProgression = new GameProgressionService();
             var saveLoad = new SaveLoadService();
-            var models = new ModelsService();
             var viewElements = new ElementImagesService();
             var navigation = new NavigationService();
             var popUpSpawner = new PopUpSpawnerService();
@@ -20,15 +29,18 @@
             ServiceLocator.RegisterService(navigation);
             ServiceLocator.RegisterService(popUpSpawner);
             ServiceLocator.RegisterService(adventureConfig);
-            ServiceLocator.RegisterService(models);
             ServiceLocator.RegisterService(viewElements);
             ServiceLocator.RegisterService(adventureProgress);
 
-            gameConfig.Initialize(elements.InitialResources);
+            await servicesInitializer.Initialize();
+            await loginService.Initialize();
+            await remoteConfig.Initialize();
+
+            gameConfig.Initialize(remoteConfig);
+            
             gameProgression.Initialize(saveLoad);
             saveLoad.Initialize(gameConfig, gameProgression);
             popUpSpawner.Initialize(elements.PopUpTransformParent);
-            models.Initialize();
             viewElements.Initialize(elements.ViewElements);
             adventureProgress.Initialize(gameProgression, elements.OnPlayerDeath);
         }

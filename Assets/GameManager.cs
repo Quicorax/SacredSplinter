@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
 
@@ -7,22 +8,14 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
+    private ServiceFeeder _serviceFeeder;
+
     private void Awake()
     {
         Singletonize();
 
-        if (PlayerPrefs.GetInt("ServicesInitialized") == 0)
-            InitializeServiceLocator();
-    }
-
-    private void OnDestroy()
-    {
-        SetServicesUninitialized();
-    }
-
-    private void OnApplicationQuit()
-    {
-        SetServicesUninitialized();
+        _serviceFeeder = new ServiceFeeder();
+        Initialize().ManageTaskException();
     }
 
     private void Singletonize()
@@ -33,13 +26,10 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    private void InitializeServiceLocator()
+    private async  Task Initialize()
     {
-        PlayerPrefs.SetInt("ServicesInitialized", 1);
-
-        ServiceFeeder serviceLoader = new();
-        ServiceFeeder.LoadServices(_servicesElements);
+        await _serviceFeeder.LoadServices(_servicesElements);
+        
+        ServiceLocator.GetService<NavigationService>().NavigateToMenu();
     }
-
-    private void SetServicesUninitialized() => PlayerPrefs.SetInt("ServicesInitialized", 0);
 }

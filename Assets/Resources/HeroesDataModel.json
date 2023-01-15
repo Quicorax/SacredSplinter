@@ -1,1 +1,0 @@
-{"HeroesData":[{"Name":"Errant","MaxHealth":100,"CanIgnoreEvents":true,"CanEscapeCombats":true},{"Name":"Brute","MaxHealth":125,"CanIgnoreEvents":false,"CanEscapeCombats":false},{"Name":"Thief","MaxHealth":75,"CanIgnoreEvents":true,"CanEscapeCombats":false},{"Name":"Cultist","MaxHealth":80,"CanIgnoreEvents":false,"CanEscapeCombats":true}]}

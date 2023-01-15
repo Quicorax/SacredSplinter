@@ -10,9 +10,9 @@ namespace Quicorax.SacredSplinter.Services
 
         public void SetHero(string heroName)
         {
-            foreach (var heroData in ServiceLocator.GetService<ModelsService>().GetModel<HeroesDataModel>("HeroesData").HeroesData)
+            foreach (var heroData in ServiceLocator.GetService<GameConfigService>().Heroes)
             {
-                if (heroData.Name == heroName)
+                if (heroData.Header == heroName)
                 {
                     _heroesData = heroData;
                     return;

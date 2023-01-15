@@ -35,21 +35,18 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 
             SetButtonLogic();
         }
+
         public void OnInteract()
         {
             var success = Random.Range(0, 100) <= _currentEvent.Chance;
 
-            var header = success ? 
-                _currentEvent.SuccedHeader :
-                _currentEvent.FailHeader;
-            
-            var kind = success ? 
-                _currentEvent.SuccedKind : 
-                _currentEvent.FailKind;
-            
-            var amount = success ? 
-                Random.Range(_currentEvent.SuccedMinAmount, _currentEvent.SuccedMaxAmount) : 
-                _currentEvent.FailAmount;
+            var header = success ? _currentEvent.SuccedHeader : _currentEvent.FailHeader;
+
+            var kind = success ? _currentEvent.SuccedKind : _currentEvent.FailKind;
+
+            var amount = success
+                ? Random.Range(_currentEvent.SuccedMinAmount, _currentEvent.SuccedMaxAmount)
+                : _currentEvent.FailAmount;
 
             OnEventResult(kind, amount, _currentEvent.DeathMotive);
 
@@ -60,13 +57,15 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 
             Complete();
         }
+
         private void SetButtonLogic()
         {
             _ignoreButton.interactable = _adventureConfig.GetHeroData().CanIgnoreEvents;
-            
-            if(_ignoreButton.interactable)
+
+            if (_ignoreButton.interactable)
                 _ignoreButton.onClick.AddListener(Complete);
         }
+
         private void GetServices()
         {
             _gameProgression = ServiceLocator.GetService<GameProgressionService>();
@@ -79,10 +78,12 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
         {
             EventData data = null;
             var dataSelected = false;
+            
+            var dataList = ServiceLocator.GetService<GameConfigService>().Events;
 
             while (!dataSelected)
             {
-                data =  ServiceLocator.GetService<ModelsService>().GetModel<EventsModel>("Events").GetRandomEvent();
+                data = dataList[Random.Range(0, dataList.Count)];
                 if (data.Active && (string.IsNullOrEmpty(data.Location) || data.Location.Equals(_adventureConfig.GetLocation())))
                 {
                     dataSelected = true;
@@ -91,6 +92,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 
             return data;
         }
+
         private void OnEventResult(string kind, int amount, string reason)
         {
             switch (kind)

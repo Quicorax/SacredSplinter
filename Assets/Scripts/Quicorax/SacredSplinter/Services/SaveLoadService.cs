@@ -8,12 +8,12 @@ namespace Quicorax.SacredSplinter.Services
         private static readonly string KeySavePath = Application.persistentDataPath + "/_gameProgression.json";
 
         private GameProgressionService _progression;
-        private GameConfigService _initialConfig;
+        private GameConfigService _config;
 
         public void Initialize(GameConfigService config, GameProgressionService gameProgression)
         {
             _progression = gameProgression;
-            _initialConfig = config;
+            _config = config;
             Load();
         }
 
@@ -24,7 +24,7 @@ namespace Quicorax.SacredSplinter.Services
             var data = File.Exists(KeySavePath) ? File.ReadAllText(KeySavePath) : string.Empty;
 
             if (string.IsNullOrEmpty(data))
-                _progression.LoadInitialResources(_initialConfig);
+                _progression.LoadInitialResources(_config);
             else
                 JsonUtility.FromJsonOverwrite(data, _progression);
         }

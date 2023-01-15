@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using DG.Tweening;
-using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
@@ -11,43 +9,41 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
 {
     public abstract class HorizontalSelectablePopUp : BasePopUp
     {
-        internal BaseModel Model;
-        internal int ActualIndex = 0;
-
         [SerializeField] private TMP_Text _header, _description, _index;
         [SerializeField] private Image _image;
+        
+        [SerializeField] private Button _select, _next, _previous, _close;
 
-        private Dictionary<int, BaseData> _elements = new();
-
-        internal BaseData CurrentElement;
-
-        internal Action<BaseData> OnSelect;
+        protected AdventureConfigurationService _adventureConfiguration;
+        
         private Action _onCancel;
+        protected Action<string> _onSelect;
+        
+        protected int ActualIndex = 0;
+        
+        private int _listCount;
+        
+        protected abstract void ElementChanged();
+        protected abstract void OnMiddleOfFade();
+        protected abstract void SelectElement();
 
-        public void Initialize(BaseModel model, Action<BaseData> onSelect, Action onCancel)
+        public virtual void Initialize(Action<string> onSelect = null, Action onCancel = null)
         {
-            Model = model;
-            OnSelect = onSelect;
-            _onCancel = onCancel;
+            SetButtons();
 
+            _onCancel = _onCancel;
+            _onSelect = onSelect;
 
-            for (var i = 0; i < model.Entries.Count; i++)
-                _elements.Add(i, model.Entries[i]);
-
-            PrintElementData();
+            _adventureConfiguration = ServiceLocator.GetService<AdventureConfigurationService>();
         }
+        
+        protected void SetListCount(int listCount) => _listCount = listCount;
 
-        public override void CloseSelf()
-        {
-            _onCancel?.Invoke();
-            base.CloseSelf();
-        }
-
-        public void ChangeElement(bool next)
+        protected void ChangeElement(bool next)
         {
             if (next)
             {
-                if (ActualIndex < _elements.Count - 1)
+                if (ActualIndex < _listCount - 1)
                     ActualIndex++;
                 else
                     ActualIndex = 0;
@@ -57,23 +53,38 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
                 if (ActualIndex > 0)
                     ActualIndex--;
                 else
-                    ActualIndex = _elements.Count - 1;
+                    ActualIndex = _listCount - 1;
             }
 
-            PrintElementData();
+            ElementChanged();
         }
 
-        private void PrintElementData()
+        protected void PrintElementData(string header, string description)
         {
-            CurrentElement = _elements[ActualIndex];
-
             FadeAnim(_index, () => _index.text = ActualIndex.ToString());
-            FadeAnim(_header, () => _header.text = CurrentElement.Header);
-            FadeAnim(_description, () => _description.text = CurrentElement.Description);
+            FadeAnim(_header, () => _header.text = header);
+            FadeAnim(_description, () => _description.text = description);
             FadeAnim(_image,
-                () => _image.sprite = ServiceLocator.GetService<ElementImagesService>().GetViewImage(CurrentElement.Header));
+                () => _image.sprite = ServiceLocator.GetService<ElementImagesService>()
+                    .GetViewImage(header));
         }
-
+        
+        protected override void CloseSelf()
+        {
+            _onCancel?.Invoke();
+            base.CloseSelf();
+        }
+        
+        private void SetButtons()
+        {
+            _select?.onClick.AddListener(SelectElement);
+            _next.onClick.AddListener(NextElement);
+            _previous.onClick.AddListener(PreviousElement);
+            _close.onClick.AddListener(CloseSelf);
+        }
+        private void NextElement() => ChangeElement(true);
+        private void PreviousElement() => ChangeElement(false);
+        
         private void FadeAnim(MaskableGraphic objectToFade, Action onFullFaded)
         {
             objectToFade.DOFade(0, 0.2f).OnComplete(() =>
@@ -82,10 +93,6 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
                 onFullFaded?.Invoke();
                 objectToFade.DOFade(1, 0.2f);
             });
-        }
-
-        public virtual void OnMiddleOfFade()
-        {
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         public void Exit()
         {
             CloseSelf();
-            ServiceLocator.GetService<NavigationService>().NavigateToScene("00_Menu");
+            ServiceLocator.GetService<NavigationService>().NavigateToMenu();
         }
     }
 }

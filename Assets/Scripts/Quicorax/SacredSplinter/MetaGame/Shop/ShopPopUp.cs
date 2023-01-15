@@ -8,9 +8,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
     {
         protected override void SpawnElements()
         {
-            var shop = ServiceLocator.GetService<ModelsService>().GetModel<ShopModel>("Shop");
-
-            foreach (var product in shop.Shop)
+            foreach (var product in ServiceLocator.GetService<GameConfigService>().Shop)
                 InstanceElement<Product>(View).Initialize(product, UpdateUI);
         }
     }

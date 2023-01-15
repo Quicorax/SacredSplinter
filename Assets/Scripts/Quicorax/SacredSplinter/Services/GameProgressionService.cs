@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
 using Quicorax.SacredSplinter.Models;
 using UnityEngine;
 
@@ -11,8 +12,8 @@ namespace Quicorax.SacredSplinter.Services
         private SaveLoadService _saveLoadService;
 
         [SerializeField] private List<ResourceElement> _resources = new();
-        [SerializeField] private List<string> _unlockedHeros = new();
-        [SerializeField] private List<string> _discoveredEnemies = new();
+        [SerializeField] private List<HeroesData> _unlockedHeros = new();
+        [SerializeField] private List<EnemiesData> _discoveredEnemies = new();
         [SerializeField] private List<int> _completedQuestIndex = new();
         [SerializeField] private List<ProgressionOnLevel> _levelsProgression = new();
 
@@ -25,7 +26,7 @@ namespace Quicorax.SacredSplinter.Services
         public void LoadInitialResources(GameConfigService config)
         {
             _resources = config.Resources;
-            _unlockedHeros = config.UnlockedHeroes;
+            _unlockedHeros = config.Heroes;
             _levelsProgression = config.LevelsProgression;
 
             _saveLoadService.Save();
@@ -67,15 +68,15 @@ namespace Quicorax.SacredSplinter.Services
 
         public bool GetQuestCompleted(int i) => _completedQuestIndex.Contains(i);
 
-        public void SetHeroUnlocked(string heroClass)
+        public void SetHeroUnlocked(HeroesData heroClass)
         {
             _unlockedHeros.Add(heroClass);
             _saveLoadService.Save();
         }
 
-        public bool GetHeroUnlocked(string heroClass) => _unlockedHeros.Contains(heroClass);
+        public bool GetHeroUnlocked(HeroesData heroClass) => _unlockedHeros.Contains(heroClass);
 
-        public void SetEnemyDiscovered(string enemyKind)
+        public void SetEnemyDiscovered(EnemiesData enemyKind)
         {
             if (_discoveredEnemies.Contains(enemyKind)) 
                 return;
@@ -84,7 +85,7 @@ namespace Quicorax.SacredSplinter.Services
             _saveLoadService.Save();
         }
 
-        public bool GetEnemyDiscovered(string heroClass) => _discoveredEnemies.Contains(heroClass);
+        public bool GetEnemyDiscovered(EnemiesData enemyKind) => _discoveredEnemies.Contains(enemyKind);
 
         public int GetAmountOfProgression(string concept)
         {

@@ -5,8 +5,8 @@ namespace Quicorax.SacredSplinter.Services
 {
     public class NavigationService : IService
     {
-        public void NavigateToScene(string sceneName) =>
-            SceneManager.LoadScene(sceneName);
+        public void NavigateToMenu() => SceneManager.LoadScene("01_Menu");
+        public void NavigateToGame() => SceneManager.LoadScene("02_Game");
 
         public void ReloadActualScene() =>
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

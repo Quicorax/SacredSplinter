@@ -18,7 +18,7 @@ namespace Quicorax.SacredSplinter.Services
             if (popUpBundle.Button != null)
                 ActivateButton(popUpBundle.Button, false);
 
-            Object.Instantiate(popUpBundle.PopUp, _parent).Initialize(popUpBundle, DeSpawnPopUp);
+            Object.Instantiate(popUpBundle.PopUp, _parent).BaseInitialize(popUpBundle, DeSpawnPopUp);
         }
 
         public T SpawnPopUp<T>(PopUpLauncher popUpBundle) where T : BasePopUp
@@ -27,7 +27,7 @@ namespace Quicorax.SacredSplinter.Services
                 ActivateButton(popUpBundle.Button, false);
 
             var newPopUp = Object.Instantiate(popUpBundle.PopUp, _parent);
-            newPopUp.Initialize(popUpBundle, DeSpawnPopUp);
+            newPopUp.BaseInitialize(popUpBundle, DeSpawnPopUp);
 
             return (T)newPopUp;
         }

@@ -12,7 +12,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
         private Action<Button> _onClosePopUp;
         private PopUpLauncher _selfPopUp;
 
-        public void Initialize(PopUpLauncher popUpBundle, Action<Button> onClosePopUp)
+        public void BaseInitialize(PopUpLauncher popUpBundle, Action<Button> onClosePopUp)
         {
             _selfPopUp = popUpBundle;
             _onClosePopUp = onClosePopUp;
@@ -20,7 +20,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
             _canvasGroup.DOFade(0, 0.2f).From();
         }
 
-        public virtual void CloseSelf()
+        protected virtual void CloseSelf()
         {
             _canvasGroup.DOFade(0, 0.2f).OnComplete(() => Destroy(gameObject));
 

@@ -45,7 +45,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _header.text = location;
 
             _background.sprite = _elementImages.GetViewImage(location);
-            _hero.sprite = _elementImages.GetViewImage(_adventureConfig.GetHeroData().Name);
+            _hero.sprite = _elementImages.GetViewImage(_adventureConfig.GetHeroData().Header);
         }
 
         private void SetMaxHealthData()
