@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
@@ -15,6 +16,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
         [SerializeField] private Image _image;
         [SerializeField] private PopUpLauncher _eventResultPopUp;
         [SerializeField] private Button _ignoreButton;
+        [SerializeField] private Button _actionButton;
 
         private EventData _currentEvent;
 
@@ -22,21 +24,32 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
         private AdventureProgressionService _adventureProgression;
         private AdventureConfigurationService _adventureConfig;
         private PopUpSpawnerService _popUpSpawner;
+        private  AddressablesService _addressables;
+        
 
         public void Start()
         {
-            GetServices();
+            _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
+            _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
+            _gameProgression = ServiceLocator.GetService<GameProgressionService>();
+            _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
+            _addressables = ServiceLocator.GetService<AddressablesService>();
 
             _currentEvent = SetEvent();
 
             _header.text = _currentEvent.Header;
             _action.text = _currentEvent.Action;
-            _image.sprite = ServiceLocator.GetService<ElementImagesService>().GetViewImage(_currentEvent.Concept);
-
+            
+            SetSpritesAsync().ManageTaskException();
+            
             SetButtonLogic();
         }
 
-        public void OnInteract()
+        private async Task SetSpritesAsync() =>
+            _image.sprite =await _addressables.LoadAddrssAsset<Sprite>(_currentEvent.Concept);
+
+        private void OnInteract() => OnInteractAsync().ManageTaskException();
+        private async Task OnInteractAsync()
         {
             var success = Random.Range(0, 100) <= _currentEvent.Chance;
             var header = success ? _currentEvent.SuccedHeader : _currentEvent.FailHeader;
@@ -47,7 +60,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 
             OnEventResult(kind, amount, _currentEvent.DeathMotive);
 
-            var image = ServiceLocator.GetService<ElementImagesService>().GetViewImage(kind);
+            var image = await _addressables.LoadAddrssAsset<Sprite>(kind);
 
             _popUpSpawner.SpawnPopUp<EventResultPopUp>(_eventResultPopUp)
                 .SetData(header, amount.ToString(), image, kind == "Health");
@@ -61,14 +74,8 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 
             if (_ignoreButton.interactable)
                 _ignoreButton.onClick.AddListener(Complete);
-        }
-
-        private void GetServices()
-        {
-            _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
-            _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
-            _gameProgression = ServiceLocator.GetService<GameProgressionService>();
-            _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
+            
+            _actionButton.onClick.AddListener(OnInteract);
         }
 
         private EventData SetEvent()

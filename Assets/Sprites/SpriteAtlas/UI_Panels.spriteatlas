@@ -88,9 +88,9 @@ SpriteAtlas:
   - UITileTransparent_gold
   - pixel
   - UITileBlack
-  - BlueCrystal
+  - Blue Crystal
   - LateralFade
-  - Coin
+  - Gold Coin
   - Shop
   - Check
   - UITileLitghter

@@ -31,7 +31,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Rooms
             _onRoomComplete = onRoomComplete;
             _onRoomSelected = onRoomSelected;
 
-            SetRoomKind();
+            SetRoomKind().ManageTaskException();
 
             _furtherRooms = Random.Range(1, 3);
 

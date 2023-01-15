@@ -1,8 +1,8 @@
+using System.Threading.Tasks;
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
@@ -16,7 +16,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
         private AdventureConfigurationService _adventureConfig;
         private GameProgressionService _gameProgression;
-        private ElementImagesService _elementImages;
+        private AddressablesService _addressables;
 
         private EnemiesData _enemiesData;
 
@@ -24,13 +24,15 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
         public void Start()
         {
-            GetServices();
+            _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
+            _gameProgression = ServiceLocator.GetService<GameProgressionService>();
+            _addressables = ServiceLocator.GetService<AddressablesService>();
 
             _enemiesData = SetEnemy();
 
             _enemyName.text = _enemiesData.Header;
-            _enemy.sprite = _elementImages.GetViewImage(_enemiesData.Header);
-            _hero.sprite = _elementImages.GetViewImage(_adventureConfig.GetHeroData().Header);
+
+            SetSpritesAsync().ManageTaskException();
 
             _enemyCurrentHealth = _enemiesData.MaxHealth;
             _enemyHealth.maxValue = _enemiesData.MaxHealth;
@@ -41,6 +43,11 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             SetButtonLogic();
         }
 
+        private async Task SetSpritesAsync()
+        {
+            _enemy.sprite = await _addressables.LoadAddrssAsset<Sprite>(_enemiesData.Header);
+            _hero.sprite = await _addressables.LoadAddrssAsset<Sprite>(_adventureConfig.GetHeroData().Header);
+        }
         private EnemiesData SetEnemy()
         {
             EnemiesData data = null;
@@ -65,13 +72,6 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
             if (_escapeButton.interactable)
                 _escapeButton.onClick.AddListener(Complete);
-        }
-
-        private void GetServices()
-        {
-            _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
-            _gameProgression = ServiceLocator.GetService<GameProgressionService>();
-            _elementImages = ServiceLocator.GetService<ElementImagesService>();
         }
 
         public void OnIgnore() => Complete();

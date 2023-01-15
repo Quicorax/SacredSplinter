@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,10 +22,10 @@ namespace Quicorax.SacredSplinter.GamePlay.Rooms
             //"Shop", (?)
         };
 
-        protected void SetRoomKind(string forceKind = null)
+        protected async Task SetRoomKind(string forceKind = null)
         {
             RoomKind = !string.IsNullOrEmpty(forceKind) ? forceKind : ChooseRandomKind();
-            _roomIcon.sprite = ServiceLocator.GetService<ElementImagesService>().GetViewImage(RoomKind);
+            _roomIcon.sprite = await ServiceLocator.GetService<AddressablesService>().LoadAddrssAsset<Sprite>(RoomKind);
         }
 
         private string ChooseRandomKind() => _roomKinds[Random.Range(0, _roomKinds.Count)];

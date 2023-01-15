@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Quicorax.SacredSplinter.GamePlay.AdventureLoop;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Services;
@@ -20,7 +21,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 
         private AdventureProgressionService _adventureProgress;
         private AdventureConfigurationService _adventureConfig;
-        private ElementImagesService _elementImages;
+        private AddressablesService _addressables;
 
         private void Awake() => _onPlayerDeath.Event += PlayerDeath;
         private void OnDestroy() => _onPlayerDeath.Event -= PlayerDeath;
@@ -29,23 +30,23 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         {
             _adventureProgress = ServiceLocator.GetService<AdventureProgressionService>();
             _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
-            _elementImages = ServiceLocator.GetService<ElementImagesService>();
+            _addressables = ServiceLocator.GetService<AddressablesService>();
 
             _adventureProgress.StartAdventure(_adventureConfig.GetLocation(), _adventureConfig.GetHeroData(),
                 SetHealthData);
 
             SetMaxHealthData();
-            SetLevelVisualData();
+            SetLevelVisualData().ManageTaskException();
         }
 
-        private void SetLevelVisualData()
+        private async Task SetLevelVisualData()
         {
             var location = _adventureConfig.GetLocation();
 
             _header.text = location;
 
-            _background.sprite = _elementImages.GetViewImage(location);
-            _hero.sprite = _elementImages.GetViewImage(_adventureConfig.GetHeroData().Header);
+            _background.sprite = await _addressables.LoadAddrssAsset<Sprite>(location);
+            _hero.sprite = await _addressables.LoadAddrssAsset<Sprite>(_adventureConfig.GetHeroData().Header);
         }
 
         private void SetMaxHealthData()

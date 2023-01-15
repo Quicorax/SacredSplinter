@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
@@ -16,25 +17,23 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
         private Action _onConfirm;
         private ProductData _product;
 
-        private ElementImagesService _elementImage;
+        private AddressablesService _addressables;
 
         public void Initialize(ProductData product, Action onConfirm)
         {
-            _elementImage = ServiceLocator.GetService<ElementImagesService>();
-
             _onConfirm = onConfirm;
             _product = product;
 
-            PrintData();
+            PrintData().ManageTaskException();
         }
 
-        private void PrintData()
+        private async Task PrintData()
         {
             _priceAmount.text = (-_product.PriceAmount).ToString();
             _rewardAmount.text = _product.RewardAmount.ToString();
 
-            _priceImage.sprite = _elementImage.GetViewImage(_product.Price);
-            _rewardImage.sprite = _elementImage.GetViewImage(_product.Reward);
+            _priceImage.sprite = await _addressables.LoadAddrssAsset<Sprite>(_product.Price);
+            _rewardImage.sprite = await _addressables.LoadAddrssAsset<Sprite>(_product.Reward);
         }
 
         public void OnConfirm()

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
@@ -13,17 +14,17 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         [SerializeField] private Button _engageOnAdventureButton;
 
+        private SelectorPack _currentSelectorPack;
+        
         private PopUpSpawnerService _popUpSpawner;
         private AdventureConfigurationService _adventureConfig;
-        private ElementImagesService _elementImages;
-
-        private SelectorPack _currentSelectorPack;
+        private AddressablesService _addressables;
 
         public void Initialize()
         {
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
             _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
-            _elementImages = ServiceLocator.GetService<ElementImagesService>();
+            _addressables = ServiceLocator.GetService<AddressablesService>();
 
             _adventureConfig.ResetSelection();
 
@@ -53,8 +54,8 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         private void OnSelectionSuccess(string header)
         {
-            _currentSelectorPack.Image.sprite = _elementImages.GetViewImage(header);
-
+            SetImage(header).ManageTaskException();
+            
             TurnObjectOn(_currentSelectorPack.Image.gameObject, true);
             TurnObjectOn(_currentSelectorPack.Unselected, false);
 
@@ -64,6 +65,9 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
                 ActivateButton(_engageOnAdventureButton, true);
         }
 
+        private async Task SetImage(string header) =>
+            _currentSelectorPack.Image.sprite = await _addressables.LoadAddrssAsset<Sprite>(header);
+        
         private void OnSelectionFailed() => ActivateButton(_currentSelectorPack.Launcher.Button, true);
 
         public void CancelSelection() => _adventureConfig.ResetSelection();

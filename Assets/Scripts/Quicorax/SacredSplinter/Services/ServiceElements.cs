@@ -8,15 +8,13 @@ namespace Quicorax.SacredSplinter.Services
     [Serializable]
     public class ServiceElements
     {
-        public ViewElementsModel ViewElements;
         public Transform PopUpTransformParent;
         public StringEventBus OnPlayerDeath;
 
-        public ServiceElements(Transform popUpTransformParent, ViewElementsModel viewElements,
+        public ServiceElements(Transform popUpTransformParent,
             StringEventBus onPlayerDeath)
         {
             PopUpTransformParent = popUpTransformParent;
-            ViewElements = viewElements;
             OnPlayerDeath = onPlayerDeath;
         }
     }
