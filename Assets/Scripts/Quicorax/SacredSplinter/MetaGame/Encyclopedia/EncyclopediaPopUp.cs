@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
+using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;

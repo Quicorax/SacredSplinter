@@ -9,14 +9,12 @@ namespace Quicorax.SacredSplinter.Services
     public class ServiceElements
     {
         public ViewElementsModel ViewElements;
-        public InitialResources InitialResources;
         public Transform PopUpTransformParent;
         public StringEventBus OnPlayerDeath;
 
-        public ServiceElements(InitialResources initialResources, Transform popUpTransformParent,
-            ViewElementsModel viewElements, StringEventBus onPlayerDeath)
+        public ServiceElements(Transform popUpTransformParent, ViewElementsModel viewElements,
+            StringEventBus onPlayerDeath)
         {
-            InitialResources = initialResources;
             PopUpTransformParent = popUpTransformParent;
             ViewElements = viewElements;
             OnPlayerDeath = onPlayerDeath;

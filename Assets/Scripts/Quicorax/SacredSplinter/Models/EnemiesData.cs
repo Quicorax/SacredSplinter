@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
+namespace Quicorax.SacredSplinter.Models
 {
     [Serializable]
     public class EnemiesData
