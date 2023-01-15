@@ -8,37 +8,44 @@ namespace Quicorax.SacredSplinter.Services
     public class AdventureProgressionService : IService
     {
         private HeroesData _selectedHero;
+        private Action _onHealthUpdate;
+        private StringEventBus _onPlayerDeath;
+        private GameProgressionService _gameProgression;
 
         private int _currentHealth;
         private int _currentFloor;
         private int _initialGoldCoins, _initialBlueCrystals;
 
-        private Action _onHealthUpdate;
-
-        private StringEventBus _onPlayerDeath;
+        private string _location;
         
-        private GameProgressionService _gameProgression;
-
         public void Initialize(GameProgressionService gameProgression, StringEventBus onPlayerDeath)
         {
             _gameProgression = gameProgression;
             _onPlayerDeath = onPlayerDeath;
         }
 
-        public void StartAdventure(HeroesData selectedHero, Action onHealthUpdate)
+        public void StartAdventure(string location, HeroesData selectedHero, Action onHealthUpdate)
         {
+            _location = location;
             _selectedHero = selectedHero;
             _onHealthUpdate = onHealthUpdate;
 
             _currentHealth = _selectedHero.MaxHealth;
 
             SetInitialResources();
+            
+            AddFloor();
         }
 
         public int GetMaxHealth() => _selectedHero.MaxHealth;
         public int GetCurrentHealth() => _currentHealth;
         public int GetCurrentFloor() => _currentFloor;
-        public void AddFloor() => _currentFloor++;
+
+        public void AddFloor()
+        {
+            _currentFloor++;
+            _gameProgression.SetLocationProgress(_location ,_currentFloor);
+        }
 
         public void UpdateRawHealth(int amount, string damageReason)
         {

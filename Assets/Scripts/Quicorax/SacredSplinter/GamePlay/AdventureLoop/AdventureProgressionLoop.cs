@@ -40,9 +40,6 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
             _rooms.Clear();
         }
 
-        private void OnRoomCompleted(int nextRoomAmount)
-        {
-            PopulateRooms(nextRoomAmount);
-        }
+        private void OnRoomCompleted(int nextRoomAmount) => PopulateRooms(nextRoomAmount);
     }
 }

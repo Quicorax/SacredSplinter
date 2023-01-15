@@ -118,7 +118,7 @@ namespace Quicorax.SacredSplinter.Services
 
         private int GetHigherLevelReached()
         {
-            var higherLevel = 0;
+            var higherLevel = -1;
 
             foreach (var item in _levelsProgression)
             {
@@ -138,6 +138,15 @@ namespace Quicorax.SacredSplinter.Services
             }
 
             return 0;
+        }
+
+        public void SetLocationProgress(string location, int floor)
+        {
+            foreach (var item in _levelsProgression)
+            {
+                if (item.LevelName == location && item.MaxLevel < floor)
+                    item.MaxLevel = floor;
+            }
         }
 
         public void SetSoundOn(bool on)

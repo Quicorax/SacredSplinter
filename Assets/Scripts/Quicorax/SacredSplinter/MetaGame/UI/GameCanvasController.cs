@@ -15,14 +15,14 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         [SerializeField] private TMP_Text _header, _floorNumber, _health;
         [SerializeField] private Slider _healthSlider;
         [SerializeField] private PopUpLauncher _deathPopUp;
-        
+
         [SerializeField] private StringEventBus _onPlayerDeath;
 
         private AdventureProgressionService _adventureProgress;
         private AdventureConfigurationService _adventureConfig;
         private ElementImagesService _elementImages;
 
-        private void Awake() =>  _onPlayerDeath.Event += PlayerDeath;
+        private void Awake() => _onPlayerDeath.Event += PlayerDeath;
         private void OnDestroy() => _onPlayerDeath.Event -= PlayerDeath;
 
         private void Start()
@@ -31,11 +31,11 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
             _elementImages = ServiceLocator.GetService<ElementImagesService>();
 
-            _adventureProgress.StartAdventure(_adventureConfig.GetHeroData(), SetHealthData);
-            
+            _adventureProgress.StartAdventure(_adventureConfig.GetLocation(), _adventureConfig.GetHeroData(),
+                SetHealthData);
+
             SetMaxHealthData();
             SetLevelVisualData();
-
         }
 
         private void SetLevelVisualData()
@@ -51,7 +51,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         private void SetMaxHealthData()
         {
             _healthSlider.maxValue = _adventureProgress.GetMaxHealth();
-            
+
             SetHealthData();
         }
 
@@ -69,7 +69,8 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _adventureProgress.AddFloor();
         }
 
-        private void PlayerDeath(string deathReason) => 
-            ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp<DeathPopUp>(_deathPopUp).Initialize(deathReason);
+        private void PlayerDeath(string deathReason) =>
+            ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp<DeathPopUp>(_deathPopUp)
+                .Initialize(deathReason);
     }
 }

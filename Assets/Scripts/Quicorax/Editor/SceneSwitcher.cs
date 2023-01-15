@@ -11,7 +11,8 @@ namespace Quicorax.Editor
         [MenuItem("Quicorax/Scene Switcher")]
         private static void Init()
         {
-            var window = (SceneSwitcher)GetWindow(typeof(SceneSwitcher));
+            var window = (SceneSwitcher)GetWindow(typeof(SceneSwitcher), false,"Scene Switcher");
+
             window.Show();
         }
 
