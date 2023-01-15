@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
 using Quicorax.SacredSplinter.Models;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Quicorax.SacredSplinter.Services
 {
@@ -11,46 +12,55 @@ namespace Quicorax.SacredSplinter.Services
     {
         private SaveLoadService _saveLoadService;
 
+        [SerializeField] private int _ticksPlayed = 0;
+        
         [SerializeField] private List<ResourceElement> _resources = new();
-        [SerializeField] private List<HeroesData> _unlockedHeros = new();
-        [SerializeField] private List<EnemiesData> _discoveredEnemies = new();
+        
+        [SerializeField] private List<string> _unlockedHeros = new();
+        [SerializeField] private List<string> _discoveredEnemies = new();
+        
         [SerializeField] private List<int> _completedQuestIndex = new();
+        
         [SerializeField] private List<ProgressionOnLevel> _levelsProgression = new();
 
         [SerializeField] private int _totalMonstersKilled = 0;
 
-        [SerializeField] private bool _soundOff = false;
+        [SerializeField] private bool _soundOn = true;
 
         public void Initialize(SaveLoadService saveLoadService) => _saveLoadService = saveLoadService;
 
         public void LoadInitialResources(GameConfigService config)
         {
-            _resources = config.Resources;
-            _unlockedHeros = config.Heroes;
-            _levelsProgression = config.LevelsProgression;
-
+            _resources = config.InitialResources;
+            _unlockedHeros.Add(config.Heroes[0].Header);
+            
+            foreach (var location in config.Locations)
+                _levelsProgression.Add(new(location.Header, 0, false));
+            
             _saveLoadService.Save();
         }
 
-        public void SetAmountOfResource(string resourceId, int elementAmount, bool save = true)
+        public void SetAmountOfResource(string resource, int amount, bool save = true)
         {
             foreach (var resourcePack in _resources)
             {
-                if (resourcePack.Key == resourceId)
-                    resourcePack.Amount += elementAmount;
+                if (resourcePack.Key == resource)
+                    resourcePack.Amount += amount;
             }
 
+            _ticksPlayed++;
+            
             if (save)
                 _saveLoadService.Save();
         }
 
-        public int GetAmountOfResource(string resourceId)
+        public int GetAmountOfResource(string resource)
         {
             var amount = -1;
 
             foreach (var resourcePack in _resources)
             {
-                if (resourcePack.Key == resourceId)
+                if (resourcePack.Key == resource)
                 {
                     amount = resourcePack.Amount;
                     break;
@@ -60,32 +70,38 @@ namespace Quicorax.SacredSplinter.Services
             return amount;
         }
 
-        public void SetQuestCompleted(int i)
+        public void SetQuestCompleted(int quest)
         {
-            _completedQuestIndex.Add(i);
+            _ticksPlayed++;
+
+            _completedQuestIndex.Add(quest);
             _saveLoadService.Save();
         }
 
-        public bool GetQuestCompleted(int i) => _completedQuestIndex.Contains(i);
+        public bool GetQuestCompleted(int quest) => _completedQuestIndex.Contains(quest);
 
-        public void SetHeroUnlocked(HeroesData heroClass)
+        public void SetHeroUnlocked(string hero)
         {
-            _unlockedHeros.Add(heroClass);
+            _ticksPlayed++;
+
+            _unlockedHeros.Add(hero);
             _saveLoadService.Save();
         }
 
-        public bool GetHeroUnlocked(HeroesData heroClass) => _unlockedHeros.Contains(heroClass);
+        public bool GetHeroUnlocked(string hero) => _unlockedHeros.Contains(hero);
 
-        public void SetEnemyDiscovered(EnemiesData enemyKind)
+        public void SetEnemyDiscovered(string enemy)
         {
-            if (_discoveredEnemies.Contains(enemyKind)) 
+            if (_discoveredEnemies.Contains(enemy)) 
                 return;
             
-            _discoveredEnemies.Add(enemyKind);
+            _ticksPlayed++;
+
+            _discoveredEnemies.Add(enemy);
             _saveLoadService.Save();
         }
 
-        public bool GetEnemyDiscovered(EnemiesData enemyKind) => _discoveredEnemies.Contains(enemyKind);
+        public bool GetEnemyDiscovered(string enemy) => _discoveredEnemies.Contains(enemy);
 
         public int GetAmountOfProgression(string concept)
         {
@@ -113,23 +129,25 @@ namespace Quicorax.SacredSplinter.Services
             return higherLevel;
         }
 
-        private int GetLocationCompleted(string locationName)
+        private int GetLocationCompleted(string location)
         {
             foreach (var item in _levelsProgression)
             {
-                if (item.LevelName == locationName && item.Completed)
+                if (item.LevelName == location && item.Completed)
                     return 1;
             }
 
             return 0;
         }
 
-        public void SetSoundOff(bool off)
+        public void SetSoundOn(bool on)
         {
-            _soundOff = off;
+            _ticksPlayed++;
+
+            _soundOn = on;
             _saveLoadService.Save();
         }
 
-        public bool GetSoundOff() => _soundOff;
+        public bool GetSoundOff() => _soundOn;
     }
 }

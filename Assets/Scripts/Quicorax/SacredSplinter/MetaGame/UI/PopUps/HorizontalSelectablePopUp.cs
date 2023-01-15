@@ -31,7 +31,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
         {
             SetButtons();
 
-            _onCancel = _onCancel;
+            _onCancel = onCancel;
             _onSelect = onSelect;
 
             _adventureConfiguration = ServiceLocator.GetService<AdventureConfigurationService>();

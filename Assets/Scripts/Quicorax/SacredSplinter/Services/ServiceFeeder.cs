@@ -22,6 +22,7 @@ namespace Quicorax.SacredSplinter.Services
             var popUpSpawner = new PopUpSpawnerService();
             var adventureConfig = new AdventureConfigurationService();
             var adventureProgress = new AdventureProgressionService();
+            var gameProgressionProvider = new GameProgressionProvider();
 
             ServiceLocator.RegisterService(gameConfig);
             ServiceLocator.RegisterService(gameProgression);
@@ -35,11 +36,12 @@ namespace Quicorax.SacredSplinter.Services
             await servicesInitializer.Initialize();
             await loginService.Initialize();
             await remoteConfig.Initialize();
+            await gameProgressionProvider.Initialize();
 
             gameConfig.Initialize(remoteConfig);
-            
             gameProgression.Initialize(saveLoad);
-            saveLoad.Initialize(gameConfig, gameProgression);
+            saveLoad.Initialize(gameConfig, gameProgression, gameProgressionProvider);
+            
             popUpSpawner.Initialize(elements.PopUpTransformParent);
             viewElements.Initialize(elements.ViewElements);
             adventureProgress.Initialize(gameProgression, elements.OnPlayerDeath);

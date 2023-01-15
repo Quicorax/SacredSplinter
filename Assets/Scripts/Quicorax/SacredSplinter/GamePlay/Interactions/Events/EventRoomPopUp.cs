@@ -39,11 +39,8 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
         public void OnInteract()
         {
             var success = Random.Range(0, 100) <= _currentEvent.Chance;
-
             var header = success ? _currentEvent.SuccedHeader : _currentEvent.FailHeader;
-
             var kind = success ? _currentEvent.SuccedKind : _currentEvent.FailKind;
-
             var amount = success
                 ? Random.Range(_currentEvent.SuccedMinAmount, _currentEvent.SuccedMaxAmount)
                 : _currentEvent.FailAmount;
@@ -68,9 +65,9 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 
         private void GetServices()
         {
-            _gameProgression = ServiceLocator.GetService<GameProgressionService>();
             _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
             _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
+            _gameProgression = ServiceLocator.GetService<GameProgressionService>();
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
         }
 

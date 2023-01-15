@@ -46,14 +46,14 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _coinsAmount.text = _gameProgression.GetAmountOfResource("Gold Coin").ToString();
             _crystalsAmount.text = _gameProgression.GetAmountOfResource("Blue Crystal").ToString();
 
-            if (!_onTween)
-            {
-                _onTween = true;
+            if (_onTween) 
+                return;
+            
+            _onTween = true;
 
-                _crystalsAmount.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f);
-                _coinsAmount.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f)
-                    .OnComplete(() => _onTween = false);
-            }
+            _crystalsAmount.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f);
+            _coinsAmount.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f)
+                .OnComplete(() => _onTween = false);
         }
     }
 }

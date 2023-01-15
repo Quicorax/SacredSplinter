@@ -21,7 +21,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         {
             var isOn = !_progression.GetSoundOff();
 
-            _progression.SetSoundOff(isOn);
+            _progression.SetSoundOn(isOn);
 
             TurnAudio(isOn);
         }

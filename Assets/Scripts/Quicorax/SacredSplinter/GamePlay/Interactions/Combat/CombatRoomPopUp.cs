@@ -35,7 +35,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             _enemyCurrentHealth = _enemiesData.MaxHealth;
             _enemyHealth.maxValue = _enemiesData.MaxHealth;
 
-            _gameProgression.SetEnemyDiscovered(_enemiesData);
+            _gameProgression.SetEnemyDiscovered(_enemiesData.Header);
             
             UpdateEnemyHealth();
             SetButtonLogic();

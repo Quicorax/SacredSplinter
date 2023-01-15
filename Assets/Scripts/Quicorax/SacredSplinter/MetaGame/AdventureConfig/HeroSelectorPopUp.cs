@@ -48,7 +48,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
             _currentHero = _heroes[ActualIndex];
             PrintElementData( _currentHero.Header, _currentHero.Description);
 
-            _elementUnlocked = _progression.GetHeroUnlocked(_currentHero);
+            _elementUnlocked = _progression.GetHeroUnlocked(_currentHero.Header);
 
             _selectable.SetActive(_elementUnlocked);
             _selectText.text = _elementUnlocked ? "Select" : "Unlock";
@@ -77,8 +77,8 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         private void OnHeroUnlocked()
         {
-            //_progression.SetAmountOfResource("Hero License", -1); //TODO: hero is now free!
-            _progression.SetHeroUnlocked(_currentHero);
+            _progression.SetAmountOfResource("Hero License", -1);
+            _progression.SetHeroUnlocked(_currentHero.Header);
 
             ElementChanged();
             SelectElement();

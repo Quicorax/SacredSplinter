@@ -6,11 +6,7 @@ namespace Quicorax.SacredSplinter.Services
 {
     public class GameConfigService : IService
     {
-        public List<ResourceElement> Resources { get; private set; }
-        public List<ProgressionOnLevel> LevelsProgression { get; private set; }
-        //Up BAD
-        
-        
+        public List<ResourceElement> InitialResources { get; private set; }
         public List<QuestData> Quests { get; private set; }
         public List<ProductData> Shop { get; private set; }
         public List<LocationsData> Locations { get; private set; }
@@ -21,6 +17,7 @@ namespace Quicorax.SacredSplinter.Services
         
         public void Initialize(RemoteConfigService dataProvider)
         {
+            InitialResources = dataProvider.GetFromJSON("InitialResourcesModel", new List<ResourceElement>());
             Quests = dataProvider.GetFromJSON("QuestsModel", new List<QuestData>());
             Shop = dataProvider.GetFromJSON("ShopModel", new List<ProductData>());
             Locations = dataProvider.GetFromJSON("LocationsModel", new List<LocationsData>());

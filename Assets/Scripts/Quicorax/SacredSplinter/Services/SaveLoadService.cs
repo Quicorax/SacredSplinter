@@ -5,24 +5,26 @@ namespace Quicorax.SacredSplinter.Services
 {
     public class SaveLoadService : IService
     {
-        private static readonly string KeySavePath = Application.persistentDataPath + "/_gameProgression.json";
+        private static readonly string SavePathKey = Application.persistentDataPath + "/gameProgression.json";
 
         private GameProgressionService _progression;
         private GameConfigService _config;
+        private IGameProgressionProvider _progressionProvider;
 
-        public void Initialize(GameConfigService config, GameProgressionService gameProgression)
+        public void Initialize(GameConfigService config, GameProgressionService progression, IGameProgressionProvider progressionProvider)
         {
-            _progression = gameProgression;
+            _progression = progression;
             _config = config;
+            _progressionProvider = progressionProvider;
+            
             Load();
         }
 
-        public void Save() => File.WriteAllText(KeySavePath, JsonUtility.ToJson(_progression));
+        public void Save() => _progressionProvider.Save(JsonUtility.ToJson(_progression));
 
         private void Load()
         {
-            var data = File.Exists(KeySavePath) ? File.ReadAllText(KeySavePath) : string.Empty;
-
+            var data = _progressionProvider.Load();
             if (string.IsNullOrEmpty(data))
                 _progression.LoadInitialResources(_config);
             else
@@ -31,8 +33,8 @@ namespace Quicorax.SacredSplinter.Services
 
         public void DeleteLocalFiles()
         {
-            if (File.Exists(KeySavePath))
-                File.Delete(KeySavePath);
+            if (File.Exists(SavePathKey))
+                File.Delete(SavePathKey);
         }
     }
 }

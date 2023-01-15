@@ -24,9 +24,9 @@ namespace Quicorax.SacredSplinter.MetaGame.Quests
 
         private GameProgressionService _progression;
 
-        public void Initialize(QuestData data, Action onTransactionCompleted)
+        public void Initialize(QuestData data, Action onTransactionCompleted, GameProgressionService gameProgression)
         {
-            _progression = ServiceLocator.GetService<GameProgressionService>();
+            _progression = gameProgression;
 
             _quest = data;
             _onTransactionCompleted = onTransactionCompleted;
