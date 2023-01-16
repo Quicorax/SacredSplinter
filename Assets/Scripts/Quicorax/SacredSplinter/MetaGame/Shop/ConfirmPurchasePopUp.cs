@@ -19,11 +19,12 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
 
         private AddressablesService _addressables;
 
-        public void Initialize(ProductData product, Action onConfirm)
+        public void Initialize(ProductData product, Action onConfirm, AddressablesService addressables)
         {
-            _onConfirm = onConfirm;
             _product = product;
-
+            _onConfirm = onConfirm;
+            _addressables = addressables;
+            
             PrintData().ManageTaskException();
         }
 

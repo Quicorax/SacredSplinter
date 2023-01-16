@@ -82,7 +82,7 @@ MonoBehaviour:
     PopUp: {fileID: 6259951370887030658, guid: 5a2025e831d9a8d4b85a61bc8ddc5604, type: 3}
     Button: {fileID: 8442508484338425645}
   _ignoreButton: {fileID: 4253545540327113135}
-  _actionButton: {fileID: 0}
+  _actionButton: {fileID: 8442508484338425645}
 --- !u!1 &744656491137185911
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 4
+  m_PixelsPerUnitMultiplier: 2
 --- !u!1 &8591780096568225422
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,6 +681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Masked_ImageDisplay
       objectReference: {fileID: 0}
+    - target: {fileID: 3651386250831933436, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4200387312963455786, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -764,6 +768,10 @@ PrefabInstance:
     - target: {fileID: 4200387312963455786, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713018235203526070, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6360098504666078003, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
       propertyPath: m_Sprite
@@ -933,6 +941,10 @@ PrefabInstance:
     - target: {fileID: 7483472847076041082, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
       propertyPath: m_fontSize
       value: 107.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579606237611689454, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
@@ -1117,6 +1129,10 @@ PrefabInstance:
     - target: {fileID: 7483472847076041082, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579606237611689454, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}

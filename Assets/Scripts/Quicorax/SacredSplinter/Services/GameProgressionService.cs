@@ -43,7 +43,14 @@ namespace Quicorax.SacredSplinter.Services
             foreach (var resourcePack in _resources)
             {
                 if (resourcePack.Key == resource)
+                {
                     resourcePack.Amount += amount;
+
+                    if (resourcePack.Amount < 0)
+                    {
+                        resourcePack.Amount = 0;
+                    }
+                }
             }
 
             _ticksPlayed++;

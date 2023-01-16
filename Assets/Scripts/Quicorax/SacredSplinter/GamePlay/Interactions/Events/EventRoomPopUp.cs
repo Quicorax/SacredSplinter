@@ -60,10 +60,17 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 
             OnEventResult(kind, amount, _currentEvent.DeathMotive);
 
-            var image = await _addressables.LoadAddrssAsset<Sprite>(kind);
+            Sprite image = null;
+            var withImage = false;
+            
+            if (kind != "Health")
+            {
+                withImage = true;   
+                image = await _addressables.LoadAddrssAsset<Sprite>(kind);
+            }
 
             _popUpSpawner.SpawnPopUp<EventResultPopUp>(_eventResultPopUp)
-                .SetData(header, amount.ToString(), image, kind == "Health");
+                .SetData(header, amount.ToString(), image, withImage);
 
             Complete();
         }

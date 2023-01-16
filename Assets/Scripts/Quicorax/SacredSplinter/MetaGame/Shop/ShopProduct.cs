@@ -47,7 +47,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
         public void TryBuy()
         {
             _popUpSpawner.SpawnPopUp<ConfirmPurchasePopUp>(_confirmPurchasePopUp)
-                .Initialize(_product, PurchaseConfirmed);
+                .Initialize(_product, PurchaseConfirmed, _addressables);
         }
 
         private void PurchaseConfirmed()

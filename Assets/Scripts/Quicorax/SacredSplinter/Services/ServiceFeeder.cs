@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace Quicorax.SacredSplinter.Services
 {
@@ -7,7 +8,7 @@ namespace Quicorax.SacredSplinter.Services
         const string _enviroment = "development";
         //const string _enviroment = "production";
 
-        public async Task LoadServices(ServiceElements elements)
+        public async Task LoadServices(ServiceElements elements, Action<string> onElementLoaded)
         {
             var servicesInitializer = new ServicesInitializer(_enviroment);
 
@@ -33,11 +34,18 @@ namespace Quicorax.SacredSplinter.Services
             ServiceLocator.RegisterService(adventureProgress);
             ServiceLocator.RegisterService(addressables);
 
+            onElementLoaded.Invoke("Sharpening Swords");
             await servicesInitializer.Initialize();
+            onElementLoaded.Invoke("Setting Artifacts");
             await loginService.Initialize();
+            onElementLoaded.Invoke("Invoking Monsters");
             await remoteConfig.Initialize();
+            onElementLoaded.Invoke("Defining Relics");
             await gameProgressionProvider.Initialize();
-
+            onElementLoaded.Invoke("Calling Warriors");
+            await addressables.Initialize(elements.AssetsToPrewarm.Assets);
+            onElementLoaded.Invoke("Casting Spells");
+            
             gameConfig.Initialize(remoteConfig);
             gameProgression.Initialize(saveLoad);
             saveLoad.Initialize(gameConfig, gameProgression, gameProgressionProvider);

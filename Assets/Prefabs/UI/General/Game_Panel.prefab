@@ -187,6 +187,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7257791141593461578}
     m_Modifications:
+    - target: {fileID: 234073696220088521, guid: 7ea9e5866eb02474a8f3333a7938a35b, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669345948177904773, guid: 7ea9e5866eb02474a8f3333a7938a35b, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5669345949094068368, guid: 7ea9e5866eb02474a8f3333a7938a35b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -201,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c10ce5ce93a340d4280c2d003a74e074, type: 3}
     - target: {fileID: 5669345949094068371, guid: 7ea9e5866eb02474a8f3333a7938a35b, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5669345949114509268, guid: 7ea9e5866eb02474a8f3333a7938a35b, type: 3}
       propertyPath: m_Name
@@ -347,6 +355,10 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 62.7
       objectReference: {fileID: 0}
+    - target: {fileID: 1782193660444921007, guid: ba80db3abc0a8854e9210108c6e6baeb, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1782193661241937766, guid: ba80db3abc0a8854e9210108c6e6baeb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -439,9 +451,17 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 71.9
       objectReference: {fileID: 0}
+    - target: {fileID: 2834549480508799908, guid: ba80db3abc0a8854e9210108c6e6baeb, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2834549481652220942, guid: ba80db3abc0a8854e9210108c6e6baeb, type: 3}
       propertyPath: m_Name
       value: Hero_Icon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143257955189808045, guid: ba80db3abc0a8854e9210108c6e6baeb, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9216652535143071545, guid: ba80db3abc0a8854e9210108c6e6baeb, type: 3}
       propertyPath: m_fontSize

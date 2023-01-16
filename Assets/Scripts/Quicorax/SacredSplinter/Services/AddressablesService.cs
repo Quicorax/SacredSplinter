@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -7,6 +8,14 @@ namespace Quicorax.SacredSplinter.Services
 {
     public class AddressablesService : IService
     {
+        public async Task Initialize(List<Sprite> assets)
+        {
+            foreach (var asset in assets)
+            {
+                await LoadAddrssAsset<Sprite>(asset.name);
+            }
+        }
+        
         public void LoadAddrssComponentObject<T>(string key, Transform parent, Action<T> taskAction) =>
             LoadAddrssOfComponentAsync(key, parent, taskAction).ManageTaskException();
 

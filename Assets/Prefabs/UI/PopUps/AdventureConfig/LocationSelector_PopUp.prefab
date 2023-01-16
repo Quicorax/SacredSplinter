@@ -418,6 +418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ImageDisplay
       objectReference: {fileID: 0}
+    - target: {fileID: 3651386250831933436, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4200387312963455786, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -502,6 +506,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4713018235203526070, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6360098504666078003, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -537,6 +545,10 @@ PrefabInstance:
     - target: {fileID: 1841018402243815360, guid: f920f0ad90e07184fbc624231ce40cd7, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841018402243815360, guid: f920f0ad90e07184fbc624231ce40cd7, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3289322118161680182, guid: f920f0ad90e07184fbc624231ce40cd7, type: 3}
       propertyPath: m_Pivot.x
@@ -620,6 +632,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3289322118161680182, guid: f920f0ad90e07184fbc624231ce40cd7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375796089598434080, guid: f920f0ad90e07184fbc624231ce40cd7, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7508903240449505730, guid: f920f0ad90e07184fbc624231ce40cd7, type: 3}
@@ -778,7 +794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7579606237611689454, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
@@ -800,6 +816,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7668103929076798876}
     m_Modifications:
+    - target: {fileID: 942775665909405467, guid: 619a43764353e844fa53860f357140e1, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1441411368732990010, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -915,6 +935,10 @@ PrefabInstance:
     - target: {fileID: 3384294727377245144, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SelectorPopUp, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4801129706070276158, guid: 619a43764353e844fa53860f357140e1, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5097677389685178966, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_Name
@@ -1193,7 +1217,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 2075591204145572089}
-  _artifactCheck: {fileID: 8367602466288883480}
   _header: {fileID: 857717860437859749}
   _description: {fileID: 3891704147727512183}
   _index: {fileID: 8605202826231529382}
@@ -1202,6 +1225,7 @@ MonoBehaviour:
   _next: {fileID: 5265701728315485336}
   _previous: {fileID: 498485251260613870}
   _close: {fileID: 7458232846669837919}
+  _artifactCheck: {fileID: 8367602466288883480}
 --- !u!114 &7458232846669837919 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2142229585986928154, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}

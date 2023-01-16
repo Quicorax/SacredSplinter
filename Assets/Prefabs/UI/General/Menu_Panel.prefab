@@ -533,7 +533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8869056888560256271, guid: 019ff1804525aeb43ad24cbca449fe20, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
-      value: 3.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8869056888560256273, guid: 019ff1804525aeb43ad24cbca449fe20, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -736,6 +736,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7579606237611689454, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
 --- !u!114 &814701119034586445 stripped
@@ -867,7 +871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8869056888560256271, guid: 019ff1804525aeb43ad24cbca449fe20, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
-      value: 3.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8869056888560256273, guid: 019ff1804525aeb43ad24cbca449fe20, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1044,7 +1048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8869056888560256271, guid: 019ff1804525aeb43ad24cbca449fe20, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
-      value: 3.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8869056888560256273, guid: 019ff1804525aeb43ad24cbca449fe20, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

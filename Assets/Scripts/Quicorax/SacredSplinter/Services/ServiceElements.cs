@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services.EventBus;
 using UnityEngine;
@@ -10,12 +11,6 @@ namespace Quicorax.SacredSplinter.Services
     {
         public Transform PopUpTransformParent;
         public StringEventBus OnPlayerDeath;
-
-        public ServiceElements(Transform popUpTransformParent,
-            StringEventBus onPlayerDeath)
-        {
-            PopUpTransformParent = popUpTransformParent;
-            OnPlayerDeath = onPlayerDeath;
-        }
+        public WarmableViews AssetsToPrewarm;
     }
 }
