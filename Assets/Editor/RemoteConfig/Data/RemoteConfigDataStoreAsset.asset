@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"18f68513-8302-42a6-910f-64dd3f9bbb6e\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"093071e7-7513-47f0-80df-5c15d1e39c9e\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"1916c05b-aa06-4d09-b81a-ca6e254d2ee8\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"616e2968-a0b0-4eca-9e41-81ca66115593\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -40,7 +40,7 @@ MonoBehaviour:
     \"Blue Cristal\",\r\n            \"Price\": \"Gold Coin\",\r\n            \"PriceAmount\":
     1,\r\n            \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\":
     100\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"2c438cb1-2c0b-458e-a8fc-ad6b60498426\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"abd1756c-0ebb-4b07-8450-03732465a1ac\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": -1,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -74,7 +74,7 @@ MonoBehaviour:
     \"Header\": \"Complete the Dungeons\",\r\n            \"Amount\": 1,\r\n           
     \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"4e6cd20d-7d01-4715-87a3-474c9f6e722a\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"f78de80e-8d28-4fd8-9bb3-1167729c91bd\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
@@ -94,7 +94,7 @@ MonoBehaviour:
     relics in the hopes of summoning powerful deities and unlocking the secrets of
     the universe.\",\r\n            \"MaxHealth\": 80,\r\n            \"CanIgnoreEvents\":
     false,\r\n            \"CanEscapeCombats\": true\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e3974d7c-0ec4-474a-9ae7-05f837afdc4a\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8eea2f13-43aa-42c1-b45d-4ff29f340080\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
@@ -107,7 +107,7 @@ MonoBehaviour:
     ruthless thief, preying on the weak and vulnerable as he roamed the land in search
     of plunder and riches.\",\r\n            \"MaxHealth\": 75\r\n          }\r\n       
     ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"76eb6ba5-ac15-42e2-a190-55be170c2075\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"6308f8e2-f8cd-48c0-88f6-5db458882e61\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"LocationsModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Village\",\r\n            \"Description\": \"The village lay nestled
@@ -123,7 +123,7 @@ MonoBehaviour:
     of the damned echoed through the cold stone walls. It was a place where the darkness
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"f17493d2-a005-4f72-aad2-9e36efc1df66\"\r\n   
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"1dc88438-c42e-4377-b701-e6408239ff12\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Active\": false,\r\n            \"Concept\":
@@ -163,14 +163,14 @@ MonoBehaviour:
     \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 20,\r\n           
     \"FailHeader\": \"---\",\r\n            \"FailKind\": \"Gold Coin\",\r\n           
     \"FailAmount\": -13\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"18f68513-8302-42a6-910f-64dd3f9bbb6e\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"093071e7-7513-47f0-80df-5c15d1e39c9e\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"1916c05b-aa06-4d09-b81a-ca6e254d2ee8\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"616e2968-a0b0-4eca-9e41-81ca66115593\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -191,7 +191,7 @@ MonoBehaviour:
     \"Blue Cristal\",\r\n            \"Price\": \"Gold Coin\",\r\n            \"PriceAmount\":
     1,\r\n            \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\":
     100\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"2c438cb1-2c0b-458e-a8fc-ad6b60498426\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"abd1756c-0ebb-4b07-8450-03732465a1ac\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": -1,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -225,7 +225,7 @@ MonoBehaviour:
     \"Header\": \"Complete the Dungeons\",\r\n            \"Amount\": 1,\r\n           
     \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"4e6cd20d-7d01-4715-87a3-474c9f6e722a\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"f78de80e-8d28-4fd8-9bb3-1167729c91bd\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
@@ -245,7 +245,7 @@ MonoBehaviour:
     relics in the hopes of summoning powerful deities and unlocking the secrets of
     the universe.\",\r\n            \"MaxHealth\": 80,\r\n            \"CanIgnoreEvents\":
     false,\r\n            \"CanEscapeCombats\": true\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e3974d7c-0ec4-474a-9ae7-05f837afdc4a\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8eea2f13-43aa-42c1-b45d-4ff29f340080\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
@@ -258,7 +258,7 @@ MonoBehaviour:
     ruthless thief, preying on the weak and vulnerable as he roamed the land in search
     of plunder and riches.\",\r\n            \"MaxHealth\": 75\r\n          }\r\n       
     ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"76eb6ba5-ac15-42e2-a190-55be170c2075\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"6308f8e2-f8cd-48c0-88f6-5db458882e61\"\r\n    },\r\n    \"rs\": {\r\n     
     \"key\": \"LocationsModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Village\",\r\n            \"Description\": \"The village lay nestled
@@ -274,7 +274,7 @@ MonoBehaviour:
     of the damned echoed through the cold stone walls. It was a place where the darkness
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"f17493d2-a005-4f72-aad2-9e36efc1df66\"\r\n   
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"1dc88438-c42e-4377-b701-e6408239ff12\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Active\": false,\r\n            \"Concept\":

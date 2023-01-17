@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Quicorax.SacredSplinter.Models;
 using UnityEngine;
 
@@ -11,69 +12,75 @@ namespace Quicorax.SacredSplinter.Services
         private SaveLoadService _saveLoadService;
 
         [SerializeField] private int _ticksPlayed = 0;
-        
+
         [SerializeField] private List<ResourceElement> _resources = new();
-        
+        [SerializeField] private List<ProgressionOnLevel> _levelsProgression = new();
+
         [SerializeField] private List<string> _unlockedHeros = new();
         [SerializeField] private List<string> _discoveredEnemies = new();
-        
+
         [SerializeField] private List<int> _completedQuestIndex = new();
-        
-        [SerializeField] private List<ProgressionOnLevel> _levelsProgression = new();
 
         [SerializeField] private int _totalMonstersKilled = 0;
 
         [SerializeField] private bool _soundOn = true;
 
+        private Dictionary<string, ResourceElement> _sortedResources = new();
+        private Dictionary<string, ProgressionOnLevel> _sortedLevelsProgression = new();
+
         public void Initialize(SaveLoadService saveLoadService) => _saveLoadService = saveLoadService;
+
+        public void DeserializeModels()
+        {
+            DeserializeResources(_resources);
+
+            foreach (var level in _levelsProgression)
+                _sortedLevelsProgression.Add(level.LevelName, level);
+        }
+        
+        public void SerializeModels(Action onComplete)
+        {
+            _resources.Clear();
+            _levelsProgression.Clear();
+            
+            foreach (var resource in _sortedResources.Values)
+                _resources.Add(resource);
+
+            foreach (var level in _sortedLevelsProgression.Values)
+                _levelsProgression.Add(level);
+
+            onComplete?.Invoke();
+        }
 
         public void LoadInitialResources(GameConfigService config)
         {
-            _resources = config.InitialResources;
+            DeserializeResources(config.InitialResources);
+
+            foreach (var level in config.Locations)
+            {
+                var location = new ProgressionOnLevel(level.Header, 0, false);   
+                _sortedLevelsProgression.Add(location.LevelName, location);
+            }
+            
             _unlockedHeros.Add(config.Heroes[0].Header);
-            
-            foreach (var location in config.Locations)
-                _levelsProgression.Add(new(location.Header, 0, false));
-            
             _saveLoadService.Save();
         }
 
-        public void SetAmountOfResource(string resource, int amount, bool save = true)
+        public void SetAmountOfResource(string resource, int amount)
         {
-            foreach (var resourcePack in _resources)
-            {
-                if (resourcePack.Key == resource)
-                {
-                    resourcePack.Amount += amount;
+            var finalAmount = _sortedResources[resource].Amount + amount;
 
-                    if (resourcePack.Amount < 0)
-                    {
-                        resourcePack.Amount = 0;
-                    }
-                }
-            }
+            if (finalAmount < 0)
+                finalAmount = 0;
+
+            _sortedResources[resource].Amount = finalAmount;
 
             _ticksPlayed++;
-            
-            if (save)
-                _saveLoadService.Save();
+
+            _saveLoadService.Save();
         }
 
-        public int GetAmountOfResource(string resource)
-        {
-            var amount = -1;
-
-            foreach (var resourcePack in _resources)
-            {
-                if (resourcePack.Key == resource)
-                {
-                    amount = resourcePack.Amount;
-                    break;
-                }
-            }
-
-            return amount;
-        }
+        public int GetAmountOfResource(string resource) => _sortedResources[resource].Amount;
 
         public void SetQuestCompleted(int quest)
         {
@@ -97,9 +104,9 @@ namespace Quicorax.SacredSplinter.Services
 
         public void SetEnemyDiscovered(string enemy)
         {
-            if (_discoveredEnemies.Contains(enemy)) 
+            if (_discoveredEnemies.Contains(enemy))
                 return;
-            
+
             _ticksPlayed++;
 
             _discoveredEnemies.Add(enemy);
@@ -121,37 +128,15 @@ namespace Quicorax.SacredSplinter.Services
             };
         }
 
-        private int GetHigherLevelReached()
-        {
-            var higherLevel = -1;
-
-            foreach (var item in _levelsProgression)
-            {
-                if (item.MaxLevel > higherLevel)
-                    higherLevel = item.MaxLevel;
-            }
-
-            return higherLevel;
-        }
-
-        private int GetLocationCompleted(string location)
-        {
-            foreach (var item in _levelsProgression)
-            {
-                if (item.LevelName == location && item.Completed)
-                    return 1;
-            }
-
-            return 0;
-        }
+        private int GetHigherLevelReached() => _sortedLevelsProgression.Values.Select(level => level.MaxLevel).Max();
+        private int GetLocationCompleted(string location) => _sortedLevelsProgression[location].Completed ? 1 : 0;
 
         public void SetLocationProgress(string location, int floor)
         {
-            foreach (var item in _levelsProgression)
-            {
-                if (item.LevelName == location && item.MaxLevel < floor)
-                    item.MaxLevel = floor;
-            }
+            var level = _sortedLevelsProgression[location];
+
+            if (level.MaxLevel < floor)
+                level.MaxLevel = floor;
         }
 
         public void SetSoundOn(bool on)
@@ -163,5 +148,11 @@ namespace Quicorax.SacredSplinter.Services
         }
 
         public bool GetSoundOff() => _soundOn;
+        
+        private void DeserializeResources(List<ResourceElement> resources)
+        {
+            foreach (var resource in resources)
+                _sortedResources.Add(resource.Key, resource);
+        }
     }
 }

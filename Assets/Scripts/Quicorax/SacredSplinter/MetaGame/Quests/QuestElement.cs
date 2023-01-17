@@ -65,8 +65,8 @@ namespace Quicorax.SacredSplinter.MetaGame.Quests
 
             _claimed = true;
 
-            _progression.SetQuestCompleted(_quest.Index);
             _progression.SetAmountOfResource(_quest.Reward, _quest.RewardAmount);
+            _progression.SetQuestCompleted(_quest.Index);
 
             _onTransactionCompleted?.Invoke();
 
