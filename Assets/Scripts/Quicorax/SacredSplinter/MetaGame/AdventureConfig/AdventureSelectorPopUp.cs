@@ -15,13 +15,16 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         [SerializeField] private Button _engageOnAdventureButton;
 
         private SelectorPack _currentSelectorPack;
-        
+
         private PopUpSpawnerService _popUpSpawner;
         private AdventureConfigurationService _adventureConfig;
         private AddressablesService _addressables;
 
-        public void Initialize()
+        private Action _onEngage;
+
+        public void Initialize(Action onEngage)
         {
+            _onEngage = onEngage;
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
             _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
             _addressables = ServiceLocator.GetService<AddressablesService>();
@@ -37,7 +40,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         public void EngageOnAdventure()
         {
             CloseSelf();
-            ServiceLocator.GetService<NavigationService>().NavigateToGame();
+            _onEngage?.Invoke();
         }
 
         public void OpenLocationSelector() => SpawnSelectorPopUp<LocationSelectorPopUp>(_locationSelectionPack);
@@ -55,7 +58,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         private void OnSelectionSuccess(string header)
         {
             SetImage(header).ManageTaskException();
-            
+
             TurnObjectOn(_currentSelectorPack.Image.gameObject, true);
             TurnObjectOn(_currentSelectorPack.Unselected, false);
 
@@ -67,7 +70,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         private async Task SetImage(string header) =>
             _currentSelectorPack.Image.sprite = await _addressables.LoadAddrssAsset<Sprite>(header);
-        
+
         private void OnSelectionFailed() => ActivateButton(_currentSelectorPack.Launcher.Button, true);
 
         public void CancelSelection() => _adventureConfig.ResetSelection();

@@ -197,19 +197,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7420052624442296059}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3061522311400507430}
-        m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
-        m_MethodName: OpenConfiguration
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &8429504702638386068
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,19 +399,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1148606890022445546}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3061522311400507430}
-        m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
-        m_MethodName: OpenResources
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2178248580847885767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +485,7 @@ MonoBehaviour:
     Button: {fileID: 1290617095584478042}
   _coinsAmount: {fileID: 4686023516242807211}
   _crystalsAmount: {fileID: 6874336480884882148}
+  _curtain: {fileID: 0}
 --- !u!1001 &5305469904324533518
 PrefabInstance:
   m_ObjectHideFlags: 0

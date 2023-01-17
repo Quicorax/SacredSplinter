@@ -12,6 +12,7 @@ namespace Quicorax.SacredSplinter.Initialization
         [SerializeField] private ServiceElements _servicesElements;
         [SerializeField] private Slider _progressionBar;
         [SerializeField] private TMP_Text _progressionText;
+        [SerializeField] private CurtainTransition _curtain;
 
         private ServiceFeeder _serviceFeeder;
 
@@ -20,7 +21,7 @@ namespace Quicorax.SacredSplinter.Initialization
         private void Awake()
         {
             _serviceFeeder = new ServiceFeeder();
-            
+
             Initialize().ManageTaskException();
 
             _progressionBar.maxValue = 5;
@@ -31,7 +32,7 @@ namespace Quicorax.SacredSplinter.Initialization
         {
             await _serviceFeeder.LoadServices(_servicesElements, UpdateProgression);
 
-            ServiceLocator.GetService<NavigationService>().NavigateToMenu();
+            _curtain.CurtainON(() => ServiceLocator.GetService<NavigationService>().NavigateToMenu());
         }
 
         private void UpdateProgression(string message)

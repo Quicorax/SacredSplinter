@@ -10,13 +10,6 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 
         private GameProgressionService _progression;
 
-        internal void SetSound(GameProgressionService progression)
-        {
-            _progression = progression;
-
-            TurnAudio(_progression.GetSoundOff());
-        }
-
         public void ToggleAudio()
         {
             var isOn = !_progression.GetSoundOff();
@@ -24,8 +17,14 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _progression.SetSoundOn(isOn);
 
             TurnAudio(isOn);
+        }       
+        
+        protected void SetSound(GameProgressionService progression)
+        {
+            _progression = progression;
+            TurnAudio(_progression.GetSoundOff());
         }
-
+        
         private void TurnAudio(bool isOn) => _audioON.SetActive(isOn);
     }
 }

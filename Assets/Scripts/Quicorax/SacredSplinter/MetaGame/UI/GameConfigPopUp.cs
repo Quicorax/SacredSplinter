@@ -1,18 +1,18 @@
-﻿using Quicorax.SacredSplinter.Services;
+﻿using System;
+using Quicorax.SacredSplinter.Services;
 
 namespace Quicorax.SacredSplinter.MetaGame.UI
 {
     public class GameConfigPopUp : BaseConfigPopUp
     {
-        private void Start()
-        {
-            SetSound(ServiceLocator.GetService<GameProgressionService>());
-        }
-
+        private Action _onReturnToMenu;
+        public void Initialize(Action onReturnToMenu) => _onReturnToMenu = onReturnToMenu;
         public void Exit()
         {
             CloseSelf();
-            ServiceLocator.GetService<NavigationService>().NavigateToMenu();
+            _onReturnToMenu?.Invoke();
         }
+        
+        private void Start() => SetSound(ServiceLocator.GetService<GameProgressionService>());
     }
 }

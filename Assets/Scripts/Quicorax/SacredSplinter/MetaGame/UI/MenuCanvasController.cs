@@ -1,3 +1,4 @@
+using Quicorax.SacredSplinter.Initialization;
 using Quicorax.SacredSplinter.MetaGame.AdventureConfig;
 using Quicorax.SacredSplinter.MetaGame.Encyclopedia;
 using Quicorax.SacredSplinter.MetaGame.Quests;
@@ -14,6 +15,8 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 
         [SerializeField] private PopUpLauncher _adventureSelector, _quests, _shop, _encyclopedia;
 
+        [SerializeField] private CurtainTransition _curtain;
+        
         private void Start()
         {
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
@@ -25,11 +28,14 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         }
 
         public void OpenAdventureSelector() =>
-            _popUpSpawner.SpawnPopUp<AdventureSelectorPopUp>(_adventureSelector).Initialize();
+            _popUpSpawner.SpawnPopUp<AdventureSelectorPopUp>(_adventureSelector).Initialize(EngageOnAdventure);
 
         public void OpenQuests() => _popUpSpawner.SpawnPopUp<QuestsPopUp>(_quests).Initialize();
         public void OpenShop() => _popUpSpawner.SpawnPopUp<ShopPopUp>(_shop).Initialize();
 
         public void OpenEncyclopedia() => _popUpSpawner.SpawnPopUp<EncyclopediaPopUp>(_encyclopedia).Initialize();
+
+        private void EngageOnAdventure() =>
+            _curtain.CurtainON(() => ServiceLocator.GetService<NavigationService>().NavigateToGame());
     }
 }

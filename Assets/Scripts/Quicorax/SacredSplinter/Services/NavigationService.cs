@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+#pragma warning disable CS0162
+
 namespace Quicorax.SacredSplinter.Services
 {
     public class NavigationService : IService

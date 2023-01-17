@@ -8,10 +8,7 @@ namespace Quicorax.SacredSplinter.Services
     {
         private Transform _parent;
 
-        public void Initialize(Transform parent)
-        {
-            _parent = parent;
-        }
+        public void Initialize(Transform parent) => _parent = parent;
 
         public void SpawnPopUp(PopUpLauncher popUpBundle)
         {

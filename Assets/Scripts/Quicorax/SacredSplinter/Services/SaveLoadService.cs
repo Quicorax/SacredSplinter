@@ -13,7 +13,7 @@ namespace Quicorax.SacredSplinter.Services
         private IGameProgressionProvider _progressionProvider;
         
         private bool _saving;
-        private readonly float _saveBufferDelay = 0.5f;
+        private readonly int _saveBufferDelayMS = 200;
         
         public void Initialize(GameConfigService config, GameProgressionService progression,
             IGameProgressionProvider progressionProvider)
@@ -40,7 +40,7 @@ namespace Quicorax.SacredSplinter.Services
             
             _saving = true;
 
-            await Task.Delay(200);
+            await Task.Delay(_saveBufferDelayMS);
             
             _progression.SerializeModels(() => _progressionProvider.Save(JsonUtility.ToJson(_progression)));
             _saving = false;
