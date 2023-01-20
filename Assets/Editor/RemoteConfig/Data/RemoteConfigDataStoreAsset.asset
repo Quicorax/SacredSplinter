@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"27f86095-124d-4530-9568-142811dc8e6f\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"163a9835-40ed-49e4-9114-87222cfe3430\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"c9eb658b-82cd-4b3c-be04-d92d7e7abb76\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8678491a-0c67-4951-b6d9-00578bc998b9\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -40,7 +40,7 @@ MonoBehaviour:
     \"Blue Cristal\",\r\n            \"Price\": \"Gold Coin\",\r\n            \"PriceAmount\":
     1,\r\n            \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\":
     100\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"4fa09438-a727-49e4-8d6c-6fd0a552f87d\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"4f95f702-aa0e-4f47-9b2e-fb5714ae3cca\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": -1,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -74,7 +74,7 @@ MonoBehaviour:
     \"Header\": \"Complete the Dungeons\",\r\n            \"Amount\": 1,\r\n           
     \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"c8f8cbfd-8f9f-4469-8ddf-35f70243baed\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"d49aad87-94f5-4bbe-90c3-947a9c3f2db3\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
@@ -94,50 +94,56 @@ MonoBehaviour:
     relics in the hopes of summoning powerful deities and unlocking the secrets of
     the universe.\",\r\n            \"MaxHealth\": 80,\r\n            \"CanIgnoreEvents\":
     false,\r\n            \"CanEscapeCombats\": true\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"5a72ea8a-8742-4fa7-b156-5cf76474d799\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2d02dc19-3111-4a25-8eaa-4e2cfa9d9c73\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
     creature, with sharp teeth and razor-like claws to defend itself against larger
-    predators.\",\r\n            \"MaxHealth\": 15\r\n          },\r\n          {\r\n           
-    \"Header\": \"Dog\",\r\n            \"Description\": \"A dangerous beast, its
-    teeth bared and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
-    \"Location\": \"Village\",\r\n            \"MaxHealth\": 35\r\n          },\r\n         
-    {\r\n            \"Header\": \"Bandit\",\r\n            \"Description\": \"A
-    ruthless thief, preying on the weak and vulnerable as he roamed the land in search
-    of plunder and riches.\",\r\n            \"MaxHealth\": 75\r\n          }\r\n       
-    ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"7c7158e1-ffcc-4480-8b3c-9e50e278ba1e\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"LocationsModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
-    null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
-    \"Header\": \"Village\",\r\n            \"Description\": \"The village lay nestled
-    on the outskirts of the castle, shrouded in darkness and mystery. It is a place
-    where danger lurks at every turn, where old and decrepit houses seemed to whisper
-    secrets of a troubled past.\"\r\n          },\r\n          {\r\n            \"Header\":
-    \"Sewers\",\r\n            \"Description\": \"The sewers lay beneath the village,
-    a putrid and fetid place overrun with all manner of filth and vermin. It was
-    a place where the light of day never reached, where the shadows seemed to dance
-    and twist in the flickering glow of a handful of torches.\"\r\n          },\r\n         
+    predators.\",\r\n            \"MaxHealth\": 15,\r\n            \"HealthEvo\":
+    5,\r\n            \"Damage\": 20,\r\n            \"DamageEvo\": 5\r\n         
+    },\r\n          {\r\n            \"Header\": \"Dog\",\r\n            \"Description\":
+    \"A dangerous beast, its teeth bared and ready to rip into the flesh of any who
+    dared to cross its path.\",\r\n            \"Location\": \"Village\",\r\n           
+    \"MaxHealth\": 35,\r\n            \"HealthEvo\": 15,\r\n            \"Damage\":
+    15,\r\n            \"DamageEvo\": 3\r\n          },\r\n          {\r\n           
+    \"Header\": \"Bandit\",\r\n            \"Description\": \"A ruthless thief, preying
+    on the weak and vulnerable as he roamed the land in search of plunder and riches.\",\r\n           
+    \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\":
+    18,\r\n            \"DamageEvo\": 5\r\n          }\r\n        ]\r\n      }\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a9b988a4-2030-43e5-b3c7-d1c406f475a9\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
+    \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
+    [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
+    \"The village lay nestled on the outskirts of the castle, shrouded in darkness
+    and mystery. It is a place where danger lurks at every turn, where old and decrepit
+    houses seemed to whisper secrets of a troubled past.\",\r\n            \"RoomsPerFloor\":
+    1,\r\n            \"FloorsPerLocation\": 3\r\n          },\r\n          {\r\n           
+    \"Header\": \"Sewers\",\r\n            \"Description\": \"The sewers lay beneath
+    the village, a putrid and fetid place overrun with all manner of filth and vermin.
+    It was a place where the light of day never reached, where the shadows seemed
+    to dance and twist in the flickering glow of a handful of torches.\",\r\n           
+    \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\": 3\r\n          },\r\n         
     {\r\n            \"Header\": \"Dungeons\",\r\n            \"Description\": \"The
     dungeons of the castle were a place of torture and suffering, where the screams
     of the damned echoed through the cold stone walls. It was a place where the darkness
     seemed to seep into one's very soul, where the air was thick with the stench
-    of fear and death.\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"020852f1-8f2c-438f-aea1-85115292b74b\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\":
-    \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
-    [\r\n          {\r\n            \"Active\": false,\r\n            \"Concept\":
-    \"Insta Death\",\r\n            \"Header\": \"Insta Death\",\r\n            \"Action\":
-    \"Insta Death\",\r\n            \"Chance\": 0,\r\n            \"SuccedHeader\":
-    \"Insta Death\",\r\n            \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\":
-    0,\r\n            \"SuccedMaxAmount\": 0,\r\n            \"FailHeader\": \"Insta
-    Death\",\r\n            \"FailKind\": \"Health\",\r\n            \"FailAmount\":
-    -100,\r\n            \"DeathMotive\": \"God\"\r\n          },\r\n          {\r\n           
-    \"Active\": true,\r\n            \"Concept\": \"Event_Corpse\",\r\n           
-    \"Header\": \"You see a corpse liying on the ground.\",\r\n            \"Action\":
-    \"Loot corpse\",\r\n            \"Chance\": 40,\r\n            \"SuccedHeader\":
-    \"You find some coins in the dead's pocked.\",\r\n            \"SuccedKind\":
-    \"Gold Coin\",\r\n            \"SuccedMinAmount\": 1,\r\n            \"SuccedMaxAmount\":
+    of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
+    3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"928f69b3-2187-49d9-ba64-e1854de14644\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
+    {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
+    \"Header\": \"Insta Death\",\r\n            \"Action\": \"Insta Death\",\r\n           
+    \"Chance\": 0,\r\n            \"SuccedHeader\": \"Insta Death\",\r\n           
+    \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\": 0,\r\n           
+    \"SuccedMaxAmount\": 0,\r\n            \"FailHeader\": \"Insta Death\",\r\n           
+    \"FailKind\": \"Health\",\r\n            \"FailAmount\": -100,\r\n           
+    \"DeathMotive\": \"God\"\r\n          },\r\n          {\r\n            \"Active\":
+    true,\r\n            \"Concept\": \"Event_Corpse\",\r\n            \"Header\":
+    \"You see a corpse liying on the ground.\",\r\n            \"Action\": \"Loot
+    corpse\",\r\n            \"Chance\": 40,\r\n            \"SuccedHeader\": \"You
+    find some coins in the dead's pocked.\",\r\n            \"SuccedKind\": \"Gold
+    Coin\",\r\n            \"SuccedMinAmount\": 1,\r\n            \"SuccedMaxAmount\":
     10,\r\n            \"FailHeader\": \"The sleeping Undead awakes and in a quick
     move scratches you! \",\r\n            \"FailKind\": \"Health\",\r\n           
     \"FailAmount\": -10,\r\n            \"DeathMotive\": \"Undead\"\r\n         
@@ -163,14 +169,14 @@ MonoBehaviour:
     \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 20,\r\n           
     \"FailHeader\": \"---\",\r\n            \"FailKind\": \"Gold Coin\",\r\n           
     \"FailAmount\": -13\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"27f86095-124d-4530-9568-142811dc8e6f\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"163a9835-40ed-49e4-9114-87222cfe3430\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"c9eb658b-82cd-4b3c-be04-d92d7e7abb76\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8678491a-0c67-4951-b6d9-00578bc998b9\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -191,7 +197,7 @@ MonoBehaviour:
     \"Blue Cristal\",\r\n            \"Price\": \"Gold Coin\",\r\n            \"PriceAmount\":
     1,\r\n            \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\":
     100\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"4fa09438-a727-49e4-8d6c-6fd0a552f87d\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"4f95f702-aa0e-4f47-9b2e-fb5714ae3cca\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": -1,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -225,7 +231,7 @@ MonoBehaviour:
     \"Header\": \"Complete the Dungeons\",\r\n            \"Amount\": 1,\r\n           
     \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"c8f8cbfd-8f9f-4469-8ddf-35f70243baed\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"d49aad87-94f5-4bbe-90c3-947a9c3f2db3\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
@@ -245,50 +251,56 @@ MonoBehaviour:
     relics in the hopes of summoning powerful deities and unlocking the secrets of
     the universe.\",\r\n            \"MaxHealth\": 80,\r\n            \"CanIgnoreEvents\":
     false,\r\n            \"CanEscapeCombats\": true\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"5a72ea8a-8742-4fa7-b156-5cf76474d799\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2d02dc19-3111-4a25-8eaa-4e2cfa9d9c73\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
     creature, with sharp teeth and razor-like claws to defend itself against larger
-    predators.\",\r\n            \"MaxHealth\": 15\r\n          },\r\n          {\r\n           
-    \"Header\": \"Dog\",\r\n            \"Description\": \"A dangerous beast, its
-    teeth bared and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
-    \"Location\": \"Village\",\r\n            \"MaxHealth\": 35\r\n          },\r\n         
-    {\r\n            \"Header\": \"Bandit\",\r\n            \"Description\": \"A
-    ruthless thief, preying on the weak and vulnerable as he roamed the land in search
-    of plunder and riches.\",\r\n            \"MaxHealth\": 75\r\n          }\r\n       
-    ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
-    \"7c7158e1-ffcc-4480-8b3c-9e50e278ba1e\"\r\n    },\r\n    \"rs\": {\r\n     
-    \"key\": \"LocationsModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
-    null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
-    \"Header\": \"Village\",\r\n            \"Description\": \"The village lay nestled
-    on the outskirts of the castle, shrouded in darkness and mystery. It is a place
-    where danger lurks at every turn, where old and decrepit houses seemed to whisper
-    secrets of a troubled past.\"\r\n          },\r\n          {\r\n            \"Header\":
-    \"Sewers\",\r\n            \"Description\": \"The sewers lay beneath the village,
-    a putrid and fetid place overrun with all manner of filth and vermin. It was
-    a place where the light of day never reached, where the shadows seemed to dance
-    and twist in the flickering glow of a handful of torches.\"\r\n          },\r\n         
+    predators.\",\r\n            \"MaxHealth\": 15,\r\n            \"HealthEvo\":
+    5,\r\n            \"Damage\": 20,\r\n            \"DamageEvo\": 5\r\n         
+    },\r\n          {\r\n            \"Header\": \"Dog\",\r\n            \"Description\":
+    \"A dangerous beast, its teeth bared and ready to rip into the flesh of any who
+    dared to cross its path.\",\r\n            \"Location\": \"Village\",\r\n           
+    \"MaxHealth\": 35,\r\n            \"HealthEvo\": 15,\r\n            \"Damage\":
+    15,\r\n            \"DamageEvo\": 3\r\n          },\r\n          {\r\n           
+    \"Header\": \"Bandit\",\r\n            \"Description\": \"A ruthless thief, preying
+    on the weak and vulnerable as he roamed the land in search of plunder and riches.\",\r\n           
+    \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\":
+    18,\r\n            \"DamageEvo\": 5\r\n          }\r\n        ]\r\n      }\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a9b988a4-2030-43e5-b3c7-d1c406f475a9\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
+    \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
+    [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
+    \"The village lay nestled on the outskirts of the castle, shrouded in darkness
+    and mystery. It is a place where danger lurks at every turn, where old and decrepit
+    houses seemed to whisper secrets of a troubled past.\",\r\n            \"RoomsPerFloor\":
+    1,\r\n            \"FloorsPerLocation\": 3\r\n          },\r\n          {\r\n           
+    \"Header\": \"Sewers\",\r\n            \"Description\": \"The sewers lay beneath
+    the village, a putrid and fetid place overrun with all manner of filth and vermin.
+    It was a place where the light of day never reached, where the shadows seemed
+    to dance and twist in the flickering glow of a handful of torches.\",\r\n           
+    \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\": 3\r\n          },\r\n         
     {\r\n            \"Header\": \"Dungeons\",\r\n            \"Description\": \"The
     dungeons of the castle were a place of torture and suffering, where the screams
     of the damned echoed through the cold stone walls. It was a place where the darkness
     seemed to seep into one's very soul, where the air was thick with the stench
-    of fear and death.\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"020852f1-8f2c-438f-aea1-85115292b74b\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\":
-    \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
-    [\r\n          {\r\n            \"Active\": false,\r\n            \"Concept\":
-    \"Insta Death\",\r\n            \"Header\": \"Insta Death\",\r\n            \"Action\":
-    \"Insta Death\",\r\n            \"Chance\": 0,\r\n            \"SuccedHeader\":
-    \"Insta Death\",\r\n            \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\":
-    0,\r\n            \"SuccedMaxAmount\": 0,\r\n            \"FailHeader\": \"Insta
-    Death\",\r\n            \"FailKind\": \"Health\",\r\n            \"FailAmount\":
-    -100,\r\n            \"DeathMotive\": \"God\"\r\n          },\r\n          {\r\n           
-    \"Active\": true,\r\n            \"Concept\": \"Event_Corpse\",\r\n           
-    \"Header\": \"You see a corpse liying on the ground.\",\r\n            \"Action\":
-    \"Loot corpse\",\r\n            \"Chance\": 40,\r\n            \"SuccedHeader\":
-    \"You find some coins in the dead's pocked.\",\r\n            \"SuccedKind\":
-    \"Gold Coin\",\r\n            \"SuccedMinAmount\": 1,\r\n            \"SuccedMaxAmount\":
+    of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
+    3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"928f69b3-2187-49d9-ba64-e1854de14644\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
+    {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
+    \"Header\": \"Insta Death\",\r\n            \"Action\": \"Insta Death\",\r\n           
+    \"Chance\": 0,\r\n            \"SuccedHeader\": \"Insta Death\",\r\n           
+    \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\": 0,\r\n           
+    \"SuccedMaxAmount\": 0,\r\n            \"FailHeader\": \"Insta Death\",\r\n           
+    \"FailKind\": \"Health\",\r\n            \"FailAmount\": -100,\r\n           
+    \"DeathMotive\": \"God\"\r\n          },\r\n          {\r\n            \"Active\":
+    true,\r\n            \"Concept\": \"Event_Corpse\",\r\n            \"Header\":
+    \"You see a corpse liying on the ground.\",\r\n            \"Action\": \"Loot
+    corpse\",\r\n            \"Chance\": 40,\r\n            \"SuccedHeader\": \"You
+    find some coins in the dead's pocked.\",\r\n            \"SuccedKind\": \"Gold
+    Coin\",\r\n            \"SuccedMinAmount\": 1,\r\n            \"SuccedMaxAmount\":
     10,\r\n            \"FailHeader\": \"The sleeping Undead awakes and in a quick
     move scratches you! \",\r\n            \"FailKind\": \"Health\",\r\n           
     \"FailAmount\": -10,\r\n            \"DeathMotive\": \"Undead\"\r\n         

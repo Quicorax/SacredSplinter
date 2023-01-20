@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 {
-    public sealed class EventRoomPopUp : BaseRoomPopUp
+    public sealed class EventRoomPopUp : AdventureRoomPopUp
     {
         [SerializeField] private SimpleEventBus _onResourcesUpdated;
         [SerializeField] private TMP_Text _header, _action;
@@ -20,34 +20,55 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 
         private EventData _currentEvent;
 
-        private GameProgressionService _gameProgression;
         private AdventureProgressionService _adventureProgression;
-        private AdventureConfigurationService _adventureConfig;
         private PopUpSpawnerService _popUpSpawner;
-        private  AddressablesService _addressables;
         
-
-        public void Start()
+        protected override void Initialize()
         {
+            GetCommonServices();
             _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
-            _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
-            _gameProgression = ServiceLocator.GetService<GameProgressionService>();
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
-            _addressables = ServiceLocator.GetService<AddressablesService>();
-
+            
+            
             _currentEvent = SetEvent();
-
+            ExecuteCommonMethods();
+            
             _header.text = _currentEvent.Header;
             _action.text = _currentEvent.Action;
-            
-            SetSpritesAsync().ManageTaskException();
-            
-            SetButtonLogic();
         }
 
-        private async Task SetSpritesAsync() =>
-            _image.sprite =await _addressables.LoadAddrssAsset<Sprite>(_currentEvent.Concept);
+        protected override async Task SetSpritesAsync() =>
+            _image.sprite =await Addressables.LoadAddrssAsset<Sprite>(_currentEvent.Concept);
+        
+        protected override void SetButtonLogic()
+        {
+            _ignoreButton.interactable = AdventureConfig.GetHeroData().CanIgnoreEvents;
 
+            if (_ignoreButton.interactable)
+                _ignoreButton.onClick.AddListener(Complete);
+            
+            _actionButton.onClick.AddListener(OnInteract);
+        }
+
+        private EventData SetEvent()
+        {
+            EventData data = null;
+            var dataSelected = false;
+            
+            var dataList = ServiceLocator.GetService<GameConfigService>().Events;
+
+            while (!dataSelected)
+            {
+                data = dataList[Random.Range(0, dataList.Count)];
+                if (data.Active && (string.IsNullOrEmpty(data.Location) || data.Location.Equals(AdventureConfig.GetLocation().Header)))
+                {
+                    dataSelected = true;
+                }
+            }
+
+            return data;
+        }
+        
         private void OnInteract() => OnInteractAsync().ManageTaskException();
         private async Task OnInteractAsync()
         {
@@ -66,7 +87,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
             if (kind != "Health")
             {
                 withImage = true;   
-                image = await _addressables.LoadAddrssAsset<Sprite>(kind);
+                image = await Addressables.LoadAddrssAsset<Sprite>(kind);
             }
 
             _popUpSpawner.SpawnPopUp<EventResultPopUp>(_eventResultPopUp)
@@ -75,41 +96,12 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
             Complete();
         }
 
-        private void SetButtonLogic()
-        {
-            _ignoreButton.interactable = _adventureConfig.GetHeroData().CanIgnoreEvents;
-
-            if (_ignoreButton.interactable)
-                _ignoreButton.onClick.AddListener(Complete);
-            
-            _actionButton.onClick.AddListener(OnInteract);
-        }
-
-        private EventData SetEvent()
-        {
-            EventData data = null;
-            var dataSelected = false;
-            
-            var dataList = ServiceLocator.GetService<GameConfigService>().Events;
-
-            while (!dataSelected)
-            {
-                data = dataList[Random.Range(0, dataList.Count)];
-                if (data.Active && (string.IsNullOrEmpty(data.Location) || data.Location.Equals(_adventureConfig.GetLocation())))
-                {
-                    dataSelected = true;
-                }
-            }
-
-            return data;
-        }
-
         private void OnEventResult(string kind, int amount, string reason)
         {
             switch (kind)
             {
                 default:
-                    _gameProgression.SetAmountOfResource(kind, amount);
+                    GameProgression.SetAmountOfResource(kind, amount);
                     _onResourcesUpdated.NotifyEvent();
                     break;
                 case "Health":

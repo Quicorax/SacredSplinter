@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Quicorax.SacredSplinter.GamePlay.AdventureLoop;
+using Quicorax.SacredSplinter.Initialization;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Services;
 using Quicorax.SacredSplinter.Services.EventBus;
@@ -12,10 +13,12 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 {
     public class GameCanvasController : MonoBehaviour
     {
+        [SerializeField] private AdventureProgressionLoop _adventureLoop;
         [SerializeField] private Image _background, _hero;
         [SerializeField] private TMP_Text _header, _floorNumber, _health;
         [SerializeField] private Slider _healthSlider;
         [SerializeField] private PopUpLauncher _deathPopUp;
+        [SerializeField]private CurtainTransition _curtain;
 
         [SerializeField] private StringEventBus _onPlayerDeath;
 
@@ -37,15 +40,17 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 
             SetMaxHealthData();
             SetLevelVisualData().ManageTaskException();
+            
+            _adventureLoop.Initialize();
         }
 
         private async Task SetLevelVisualData()
         {
             var location = _adventureConfig.GetLocation();
 
-            _header.text = location;
+            _header.text = location.Header;
 
-            _background.sprite = await _addressables.LoadAddrssAsset<Sprite>(location);
+            _background.sprite = await _addressables.LoadAddrssAsset<Sprite>(location.Header);
             _hero.sprite = await _addressables.LoadAddrssAsset<Sprite>(_adventureConfig.GetHeroData().Header);
         }
 
@@ -64,14 +69,10 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _health.text = $"{currentHealth} / {_adventureProgress.GetMaxHealth()}";
         }
 
-        public void SetFloorNumber(int number)
-        {
-            _floorNumber.text = number.ToString();
-            _adventureProgress.AddFloor();
-        }
-
+        public void UpdateFloorNumber() => _floorNumber.text = _adventureProgress.GetCurrentFloor().ToString();
+        
         private void PlayerDeath(string deathReason) =>
             ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp<DeathPopUp>(_deathPopUp)
-                .Initialize(deathReason);
+                .Initialize(deathReason, _curtain);
     }
 }

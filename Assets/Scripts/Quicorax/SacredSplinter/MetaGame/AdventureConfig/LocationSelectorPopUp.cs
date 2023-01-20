@@ -32,11 +32,14 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         {
             _currentLocation = _locations[ActualIndex];
             PrintElementData( _currentLocation.Header, _currentLocation.Description);
+            
+            _artifactCheck.SetActive(ServiceLocator.GetService<GameProgressionService>()
+                .GetLocationCompleted(_currentLocation.Header));
         }
 
         protected override void SelectElement()
         {
-            _adventureConfiguration.SetLocation(_currentLocation.Header);
+            _adventureConfiguration.SetLocation(_currentLocation);
             _onSelect?.Invoke(_currentLocation.Header);
 
             CloseSelf();

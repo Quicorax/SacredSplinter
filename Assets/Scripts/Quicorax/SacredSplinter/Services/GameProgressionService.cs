@@ -37,12 +37,12 @@ namespace Quicorax.SacredSplinter.Services
             foreach (var level in _levelsProgression)
                 _sortedLevelsProgression.Add(level.LevelName, level);
         }
-        
+
         public void SerializeModels(Action onComplete)
         {
             _resources.Clear();
             _levelsProgression.Clear();
-            
+
             foreach (var resource in _sortedResources.Values)
                 _resources.Add(resource);
 
@@ -58,10 +58,10 @@ namespace Quicorax.SacredSplinter.Services
 
             foreach (var level in config.Locations)
             {
-                var location = new ProgressionOnLevel(level.Header, 0, false);   
+                var location = new ProgressionOnLevel(level.Header, 0, false);
                 _sortedLevelsProgression.Add(location.LevelName, location);
             }
-            
+
             _unlockedHeros.Add(config.Heroes[0].Header);
             _saveLoadService.Save();
         }
@@ -121,22 +121,34 @@ namespace Quicorax.SacredSplinter.Services
             {
                 "Hunt" => _totalMonstersKilled,
                 "Adventure" => GetHigherLevelReached(),
-                "Complete_Village" => GetLocationCompleted("Village"),
-                "Complete_Sewer" => GetLocationCompleted("Sewers"),
-                "Complete_Dungeon" => GetLocationCompleted("Dungeons"),
+                "Complete_Village" => GetLocationCompleted("Village") ? 1 : 0,
+                "Complete_Sewer" => GetLocationCompleted("Sewers") ? 1 : 0,
+                "Complete_Dungeon" => GetLocationCompleted("Dungeons") ? 1 : 0,
                 _ => 0
             };
         }
 
         private int GetHigherLevelReached() => _sortedLevelsProgression.Values.Select(level => level.MaxLevel).Max();
-        private int GetLocationCompleted(string location) => _sortedLevelsProgression[location].Completed ? 1 : 0;
+        public bool GetLocationCompleted(string location) => _sortedLevelsProgression[location].Completed;
 
         public void SetLocationProgress(string location, int floor)
         {
+            _ticksPlayed++;
+            
             var level = _sortedLevelsProgression[location];
 
             if (level.MaxLevel < floor)
                 level.MaxLevel = floor;
+            
+            _saveLoadService.Save();
+        }
+
+        public void SetLocationCompleted(string location)
+        {
+            _ticksPlayed++;
+            
+            _sortedLevelsProgression[location].Completed = true;
+            _saveLoadService.Save();
         }
 
         public void SetSoundOn(bool on)
@@ -148,7 +160,7 @@ namespace Quicorax.SacredSplinter.Services
         }
 
         public bool GetSoundOff() => _soundOn;
-        
+
         private void DeserializeResources(List<ResourceElement> resources)
         {
             foreach (var resource in resources)

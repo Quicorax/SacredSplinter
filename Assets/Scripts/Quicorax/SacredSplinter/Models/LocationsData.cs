@@ -7,5 +7,7 @@ namespace Quicorax.SacredSplinter.Models
     {
         public string Header;
         public string Description;
+        public int RoomsPerFloor;
+        public int FloorsPerLocation;
     }
 }

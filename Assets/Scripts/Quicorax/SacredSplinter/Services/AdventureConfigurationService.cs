@@ -6,7 +6,7 @@ namespace Quicorax.SacredSplinter.Services
     public class AdventureConfigurationService : IService
     {
         private HeroesData _heroesData;
-        private string _location = string.Empty;
+        private LocationsData _locationData;
 
         public void SetHero(string heroName)
         {
@@ -19,16 +19,16 @@ namespace Quicorax.SacredSplinter.Services
                 }
             }
         }
-        public void SetLocation(string location) => _location = location;
+        public void SetLocation(LocationsData location) => _locationData = location;
         
-        public string GetLocation() => _location;
+        public LocationsData GetLocation() => _locationData;
         public HeroesData GetHeroData() => _heroesData;
-        public bool ReadyToEngage() => _heroesData != null && _location != string.Empty;
+        public bool ReadyToEngage() => _heroesData != null && _locationData != null;
 
         public void ResetSelection()
         {
             _heroesData = null;
-            _location = string.Empty;
+            _locationData = null;
         }
     }
 }

@@ -1,34 +1,21 @@
-using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
-using Quicorax.SacredSplinter.Services;
+using Quicorax.SacredSplinter.Initialization;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
 {
-    public class DeathPopUp : BasePopUp
+    public sealed class DeathPopUp : GameOverPopUp
     {
-        [SerializeField] private Button _returnButton;
         [SerializeField] private TMP_Text _killer, _floorReached, _blueCrystalAmount, _goldCoinAmount;
-
-        private AdventureProgressionService _adventureProgression;
-        
-        public void Initialize(string deathReason)
+       
+        public void Initialize(string deathReason, CurtainTransition curtain)
         {
-            _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
-                                   
-            _returnButton.onClick.AddListener(Return);
+            SetData(curtain);
             
             _killer.text = deathReason;
-            _floorReached.text = _adventureProgression.GetCurrentFloor().ToString();
-            _blueCrystalAmount.text = _adventureProgression.GetBlueCrystalsBalance().ToString();
-            _goldCoinAmount.text = _adventureProgression.GetGoldCoinsBalance().ToString();
-        }
-        
-        private void Return()
-        {
-            base.CloseSelf();
-            ServiceLocator.GetService<NavigationService>().NavigateToMenu();
+            _floorReached.text = AdventureProgression.GetCurrentFloor().ToString();
+            _blueCrystalAmount.text = AdventureProgression.GetBlueCrystalsBalance().ToString();
+            _goldCoinAmount.text = AdventureProgression.GetGoldCoinsBalance().ToString();
         }
     }
 }

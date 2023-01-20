@@ -9,5 +9,8 @@ namespace Quicorax.SacredSplinter.Models
         public string Description;
         public string Location;
         public int MaxHealth;
+        public int HealthEvo;
+        public int Damage;
+        public int DamageEvo;
     }
 }
