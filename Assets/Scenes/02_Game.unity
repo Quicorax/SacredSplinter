@@ -244,10 +244,6 @@ PrefabInstance:
       propertyPath: _curtain
       value: 
       objectReference: {fileID: 1523733700}
-    - target: {fileID: 4771332520551545960, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
-      propertyPath: _victoryPopUp.PopUp
-      value: 
-      objectReference: {fileID: 9160504514981195181, guid: 24e9d0f0fea37de4ea867700e641888c, type: 3}
     - target: {fileID: 7041029968508873799, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
       propertyPath: m_Color.a
       value: 0.6117647

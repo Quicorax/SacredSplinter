@@ -20,8 +20,8 @@ namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
 
         private bool _elementDiscovered;
 
-        private Dictionary<int, EnemiesData> _enemies = new();
-        private EnemiesData _currentEnemy;
+        private Dictionary<int, EnemyData> _enemies = new();
+        private EnemyData _currentEnemy;
 
         private GameProgressionService _gameProgression;
         

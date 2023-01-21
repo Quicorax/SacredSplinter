@@ -1,34 +1,51 @@
-﻿using Quicorax.SacredSplinter.Models;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
+using Quicorax.SacredSplinter.Models;
 using UnityEngine;
 
 namespace Quicorax.SacredSplinter.Services
 {
     public class AdventureConfigurationService : IService
     {
-        private HeroesData _heroesData;
+        private HeroData _heroData;
         private LocationsData _locationData;
 
-        public void SetHero(string heroName)
+        public void SetHero(HeroData hero)
         {
-            foreach (var heroData in ServiceLocator.GetService<GameConfigService>().Heroes)
-            {
-                if (heroData.Header == heroName)
-                {
-                    _heroesData = heroData;
-                    return;
-                }
-            }
+            _heroData = hero;
+            _heroData.Attacks = SetRandomAttacks();
         }
+
         public void SetLocation(LocationsData location) => _locationData = location;
-        
+
         public LocationsData GetLocation() => _locationData;
-        public HeroesData GetHeroData() => _heroesData;
-        public bool ReadyToEngage() => _heroesData != null && _locationData != null;
+        public HeroData GetHeroData() => _heroData;
+        public bool ReadyToEngage() => _heroData != null && _locationData != null;
 
         public void ResetSelection()
         {
-            _heroesData = null;
+            _heroData = null;
             _locationData = null;
+        }
+
+        private List<AttackData> SetRandomAttacks()
+        {
+            var attacks = ServiceLocator.GetService<GameConfigService>().Attacks;
+            List<AttackData> tempAttacksOfKind = new();
+
+            foreach (var attack in attacks)
+            {
+                if (attack.AttackType == _heroData.AttackType)
+                    tempAttacksOfKind.Add(attack);
+            }
+
+            while (tempAttacksOfKind.Count() > _heroData.AttackAmount)
+            {
+                tempAttacksOfKind.RemoveAt(Random.Range(0, tempAttacksOfKind.Count));
+            }
+
+            return tempAttacksOfKind;
         }
     }
 }

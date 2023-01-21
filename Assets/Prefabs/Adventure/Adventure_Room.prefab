@@ -121,19 +121,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 173304999794253660}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5828427992710616067}
-        m_TargetAssemblyTypeName: BaseRoom, Assembly-CSharp
-        m_MethodName: OnSelect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &173305000380477225
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,3 +329,4 @@ MonoBehaviour:
   _roomsData: {fileID: 11400000, guid: a9daf047d0f2b004180a79ae3264c272, type: 2}
   _furtherRoom: {fileID: 7046784374782803161, guid: 47009a70d220117438fd69fa81c50645, type: 3}
   _roomHolder: {fileID: 7233717970956185350}
+  _selectButton: {fileID: 173304999794253662}

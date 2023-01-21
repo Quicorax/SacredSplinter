@@ -13,13 +13,10 @@ namespace Quicorax.SacredSplinter.GamePlay.Rooms
 
         internal string RoomKind;
 
-        private readonly List<string> _roomKinds = new()
+        private readonly List<string> _randomRoomKinds = new()
         {
             "Combat",
             "Event",
-            //"Unknown",
-            //"Boss",
-            //"Shop", (?)
         };
 
         protected async Task SetRoomKind(string forceKind = null)
@@ -28,6 +25,6 @@ namespace Quicorax.SacredSplinter.GamePlay.Rooms
             _roomIcon.sprite = await ServiceLocator.GetService<AddressablesService>().LoadAddrssAsset<Sprite>(RoomKind);
         }
 
-        private string ChooseRandomKind() => _roomKinds[Random.Range(0, _roomKinds.Count)];
+        private string ChooseRandomKind() => _randomRoomKinds[Random.Range(0, _randomRoomKinds.Count)];
     }
 }

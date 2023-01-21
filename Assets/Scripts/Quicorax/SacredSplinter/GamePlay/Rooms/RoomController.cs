@@ -3,6 +3,7 @@ using System.Linq;
 using Quicorax.SacredSplinter.GamePlay.Interactions;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 
@@ -15,17 +16,19 @@ namespace Quicorax.SacredSplinter.GamePlay.Rooms
         [SerializeField] private FurtherRoomController _furtherRoom;
 
         [SerializeField] private Transform _roomHolder;
+        [SerializeField] private Button _selectButton;
 
 
         private Action<int> _onRoomComplete;
         private Action _onRoomSelected;
-        
+
         private int _furtherRooms;
         private int _currentFloor;
 
         private PopUpSpawnerService _popUpSpawner;
 
-        public void Initialize(int currentFloor, Action onRoomSelected, Action<int> onRoomComplete)
+        public void Initialize(int currentFloor, Action onRoomSelected, Action<int> onRoomComplete,
+            string forceRoom = null)
         {
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
 
@@ -33,21 +36,27 @@ namespace Quicorax.SacredSplinter.GamePlay.Rooms
             _onRoomComplete = onRoomComplete;
             _onRoomSelected = onRoomSelected;
 
-            SetRoomKind().ManageTaskException();
+            _selectButton.onClick.AddListener(OnSelect);
+
+            SetRoomKind(forceRoom).ManageTaskException();
 
             _furtherRooms = Random.Range(1, 3);
 
-            for (var i = 0; i < _furtherRooms; i++)
-                Instantiate(_furtherRoom, _roomHolder).Initialize();
+            if (forceRoom != "Boss")
+            {
+                for (var i = 0; i < _furtherRooms; i++)
+                    Instantiate(_furtherRoom, _roomHolder).Initialize();
+            }
         }
 
-        public void OnSelect()
+        private void OnSelect()
         {
             _onRoomSelected?.Invoke();
 
             foreach (var item in _roomsData.Rooms.Where(item => item.Kind == RoomKind))
             {
-                _popUpSpawner.SpawnPopUp<BaseRoomPopUp>(item.RoomPopUp).SetData(_currentFloor, _furtherRooms, _onRoomComplete);
+                _popUpSpawner.SpawnPopUp<BaseRoomPopUp>(item.RoomPopUp)
+                    .SetData(_currentFloor, _furtherRooms, _onRoomComplete);
                 return;
             }
         }

@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: _victoryPopUp.PopUp
       value: 
       objectReference: {fileID: 9160504514981195181, guid: 24e9d0f0fea37de4ea867700e641888c, type: 3}
+    - target: {fileID: 8294173869924503423, guid: 5929bd1be0be42d45b8829494333c117, type: 3}
+      propertyPath: _boosCombatPopUp.PopUp
+      value: 
+      objectReference: {fileID: 4956627693633831189, guid: 03a38977abacba0469aeac59f7fadb5d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5929bd1be0be42d45b8829494333c117, type: 3}
 --- !u!114 &4771332520551545960 stripped

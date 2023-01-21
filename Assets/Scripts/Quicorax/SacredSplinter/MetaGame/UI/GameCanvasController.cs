@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using Quicorax.SacredSplinter.GamePlay.AdventureLoop;
 using Quicorax.SacredSplinter.Initialization;

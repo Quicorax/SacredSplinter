@@ -1,6 +1,5 @@
 ﻿using System;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
-using UnityEngine;
 
 namespace Quicorax.SacredSplinter.GamePlay.Interactions
 {
@@ -21,7 +20,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions
         }
 
         protected abstract void Initialize();
-        
+
         protected void Complete()
         {
             _onComplete?.Invoke(_furtherRooms);

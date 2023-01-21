@@ -22,8 +22,8 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         private GameProgressionService _progression;
         private PopUpSpawnerService _popUpSpawner;
 
-        private Dictionary<int, HeroesData> _heroes = new();
-        private HeroesData _currentHero;
+        private Dictionary<int, HeroData> _heroes = new();
+        private HeroData _currentHero;
 
         public override void Initialize(Action<string> onSelect, Action onCancel)
         {
@@ -60,7 +60,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         {
             if (_elementUnlocked)
             {
-                _adventureConfiguration.SetHero(_currentHero.Header);
+                _adventureConfiguration.SetHero(_currentHero);
                 _onSelect?.Invoke(_currentHero.Header);
                 CloseSelf();
             }

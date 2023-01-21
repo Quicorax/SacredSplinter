@@ -139,7 +139,7 @@ MonoBehaviour:
   _inputBlocker: {fileID: 2146924907780451804}
   _viewBlocker: {fileID: 6844672828317892955}
   _viewBackground: {fileID: 4333497323235132297}
-  _transitionTime: 1
+  _transitionTime: 0.5
 --- !u!114 &2146924907780451804
 MonoBehaviour:
   m_ObjectHideFlags: 0

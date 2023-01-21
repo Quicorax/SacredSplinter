@@ -7,14 +7,20 @@ namespace Quicorax.SacredSplinter.Services
 {
     public class AdventureProgressionService : IService
     {
-        private HeroesData _selectedHero;
+        private HeroData _selectedHero;
         private LocationsData _selectedLocation;
 
         private Action _onHealthUpdate;
         private StringEventBus _onPlayerDeath;
         private GameProgressionService _gameProgression;
 
-        private int _currentHealth;
+        private int _currentHeroLevel;
+        private int _currentHeroExperience;
+
+        private int _currentHeroHealth;
+        private int _currentHeroSpeed;
+        private int _currentHeroDamage;
+
         private int _currentFloor;
         private int _currentFloorRooms;
         private int _initialGoldCoins, _initialBlueCrystals;
@@ -26,29 +32,41 @@ namespace Quicorax.SacredSplinter.Services
             _onPlayerDeath = onPlayerDeath;
         }
 
-        public void StartAdventure(LocationsData location, HeroesData selectedHero, Action onHealthUpdate)
+        public void StartAdventure(LocationsData location, HeroData selectedHero, Action onHealthUpdate)
         {
             ResetAdventure();
-            
+
             _selectedLocation = location;
             _selectedHero = selectedHero;
             _onHealthUpdate = onHealthUpdate;
 
-            _currentHealth = _selectedHero.MaxHealth;
-
+            SetInitialHeroStats();
             SetInitialResources();
 
             AddFloor();
         }
 
-        private void ResetAdventure()
-        {
-            ResetRoomCount();
-            ResetFloorCount();
-        }
+
         public int GetMaxHealth() => _selectedHero.MaxHealth;
-        public int GetCurrentHealth() => _currentHealth;
+        public int GetCurrentHealth() => _currentHeroHealth;
         public int GetCurrentFloor() => _currentFloor;
+
+        public int GetCurrentHeroSpeed() => _currentHeroSpeed;
+        public int GetCurrentHeroDamage() => _currentHeroDamage;
+
+        public void AddHeroExperience(int amount)
+        {
+            _currentHeroExperience += amount;
+
+            if (_currentHeroExperience >= _selectedHero.ExperienceToLvl)
+            {
+                HeroLevelUp();
+                _currentHeroExperience -= _selectedHero.ExperienceToLvl;
+
+                if (_currentHeroExperience > 0)
+                    AddHeroExperience(_currentHeroExperience);
+            }
+        }
 
         public void AddFloor()
         {
@@ -66,9 +84,9 @@ namespace Quicorax.SacredSplinter.Services
 
         public void UpdateRawHealth(int amount, string damageReason)
         {
-            _currentHealth = Mathf.Clamp(_currentHealth + amount, 0, _selectedHero.MaxHealth);
+            _currentHeroHealth = Mathf.Clamp(_currentHeroHealth + amount, 0, _selectedHero.MaxHealth);
 
-            if (_currentHealth == 0)
+            if (_currentHeroHealth == 0)
             {
                 PlayerDead(damageReason);
             }
@@ -88,12 +106,35 @@ namespace Quicorax.SacredSplinter.Services
 
         public int GetBlueCrystalsBalance() =>
             _gameProgression.GetAmountOfResource("Blue Crystal") - _initialBlueCrystals;
-
+       
+        private void SetInitialHeroStats()
+        {
+            _currentHeroHealth = _selectedHero.MaxHealth;
+            _currentHeroSpeed = _selectedHero.Speed;
+            _currentHeroDamage = _selectedHero.Damage;
+        }
+        
         private void SetInitialResources()
         {
             _initialGoldCoins = _gameProgression.GetAmountOfResource("Gold Coin");
             _initialBlueCrystals = _gameProgression.GetAmountOfResource("Blue Crystal");
         }
+        
+        private void HeroLevelUp()
+        {
+            _currentHeroLevel++;
+
+            _currentHeroHealth = _selectedHero.MaxHealth + _selectedHero.HealthEvo * _currentHeroLevel;
+            _currentHeroSpeed = _selectedHero.Speed + _selectedHero.SpeedEvo * _currentHeroLevel;
+            _currentHeroDamage = _selectedHero.Damage + _selectedHero.DamageEvo * _currentHeroLevel;
+        }
+        
+        private void ResetAdventure()
+        {
+            ResetRoomCount();
+            ResetFloorCount();
+        }
+
         private void ResetFloorCount() => _currentFloor = 0;
 
         private void PlayerDead(string deathReason) => _onPlayerDeath.NotifyEvent(deathReason);

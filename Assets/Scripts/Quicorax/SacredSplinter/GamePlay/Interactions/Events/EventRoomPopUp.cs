@@ -20,13 +20,11 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 
         private EventData _currentEvent;
 
-        private AdventureProgressionService _adventureProgression;
         private PopUpSpawnerService _popUpSpawner;
         
         protected override void Initialize()
         {
             GetCommonServices();
-            _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
             
             
@@ -105,7 +103,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
                     _onResourcesUpdated.NotifyEvent();
                     break;
                 case "Health":
-                    _adventureProgression.UpdateProportionalHealth(amount, reason);
+                    AdventureProgression.UpdateProportionalHealth(amount, reason);
                     break;
             }
         }

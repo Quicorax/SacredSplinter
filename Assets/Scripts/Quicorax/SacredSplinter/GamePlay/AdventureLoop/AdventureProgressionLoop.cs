@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
 using Quicorax.SacredSplinter.GamePlay.Rooms;
 using Quicorax.SacredSplinter.Initialization;
 using Quicorax.SacredSplinter.MetaGame.UI;
@@ -14,15 +15,19 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
         [SerializeField] private RoomController _room;
         [SerializeField] private Transform _roomHolder;
         [SerializeField] private PopUpLauncher _victoryPopUp;
-        [SerializeField]private CurtainTransition _curtain;
+        [SerializeField] private PopUpLauncher _boosCombatPopUp;
+
+        [SerializeField] private CurtainTransition _curtain;
 
         private readonly List<RoomController> _rooms = new();
 
         private AdventureProgressionService _adventureProgression;
+        private PopUpSpawnerService _popUpSpawner;
 
         public void Initialize()
         {
             _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
+            _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
 
             InitialRoomPopulation();
         }
@@ -30,12 +35,12 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
         private void InitialRoomPopulation() => PopulateRooms(Random.Range(1, 3));
 
 
-        private void PopulateRooms(int nextRoomAmount)
+        private void PopulateRooms(int nextRoomAmount, string forceRoom = null)
         {
             for (var i = 0; i < nextRoomAmount; i++)
             {
                 var room = Instantiate(_room, _roomHolder);
-                room.Initialize(_adventureProgression.GetCurrentFloor(), DisposeRooms, OnRoomCompleted);
+                room.Initialize(_adventureProgression.GetCurrentFloor(), DisposeRooms, OnRoomCompleted, forceRoom);
 
                 _rooms.Add(room);
             }
@@ -58,16 +63,18 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
                 if (_adventureProgression.IsLocationBoosTime())
                 {
                     //Location boss Event
-                    Debug.Log("Floor Boss PopUp");
+                    //_popUpSpawner.SpawnPopUp<BossCombatPopUp>(_boosCombatPopUp).Initialize();
+                    PopulateRooms(1, "Boss");
 
-                    OnLocationBossRoomCompleted();
+                    //OnLocationBossRoomCompleted();
                     return;
                 }
 
                 //Floor boss Event
-                Debug.Log("Location Boss PopUp");
+                //_popUpSpawner.SpawnPopUp<BossCombatPopUp>(_boosCombatPopUp).Initialize();
+                PopulateRooms(1, "Boss");
 
-                OnFloorBossRoomCompleted();
+                //OnFloorBossRoomCompleted();
                 return;
             }
 
@@ -87,8 +94,8 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
 
         private void OnLocationBossRoomCompleted()
         {
-            ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp<VictoryPopUp>(_victoryPopUp)
+            _popUpSpawner.SpawnPopUp<VictoryPopUp>(_victoryPopUp)
                 .Initialize(_curtain);
-        } 
+        }
     }
 }

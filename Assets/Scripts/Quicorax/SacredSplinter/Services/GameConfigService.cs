@@ -6,24 +6,32 @@ namespace Quicorax.SacredSplinter.Services
 {
     public class GameConfigService : IService
     {
+        private RemoteConfigService _dataProvider;
+
         public List<ResourceElement> InitialResources { get; private set; }
         public List<QuestData> Quests { get; private set; }
         public List<ProductData> Shop { get; private set; }
         public List<LocationsData> Locations { get; private set; }
-        public List<HeroesData> Heroes { get; private set; }
-        public List<EnemiesData> Enemies { get; private set; }
+        public List<HeroData> Heroes { get; private set; }
+        public List<EnemyData> Enemies { get; private set; }
         public List<EventData> Events { get; private set; }
+        public List<AttackData> Attacks { get; private set; }
 
-        
+
         public void Initialize(RemoteConfigService dataProvider)
         {
-            InitialResources = dataProvider.GetFromJSON("InitialResourcesModel", new List<ResourceElement>());
-            Quests = dataProvider.GetFromJSON("QuestsModel", new List<QuestData>());
-            Shop = dataProvider.GetFromJSON("ShopModel", new List<ProductData>());
-            Locations = dataProvider.GetFromJSON("LocationsModel", new List<LocationsData>());
-            Heroes = dataProvider.GetFromJSON("HeroesModel", new List<HeroesData>());
-            Enemies = dataProvider.GetFromJSON("EnemiesModel", new List<EnemiesData>());
-            Events = dataProvider.GetFromJSON("AdventureEventsModel", new List<EventData>());
+            _dataProvider = dataProvider;
+
+            InitialResources = FromJsonToList<ResourceElement>("InitialResourcesModel");
+            Quests = FromJsonToList<QuestData>("QuestsModel");
+            Shop = FromJsonToList<ProductData>("ShopModel");
+            Locations = FromJsonToList<LocationsData>("LocationsModel");
+            Heroes = FromJsonToList<HeroData>("HeroesModel");
+            Enemies = FromJsonToList<EnemyData>("EnemiesModel");
+            Events = FromJsonToList<EventData>("AdventureEventsModel");
+            Attacks = FromJsonToList<AttackData>("AttacksModel");
         }
+
+        private List<T> FromJsonToList<T>(string key) => _dataProvider.GetFromJSON(key, new List<T>());
     }
 }
