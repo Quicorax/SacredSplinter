@@ -15,7 +15,6 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
         [SerializeField] private RoomController _room;
         [SerializeField] private Transform _roomHolder;
         [SerializeField] private PopUpLauncher _victoryPopUp;
-        [SerializeField] private PopUpLauncher _boosCombatPopUp;
 
         [SerializeField] private CurtainTransition _curtain;
 
@@ -23,6 +22,9 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
 
         private AdventureProgressionService _adventureProgression;
         private PopUpSpawnerService _popUpSpawner;
+
+        private bool _nextIsBoss;
+        private bool _nextIsLocationBoss;
 
         public void Initialize()
         {
@@ -56,25 +58,36 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
 
         private void OnRoomCompleted(int nextRoomAmount)
         {
+            if (_adventureProgression.GetCurrentHealth() > 0)
+            {
+                if (_nextIsBoss)
+                {
+                    _nextIsBoss = false;
+                    OnFloorBossRoomCompleted();
+                    return;
+                }
+
+                if (_nextIsLocationBoss)
+                {
+                    _nextIsLocationBoss = false;
+                    OnLocationBossRoomCompleted();
+                    return;
+                }
+            }
+
             _adventureProgression.AddRoom();
 
             if (_adventureProgression.IsFloorBoosTime())
             {
                 if (_adventureProgression.IsLocationBoosTime())
                 {
-                    //Location boss Event
-                    //_popUpSpawner.SpawnPopUp<BossCombatPopUp>(_boosCombatPopUp).Initialize();
-                    PopulateRooms(1, "Boss");
-
-                    //OnLocationBossRoomCompleted();
+                    PopulateRooms(1, "LocationBoss");
+                    _nextIsLocationBoss = true;
                     return;
                 }
 
-                //Floor boss Event
-                //_popUpSpawner.SpawnPopUp<BossCombatPopUp>(_boosCombatPopUp).Initialize();
                 PopulateRooms(1, "Boss");
-
-                //OnFloorBossRoomCompleted();
+                _nextIsBoss = true;
                 return;
             }
 

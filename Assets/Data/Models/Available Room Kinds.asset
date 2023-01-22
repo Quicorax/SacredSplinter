@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: Available Room Kinds
   m_EditorClassIdentifier: 
   Rooms:
+  - Kind: Event
+    RoomPopUp:
+      PopUp: {fileID: -9108862488584507960, guid: 980b68ccd02f5e4409923d17c5c04f27, type: 3}
+      Button: {fileID: 0}
   - Kind: Combat
     RoomPopUp:
       PopUp: {fileID: -1396113173216258828, guid: b26a6cec8d5099549b69eab5cc1edd17, type: 3}
       Button: {fileID: 0}
-  - Kind: Event
-    RoomPopUp:
-      PopUp: {fileID: -9108862488584507960, guid: 980b68ccd02f5e4409923d17c5c04f27, type: 3}
-      Button: {fileID: 0}
-  - Kind: Event
-    RoomPopUp:
-      PopUp: {fileID: -9108862488584507960, guid: 980b68ccd02f5e4409923d17c5c04f27, type: 3}
-      Button: {fileID: 0}
   - Kind: Boss
     RoomPopUp:
-      PopUp: {fileID: 4956627693633831189, guid: 03a38977abacba0469aeac59f7fadb5d, type: 3}
+      PopUp: {fileID: -1396113173216258828, guid: 2e45d653b8c87f14ea14b107a51ea87c, type: 3}
+      Button: {fileID: 0}
+  - Kind: LocationBoss
+    RoomPopUp:
+      PopUp: {fileID: -1396113173216258828, guid: 2e45d653b8c87f14ea14b107a51ea87c, type: 3}
       Button: {fileID: 0}

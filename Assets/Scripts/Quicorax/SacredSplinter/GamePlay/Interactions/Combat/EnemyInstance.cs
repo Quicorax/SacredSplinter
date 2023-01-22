@@ -8,77 +8,110 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 {
     public class EnemyInstance
     {
-        private EnemyData _enemy;
-        private Dictionary<AttackData, int> _attacksOnCooldown = new();
-        private AdventureConfigurationService _adventureConfig;
+        private EnemyData _enemyData;
+        private List<AvailableAttack> _attackOfMyType = new();
 
-        public EnemyInstance()
+        private AdventureConfigurationService _adventureConfig;
+        private AdventureProgressionService _adventureProgression;
+
+        private int _currentFloor;
+
+        public EnemyInstance(int floor)
         {
+            _currentFloor = floor;
+
             _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
-            
-            _enemy = SetEnemy();
-            
+            _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
+
+            _enemyData = SetEnemy();
+            SetEnemyStats();
             SetRandomAttacks();
         }
 
-        public EnemyData GetEnemy() => _enemy;
-        
+        private void SetEnemyStats()
+        {
+            _enemyData.CurrentHealth = _enemyData.MaxHealth + _enemyData.HealthEvo * (_currentFloor - 1);
+            _enemyData.CurrentSpeed = _enemyData.Speed + _enemyData.SpeedEvo * (_currentFloor - 1);
+            _enemyData.CurrentDamage = _enemyData.Damage + _enemyData.DamageEvo * (_currentFloor - 1);
+        }
+
+        public EnemyData GetEnemy() => _enemyData;
+
         private EnemyData SetEnemy()
         {
             EnemyData enemy = null;
             var enemySelected = false;
+            var loops = 0;
 
             var dataList = ServiceLocator.GetService<GameConfigService>().Enemies;
 
             while (!enemySelected)
             {
                 enemy = dataList[Random.Range(0, dataList.Count)];
-                if (string.IsNullOrEmpty(enemy.Location) || enemy.Location.Equals(_adventureConfig.GetLocation().Header))
+
+                if (enemy.Type.Equals(_adventureProgression.GetCombatType()) &&
+                    (string.IsNullOrEmpty(enemy.Location) ||
+                     enemy.Location.Equals(_adventureConfig.GetLocation().Header)))
                 {
                     enemySelected = true;
                 }
+
+                loops++;
+
+                if (loops > 20)
+                    break;
             }
+
             return enemy;
         }
-        
+
         private void SetRandomAttacks()
         {
             var attacks = ServiceLocator.GetService<GameConfigService>().Attacks;
-            var tempAttacksOfKind = attacks.Where(attack => attack.AttackType == _enemy.AttackType).ToList();
+            var tempAttacksOfKind = attacks.Where(attack => attack.AttackType == _enemyData.AttackType).ToList();
 
-            while (tempAttacksOfKind.Count > _enemy.AttackAmount)
+            while (tempAttacksOfKind.Count > _enemyData.AttackAmount)
             {
                 tempAttacksOfKind.RemoveAt(Random.Range(0, tempAttacksOfKind.Count));
             }
 
             foreach (var attack in tempAttacksOfKind)
             {
-                _attacksOnCooldown.Add(attack, 0);
+                _attackOfMyType.Add(new(attack, 0));
             }
         }
 
         public AttackData GetAttack()
         {
-            var availableAttacks = new List<AttackData>();
-            var attacks = new Dictionary<AttackData, int>();
-            
-            foreach (var availableAttack in _attacksOnCooldown)
+            var availableAttacks = new List<AvailableAttack>();
+
+            foreach (var attackOfType in _attackOfMyType)
             {
-                if (availableAttack.Value == 0)
+                if (attackOfType.CurrentCooldown == 0)
                 {
-                    availableAttacks.Add(availableAttack.Key);
-                }  
-                attacks.Add(availableAttack.Key, Mathf.Clamp(availableAttack.Value, 0, availableAttack.Key.CooldownTurns));
+                    availableAttacks.Add(attackOfType);
+                }
+
+                attackOfType.CurrentCooldown = attackOfType.CurrentCooldown <= 0 ? 0 : attackOfType.CurrentCooldown--;
             }
 
-            _attacksOnCooldown = attacks;
-            
-            var selectedAttack = availableAttacks.Count > 0 ? availableAttacks[Random.Range(0, availableAttacks.Count)] : null;
-            
-            if(selectedAttack != null)
-                _attacksOnCooldown[selectedAttack] = selectedAttack.CooldownTurns;
-            
-            return selectedAttack;
+            var selectedAttack = availableAttacks.Count > 0
+                ? availableAttacks[Random.Range(0, availableAttacks.Count)]
+                : new(null, 0);
+
+            return selectedAttack.Attack;
+        }
+
+        private class AvailableAttack
+        {
+            public AttackData Attack;
+            public int CurrentCooldown;
+
+            public AvailableAttack(AttackData attack, int currentCooldown)
+            {
+                Attack = attack;
+                CurrentCooldown = currentCooldown;
+            }
         }
     }
 }

@@ -14,6 +14,8 @@ namespace Quicorax.SacredSplinter.Services
         private StringEventBus _onPlayerDeath;
         private GameProgressionService _gameProgression;
 
+        private Action<int, int> _onHeroExperience;
+
         private int _currentHeroLevel;
         private int _currentHeroExperience;
 
@@ -25,6 +27,7 @@ namespace Quicorax.SacredSplinter.Services
         private int _currentFloorRooms;
         private int _initialGoldCoins, _initialBlueCrystals;
 
+        private string _combatType;
 
         public void Initialize(GameProgressionService gameProgression, StringEventBus onPlayerDeath)
         {
@@ -32,13 +35,15 @@ namespace Quicorax.SacredSplinter.Services
             _onPlayerDeath = onPlayerDeath;
         }
 
-        public void StartAdventure(LocationsData location, HeroData selectedHero, Action onHealthUpdate)
+        public void StartAdventure(LocationsData location, HeroData selectedHero, Action onHealthUpdate,
+            Action<int, int> onHeroExperience)
         {
             ResetAdventure();
 
             _selectedLocation = location;
             _selectedHero = selectedHero;
             _onHealthUpdate = onHealthUpdate;
+            _onHeroExperience = onHeroExperience;
 
             SetInitialHeroStats();
             SetInitialResources();
@@ -66,6 +71,8 @@ namespace Quicorax.SacredSplinter.Services
                 if (_currentHeroExperience > 0)
                     AddHeroExperience(_currentHeroExperience);
             }
+
+            _onHeroExperience?.Invoke(_currentHeroLevel, _currentHeroExperience);
         }
 
         public void AddFloor()
@@ -106,29 +113,32 @@ namespace Quicorax.SacredSplinter.Services
 
         public int GetBlueCrystalsBalance() =>
             _gameProgression.GetAmountOfResource("Blue Crystal") - _initialBlueCrystals;
-       
+
+        public void SetCombatType(string type) => _combatType = type;
+        public string GetCombatType() => _combatType;
+        
         private void SetInitialHeroStats()
         {
             _currentHeroHealth = _selectedHero.MaxHealth;
             _currentHeroSpeed = _selectedHero.Speed;
             _currentHeroDamage = _selectedHero.Damage;
         }
-        
+
         private void SetInitialResources()
         {
             _initialGoldCoins = _gameProgression.GetAmountOfResource("Gold Coin");
             _initialBlueCrystals = _gameProgression.GetAmountOfResource("Blue Crystal");
         }
-        
+
         private void HeroLevelUp()
         {
             _currentHeroLevel++;
-            
+
             _currentHeroHealth = _selectedHero.MaxHealth + _selectedHero.HealthEvo * _currentHeroLevel;
             _currentHeroSpeed = _selectedHero.Speed + _selectedHero.SpeedEvo * _currentHeroLevel;
             _currentHeroDamage = _selectedHero.Damage + _selectedHero.DamageEvo * _currentHeroLevel;
         }
-        
+
         private void ResetAdventure()
         {
             ResetRoomCount();

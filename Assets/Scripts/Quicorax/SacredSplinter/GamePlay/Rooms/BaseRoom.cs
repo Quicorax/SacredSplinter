@@ -11,7 +11,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Rooms
     {
         [SerializeField] private Image _roomIcon;
 
-        internal string RoomKind;
+        protected string RoomKind;
 
         private readonly List<string> _randomRoomKinds = new()
         {

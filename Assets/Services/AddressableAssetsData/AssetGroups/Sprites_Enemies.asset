@@ -29,6 +29,22 @@ MonoBehaviour:
     m_Address: Rat
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 1249ddc717fcee946939a1bccb0cab45
+    m_Address: Boss0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fef9b4060b4e3624aa80720a4fcf065b
+    m_Address: Boss1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1565ff87a19909a47948eddd312d2007
+    m_Address: Boss2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 829c7ccf43e4b5f4cb8c22ff0c7e56b2
+    m_Address: LocationBoss0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 302e75e9dfc5e1140b39ed4656a4d0a3, type: 2}
   m_SchemaSet:

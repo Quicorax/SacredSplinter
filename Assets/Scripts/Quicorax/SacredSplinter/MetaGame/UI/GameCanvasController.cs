@@ -17,7 +17,9 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         [SerializeField] private TMP_Text _header, _floorNumber, _health;
         [SerializeField] private Slider _healthSlider;
         [SerializeField] private PopUpLauncher _deathPopUp;
-        [SerializeField]private CurtainTransition _curtain;
+        [SerializeField] private CurtainTransition _curtain;
+        [SerializeField] private TMP_Text _heroLvl;
+        [SerializeField] private Slider _experienceSlider;
 
         [SerializeField] private StringEventBus _onPlayerDeath;
 
@@ -35,11 +37,11 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _addressables = ServiceLocator.GetService<AddressablesService>();
 
             _adventureProgress.StartAdventure(_adventureConfig.GetLocation(), _adventureConfig.GetHeroData(),
-                SetHealthData);
+                SetHealthData, UpdateExperience);
 
             SetMaxHealthData();
             SetLevelVisualData().ManageTaskException();
-            
+
             _adventureLoop.Initialize();
         }
 
@@ -69,7 +71,13 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         }
 
         public void UpdateFloorNumber() => _floorNumber.text = _adventureProgress.GetCurrentFloor().ToString();
-        
+
+        public void UpdateExperience(int heroLevel, int heroExperience)
+        {
+            _heroLvl.text = heroLevel.ToString();
+            _experienceSlider.value = heroExperience;
+        }
+
         private void PlayerDeath(string deathReason) =>
             ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp<DeathPopUp>(_deathPopUp)
                 .Initialize(deathReason, _curtain);

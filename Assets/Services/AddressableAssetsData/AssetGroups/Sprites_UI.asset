@@ -45,6 +45,10 @@ MonoBehaviour:
     m_Address: Boss
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 4c7d34434233c1f40bbbdfa53946c40a
+    m_Address: LocationBoss
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 302e75e9dfc5e1140b39ed4656a4d0a3, type: 2}
   m_SchemaSet:

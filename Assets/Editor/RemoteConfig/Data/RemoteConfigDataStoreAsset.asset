@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f078726b-6498-4284-a45d-72364a530caf\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"fa22e198-1273-4e6c-8f92-16243e2a23ed\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a0aa4537-5830-48c5-ae58-2bcced41e593\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2926b01f-2d7b-4dbe-bcba-42484d06f783\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -40,7 +40,7 @@ MonoBehaviour:
     \"Blue Cristal\",\r\n            \"Price\": \"Gold Coin\",\r\n            \"PriceAmount\":
     1,\r\n            \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\":
     100\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"3fab00a4-814b-4dcc-87d1-8b73c4bc96ad\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"80cf330b-d1fb-47f0-ac0a-844c453eaa4d\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": -1,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -74,7 +74,7 @@ MonoBehaviour:
     \"Header\": \"Complete the Dungeons\",\r\n            \"Amount\": 1,\r\n           
     \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"86c7c960-1aaf-466c-88b5-76e1ba9bb8a0\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"cce58b31-d88b-4f4c-bea2-75a3ca2410dd\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
@@ -108,33 +108,62 @@ MonoBehaviour:
     \"DamageEvo\": 15,\r\n            \"MaxHealth\": 80,\r\n            \"HealthEvo\":
     8,\r\n            \"Speed\": 55,\r\n            \"SpeedEvo\": 7\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"bcad43dc-2673-4491-8445-41f192165ca5\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"d751cbdf-cb5e-4728-bf36-81a4d10583e9\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious creature, with
     sharp teeth and razor-like claws to defend itself against larger predators.\",\r\n           
-    \"ExperienceOnKill\": 10,\r\n            \"MaxHealth\": 15,\r\n            \"HealthEvo\":
-    5,\r\n            \"Damage\": 20,\r\n            \"DamageEvo\": 5,\r\n           
-    \"Speed\": 50,\r\n            \"SpeedEvo\": 4\r\n          },\r\n          {\r\n           
-    \"Header\": \"Dog\",\r\n            \"Description\": \"A dangerous beast, its
-    teeth bared and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"ExperienceOnKill\": 10,\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"AttackAmount\": 3,\r\n           
+    \"MaxHealth\": 15,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\":
+    100,\r\n            \"DamageEvo\": 15,\r\n            \"Speed\": 50,\r\n           
+    \"SpeedEvo\": 4\r\n          },\r\n          {\r\n            \"Header\": \"Dog\",\r\n           
+    \"Description\": \"A dangerous beast, its teeth bared and ready to rip into the
+    flesh of any who dared to cross its path.\",\r\n            \"Type\": \"Combat\",\r\n           
     \"Location\": \"Village\",\r\n            \"ExperienceOnKill\": 13,\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"AttackAmount\": 3,\r\n           
     \"MaxHealth\": 35,\r\n            \"HealthEvo\": 15,\r\n            \"Damage\":
-    15,\r\n            \"DamageEvo\": 3,\r\n            \"Speed\": 70,\r\n           
+    100,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 70,\r\n           
     \"SpeedEvo\": 6\r\n          },\r\n          {\r\n            \"Header\": \"Bandit\",\r\n           
     \"Description\": \"A ruthless thief, preying on the weak and vulnerable as he
-    roamed the land in search of plunder and riches.\",\r\n            \"ExperienceOnKill\":
-    16,\r\n            \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n           
-    \"Damage\": 18,\r\n            \"DamageEvo\": 5,\r\n            \"Speed\": 30,\r\n           
-    \"SpeedEvo\": 1\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"ef14c853-ca11-4a9d-aa71-0980e665052e\"\r\n   
+    roamed the land in search of plunder and riches.\",\r\n            \"Type\":
+    \"Combat\",\r\n            \"ExperienceOnKill\": 16,\r\n            \"AttackType\":
+    \"Dagger\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
+    45,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 100,\r\n           
+    \"DamageEvo\": 10,\r\n            \"Speed\": 30,\r\n            \"SpeedEvo\":
+    5\r\n          },\r\n          {\r\n            \"Header\": \"Boss0\",\r\n           
+    \"Description\": \"---\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
+    \"Village\",\r\n            \"ExperienceOnKill\": 33,\r\n            \"AttackType\":
+    \"Beast\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    55,\r\n            \"HealthEvo\": 3,\r\n            \"Damage\": 100,\r\n           
+    \"DamageEvo\": 10,\r\n            \"Speed\": 80,\r\n            \"SpeedEvo\":
+    0\r\n          },\r\n          {\r\n            \"Header\": \"Boss1\",\r\n           
+    \"Description\": \"---\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
+    \"Village\",\r\n            \"ExperienceOnKill\": 33,\r\n            \"AttackType\":
+    \"Beast\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    75,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 80,\r\n           
+    \"DamageEvo\": 3,\r\n            \"Speed\": 10,\r\n            \"SpeedEvo\":
+    0\r\n          },\r\n          {\r\n            \"Header\": \"Boss2\",\r\n           
+    \"Description\": \"---\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
+    \"Village\",\r\n            \"ExperienceOnKill\": 33,\r\n            \"AttackType\":
+    \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    40,\r\n            \"HealthEvo\": 6,\r\n            \"Damage\": 110,\r\n           
+    \"DamageEvo\": 10,\r\n            \"Speed\": 60,\r\n            \"SpeedEvo\":
+    0\r\n          },\r\n          {\r\n            \"Header\": \"LocationBoss0\",\r\n           
+    \"Description\": \"---\",\r\n            \"Type\": \"LocationBoss\",\r\n           
+    \"Location\": \"Village\",\r\n            \"ExperienceOnKill\": 0,\r\n           
+    \"AttackType\": \"Sword\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"MaxHealth\": 100,\r\n            \"HealthEvo\": 20,\r\n            \"Damage\":
+    100,\r\n            \"DamageEvo\": 20,\r\n            \"Speed\": 0,\r\n           
+    \"SpeedEvo\": 0\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"7685f3cd-c7a3-4f3f-a44c-0806b39dc7e7\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
     \"The village lay nestled on the outskirts of the castle, shrouded in darkness
     and mystery. It is a place where danger lurks at every turn, where old and decrepit
     houses seemed to whisper secrets of a troubled past.\",\r\n            \"RoomsPerFloor\":
-    1,\r\n            \"FloorsPerLocation\": 3\r\n          },\r\n          {\r\n           
+    5,\r\n            \"FloorsPerLocation\": 3\r\n          },\r\n          {\r\n           
     \"Header\": \"Sewers\",\r\n            \"Description\": \"The sewers lay beneath
     the village, a putrid and fetid place overrun with all manner of filth and vermin.
     It was a place where the light of day never reached, where the shadows seemed
@@ -146,7 +175,7 @@ MonoBehaviour:
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
     3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"d63984f1-cbd8-4edc-9050-8b831a9bf50b\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"38f3e93d-60e8-4312-af65-b6ff9a35b515\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
@@ -186,28 +215,48 @@ MonoBehaviour:
     \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 20,\r\n           
     \"FailHeader\": \"---\",\r\n            \"FailKind\": \"Gold Coin\",\r\n           
     \"FailAmount\": -13\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"29f30fd6-34be-46ab-b896-091f4827c085\"\r\n   
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"75507b1b-9293-49f3-b426-c66ee8568c8e\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AttacksModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
-    {\r\n            \"Header\": \"Swipe\",\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"Damage\": 11,\r\n            \"CooldownTurns\": 1\r\n          },\r\n         
     {\r\n            \"Header\": \"Pinch\",\r\n            \"AttackType\": \"Sword\",\r\n           
     \"Damage\": 5,\r\n            \"CooldownTurns\": 0\r\n          },\r\n         
+    {\r\n            \"Header\": \"Swipe\",\r\n            \"AttackType\": \"Sword\",\r\n           
+    \"Damage\": 11,\r\n            \"CooldownTurns\": 1\r\n          },\r\n         
+    {\r\n            \"Header\": \"Punch\",\r\n            \"AttackType\": \"Sword\",\r\n           
+    \"Damage\": 13,\r\n            \"CooldownTurns\": 0\r\n          },\r\n         
     {\r\n            \"Header\": \"Rush\",\r\n            \"AttackType\": \"Sword\",\r\n           
     \"Damage\": 13,\r\n            \"CooldownTurns\": 2\r\n          },\r\n         
     {\r\n            \"Header\": \"DobleSlash\",\r\n            \"AttackType\": \"Sword\",\r\n           
     \"Damage\": 30,\r\n            \"CooldownTurns\": 4\r\n          },\r\n         
-    {\r\n            \"Header\": \"Punch\",\r\n            \"AttackType\": \"Maze\",\r\n           
-    \"Damage\": 13,\r\n            \"CooldownTurns\": 0\r\n          }\r\n       
-    ]\r\n      }\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f078726b-6498-4284-a45d-72364a530caf\"\r\n   
+    {\r\n            \"Header\": \"DaggerAttack0\",\r\n            \"AttackType\":
+    \"Dagger\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\": 0\r\n         
+    },\r\n          {\r\n            \"Header\": \"DaggerAttack1\",\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
+    1\r\n          },\r\n          {\r\n            \"Header\": \"DaggerAttack2\",\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
+    1\r\n          },\r\n          {\r\n            \"Header\": \"DaggerAttack3\",\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
+    4\r\n          },\r\n          {\r\n            \"Header\": \"DaggerAttack4\",\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 35,\r\n            \"CooldownTurns\":
+    8\r\n          },\r\n          {\r\n            \"Header\": \"BeastAttack0\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\":
+    1\r\n          },\r\n          {\r\n            \"Header\": \"Bite\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\":
+    1\r\n          },\r\n          {\r\n            \"Header\": \"BeastAttack1\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
+    3\r\n          },\r\n          {\r\n            \"Header\": \"Scratch\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 10,\r\n            \"CooldownTurns\":
+    2\r\n          },\r\n          {\r\n            \"Header\": \"Charge\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
+    4\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"fa22e198-1273-4e6c-8f92-16243e2a23ed\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a0aa4537-5830-48c5-ae58-2bcced41e593\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2926b01f-2d7b-4dbe-bcba-42484d06f783\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -228,7 +277,7 @@ MonoBehaviour:
     \"Blue Cristal\",\r\n            \"Price\": \"Gold Coin\",\r\n            \"PriceAmount\":
     1,\r\n            \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\":
     100\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"3fab00a4-814b-4dcc-87d1-8b73c4bc96ad\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"80cf330b-d1fb-47f0-ac0a-844c453eaa4d\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": -1,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -262,7 +311,7 @@ MonoBehaviour:
     \"Header\": \"Complete the Dungeons\",\r\n            \"Amount\": 1,\r\n           
     \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"86c7c960-1aaf-466c-88b5-76e1ba9bb8a0\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"cce58b31-d88b-4f4c-bea2-75a3ca2410dd\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
@@ -296,33 +345,62 @@ MonoBehaviour:
     \"DamageEvo\": 15,\r\n            \"MaxHealth\": 80,\r\n            \"HealthEvo\":
     8,\r\n            \"Speed\": 55,\r\n            \"SpeedEvo\": 7\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"bcad43dc-2673-4491-8445-41f192165ca5\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"d751cbdf-cb5e-4728-bf36-81a4d10583e9\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious creature, with
     sharp teeth and razor-like claws to defend itself against larger predators.\",\r\n           
-    \"ExperienceOnKill\": 10,\r\n            \"MaxHealth\": 15,\r\n            \"HealthEvo\":
-    5,\r\n            \"Damage\": 20,\r\n            \"DamageEvo\": 5,\r\n           
-    \"Speed\": 50,\r\n            \"SpeedEvo\": 4\r\n          },\r\n          {\r\n           
-    \"Header\": \"Dog\",\r\n            \"Description\": \"A dangerous beast, its
-    teeth bared and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"ExperienceOnKill\": 10,\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"AttackAmount\": 3,\r\n           
+    \"MaxHealth\": 15,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\":
+    100,\r\n            \"DamageEvo\": 15,\r\n            \"Speed\": 50,\r\n           
+    \"SpeedEvo\": 4\r\n          },\r\n          {\r\n            \"Header\": \"Dog\",\r\n           
+    \"Description\": \"A dangerous beast, its teeth bared and ready to rip into the
+    flesh of any who dared to cross its path.\",\r\n            \"Type\": \"Combat\",\r\n           
     \"Location\": \"Village\",\r\n            \"ExperienceOnKill\": 13,\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"AttackAmount\": 3,\r\n           
     \"MaxHealth\": 35,\r\n            \"HealthEvo\": 15,\r\n            \"Damage\":
-    15,\r\n            \"DamageEvo\": 3,\r\n            \"Speed\": 70,\r\n           
+    100,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 70,\r\n           
     \"SpeedEvo\": 6\r\n          },\r\n          {\r\n            \"Header\": \"Bandit\",\r\n           
     \"Description\": \"A ruthless thief, preying on the weak and vulnerable as he
-    roamed the land in search of plunder and riches.\",\r\n            \"ExperienceOnKill\":
-    16,\r\n            \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n           
-    \"Damage\": 18,\r\n            \"DamageEvo\": 5,\r\n            \"Speed\": 30,\r\n           
-    \"SpeedEvo\": 1\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"ef14c853-ca11-4a9d-aa71-0980e665052e\"\r\n   
+    roamed the land in search of plunder and riches.\",\r\n            \"Type\":
+    \"Combat\",\r\n            \"ExperienceOnKill\": 16,\r\n            \"AttackType\":
+    \"Dagger\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
+    45,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 100,\r\n           
+    \"DamageEvo\": 10,\r\n            \"Speed\": 30,\r\n            \"SpeedEvo\":
+    5\r\n          },\r\n          {\r\n            \"Header\": \"Boss0\",\r\n           
+    \"Description\": \"---\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
+    \"Village\",\r\n            \"ExperienceOnKill\": 33,\r\n            \"AttackType\":
+    \"Beast\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    55,\r\n            \"HealthEvo\": 3,\r\n            \"Damage\": 100,\r\n           
+    \"DamageEvo\": 10,\r\n            \"Speed\": 80,\r\n            \"SpeedEvo\":
+    0\r\n          },\r\n          {\r\n            \"Header\": \"Boss1\",\r\n           
+    \"Description\": \"---\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
+    \"Village\",\r\n            \"ExperienceOnKill\": 33,\r\n            \"AttackType\":
+    \"Beast\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    75,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 80,\r\n           
+    \"DamageEvo\": 3,\r\n            \"Speed\": 10,\r\n            \"SpeedEvo\":
+    0\r\n          },\r\n          {\r\n            \"Header\": \"Boss2\",\r\n           
+    \"Description\": \"---\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
+    \"Village\",\r\n            \"ExperienceOnKill\": 33,\r\n            \"AttackType\":
+    \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    40,\r\n            \"HealthEvo\": 6,\r\n            \"Damage\": 110,\r\n           
+    \"DamageEvo\": 10,\r\n            \"Speed\": 60,\r\n            \"SpeedEvo\":
+    0\r\n          },\r\n          {\r\n            \"Header\": \"LocationBoss0\",\r\n           
+    \"Description\": \"---\",\r\n            \"Type\": \"LocationBoss\",\r\n           
+    \"Location\": \"Village\",\r\n            \"ExperienceOnKill\": 0,\r\n           
+    \"AttackType\": \"Sword\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"MaxHealth\": 100,\r\n            \"HealthEvo\": 20,\r\n            \"Damage\":
+    100,\r\n            \"DamageEvo\": 20,\r\n            \"Speed\": 0,\r\n           
+    \"SpeedEvo\": 0\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"7685f3cd-c7a3-4f3f-a44c-0806b39dc7e7\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
     \"The village lay nestled on the outskirts of the castle, shrouded in darkness
     and mystery. It is a place where danger lurks at every turn, where old and decrepit
     houses seemed to whisper secrets of a troubled past.\",\r\n            \"RoomsPerFloor\":
-    1,\r\n            \"FloorsPerLocation\": 3\r\n          },\r\n          {\r\n           
+    5,\r\n            \"FloorsPerLocation\": 3\r\n          },\r\n          {\r\n           
     \"Header\": \"Sewers\",\r\n            \"Description\": \"The sewers lay beneath
     the village, a putrid and fetid place overrun with all manner of filth and vermin.
     It was a place where the light of day never reached, where the shadows seemed
@@ -334,7 +412,7 @@ MonoBehaviour:
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
     3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"d63984f1-cbd8-4edc-9050-8b831a9bf50b\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"38f3e93d-60e8-4312-af65-b6ff9a35b515\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
@@ -374,20 +452,40 @@ MonoBehaviour:
     \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 20,\r\n           
     \"FailHeader\": \"---\",\r\n            \"FailKind\": \"Gold Coin\",\r\n           
     \"FailAmount\": -13\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"29f30fd6-34be-46ab-b896-091f4827c085\"\r\n   
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"75507b1b-9293-49f3-b426-c66ee8568c8e\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AttacksModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
-    {\r\n            \"Header\": \"Swipe\",\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"Damage\": 11,\r\n            \"CooldownTurns\": 1\r\n          },\r\n         
     {\r\n            \"Header\": \"Pinch\",\r\n            \"AttackType\": \"Sword\",\r\n           
     \"Damage\": 5,\r\n            \"CooldownTurns\": 0\r\n          },\r\n         
+    {\r\n            \"Header\": \"Swipe\",\r\n            \"AttackType\": \"Sword\",\r\n           
+    \"Damage\": 11,\r\n            \"CooldownTurns\": 1\r\n          },\r\n         
+    {\r\n            \"Header\": \"Punch\",\r\n            \"AttackType\": \"Sword\",\r\n           
+    \"Damage\": 13,\r\n            \"CooldownTurns\": 0\r\n          },\r\n         
     {\r\n            \"Header\": \"Rush\",\r\n            \"AttackType\": \"Sword\",\r\n           
     \"Damage\": 13,\r\n            \"CooldownTurns\": 2\r\n          },\r\n         
     {\r\n            \"Header\": \"DobleSlash\",\r\n            \"AttackType\": \"Sword\",\r\n           
     \"Damage\": 30,\r\n            \"CooldownTurns\": 4\r\n          },\r\n         
-    {\r\n            \"Header\": \"Punch\",\r\n            \"AttackType\": \"Maze\",\r\n           
-    \"Damage\": 13,\r\n            \"CooldownTurns\": 0\r\n          }\r\n       
-    ]\r\n      }\r\n    }\r\n  }\r\n]"
+    {\r\n            \"Header\": \"DaggerAttack0\",\r\n            \"AttackType\":
+    \"Dagger\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\": 0\r\n         
+    },\r\n          {\r\n            \"Header\": \"DaggerAttack1\",\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
+    1\r\n          },\r\n          {\r\n            \"Header\": \"DaggerAttack2\",\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
+    1\r\n          },\r\n          {\r\n            \"Header\": \"DaggerAttack3\",\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
+    4\r\n          },\r\n          {\r\n            \"Header\": \"DaggerAttack4\",\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 35,\r\n            \"CooldownTurns\":
+    8\r\n          },\r\n          {\r\n            \"Header\": \"BeastAttack0\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\":
+    1\r\n          },\r\n          {\r\n            \"Header\": \"Bite\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\":
+    1\r\n          },\r\n          {\r\n            \"Header\": \"BeastAttack1\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
+    3\r\n          },\r\n          {\r\n            \"Header\": \"Scratch\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 10,\r\n            \"CooldownTurns\":
+    2\r\n          },\r\n          {\r\n            \"Header\": \"Charge\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
+    4\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"12851c75-924b-434b-8415-bd82991e2400\",\r\n   
     \"name\": \"development\",\r\n    \"id\": \"8b45dece-9500-4f4d-ae7c-15c09ebbfb65\",\r\n   
     \"isDefault\": false,\r\n    \"createdAt\": \"2023-01-15T10:43:45Z\",\r\n   

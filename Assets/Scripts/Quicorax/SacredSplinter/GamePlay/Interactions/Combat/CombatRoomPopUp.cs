@@ -3,11 +3,9 @@ using System.Threading.Tasks;
 using Quicorax.SacredSplinter.GamePlay.Interactions.Events;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Models;
-using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 {
@@ -36,13 +34,13 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         {
             GetCommonServices();
 
-            _enemyCombatData = new EnemyInstance();
+            _enemyCombatData = new EnemyInstance(CurrentFloor);
             _enemyData = _enemyCombatData.GetEnemy();
-            
+
             ExecuteCommonMethods();
 
-            ConfigureEnemy();
-            ConfigureHero();
+            PrintEnemyData();
+            PrintHeroData();
 
             StartCombat();
         }
@@ -67,13 +65,9 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         private void StartCombat() => _combatInstance =
             new CombatInstance(_enemyCombatData, PlayerTurn, UpdateEnemyHealth, OnDamagePlayer, OnCombatEnded);
 
-        private void ConfigureEnemy()
+        private void PrintEnemyData()
         {
             _enemyName.text = _enemyData.Header;
-
-            _enemyData.CurrentHealth = _enemyData.MaxHealth + _enemyData.HealthEvo * (CurrentFloor - 1);
-            _enemyData.CurrentSpeed = _enemyData.Speed + _enemyData.SpeedEvo * (CurrentFloor - 1);
-            _enemyData.CurrentDamage = _enemyData.Damage + _enemyData.DamageEvo * (CurrentFloor - 1);
 
             _enemyMaxHealth = _enemyData.CurrentHealth;
             _enemyHealth.maxValue = _enemyMaxHealth;
@@ -81,7 +75,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             UpdateEnemyHealth();
         }
 
-        private void ConfigureHero()
+        private void PrintHeroData()
         {
             _heroData = AdventureConfig.GetHeroData();
 
@@ -116,7 +110,8 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         {
             if (enemyDead)
             {
-                PopUpSpawner.SpawnPopUp<CombatResultPopUp>(_combatResultPopUp).SetData(_enemyData.ExperienceOnKill);
+                if (_enemyData.ExperienceOnKill != 0)
+                    PopUpSpawner.SpawnPopUp<CombatResultPopUp>(_combatResultPopUp).SetData(_enemyData.ExperienceOnKill);
             }
 
             Complete();

@@ -240,6 +240,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 967413733}
     m_Modifications:
+    - target: {fileID: 3857224257716844908, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857224257716844908, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4771332520551545960, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
       propertyPath: _curtain
       value: 
@@ -340,10 +348,6 @@ PrefabInstance:
       propertyPath: _curtain
       value: 
       objectReference: {fileID: 1523733700}
-    - target: {fileID: 7257791141593461581, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
-      propertyPath: _deathPopUp.PopUp
-      value: 
-      objectReference: {fileID: 6851516485190758015, guid: a3e1e66222a5bc947a627f4d682d308e, type: 3}
     - target: {fileID: 7257791141593461590, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
       propertyPath: m_Name
       value: Game_Panel
