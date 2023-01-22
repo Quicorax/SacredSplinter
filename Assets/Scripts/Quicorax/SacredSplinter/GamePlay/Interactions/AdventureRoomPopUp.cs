@@ -9,14 +9,17 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions
         protected GameProgressionService GameProgression;
         protected AddressablesService Addressables;
         protected AdventureProgressionService AdventureProgression;
-        
+        protected PopUpSpawnerService PopUpSpawner;
+
+
         protected void GetCommonServices()        
         {
             AdventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
             AdventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
             GameProgression = ServiceLocator.GetService<GameProgressionService>();
             Addressables = ServiceLocator.GetService<AddressablesService>();
-            
+            PopUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
+
         }
 
         protected void ExecuteCommonMethods()

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
 
 namespace Quicorax.SacredSplinter.Models
 {
@@ -7,8 +9,14 @@ namespace Quicorax.SacredSplinter.Models
     {
         public string Header;
         public string Description;
+        
+        public string Type;
+        
         public string Location;
         public int ExperienceOnKill;
+        
+        public string AttackType;
+        public int AttackAmount;
         
         public int MaxHealth;
         public int HealthEvo;

@@ -80,7 +80,7 @@ MonoBehaviour:
   _image: {fileID: 8535249038909747884}
   _eventResultPopUp:
     PopUp: {fileID: 6259951370887030658, guid: 5a2025e831d9a8d4b85a61bc8ddc5604, type: 3}
-    Button: {fileID: 8442508484338425645}
+    Button: {fileID: 0}
   _ignoreButton: {fileID: 4253545540327113135}
   _actionButton: {fileID: 8442508484338425645}
 --- !u!1 &744656491137185911

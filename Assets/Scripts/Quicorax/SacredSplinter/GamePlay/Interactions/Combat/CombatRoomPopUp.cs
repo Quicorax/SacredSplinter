@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Quicorax.SacredSplinter.GamePlay.Interactions.Events;
+using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
 using TMPro;
@@ -18,9 +20,11 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         [SerializeField] private Button _skipTurnButton;
         [SerializeField] private BaseAttack _baseAttack;
         [SerializeField] private Transform _heroAttacksHolder;
+        [SerializeField] private PopUpLauncher _combatResultPopUp;
 
         private readonly List<BaseAttack> _availableAttacks = new();
 
+        private EnemyInstance _enemyCombatData;
         private EnemyData _enemyData;
         private HeroData _heroData;
 
@@ -32,13 +36,15 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         {
             GetCommonServices();
 
-            _enemyData = SetEnemy();
+            _enemyCombatData = new EnemyInstance();
+            _enemyData = _enemyCombatData.GetEnemy();
+            
             ExecuteCommonMethods();
 
             ConfigureEnemy();
             ConfigureHero();
 
-            StartCombat(_heroData, _enemyData);
+            StartCombat();
         }
 
 
@@ -58,27 +64,8 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             _skipTurnButton.onClick.AddListener(() => _combatInstance.OnPlayerSkipTurn());
         }
 
-        private void StartCombat(HeroData hero, EnemyData enemy) => _combatInstance =
-            new CombatInstance(hero, enemy, PlayerTurn, UpdateEnemyHealth, OnDamagePlayer, OnCombatEnded);
-
-        private EnemyData SetEnemy()
-        {
-            EnemyData data = null;
-            var dataSelected = false;
-
-            var dataList = ServiceLocator.GetService<GameConfigService>().Enemies;
-
-            while (!dataSelected)
-            {
-                data = dataList[Random.Range(0, dataList.Count)];
-                if (string.IsNullOrEmpty(data.Location) || data.Location.Equals(AdventureConfig.GetLocation().Header))
-                {
-                    dataSelected = true;
-                }
-            }
-
-            return data;
-        }
+        private void StartCombat() => _combatInstance =
+            new CombatInstance(_enemyCombatData, PlayerTurn, UpdateEnemyHealth, OnDamagePlayer, OnCombatEnded);
 
         private void ConfigureEnemy()
         {
@@ -129,13 +116,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         {
             if (enemyDead)
             {
-                Debug.Log("victory");
-                //Combat victory popup 
-            }
-            else
-            {
-                Debug.Log("defeat");
-                //Death PopUp
+                PopUpSpawner.SpawnPopUp<CombatResultPopUp>(_combatResultPopUp).SetData(_enemyData.ExperienceOnKill);
             }
 
             Complete();

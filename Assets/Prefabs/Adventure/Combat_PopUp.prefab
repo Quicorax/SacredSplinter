@@ -83,6 +83,9 @@ MonoBehaviour:
   _skipTurnButton: {fileID: 6769130808346529294}
   _baseAttack: {fileID: 6785121756757395518, guid: a8e97e8bd1d5b2a4eab34ec1cc600374, type: 3}
   _heroAttacksHolder: {fileID: 3146538375389211962}
+  _combatResultPopUp:
+    PopUp: {fileID: 16908992397709223, guid: 2cf9c74623865964ab546e04a74524f6, type: 3}
+    Button: {fileID: 0}
 --- !u!1 &72679040047188473
 GameObject:
   m_ObjectHideFlags: 0

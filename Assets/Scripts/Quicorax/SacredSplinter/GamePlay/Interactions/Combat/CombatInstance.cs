@@ -1,4 +1,5 @@
 ﻿using System;
+using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
@@ -7,8 +8,8 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 {
     public class CombatInstance
     {
-        private HeroData _hero;
         private EnemyData _enemy;
+        private EnemyInstance _enemyCombat;
         private Action _onPlayerTurn;
         private Action _onDamageEnemy;
         private Action<int> _onDamagePlayer;
@@ -16,17 +17,18 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
         private AdventureProgressionService _adventureProgression;
         
-        public CombatInstance(HeroData hero, EnemyData enemy, Action onPlayerPlayerTurn, Action onDamageEnemy,
+        public CombatInstance(EnemyInstance enemy, Action onPlayerPlayerTurn, Action onDamageEnemy,
             Action<int> onDamagePlayer, Action<bool> onCombatEnded)
         {
-            _hero = hero;
-            _enemy = enemy;
+            _enemyCombat = enemy;
             _onPlayerTurn = onPlayerPlayerTurn;
             _onDamageEnemy = onDamageEnemy;
             _onDamagePlayer = onDamagePlayer;
             _onCombatEnded = onCombatEnded;
 
             _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
+
+            _enemy = _enemyCombat.GetEnemy();
             
             SetTurn(_adventureProgression.GetCurrentHeroSpeed() >= _enemy.CurrentSpeed);
         }
@@ -58,8 +60,10 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             }
             else
             {
-                Debug.Log("Enemy Turn");
-                _onDamagePlayer?.Invoke(-_enemy.Damage);
+                var attack = _enemyCombat.GetAttack();
+                
+                if(attack != null)
+                    _onDamagePlayer?.Invoke(-attack.Damage * _enemy.CurrentDamage/100);
                 
                 if (_adventureProgression.GetCurrentHealth() <= 0)
                 {

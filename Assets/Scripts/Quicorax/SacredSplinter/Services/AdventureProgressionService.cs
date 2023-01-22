@@ -123,7 +123,7 @@ namespace Quicorax.SacredSplinter.Services
         private void HeroLevelUp()
         {
             _currentHeroLevel++;
-
+            
             _currentHeroHealth = _selectedHero.MaxHealth + _selectedHero.HealthEvo * _currentHeroLevel;
             _currentHeroSpeed = _selectedHero.Speed + _selectedHero.SpeedEvo * _currentHeroLevel;
             _currentHeroDamage = _selectedHero.Damage + _selectedHero.DamageEvo * _currentHeroLevel;

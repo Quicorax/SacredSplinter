@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"485396f8-a917-4dc0-9393-d5402e1599f9\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f078726b-6498-4284-a45d-72364a530caf\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"d3b64d3b-4f73-4d9f-89f8-7c2838c5acfa\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a0aa4537-5830-48c5-ae58-2bcced41e593\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -40,7 +40,7 @@ MonoBehaviour:
     \"Blue Cristal\",\r\n            \"Price\": \"Gold Coin\",\r\n            \"PriceAmount\":
     1,\r\n            \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\":
     100\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"bdf6f751-c823-47ba-bbcc-ad2c29390e91\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"3fab00a4-814b-4dcc-87d1-8b73c4bc96ad\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": -1,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -74,57 +74,60 @@ MonoBehaviour:
     \"Header\": \"Complete the Dungeons\",\r\n            \"Amount\": 1,\r\n           
     \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"7696c1d3-65e3-4d09-8ac1-e7e62276c98c\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"86c7c960-1aaf-466c-88b5-76e1ba9bb8a0\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
     the unknown reaches of the world in search of treasure and the thrill of discovery.\",\r\n           
     \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": true,\r\n           
     \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"AttackAmount\": 4,\r\n            \"MaxHealth\": 100,\r\n            \"HealthEvo\":
-    10,\r\n            \"Speed\": 50,\r\n            \"SpeedEvo\": 6\r\n         
-    },\r\n          {\r\n            \"Header\": \"Brute\",\r\n            \"Description\":
-    \"A brute of a man, relying on strength and brawn rather than wit and cunning
-    as he sought out treasure and glory in the far-flung corners of the world.\",\r\n           
-    \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\": false,\r\n           
-    \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Maze\",\r\n           
-    \"AttackAmount\": 4,\r\n            \"MaxHealth\": 125,\r\n            \"HealthEvo\":
-    15,\r\n            \"Speed\": 25,\r\n            \"SpeedEvo\": 3\r\n         
-    },\r\n          {\r\n            \"Header\": \"Thief\",\r\n            \"Description\":
-    \"A sly thief, using stealth and deception to pilfer valuable goods and riches
-    from those foolish enough to underestimate her.\",\r\n            \"CanIgnoreEvents\":
-    true,\r\n            \"CanEscapeCombats\": false,\r\n            \"ExperienceToLvl\":
-    50,\r\n            \"AttackType\": \"Dagger\",\r\n            \"AttackAmount\":
-    4,\r\n            \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n           
-    \"Speed\": 90,\r\n            \"SpeedEvo\": 1\r\n          },\r\n          {\r\n           
-    \"Header\": \"Cultist\",\r\n            \"Description\": \"A devout cultist,
-    seeking out forbidden knowledge and ancient relics in the hopes of summoning
-    powerful deities and unlocking the secrets of the universe.\",\r\n           
-    \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\": true,\r\n           
-    \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Magic\",\r\n           
-    \"AttackAmount\": 4,\r\n            \"MaxHealth\": 80,\r\n            \"HealthEvo\":
+    \"AttackAmount\": 4,\r\n            \"Damage\": 100,\r\n            \"DamageEvo\":
+    25,\r\n            \"MaxHealth\": 100,\r\n            \"HealthEvo\": 10,\r\n           
+    \"Speed\": 50,\r\n            \"SpeedEvo\": 6\r\n          },\r\n          {\r\n           
+    \"Header\": \"Brute\",\r\n            \"Description\": \"A brute of a man, relying
+    on strength and brawn rather than wit and cunning as he sought out treasure and
+    glory in the far-flung corners of the world.\",\r\n            \"CanIgnoreEvents\":
+    false,\r\n            \"CanEscapeCombats\": false,\r\n            \"ExperienceToLvl\":
+    50,\r\n            \"AttackType\": \"Maze\",\r\n            \"AttackAmount\":
+    4,\r\n            \"Damage\": 100,\r\n            \"DamageEvo\": 30,\r\n           
+    \"MaxHealth\": 125,\r\n            \"HealthEvo\": 15,\r\n            \"Speed\":
+    25,\r\n            \"SpeedEvo\": 3\r\n          },\r\n          {\r\n           
+    \"Header\": \"Thief\",\r\n            \"Description\": \"A sly thief, using stealth
+    and deception to pilfer valuable goods and riches from those foolish enough to
+    underestimate her.\",\r\n            \"CanIgnoreEvents\": true,\r\n           
+    \"CanEscapeCombats\": false,\r\n            \"ExperienceToLvl\": 50,\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"Damage\": 100,\r\n            \"DamageEvo\": 50,\r\n            \"MaxHealth\":
+    75,\r\n            \"HealthEvo\": 5,\r\n            \"Speed\": 90,\r\n           
+    \"SpeedEvo\": 1\r\n          },\r\n          {\r\n            \"Header\": \"Cultist\",\r\n           
+    \"Description\": \"A devout cultist, seeking out forbidden knowledge and ancient
+    relics in the hopes of summoning powerful deities and unlocking the secrets of
+    the universe.\",\r\n            \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\":
+    true,\r\n            \"ExperienceToLvl\": 50,\r\n            \"AttackType\":
+    \"Magic\",\r\n            \"AttackAmount\": 4,\r\n            \"Damage\": 100,\r\n           
+    \"DamageEvo\": 15,\r\n            \"MaxHealth\": 80,\r\n            \"HealthEvo\":
     8,\r\n            \"Speed\": 55,\r\n            \"SpeedEvo\": 7\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"90c4f3f4-798f-4d92-a35d-9eb61a4d5790\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"bcad43dc-2673-4491-8445-41f192165ca5\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious creature, with
     sharp teeth and razor-like claws to defend itself against larger predators.\",\r\n           
-    \"ExeprienceOnKill\": 10,\r\n            \"MaxHealth\": 15,\r\n            \"HealthEvo\":
+    \"ExperienceOnKill\": 10,\r\n            \"MaxHealth\": 15,\r\n            \"HealthEvo\":
     5,\r\n            \"Damage\": 20,\r\n            \"DamageEvo\": 5,\r\n           
     \"Speed\": 50,\r\n            \"SpeedEvo\": 4\r\n          },\r\n          {\r\n           
     \"Header\": \"Dog\",\r\n            \"Description\": \"A dangerous beast, its
     teeth bared and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
-    \"Location\": \"Village\",\r\n            \"ExeprienceOnKill\": 13,\r\n           
+    \"Location\": \"Village\",\r\n            \"ExperienceOnKill\": 13,\r\n           
     \"MaxHealth\": 35,\r\n            \"HealthEvo\": 15,\r\n            \"Damage\":
     15,\r\n            \"DamageEvo\": 3,\r\n            \"Speed\": 70,\r\n           
     \"SpeedEvo\": 6\r\n          },\r\n          {\r\n            \"Header\": \"Bandit\",\r\n           
     \"Description\": \"A ruthless thief, preying on the weak and vulnerable as he
-    roamed the land in search of plunder and riches.\",\r\n            \"ExeprienceOnKill\":
+    roamed the land in search of plunder and riches.\",\r\n            \"ExperienceOnKill\":
     16,\r\n            \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n           
     \"Damage\": 18,\r\n            \"DamageEvo\": 5,\r\n            \"Speed\": 30,\r\n           
     \"SpeedEvo\": 1\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"8e1894a9-2e2e-4956-9b18-63733ec1d40d\"\r\n   
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"ef14c853-ca11-4a9d-aa71-0980e665052e\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
@@ -143,7 +146,7 @@ MonoBehaviour:
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
     3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"b34ece52-deca-45f6-bd2e-89bcf9f9e73d\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"d63984f1-cbd8-4edc-9050-8b831a9bf50b\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
@@ -183,7 +186,7 @@ MonoBehaviour:
     \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 20,\r\n           
     \"FailHeader\": \"---\",\r\n            \"FailKind\": \"Gold Coin\",\r\n           
     \"FailAmount\": -13\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"86b4bfe6-33dd-408d-b013-8da2f4b1dae0\"\r\n   
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"29f30fd6-34be-46ab-b896-091f4827c085\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AttacksModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Swipe\",\r\n            \"AttackType\": \"Sword\",\r\n           
@@ -197,14 +200,14 @@ MonoBehaviour:
     {\r\n            \"Header\": \"Punch\",\r\n            \"AttackType\": \"Maze\",\r\n           
     \"Damage\": 13,\r\n            \"CooldownTurns\": 0\r\n          }\r\n       
     ]\r\n      }\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"485396f8-a917-4dc0-9393-d5402e1599f9\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f078726b-6498-4284-a45d-72364a530caf\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"d3b64d3b-4f73-4d9f-89f8-7c2838c5acfa\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a0aa4537-5830-48c5-ae58-2bcced41e593\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -225,7 +228,7 @@ MonoBehaviour:
     \"Blue Cristal\",\r\n            \"Price\": \"Gold Coin\",\r\n            \"PriceAmount\":
     1,\r\n            \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\":
     100\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"bdf6f751-c823-47ba-bbcc-ad2c29390e91\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"3fab00a4-814b-4dcc-87d1-8b73c4bc96ad\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": -1,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -259,57 +262,60 @@ MonoBehaviour:
     \"Header\": \"Complete the Dungeons\",\r\n            \"Amount\": 1,\r\n           
     \"Reward\": \"Hero License\",\r\n            \"RewardAmount\": 1\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"7696c1d3-65e3-4d09-8ac1-e7e62276c98c\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"86c7c960-1aaf-466c-88b5-76e1ba9bb8a0\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
     the unknown reaches of the world in search of treasure and the thrill of discovery.\",\r\n           
     \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": true,\r\n           
     \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"AttackAmount\": 4,\r\n            \"MaxHealth\": 100,\r\n            \"HealthEvo\":
-    10,\r\n            \"Speed\": 50,\r\n            \"SpeedEvo\": 6\r\n         
-    },\r\n          {\r\n            \"Header\": \"Brute\",\r\n            \"Description\":
-    \"A brute of a man, relying on strength and brawn rather than wit and cunning
-    as he sought out treasure and glory in the far-flung corners of the world.\",\r\n           
-    \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\": false,\r\n           
-    \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Maze\",\r\n           
-    \"AttackAmount\": 4,\r\n            \"MaxHealth\": 125,\r\n            \"HealthEvo\":
-    15,\r\n            \"Speed\": 25,\r\n            \"SpeedEvo\": 3\r\n         
-    },\r\n          {\r\n            \"Header\": \"Thief\",\r\n            \"Description\":
-    \"A sly thief, using stealth and deception to pilfer valuable goods and riches
-    from those foolish enough to underestimate her.\",\r\n            \"CanIgnoreEvents\":
-    true,\r\n            \"CanEscapeCombats\": false,\r\n            \"ExperienceToLvl\":
-    50,\r\n            \"AttackType\": \"Dagger\",\r\n            \"AttackAmount\":
-    4,\r\n            \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n           
-    \"Speed\": 90,\r\n            \"SpeedEvo\": 1\r\n          },\r\n          {\r\n           
-    \"Header\": \"Cultist\",\r\n            \"Description\": \"A devout cultist,
-    seeking out forbidden knowledge and ancient relics in the hopes of summoning
-    powerful deities and unlocking the secrets of the universe.\",\r\n           
-    \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\": true,\r\n           
-    \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Magic\",\r\n           
-    \"AttackAmount\": 4,\r\n            \"MaxHealth\": 80,\r\n            \"HealthEvo\":
+    \"AttackAmount\": 4,\r\n            \"Damage\": 100,\r\n            \"DamageEvo\":
+    25,\r\n            \"MaxHealth\": 100,\r\n            \"HealthEvo\": 10,\r\n           
+    \"Speed\": 50,\r\n            \"SpeedEvo\": 6\r\n          },\r\n          {\r\n           
+    \"Header\": \"Brute\",\r\n            \"Description\": \"A brute of a man, relying
+    on strength and brawn rather than wit and cunning as he sought out treasure and
+    glory in the far-flung corners of the world.\",\r\n            \"CanIgnoreEvents\":
+    false,\r\n            \"CanEscapeCombats\": false,\r\n            \"ExperienceToLvl\":
+    50,\r\n            \"AttackType\": \"Maze\",\r\n            \"AttackAmount\":
+    4,\r\n            \"Damage\": 100,\r\n            \"DamageEvo\": 30,\r\n           
+    \"MaxHealth\": 125,\r\n            \"HealthEvo\": 15,\r\n            \"Speed\":
+    25,\r\n            \"SpeedEvo\": 3\r\n          },\r\n          {\r\n           
+    \"Header\": \"Thief\",\r\n            \"Description\": \"A sly thief, using stealth
+    and deception to pilfer valuable goods and riches from those foolish enough to
+    underestimate her.\",\r\n            \"CanIgnoreEvents\": true,\r\n           
+    \"CanEscapeCombats\": false,\r\n            \"ExperienceToLvl\": 50,\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"Damage\": 100,\r\n            \"DamageEvo\": 50,\r\n            \"MaxHealth\":
+    75,\r\n            \"HealthEvo\": 5,\r\n            \"Speed\": 90,\r\n           
+    \"SpeedEvo\": 1\r\n          },\r\n          {\r\n            \"Header\": \"Cultist\",\r\n           
+    \"Description\": \"A devout cultist, seeking out forbidden knowledge and ancient
+    relics in the hopes of summoning powerful deities and unlocking the secrets of
+    the universe.\",\r\n            \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\":
+    true,\r\n            \"ExperienceToLvl\": 50,\r\n            \"AttackType\":
+    \"Magic\",\r\n            \"AttackAmount\": 4,\r\n            \"Damage\": 100,\r\n           
+    \"DamageEvo\": 15,\r\n            \"MaxHealth\": 80,\r\n            \"HealthEvo\":
     8,\r\n            \"Speed\": 55,\r\n            \"SpeedEvo\": 7\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"90c4f3f4-798f-4d92-a35d-9eb61a4d5790\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"bcad43dc-2673-4491-8445-41f192165ca5\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious creature, with
     sharp teeth and razor-like claws to defend itself against larger predators.\",\r\n           
-    \"ExeprienceOnKill\": 10,\r\n            \"MaxHealth\": 15,\r\n            \"HealthEvo\":
+    \"ExperienceOnKill\": 10,\r\n            \"MaxHealth\": 15,\r\n            \"HealthEvo\":
     5,\r\n            \"Damage\": 20,\r\n            \"DamageEvo\": 5,\r\n           
     \"Speed\": 50,\r\n            \"SpeedEvo\": 4\r\n          },\r\n          {\r\n           
     \"Header\": \"Dog\",\r\n            \"Description\": \"A dangerous beast, its
     teeth bared and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
-    \"Location\": \"Village\",\r\n            \"ExeprienceOnKill\": 13,\r\n           
+    \"Location\": \"Village\",\r\n            \"ExperienceOnKill\": 13,\r\n           
     \"MaxHealth\": 35,\r\n            \"HealthEvo\": 15,\r\n            \"Damage\":
     15,\r\n            \"DamageEvo\": 3,\r\n            \"Speed\": 70,\r\n           
     \"SpeedEvo\": 6\r\n          },\r\n          {\r\n            \"Header\": \"Bandit\",\r\n           
     \"Description\": \"A ruthless thief, preying on the weak and vulnerable as he
-    roamed the land in search of plunder and riches.\",\r\n            \"ExeprienceOnKill\":
+    roamed the land in search of plunder and riches.\",\r\n            \"ExperienceOnKill\":
     16,\r\n            \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n           
     \"Damage\": 18,\r\n            \"DamageEvo\": 5,\r\n            \"Speed\": 30,\r\n           
     \"SpeedEvo\": 1\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"8e1894a9-2e2e-4956-9b18-63733ec1d40d\"\r\n   
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"ef14c853-ca11-4a9d-aa71-0980e665052e\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
@@ -328,7 +334,7 @@ MonoBehaviour:
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
     3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"b34ece52-deca-45f6-bd2e-89bcf9f9e73d\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"d63984f1-cbd8-4edc-9050-8b831a9bf50b\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
@@ -368,7 +374,7 @@ MonoBehaviour:
     \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 20,\r\n           
     \"FailHeader\": \"---\",\r\n            \"FailKind\": \"Gold Coin\",\r\n           
     \"FailAmount\": -13\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"86b4bfe6-33dd-408d-b013-8da2f4b1dae0\"\r\n   
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"29f30fd6-34be-46ab-b896-091f4827c085\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AttacksModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Swipe\",\r\n            \"AttackType\": \"Sword\",\r\n           

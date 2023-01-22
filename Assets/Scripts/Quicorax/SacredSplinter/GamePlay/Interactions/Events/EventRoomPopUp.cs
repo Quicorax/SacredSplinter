@@ -20,12 +20,10 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 
         private EventData _currentEvent;
 
-        private PopUpSpawnerService _popUpSpawner;
         
         protected override void Initialize()
         {
             GetCommonServices();
-            _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
             
             
             _currentEvent = SetEvent();
@@ -88,7 +86,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
                 image = await Addressables.LoadAddrssAsset<Sprite>(kind);
             }
 
-            _popUpSpawner.SpawnPopUp<EventResultPopUp>(_eventResultPopUp)
+            PopUpSpawner.SpawnPopUp<EventResultPopUp>(_eventResultPopUp)
                 .SetData(header, amount.ToString(), image, withImage);
 
             Complete();
