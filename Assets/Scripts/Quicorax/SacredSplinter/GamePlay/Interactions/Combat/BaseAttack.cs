@@ -31,7 +31,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             _attackIcon.sprite = await ServiceLocator.GetService<AddressablesService>()
                 .LoadAddrssAsset<Sprite>(_attackData.Header);
 
-        public void TryAwake()
+        public void TryAwake(bool awake)
         {
             if (_currentCooldownTurns > 0)
             {
@@ -41,7 +41,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             }
 
             _cooldown.text = string.Empty;
-            _useButton.interactable = true;
+            _useButton.interactable = awake;
         }
 
         private void OnUse()

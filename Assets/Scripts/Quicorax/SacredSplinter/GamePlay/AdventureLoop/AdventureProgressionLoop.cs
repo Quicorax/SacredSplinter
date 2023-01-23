@@ -35,8 +35,7 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
         }
 
         private void InitialRoomPopulation() => PopulateRooms(Random.Range(1, 3));
-
-
+        
         private void PopulateRooms(int nextRoomAmount, string forceRoom = null)
         {
             for (var i = 0; i < nextRoomAmount; i++)

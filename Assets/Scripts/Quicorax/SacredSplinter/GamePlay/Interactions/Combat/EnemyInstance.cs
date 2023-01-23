@@ -41,7 +41,6 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         {
             EnemyData enemy = null;
             var enemySelected = false;
-            var loops = 0;
 
             var dataList = ServiceLocator.GetService<GameConfigService>().Enemies;
 
@@ -49,20 +48,21 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             {
                 enemy = dataList[Random.Range(0, dataList.Count)];
 
-                if (enemy.Type.Equals(_adventureProgression.GetCombatType()) &&
-                    (string.IsNullOrEmpty(enemy.Location) ||
-                     enemy.Location.Equals(_adventureConfig.GetLocation().Header)))
+                if (CheckSpawnConditions(enemy))
                 {
                     enemySelected = true;
                 }
-
-                loops++;
-
-                if (loops > 20)
-                    break;
             }
 
             return enemy;
+        }
+
+        private bool CheckSpawnConditions(EnemyData enemy)
+        {
+            return enemy.Type.Equals(_adventureProgression.GetCombatType()) &&
+                   _adventureProgression.GetCurrentFloor() >= enemy.MinFloor  &&
+                   (string.IsNullOrEmpty(enemy.Location) ||
+                    enemy.Location.Equals(_adventureConfig.GetLocation().Header));
         }
 
         private void SetRandomAttacks()

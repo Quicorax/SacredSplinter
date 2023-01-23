@@ -21,7 +21,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions
 
         protected abstract void Initialize();
 
-        protected void Complete()
+        protected virtual void Complete()
         {
             _onComplete?.Invoke(_furtherRooms);
             CloseSelf();

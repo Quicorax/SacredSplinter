@@ -20,6 +20,8 @@ namespace Quicorax.SacredSplinter.Services
         private int _currentHeroExperience;
 
         private int _currentHeroHealth;
+        private int _currentHeroMaxHealth;
+
         private int _currentHeroSpeed;
         private int _currentHeroDamage;
 
@@ -45,14 +47,14 @@ namespace Quicorax.SacredSplinter.Services
             _onHealthUpdate = onHealthUpdate;
             _onHeroExperience = onHeroExperience;
 
-            SetInitialHeroStats();
+            UpdateStats();
             SetInitialResources();
 
             AddFloor();
         }
 
 
-        public int GetMaxHealth() => _selectedHero.MaxHealth;
+        public int GetMaxHealth() => _currentHeroMaxHealth;
         public int GetCurrentHealth() => _currentHeroHealth;
         public int GetCurrentFloor() => _currentFloor;
 
@@ -103,9 +105,8 @@ namespace Quicorax.SacredSplinter.Services
 
         public void UpdateProportionalHealth(int percent, string damageReason)
         {
-            var damage = ((float)percent / 100) * _selectedHero.MaxHealth;
-
-            UpdateRawHealth(Mathf.RoundToInt(damage), damageReason);
+            var health = ((float)percent / 100) * _selectedHero.MaxHealth;
+            UpdateRawHealth(Mathf.RoundToInt(health), damageReason);
         }
 
         public int GetGoldCoinsBalance() =>
@@ -116,12 +117,16 @@ namespace Quicorax.SacredSplinter.Services
 
         public void SetCombatType(string type) => _combatType = type;
         public string GetCombatType() => _combatType;
-        
-        private void SetInitialHeroStats()
+
+        private void UpdateStats()
         {
-            _currentHeroHealth = _selectedHero.MaxHealth;
-            _currentHeroSpeed = _selectedHero.Speed;
-            _currentHeroDamage = _selectedHero.Damage;
+            _currentHeroMaxHealth = _selectedHero.MaxHealth + _selectedHero.HealthEvo * _currentHeroLevel;
+            _currentHeroHealth = _currentHeroMaxHealth;
+
+            _currentHeroSpeed = _selectedHero.Speed + _selectedHero.SpeedEvo * _currentHeroLevel;
+            _currentHeroDamage = _selectedHero.Damage + _selectedHero.DamageEvo * _currentHeroLevel;
+            
+            _onHealthUpdate?.Invoke();
         }
 
         private void SetInitialResources()
@@ -133,10 +138,7 @@ namespace Quicorax.SacredSplinter.Services
         private void HeroLevelUp()
         {
             _currentHeroLevel++;
-
-            _currentHeroHealth = _selectedHero.MaxHealth + _selectedHero.HealthEvo * _currentHeroLevel;
-            _currentHeroSpeed = _selectedHero.Speed + _selectedHero.SpeedEvo * _currentHeroLevel;
-            _currentHeroDamage = _selectedHero.Damage + _selectedHero.DamageEvo * _currentHeroLevel;
+            UpdateStats();
         }
 
         private void ResetAdventure()

@@ -39,7 +39,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _adventureProgress.StartAdventure(_adventureConfig.GetLocation(), _adventureConfig.GetHeroData(),
                 SetHealthData, UpdateExperience);
 
-            SetMaxHealthData();
+            SetHealthData();
             SetLevelVisualData().ManageTaskException();
 
             _adventureLoop.Initialize();
@@ -54,18 +54,13 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _background.sprite = await _addressables.LoadAddrssAsset<Sprite>(location.Header);
             _hero.sprite = await _addressables.LoadAddrssAsset<Sprite>(_adventureConfig.GetHeroData().Header);
         }
-
-        private void SetMaxHealthData()
+        
+        private void SetHealthData()
         {
             _healthSlider.maxValue = _adventureProgress.GetMaxHealth();
 
-            SetHealthData();
-        }
-
-        private void SetHealthData()
-        {
             var currentHealth = _adventureProgress.GetCurrentHealth();
-
+            
             _healthSlider.value = currentHealth;
             _health.text = $"{currentHealth} / {_adventureProgress.GetMaxHealth()}";
         }

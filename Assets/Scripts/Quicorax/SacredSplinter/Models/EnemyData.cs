@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
 
 namespace Quicorax.SacredSplinter.Models
 {
@@ -13,7 +11,7 @@ namespace Quicorax.SacredSplinter.Models
         public string Type;
         
         public string Location;
-        public int ExperienceOnKill;
+        public int MinFloor;
         
         public string AttackType;
         public int AttackAmount;
@@ -27,9 +25,16 @@ namespace Quicorax.SacredSplinter.Models
         public int Speed;
         public int SpeedEvo;
         
+        public int ExperienceOnKill;
+        public int BlueCrystalsOnKill;
+        public int GoldCoinsOnKill;
+        
         //Dynamic properties
         public int CurrentHealth;
         public int CurrentDamage;
         public int CurrentSpeed;
+        
+        public int TempBlueCrystalReward;
+        public int TempGoldCoinReward;
     }
 }

@@ -19,6 +19,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         [SerializeField] private BaseAttack _baseAttack;
         [SerializeField] private Transform _heroAttacksHolder;
         [SerializeField] private PopUpLauncher _combatResultPopUp;
+        [SerializeField] private CombatLog _combatLog;
 
         private readonly List<BaseAttack> _availableAttacks = new();
 
@@ -63,7 +64,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         }
 
         private void StartCombat() => _combatInstance =
-            new CombatInstance(_enemyCombatData, PlayerTurn, UpdateEnemyHealth, OnDamagePlayer, OnCombatEnded);
+            new CombatInstance(_enemyCombatData, PlayerTurn, UpdateEnemyHealth, OnDamagePlayer, OnCombatEnded, _combatLog);
 
         private void PrintEnemyData()
         {
@@ -88,10 +89,10 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             }
         }
 
-        private void PlayerTurn()
+        private void PlayerTurn(bool playerTurn)
         {
             foreach (var attack in _availableAttacks)
-                attack.TryAwake();
+                attack.TryAwake(playerTurn);
         }
 
         private void OnAttackSelected(AttackData attack)
@@ -108,10 +109,14 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
         private void OnCombatEnded(bool enemyDead)
         {
+            OnResourcesUpdated.NotifyEvent();
+
             if (enemyDead)
             {
+                GameProgression.SetEnemyKilled();
+                
                 if (_enemyData.ExperienceOnKill != 0)
-                    PopUpSpawner.SpawnPopUp<CombatResultPopUp>(_combatResultPopUp).SetData(_enemyData.ExperienceOnKill);
+                    PopUpSpawner.SpawnPopUp<CombatResultPopUp>(_combatResultPopUp).SetData(_enemyData);
             }
 
             Complete();

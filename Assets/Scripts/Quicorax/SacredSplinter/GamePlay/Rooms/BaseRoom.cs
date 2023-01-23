@@ -22,7 +22,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Rooms
         protected async Task SetRoomKind(string forceKind = null)
         {
             RoomKind = !string.IsNullOrEmpty(forceKind) ? forceKind : ChooseRandomKind();
-            _roomIcon.sprite = await ServiceLocator.GetService<AddressablesService>().LoadAddrssAsset<Sprite>(RoomKind);
+            _roomIcon.sprite = await ServiceLocator.GetService<AddressablesService>().LoadAddrssAsset<Sprite>($"{RoomKind}_Icon");
         }
 
         private string ChooseRandomKind() => _randomRoomKinds[Random.Range(0, _randomRoomKinds.Count)];

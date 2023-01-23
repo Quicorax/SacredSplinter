@@ -65,7 +65,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
         protected void PrintElementData(string header, string description)
         {
             FadeAnim(_index, () => _index.text = ActualIndex.ToString());
-            FadeAnim(_header, () => _header.text = header);
+            FadeAnim(_header, () => SetHeader(header));
             FadeAnim(_description, () => _description.text = description);
             FadeAnim(_image, () => SetSprites(header));
         }
@@ -80,6 +80,10 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
             base.CloseSelf();
         }
 
+        protected virtual void SetHeader(string header)
+        {
+            _header.text = header;
+        }
         private void SetButtons()
         {
             _select?.onClick.AddListener(SelectElement);

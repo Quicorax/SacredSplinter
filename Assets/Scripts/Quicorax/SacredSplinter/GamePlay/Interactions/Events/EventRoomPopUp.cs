@@ -2,7 +2,6 @@ using System.Threading.Tasks;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
-using Quicorax.SacredSplinter.Services.EventBus;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +10,6 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 {
     public sealed class EventRoomPopUp : AdventureRoomPopUp
     {
-        [SerializeField] private SimpleEventBus _onResourcesUpdated;
         [SerializeField] private TMP_Text _header, _action;
         [SerializeField] private Image _image;
         [SerializeField] private PopUpLauncher _eventResultPopUp;
@@ -98,7 +96,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
             {
                 default:
                     GameProgression.SetAmountOfResource(kind, amount);
-                    _onResourcesUpdated.NotifyEvent();
+                    OnResourcesUpdated.NotifyEvent();
                     break;
                 case "Health":
                     AdventureProgression.UpdateProportionalHealth(amount, reason);

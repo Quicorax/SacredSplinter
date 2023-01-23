@@ -22,6 +22,7 @@ namespace Quicorax.SacredSplinter.Services
         [SerializeField] private List<int> _completedQuestIndex = new();
 
         [SerializeField] private int _totalMonstersKilled = 0;
+        [SerializeField] private int _totalRoomsCleared = 0;
 
         [SerializeField] private bool _soundOn = true;
 
@@ -121,32 +122,36 @@ namespace Quicorax.SacredSplinter.Services
             {
                 "Hunt" => _totalMonstersKilled,
                 "Adventure" => GetHigherLevelReached(),
+                "Rooms" => GetRoomsCompleted(),
                 "Complete_Village" => GetLocationCompleted("Village") ? 1 : 0,
-                "Complete_Sewer" => GetLocationCompleted("Sewers") ? 1 : 0,
-                "Complete_Dungeon" => GetLocationCompleted("Dungeons") ? 1 : 0,
+                "Complete_Sewers" => GetLocationCompleted("Sewers") ? 1 : 0,
+                "Complete_Dungeons" => GetLocationCompleted("Dungeons") ? 1 : 0,
                 _ => 0
             };
         }
 
         private int GetHigherLevelReached() => _sortedLevelsProgression.Values.Select(level => level.MaxLevel).Max();
+        public void SetRoomCompleted() => _totalRoomsCleared++;
+        public int GetRoomsCompleted() => _totalRoomsCleared;
         public bool GetLocationCompleted(string location) => _sortedLevelsProgression[location].Completed;
+        public void SetEnemyKilled() => _totalMonstersKilled++;
 
         public void SetLocationProgress(string location, int floor)
         {
             _ticksPlayed++;
-            
+
             var level = _sortedLevelsProgression[location];
 
             if (level.MaxLevel < floor)
                 level.MaxLevel = floor;
-            
+
             _saveLoadService.Save();
         }
 
         public void SetLocationCompleted(string location)
         {
             _ticksPlayed++;
-            
+
             _sortedLevelsProgression[location].Completed = true;
             _saveLoadService.Save();
         }

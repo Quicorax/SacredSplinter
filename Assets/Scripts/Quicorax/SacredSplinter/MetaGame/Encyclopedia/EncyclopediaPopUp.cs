@@ -15,16 +15,15 @@ namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
         [SerializeField] private TMP_Text _descriptionText, _unknownDescriptionText;
         [SerializeField] private Image _artImage;
 
-
-        private readonly Color _darkGray = new(0.12f, 0.12f, 0.12f);
-
-        private bool _elementDiscovered;
+        private readonly Color _darkGray = new(0.09f, 0.09f, 0.09f);
 
         private Dictionary<int, EnemyData> _enemies = new();
         private EnemyData _currentEnemy;
 
+        private bool _elementDiscovered;
+
         private GameProgressionService _gameProgression;
-        
+
         public override void Initialize(Action<string> onSelect = null, Action onCancel = null)
         {
             _gameProgression = ServiceLocator.GetService<GameProgressionService>();
@@ -41,11 +40,22 @@ namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
             ElementChanged();
         }
 
+        protected override void SetHeader(string header)
+        {
+            if (_elementDiscovered)
+            {
+                base.SetHeader(header);
+                return;
+            }
+
+            base.SetHeader("Unknown");
+        }
+
         protected override void ElementChanged()
         {
             _currentEnemy = _enemies[ActualIndex];
             _elementDiscovered = _gameProgression.GetEnemyDiscovered(_currentEnemy.Header);
-            
+
             PrintElementData(_currentEnemy.Header, _currentEnemy.Description);
         }
 
