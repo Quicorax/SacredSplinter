@@ -158,6 +158,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3554326740527456912, guid: b59884edbe398ca45bcb84eaac28192f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3804657949628664483, guid: b59884edbe398ca45bcb84eaac28192f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -462,6 +466,10 @@ PrefabInstance:
       propertyPath: _curtain
       value: 
       objectReference: {fileID: 1274318888}
+    - target: {fileID: 2029477322696702993, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2107639537469123404, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -513,6 +521,10 @@ PrefabInstance:
     - target: {fileID: 6986606759669300868, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
       propertyPath: m_Name
       value: Menu_Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6986606759669300868, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7161853074590757613, guid: d3e6d59857b44b44596b12af53060a36, type: 3}
       propertyPath: m_Pivot.x
@@ -614,6 +626,10 @@ PrefabInstance:
     - target: {fileID: 4333497323893185940, guid: 2d889aa331568ab4bb8ec272e5aa737e, type: 3}
       propertyPath: m_Name
       value: Canvas_Curtain
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333497323893185940, guid: 2d889aa331568ab4bb8ec272e5aa737e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4333497323893185941, guid: 2d889aa331568ab4bb8ec272e5aa737e, type: 3}
       propertyPath: m_Pivot.x

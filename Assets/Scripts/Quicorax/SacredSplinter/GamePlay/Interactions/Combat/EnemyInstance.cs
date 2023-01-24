@@ -95,11 +95,12 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
                 attackOfType.CurrentCooldown = attackOfType.CurrentCooldown <= 0 ? 0 : attackOfType.CurrentCooldown--;
             }
 
-            var selectedAttack = availableAttacks.Count > 0
-                ? availableAttacks[Random.Range(0, availableAttacks.Count)]
-                : new(null, 0);
-
-            return selectedAttack.Attack;
+            if (availableAttacks.Count > 0)
+            {
+                return availableAttacks[Random.Range(0, availableAttacks.Count)].Attack;
+            }
+            
+            return null;
         }
 
         private class AvailableAttack

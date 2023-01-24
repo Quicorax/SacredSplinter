@@ -420,7 +420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3651386250831933436, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4200387312963455786, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
       propertyPath: m_Pivot.x
@@ -508,7 +508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4713018235203526070, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6360098504666078003, guid: 4dd9bdf147d16a145a080123c906d2c0, type: 3}
       propertyPath: m_Color.a

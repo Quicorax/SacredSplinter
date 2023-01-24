@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Quicorax.SacredSplinter.MetaGame.UI;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
@@ -54,7 +55,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
             _selectText.text = _elementUnlocked ? "Select" : "Unlock";
         }
 
-        public void ShowHeroStats() => _popUpSpawner.SpawnPopUp(_heroStats);
+        public void ShowHeroStats() => _popUpSpawner.SpawnPopUp<HeroStatsPopUp>(_heroStats).SetData(_currentHero);
 
         protected override void SelectElement()
         {

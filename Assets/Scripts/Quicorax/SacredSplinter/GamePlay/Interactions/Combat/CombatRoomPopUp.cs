@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using DG.Tweening;
 using Quicorax.SacredSplinter.GamePlay.Interactions.Events;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Models;
@@ -60,12 +62,17 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             if (_escapeButton.interactable)
                 _escapeButton.onClick.AddListener(Complete);
 
-            _skipTurnButton.onClick.AddListener(() => _combatInstance.OnPlayerSkipTurn());
+            _skipTurnButton.onClick.AddListener(SkipTurn);
         }
 
         private void StartCombat() => _combatInstance =
-            new CombatInstance(_enemyCombatData, PlayerTurn, UpdateEnemyHealth, OnDamagePlayer, OnCombatEnded, _combatLog);
+            new CombatInstance(_enemyCombatData, PlayerTurn, OnDamageEnemy, OnDamagePlayer, OnCombatEnded, _combatLog);
 
+        private void SkipTurn()
+        {
+            _skipTurnButton.interactable = false;
+            _combatInstance.OnPlayerSkipTurn();
+        }
         private void PrintEnemyData()
         {
             _enemyName.text = _enemyData.Header;
@@ -73,7 +80,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             _enemyMaxHealth = _enemyData.CurrentHealth;
             _enemyHealth.maxValue = _enemyMaxHealth;
             GameProgression.SetEnemyDiscovered(_enemyData.Header);
-            UpdateEnemyHealth();
+            UpdateEnemyHealthDisplay();
         }
 
         private void PrintHeroData()
@@ -91,30 +98,30 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
         private void PlayerTurn(bool playerTurn)
         {
+            if(playerTurn)
+                _skipTurnButton.interactable = true;
+            
             foreach (var attack in _availableAttacks)
                 attack.TryAwake(playerTurn);
         }
 
         private void OnAttackSelected(AttackData attack)
         {
-            //Animation...
+            _skipTurnButton.interactable = false;
             _combatInstance.OnPlayerAttackSelected(attack);
-        }
+        } 
 
-        private void OnDamagePlayer(int damage)
+        private void OnCombatEnded(bool enemyDead) => StartCoroutine(DelayedCombatEnded(enemyDead));
+        private IEnumerator DelayedCombatEnded(bool enemyDead)
         {
-            //Animation...
-            AdventureProgression.UpdateRawHealth(damage, _enemyData.Header);
-        }
-
-        private void OnCombatEnded(bool enemyDead)
-        {
+            yield return new WaitForSeconds(1f);
+            
             OnResourcesUpdated.NotifyEvent();
 
             if (enemyDead)
             {
                 GameProgression.SetEnemyKilled();
-                
+
                 if (_enemyData.ExperienceOnKill != 0)
                     PopUpSpawner.SpawnPopUp<CombatResultPopUp>(_combatResultPopUp).SetData(_enemyData);
             }
@@ -122,10 +129,33 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             Complete();
         }
 
-        private void UpdateEnemyHealth()
+        private void OnDamagePlayer(int damage)
+        {
+            AttackAnimation(_enemy.transform);
+            HitAnimation(_hero);
+            AdventureProgression.UpdateRawHealth(damage, _enemyData.Header);
+        }
+
+        private void OnDamageEnemy()
+        {
+            AttackAnimation(_hero.transform);
+            HitAnimation(_enemy);
+            UpdateEnemyHealthDisplay();
+        }
+
+        private void UpdateEnemyHealthDisplay()
         {
             _enemyHealth.value = _enemyData.CurrentHealth;
             _enemyHealthDisplay.text = $"{_enemyData.CurrentHealth} / {_enemyMaxHealth}";
         }
+
+        private void HitAnimation(Image target)
+        {
+            target.transform.DOPunchScale(Vector3.one  * 0.2f, 0.5f, 8, 0.5f);
+            target.DOColor(Color.red, 0.4f).OnComplete(() => target.DOColor(Color.white, 0.3f));
+        }
+
+        private void AttackAnimation(Transform target) => 
+            target.DOPunchPosition(Vector3.up * 50, 0.5f, 1).SetRelative();
     }
 }

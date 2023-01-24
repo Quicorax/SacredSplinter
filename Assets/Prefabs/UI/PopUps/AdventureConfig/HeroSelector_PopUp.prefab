@@ -75,7 +75,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3
+  m_PixelsPerUnitMultiplier: 1.5
 --- !u!1 &1940690391424531837
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3.5
+  m_PixelsPerUnitMultiplier: 1.5
 --- !u!1 &4989662334687888979
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +715,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 5
+  m_PixelsPerUnitMultiplier: 1.5
 --- !u!1 &8583532924206656885
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,10 +990,6 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 7579606237611689454, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
-      propertyPath: m_PixelsPerUnitMultiplier
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32e8a9eace23834d8db54affad6cde8, type: 3}
 --- !u!114 &90402085527896849 stripped
@@ -1025,6 +1021,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7668103929076798876}
     m_Modifications:
+    - target: {fileID: 942775665909405467, guid: 619a43764353e844fa53860f357140e1, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1441411368732990010, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1172,6 +1172,10 @@ PrefabInstance:
     - target: {fileID: 3384294727377245144, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4801129706070276158, guid: 619a43764353e844fa53860f357140e1, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5097677389685178966, guid: 619a43764353e844fa53860f357140e1, type: 3}
       propertyPath: m_Name

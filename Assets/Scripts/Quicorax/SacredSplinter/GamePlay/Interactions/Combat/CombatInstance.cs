@@ -40,13 +40,16 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
         public void OnPlayerAttackSelected(AttackData attack)
         {
-            var finalDamage = attack.Damage * (_adventureProgression.GetCurrentHeroDamage() / 100);
+            var finalDamage =
+                Mathf.FloorToInt(attack.Damage * ((float)_adventureProgression.GetCurrentHeroDamage() / 100));
             _enemy.CurrentHealth -= finalDamage;
             _combatLog.SetCombatLog("Hero", _enemy.Header, finalDamage, attack.Header);
 
             if (_enemy.CurrentHealth <= 0)
             {
                 _enemy.CurrentHealth = 0;
+
+                _onDamageEnemy?.Invoke();
 
                 _adventureProgression.AddHeroExperience(_enemy.ExperienceOnKill);
 
@@ -62,8 +65,8 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
                 _onCombatEnded?.Invoke(true);
                 return;
             }
-
-            _onDamageEnemy?.Invoke();
+            else
+                _onDamageEnemy?.Invoke();
 
             SetTurn(false).ManageTaskException();
         }
@@ -90,7 +93,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
                 if (attack != null)
                 {
-                    var finalDamage = attack.Damage * _enemy.CurrentDamage / 100;
+                    var finalDamage = Mathf.FloorToInt(attack.Damage * ((float)_enemy.CurrentDamage / 100));
                     _onDamagePlayer?.Invoke(-finalDamage);
 
                     _combatLog.SetCombatLog(_enemy.Header, "Hero", finalDamage, attack.Header);
@@ -103,7 +106,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
                     _onCombatEnded?.Invoke(false);
                     return;
                 }
-                
+
                 await Task.Delay(1000);
 
                 SetTurn(true).ManageTaskException();

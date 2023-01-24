@@ -36,7 +36,12 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             if (_currentCooldownTurns > 0)
             {
                 _cooldown.text = _currentCooldownTurns.ToString();
-                _currentCooldownTurns--;
+
+                if (awake)
+                {
+                    _currentCooldownTurns--;
+                }
+                
                 return;
             }
 

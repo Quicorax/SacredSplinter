@@ -53,7 +53,6 @@ namespace Quicorax.SacredSplinter.Services
             AddFloor();
         }
 
-
         public int GetMaxHealth() => _currentHeroMaxHealth;
         public int GetCurrentHealth() => _currentHeroHealth;
         public int GetCurrentFloor() => _currentFloor;
@@ -105,7 +104,7 @@ namespace Quicorax.SacredSplinter.Services
 
         public void UpdateProportionalHealth(int percent, string damageReason)
         {
-            var health = ((float)percent / 100) * _selectedHero.MaxHealth;
+            var health = ((float)percent / 100) * _currentHeroMaxHealth;
             UpdateRawHealth(Mathf.RoundToInt(health), damageReason);
         }
 
