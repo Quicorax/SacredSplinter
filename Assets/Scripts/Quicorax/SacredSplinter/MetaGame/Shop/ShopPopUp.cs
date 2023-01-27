@@ -7,14 +7,12 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
     {
         protected override void SpawnElements()
         {
-            var progression = ServiceLocator.GetService<GameProgressionService>();
             var popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
-            var addressables = ServiceLocator.GetService<AddressablesService>();
 
             foreach (var product in ServiceLocator.GetService<GameConfigService>().Shop)
             {
-                addressables.LoadAddrssComponentObject<ShopProduct>("ShopProduct", _elementsHolder, productData =>
-                    productData.Initialize(product, UpdateUI, progression, popUpSpawner, addressables).ManageTaskException());
+                Addressables.LoadAddrssComponentObject<ShopProduct>("ShopProduct", _elementsHolder, productData =>
+                    productData.Initialize(product, UpdateUI, Progression, popUpSpawner, Addressables).ManageTaskException());
             }
         }
     }

@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e4ef8a22-7dcf-429b-bb5d-e49cb4b36a12\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"ca051ef8-283f-44db-b3b6-a85a22c26397\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"b4b3249d-873a-46d1-bba1-65ce8308a462\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"91b214f2-47ad-4a3d-a49f-76cbe69e1561\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -37,7 +37,7 @@ MonoBehaviour:
     \"Gold Coins x 1000\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
     \"PriceAmount\": 10000,\r\n            \"Reward\": \"Gold Coin\",\r\n           
     \"RewardAmount\": 1000\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"e045a236-f568-4023-8e11-6780454c57e6\"\r\n   
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"bf7a1868-bffc-4117-8931-a1c43566aca1\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": 0,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -77,7 +77,7 @@ MonoBehaviour:
     \"Header\": \"Clear 100 rooms\",\r\n            \"Amount\": 100,\r\n           
     \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 4000\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"4a7ef4ac-b845-4c9a-bbdb-09e49838e54c\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"80721b64-0c3d-4804-83da-225a51ed4279\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
@@ -125,7 +125,7 @@ MonoBehaviour:
     90,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 100,\r\n           
     \"SpeedEvo\": 50,\r\n            \"Agility\": 33,\r\n            \"AgilityEvo\":
     5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"5f7a54be-b649-4f1f-a44d-95c3dce81b2d\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"95f3fc36-74c3-42ab-bda0-32b261cbbf34\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
@@ -345,7 +345,7 @@ MonoBehaviour:
     \"SpeedEvo\": 0,\r\n            \"Agility\": 1,\r\n            \"AgilityEvo\":
     0,\r\n            \"ExperienceOnKill\": 0,\r\n            \"BlueCrystalsOnKill\":
     120,\r\n            \"GoldCoinsOnKill\": 50\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"7ece0245-1050-4dbd-8b24-ad8ff27772ab\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"5b73122b-53ed-4968-80dc-548979e8c702\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
@@ -364,89 +364,89 @@ MonoBehaviour:
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
     3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"8d510695-2fc7-4f2a-b07f-4393132ca287\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"f65e3563-59d6-4537-9dff-e7d395c0bb64\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
     \"Header\": \"Insta Death\",\r\n            \"Action\": \"Insta Death\",\r\n           
-    \"Chance\": 0,\r\n            \"SuccedHeader\": \"Insta Death\",\r\n           
-    \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\": 0,\r\n           
-    \"SuccedMaxAmount\": 0,\r\n            \"FailHeader\": \"Insta Death\",\r\n           
+    \"Chance\": 0,\r\n            \"SucceedHeader\": \"Insta Death\",\r\n           
+    \"SucceedKind\": \"Health\",\r\n            \"SucceedMinAmount\": 0,\r\n           
+    \"SucceedMaxAmount\": 0,\r\n            \"FailHeader\": \"Insta Death\",\r\n           
     \"FailKind\": \"Health\",\r\n            \"FailAmount\": -100,\r\n           
     \"DeathMotive\": \"God\"\r\n          },\r\n          {\r\n            \"Active\":
-    true,\r\n            \"Concept\": \"Event_Unknown\",\r\n            \"Header\":
+    false,\r\n            \"Concept\": \"Event_Unknown\",\r\n            \"Header\":
     \"???\",\r\n            \"Action\": \"?\",\r\n            \"Chance\": 50,\r\n           
-    \"SuccedHeader\": \":)\",\r\n            \"SuccedKind\": \"Blue Crystal\",\r\n           
-    \"SuccedMinAmount\": 0,\r\n            \"SuccedMaxAmount\": 999,\r\n           
+    \"SucceedHeader\": \":)\",\r\n            \"SucceedKind\": \"Blue Crystal\",\r\n           
+    \"SucceedMinAmount\": 0,\r\n            \"SucceedMaxAmount\": 999,\r\n           
     \"FailHeader\": \":(\",\r\n            \"FailKind\": \"Health\",\r\n           
     \"FailAmount\": -100,\r\n            \"DeathMotive\": \"?\"\r\n          },\r\n         
     {\r\n            \"Active\": true,\r\n            \"Concept\": \"Event_Corpse\",\r\n           
     \"Header\": \"You see a corpse lying on the ground.\",\r\n            \"Action\":
-    \"Loot corpse\",\r\n            \"Chance\": 40,\r\n            \"SuccedHeader\":
-    \"You find some coins in the dead's pocked.\",\r\n            \"SuccedKind\":
-    \"Gold Coin\",\r\n            \"SuccedMinAmount\": 1,\r\n            \"SuccedMaxAmount\":
+    \"Loot corpse\",\r\n            \"Chance\": 40,\r\n            \"SucceedHeader\":
+    \"You find some coins in the dead's pocked.\",\r\n            \"SucceedKind\":
+    \"Gold Coin\",\r\n            \"SucceedMinAmount\": 1,\r\n            \"SucceedMaxAmount\":
     10,\r\n            \"FailHeader\": \"The sleeping Undead awakes and in a quick
     move scratches you! \",\r\n            \"FailKind\": \"Health\",\r\n           
     \"FailAmount\": -10,\r\n            \"DeathMotive\": \"Undead\"\r\n         
     },\r\n          {\r\n            \"Concept\": \"Event_Beggar\",\r\n           
     \"Header\": \"A pity beggar asks you for some coins.\",\r\n            \"Action\":
-    \"Give coins\",\r\n            \"Chance\": 30,\r\n            \"SuccedHeader\":
+    \"Give coins\",\r\n            \"Chance\": 30,\r\n            \"SucceedHeader\":
     \"The beggar smiles and banishes, in the floor you see something.\",\r\n           
-    \"SuccedKind\": \"Blue Crystal\",\r\n            \"SuccedMinAmount\": 30,\r\n           
-    \"SuccedMaxAmount\": 50,\r\n            \"FailHeader\": \"You give the beggar
+    \"SucceedKind\": \"Blue Crystal\",\r\n            \"SucceedMinAmount\": 30,\r\n           
+    \"SucceedMaxAmount\": 50,\r\n            \"FailHeader\": \"You give the beggar
     some coins.\",\r\n            \"FailKind\": \"Gold Coin\",\r\n            \"FailAmount\":
     -3\r\n          },\r\n          {\r\n            \"Active\": true,\r\n           
     \"Concept\": \"Event_GlowingFountain\",\r\n            \"Location\": \"Village\",\r\n           
     \"Header\": \"You see a fountain with glowing water.\",\r\n            \"Action\":
-    \"Drink water\",\r\n            \"Chance\": 50,\r\n            \"SuccedHeader\":
-    \"You feel your body grow with energy.\",\r\n            \"SuccedKind\": \"Health\",\r\n           
-    \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 25,\r\n           
+    \"Drink water\",\r\n            \"Chance\": 50,\r\n            \"SucceedHeader\":
+    \"You feel your body grow with energy.\",\r\n            \"SucceedKind\": \"Health\",\r\n           
+    \"SucceedMinAmount\": 15,\r\n            \"SucceedMaxAmount\": 25,\r\n           
     \"FailHeader\": \"The water taster dirty...\",\r\n            \"FailKind\": \"Health\",\r\n           
     \"FailAmount\": -15,\r\n            \"DeathMotive\": \"Intoxication\"\r\n         
     },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
     \"Event_InjuredDog\",\r\n            \"Location\": \"Village\",\r\n           
     \"Header\": \"An injured dog approaches to you.\",\r\n            \"Action\":
-    \"Pet the dog\",\r\n            \"Chance\": 55,\r\n            \"SuccedHeader\":
-    \"The dog seems to be grateful.\",\r\n            \"SuccedKind\": \"Blue Crystal\",\r\n           
-    \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 20,\r\n           
+    \"Pet the dog\",\r\n            \"Chance\": 55,\r\n            \"SucceedHeader\":
+    \"The dog seems to be grateful.\",\r\n            \"SucceedKind\": \"Blue Crystal\",\r\n           
+    \"SucceedMinAmount\": 15,\r\n            \"SucceedMaxAmount\": 20,\r\n           
     \"FailHeader\": \"The dog tries to bite you, but instead breaks your coin pouch.\",\r\n           
     \"FailKind\": \"Gold Coin\",\r\n            \"FailAmount\": -13\r\n         
     },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
     \"Event_Bubble\",\r\n            \"Location\": \"Sewers\",\r\n            \"Header\":
     \"You see bubbles coming from a puddle.\",\r\n            \"Action\": \"Investigate\",\r\n           
-    \"Chance\": 30,\r\n            \"SuccedHeader\": \"You find a couple of dirty
-    gold coins.\",\r\n            \"SuccedKind\": \"Gold Coin\",\r\n            \"SuccedMinAmount\":
-    5,\r\n            \"SuccedMaxAmount\": 10,\r\n            \"FailHeader\": \"Your
-    hand gets covered in a very disgusting liquid... It hurts in your wounds.\",\r\n           
-    \"FailKind\": \"Health\",\r\n            \"FailAmount\": -10,\r\n           
-    \"DeathMotive\": \"Infection\"\r\n          },\r\n          {\r\n           
-    \"Active\": true,\r\n            \"Concept\": \"Event_Mushroom\",\r\n           
+    \"Chance\": 30,\r\n            \"SucceedHeader\": \"You find a couple of dirty
+    gold coins.\",\r\n            \"SucceedKind\": \"Gold Coin\",\r\n           
+    \"SucceedMinAmount\": 5,\r\n            \"SucceedMaxAmount\": 10,\r\n           
+    \"FailHeader\": \"Your hand gets covered in a very disgusting liquid... It hurts
+    in your wounds.\",\r\n            \"FailKind\": \"Health\",\r\n            \"FailAmount\":
+    -10,\r\n            \"DeathMotive\": \"Infection\"\r\n          },\r\n         
+    {\r\n            \"Active\": true,\r\n            \"Concept\": \"Event_Mushroom\",\r\n           
     \"Location\": \"Sewers\",\r\n            \"Header\": \"You are starving. You
     see a very appetizing mushroom growing on the mud.\",\r\n            \"Action\":
-    \"Eat\",\r\n            \"Chance\": 10,\r\n            \"SuccedHeader\": \"Tasty!\",\r\n           
-    \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\": 20,\r\n           
-    \"SuccedMaxAmount\": 30,\r\n            \"FailHeader\": \"A bit spicy, weird
+    \"Eat\",\r\n            \"Chance\": 10,\r\n            \"SucceedHeader\": \"Tasty!\",\r\n           
+    \"SucceedKind\": \"Health\",\r\n            \"SucceedMinAmount\": 20,\r\n           
+    \"SucceedMaxAmount\": 30,\r\n            \"FailHeader\": \"A bit spicy, weird
     taste, repugnant texture... A nauseating sensation invades you.\",\r\n           
     \"FailKind\": \"Health\",\r\n            \"FailAmount\": -70,\r\n           
     \"DeathMotive\": \"Parasit Micelle\"\r\n          },\r\n          {\r\n           
     \"Active\": true,\r\n            \"Concept\": \"Event_Prisioner\",\r\n           
     \"Location\": \"Dungeons\",\r\n            \"Header\": \"While exploring the
     dungeons, you hear screams. Someone is being tortured.\",\r\n            \"Action\":
-    \"Help\",\r\n            \"Chance\": 55,\r\n            \"SuccedHeader\": \"In
+    \"Help\",\r\n            \"Chance\": 55,\r\n            \"SucceedHeader\": \"In
     a fast move, you incapacitate the guard and free the man being tortured.\",\r\n           
-    \"SuccedKind\": \"Gold Coin\",\r\n            \"SuccedMinAmount\": 10,\r\n           
-    \"SuccedMaxAmount\": 30,\r\n            \"FailHeader\": \"When trying to help,
+    \"SucceedKind\": \"Gold Coin\",\r\n            \"SucceedMinAmount\": 10,\r\n           
+    \"SucceedMaxAmount\": 30,\r\n            \"FailHeader\": \"When trying to help,
     you get caught. \",\r\n            \"FailKind\": \"Health\",\r\n            \"FailAmount\":
     -25,\r\n            \"DeathMotive\": \"Torture\"\r\n          },\r\n         
     {\r\n            \"Active\": true,\r\n            \"Concept\": \"Event_Light\",\r\n           
     \"Location\": \"Dungeons\",\r\n            \"Header\": \"A floating light sphere
     appears blocking your path.\",\r\n            \"Action\": \"Touch\",\r\n           
-    \"SuccedHeader\": \"The sphere stops shinning. You feel rejuvenated.\",\r\n           
-    \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\": 30,\r\n           
-    \"SuccedMaxAmount\": 35,\r\n            \"FailHeader\": \"The shining sphere
+    \"SucceedHeader\": \"The sphere stops shinning. You feel rejuvenated.\",\r\n           
+    \"SucceedKind\": \"Health\",\r\n            \"SucceedMinAmount\": 30,\r\n           
+    \"SucceedMaxAmount\": 35,\r\n            \"FailHeader\": \"The shining sphere
     fades, and with it, you feel your pouch loss weight.\",\r\n            \"FailKind\":
     \"Gold Coin\",\r\n            \"FailAmount\": -5\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"5039f4e8-a40d-4b52-a3f9-cf2aeafa43a3\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"975fd764-7380-465a-a1dd-4f2925e0cffd\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AttacksModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Perforation\",\r\n            \"AttackType\":
@@ -500,14 +500,14 @@ MonoBehaviour:
     3\r\n          },\r\n          {\r\n            \"Header\": \"Stampede\",\r\n           
     \"AttackType\": \"Beast\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
     5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e4ef8a22-7dcf-429b-bb5d-e49cb4b36a12\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"ca051ef8-283f-44db-b3b6-a85a22c26397\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"b4b3249d-873a-46d1-bba1-65ce8308a462\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"91b214f2-47ad-4a3d-a49f-76cbe69e1561\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -525,7 +525,7 @@ MonoBehaviour:
     \"Gold Coins x 1000\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
     \"PriceAmount\": 10000,\r\n            \"Reward\": \"Gold Coin\",\r\n           
     \"RewardAmount\": 1000\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"e045a236-f568-4023-8e11-6780454c57e6\"\r\n   
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"bf7a1868-bffc-4117-8931-a1c43566aca1\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": 0,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -565,7 +565,7 @@ MonoBehaviour:
     \"Header\": \"Clear 100 rooms\",\r\n            \"Amount\": 100,\r\n           
     \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 4000\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"4a7ef4ac-b845-4c9a-bbdb-09e49838e54c\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"80721b64-0c3d-4804-83da-225a51ed4279\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
@@ -613,7 +613,7 @@ MonoBehaviour:
     90,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 100,\r\n           
     \"SpeedEvo\": 50,\r\n            \"Agility\": 33,\r\n            \"AgilityEvo\":
     5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"5f7a54be-b649-4f1f-a44d-95c3dce81b2d\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"95f3fc36-74c3-42ab-bda0-32b261cbbf34\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
@@ -833,7 +833,7 @@ MonoBehaviour:
     \"SpeedEvo\": 0,\r\n            \"Agility\": 1,\r\n            \"AgilityEvo\":
     0,\r\n            \"ExperienceOnKill\": 0,\r\n            \"BlueCrystalsOnKill\":
     120,\r\n            \"GoldCoinsOnKill\": 50\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"7ece0245-1050-4dbd-8b24-ad8ff27772ab\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"5b73122b-53ed-4968-80dc-548979e8c702\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
@@ -852,89 +852,89 @@ MonoBehaviour:
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
     3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"8d510695-2fc7-4f2a-b07f-4393132ca287\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"f65e3563-59d6-4537-9dff-e7d395c0bb64\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
     \"Header\": \"Insta Death\",\r\n            \"Action\": \"Insta Death\",\r\n           
-    \"Chance\": 0,\r\n            \"SuccedHeader\": \"Insta Death\",\r\n           
-    \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\": 0,\r\n           
-    \"SuccedMaxAmount\": 0,\r\n            \"FailHeader\": \"Insta Death\",\r\n           
+    \"Chance\": 0,\r\n            \"SucceedHeader\": \"Insta Death\",\r\n           
+    \"SucceedKind\": \"Health\",\r\n            \"SucceedMinAmount\": 0,\r\n           
+    \"SucceedMaxAmount\": 0,\r\n            \"FailHeader\": \"Insta Death\",\r\n           
     \"FailKind\": \"Health\",\r\n            \"FailAmount\": -100,\r\n           
     \"DeathMotive\": \"God\"\r\n          },\r\n          {\r\n            \"Active\":
-    true,\r\n            \"Concept\": \"Event_Unknown\",\r\n            \"Header\":
+    false,\r\n            \"Concept\": \"Event_Unknown\",\r\n            \"Header\":
     \"???\",\r\n            \"Action\": \"?\",\r\n            \"Chance\": 50,\r\n           
-    \"SuccedHeader\": \":)\",\r\n            \"SuccedKind\": \"Blue Crystal\",\r\n           
-    \"SuccedMinAmount\": 0,\r\n            \"SuccedMaxAmount\": 999,\r\n           
+    \"SucceedHeader\": \":)\",\r\n            \"SucceedKind\": \"Blue Crystal\",\r\n           
+    \"SucceedMinAmount\": 0,\r\n            \"SucceedMaxAmount\": 999,\r\n           
     \"FailHeader\": \":(\",\r\n            \"FailKind\": \"Health\",\r\n           
     \"FailAmount\": -100,\r\n            \"DeathMotive\": \"?\"\r\n          },\r\n         
     {\r\n            \"Active\": true,\r\n            \"Concept\": \"Event_Corpse\",\r\n           
     \"Header\": \"You see a corpse lying on the ground.\",\r\n            \"Action\":
-    \"Loot corpse\",\r\n            \"Chance\": 40,\r\n            \"SuccedHeader\":
-    \"You find some coins in the dead's pocked.\",\r\n            \"SuccedKind\":
-    \"Gold Coin\",\r\n            \"SuccedMinAmount\": 1,\r\n            \"SuccedMaxAmount\":
+    \"Loot corpse\",\r\n            \"Chance\": 40,\r\n            \"SucceedHeader\":
+    \"You find some coins in the dead's pocked.\",\r\n            \"SucceedKind\":
+    \"Gold Coin\",\r\n            \"SucceedMinAmount\": 1,\r\n            \"SucceedMaxAmount\":
     10,\r\n            \"FailHeader\": \"The sleeping Undead awakes and in a quick
     move scratches you! \",\r\n            \"FailKind\": \"Health\",\r\n           
     \"FailAmount\": -10,\r\n            \"DeathMotive\": \"Undead\"\r\n         
     },\r\n          {\r\n            \"Concept\": \"Event_Beggar\",\r\n           
     \"Header\": \"A pity beggar asks you for some coins.\",\r\n            \"Action\":
-    \"Give coins\",\r\n            \"Chance\": 30,\r\n            \"SuccedHeader\":
+    \"Give coins\",\r\n            \"Chance\": 30,\r\n            \"SucceedHeader\":
     \"The beggar smiles and banishes, in the floor you see something.\",\r\n           
-    \"SuccedKind\": \"Blue Crystal\",\r\n            \"SuccedMinAmount\": 30,\r\n           
-    \"SuccedMaxAmount\": 50,\r\n            \"FailHeader\": \"You give the beggar
+    \"SucceedKind\": \"Blue Crystal\",\r\n            \"SucceedMinAmount\": 30,\r\n           
+    \"SucceedMaxAmount\": 50,\r\n            \"FailHeader\": \"You give the beggar
     some coins.\",\r\n            \"FailKind\": \"Gold Coin\",\r\n            \"FailAmount\":
     -3\r\n          },\r\n          {\r\n            \"Active\": true,\r\n           
     \"Concept\": \"Event_GlowingFountain\",\r\n            \"Location\": \"Village\",\r\n           
     \"Header\": \"You see a fountain with glowing water.\",\r\n            \"Action\":
-    \"Drink water\",\r\n            \"Chance\": 50,\r\n            \"SuccedHeader\":
-    \"You feel your body grow with energy.\",\r\n            \"SuccedKind\": \"Health\",\r\n           
-    \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 25,\r\n           
+    \"Drink water\",\r\n            \"Chance\": 50,\r\n            \"SucceedHeader\":
+    \"You feel your body grow with energy.\",\r\n            \"SucceedKind\": \"Health\",\r\n           
+    \"SucceedMinAmount\": 15,\r\n            \"SucceedMaxAmount\": 25,\r\n           
     \"FailHeader\": \"The water taster dirty...\",\r\n            \"FailKind\": \"Health\",\r\n           
     \"FailAmount\": -15,\r\n            \"DeathMotive\": \"Intoxication\"\r\n         
     },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
     \"Event_InjuredDog\",\r\n            \"Location\": \"Village\",\r\n           
     \"Header\": \"An injured dog approaches to you.\",\r\n            \"Action\":
-    \"Pet the dog\",\r\n            \"Chance\": 55,\r\n            \"SuccedHeader\":
-    \"The dog seems to be grateful.\",\r\n            \"SuccedKind\": \"Blue Crystal\",\r\n           
-    \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 20,\r\n           
+    \"Pet the dog\",\r\n            \"Chance\": 55,\r\n            \"SucceedHeader\":
+    \"The dog seems to be grateful.\",\r\n            \"SucceedKind\": \"Blue Crystal\",\r\n           
+    \"SucceedMinAmount\": 15,\r\n            \"SucceedMaxAmount\": 20,\r\n           
     \"FailHeader\": \"The dog tries to bite you, but instead breaks your coin pouch.\",\r\n           
     \"FailKind\": \"Gold Coin\",\r\n            \"FailAmount\": -13\r\n         
     },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
     \"Event_Bubble\",\r\n            \"Location\": \"Sewers\",\r\n            \"Header\":
     \"You see bubbles coming from a puddle.\",\r\n            \"Action\": \"Investigate\",\r\n           
-    \"Chance\": 30,\r\n            \"SuccedHeader\": \"You find a couple of dirty
-    gold coins.\",\r\n            \"SuccedKind\": \"Gold Coin\",\r\n            \"SuccedMinAmount\":
-    5,\r\n            \"SuccedMaxAmount\": 10,\r\n            \"FailHeader\": \"Your
-    hand gets covered in a very disgusting liquid... It hurts in your wounds.\",\r\n           
-    \"FailKind\": \"Health\",\r\n            \"FailAmount\": -10,\r\n           
-    \"DeathMotive\": \"Infection\"\r\n          },\r\n          {\r\n           
-    \"Active\": true,\r\n            \"Concept\": \"Event_Mushroom\",\r\n           
+    \"Chance\": 30,\r\n            \"SucceedHeader\": \"You find a couple of dirty
+    gold coins.\",\r\n            \"SucceedKind\": \"Gold Coin\",\r\n           
+    \"SucceedMinAmount\": 5,\r\n            \"SucceedMaxAmount\": 10,\r\n           
+    \"FailHeader\": \"Your hand gets covered in a very disgusting liquid... It hurts
+    in your wounds.\",\r\n            \"FailKind\": \"Health\",\r\n            \"FailAmount\":
+    -10,\r\n            \"DeathMotive\": \"Infection\"\r\n          },\r\n         
+    {\r\n            \"Active\": true,\r\n            \"Concept\": \"Event_Mushroom\",\r\n           
     \"Location\": \"Sewers\",\r\n            \"Header\": \"You are starving. You
     see a very appetizing mushroom growing on the mud.\",\r\n            \"Action\":
-    \"Eat\",\r\n            \"Chance\": 10,\r\n            \"SuccedHeader\": \"Tasty!\",\r\n           
-    \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\": 20,\r\n           
-    \"SuccedMaxAmount\": 30,\r\n            \"FailHeader\": \"A bit spicy, weird
+    \"Eat\",\r\n            \"Chance\": 10,\r\n            \"SucceedHeader\": \"Tasty!\",\r\n           
+    \"SucceedKind\": \"Health\",\r\n            \"SucceedMinAmount\": 20,\r\n           
+    \"SucceedMaxAmount\": 30,\r\n            \"FailHeader\": \"A bit spicy, weird
     taste, repugnant texture... A nauseating sensation invades you.\",\r\n           
     \"FailKind\": \"Health\",\r\n            \"FailAmount\": -70,\r\n           
     \"DeathMotive\": \"Parasit Micelle\"\r\n          },\r\n          {\r\n           
     \"Active\": true,\r\n            \"Concept\": \"Event_Prisioner\",\r\n           
     \"Location\": \"Dungeons\",\r\n            \"Header\": \"While exploring the
     dungeons, you hear screams. Someone is being tortured.\",\r\n            \"Action\":
-    \"Help\",\r\n            \"Chance\": 55,\r\n            \"SuccedHeader\": \"In
+    \"Help\",\r\n            \"Chance\": 55,\r\n            \"SucceedHeader\": \"In
     a fast move, you incapacitate the guard and free the man being tortured.\",\r\n           
-    \"SuccedKind\": \"Gold Coin\",\r\n            \"SuccedMinAmount\": 10,\r\n           
-    \"SuccedMaxAmount\": 30,\r\n            \"FailHeader\": \"When trying to help,
+    \"SucceedKind\": \"Gold Coin\",\r\n            \"SucceedMinAmount\": 10,\r\n           
+    \"SucceedMaxAmount\": 30,\r\n            \"FailHeader\": \"When trying to help,
     you get caught. \",\r\n            \"FailKind\": \"Health\",\r\n            \"FailAmount\":
     -25,\r\n            \"DeathMotive\": \"Torture\"\r\n          },\r\n         
     {\r\n            \"Active\": true,\r\n            \"Concept\": \"Event_Light\",\r\n           
     \"Location\": \"Dungeons\",\r\n            \"Header\": \"A floating light sphere
     appears blocking your path.\",\r\n            \"Action\": \"Touch\",\r\n           
-    \"SuccedHeader\": \"The sphere stops shinning. You feel rejuvenated.\",\r\n           
-    \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\": 30,\r\n           
-    \"SuccedMaxAmount\": 35,\r\n            \"FailHeader\": \"The shining sphere
+    \"SucceedHeader\": \"The sphere stops shinning. You feel rejuvenated.\",\r\n           
+    \"SucceedKind\": \"Health\",\r\n            \"SucceedMinAmount\": 30,\r\n           
+    \"SucceedMaxAmount\": 35,\r\n            \"FailHeader\": \"The shining sphere
     fades, and with it, you feel your pouch loss weight.\",\r\n            \"FailKind\":
     \"Gold Coin\",\r\n            \"FailAmount\": -5\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"5039f4e8-a40d-4b52-a3f9-cf2aeafa43a3\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"975fd764-7380-465a-a1dd-4f2925e0cffd\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AttacksModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Perforation\",\r\n            \"AttackType\":
