@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"c5a7f93e-6655-4552-9efb-d8692636ed16\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f550b0f7-09b6-48dc-a66a-7be4861b63eb\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e3e08c01-7db9-4ec4-98f3-42485a350aa1\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"23c9b859-1b5d-48c9-926e-834beff5f829\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -40,7 +40,7 @@ MonoBehaviour:
     \"Blue Cristal\",\r\n            \"Price\": \"Gold Coin\",\r\n            \"PriceAmount\":
     1,\r\n            \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\":
     100\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"64402b60-fed1-466e-a95a-8625140381f0\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"02ec937d-5c12-4191-9144-9dad3b944858\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": 0,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -80,97 +80,275 @@ MonoBehaviour:
     \"Header\": \"Clear 100 rooms\",\r\n            \"Amount\": 100,\r\n           
     \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 4000\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"4a2d2903-e014-408e-a0f0-ebb822a7b901\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"ba64f1d6-9eb7-4833-a9e8-c1f3393f8a8e\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
     the unknown reaches of the world in search of treasure and the thrill of discovery.\",\r\n           
     \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": true,\r\n           
     \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"AttackAmount\": 4,\r\n            \"Damage\": 100,\r\n            \"DamageEvo\":
-    25,\r\n            \"MaxHealth\": 100,\r\n            \"HealthEvo\": 10,\r\n           
-    \"Speed\": 50,\r\n            \"SpeedEvo\": 6\r\n          },\r\n          {\r\n           
-    \"Header\": \"Brute\",\r\n            \"Description\": \"A brute of a man, relying
-    on strength and brawn rather than wit and cunning as he sought out treasure and
-    glory in the far-flung corners of the world.\",\r\n            \"CanIgnoreEvents\":
-    false,\r\n            \"CanEscapeCombats\": false,\r\n            \"ExperienceToLvl\":
-    50,\r\n            \"AttackType\": \"Maze\",\r\n            \"AttackAmount\":
-    4,\r\n            \"Damage\": 100,\r\n            \"DamageEvo\": 30,\r\n           
-    \"MaxHealth\": 125,\r\n            \"HealthEvo\": 15,\r\n            \"Speed\":
-    25,\r\n            \"SpeedEvo\": 3\r\n          },\r\n          {\r\n           
-    \"Header\": \"Thief\",\r\n            \"Description\": \"A sly thief, using stealth
-    and deception to pilfer valuable goods and riches from those foolish enough to
-    underestimate her.\",\r\n            \"CanIgnoreEvents\": true,\r\n           
-    \"CanEscapeCombats\": false,\r\n            \"ExperienceToLvl\": 50,\r\n           
-    \"AttackType\": \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n           
-    \"Damage\": 100,\r\n            \"DamageEvo\": 50,\r\n            \"MaxHealth\":
-    75,\r\n            \"HealthEvo\": 5,\r\n            \"Speed\": 90,\r\n           
-    \"SpeedEvo\": 1\r\n          },\r\n          {\r\n            \"Header\": \"Cultist\",\r\n           
+    \"WeeknessType\": \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"MaxHealth\": 100,\r\n            \"HealthEvo\": 10,\r\n            \"Damage\":
+    100,\r\n            \"DamageEvo\": 25,\r\n            \"Speed\": 50,\r\n           
+    \"SpeedEvo\": 6,\r\n            \"Agility\": 15,\r\n            \"AgilityEvo\":
+    2\r\n          },\r\n          {\r\n            \"Header\": \"Brute\",\r\n           
+    \"Description\": \"A brute of a man, relying on strength and brawn rather than
+    wit and cunning as he sought out treasure and glory in the far-flung corners
+    of the world.\",\r\n            \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\":
+    false,\r\n            \"ExperienceToLvl\": 50,\r\n            \"AttackType\":
+    \"Maze\",\r\n            \"WeeknessType\": \"Mage\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 125,\r\n            \"HealthEvo\": 15,\r\n           
+    \"Damage\": 100,\r\n            \"DamageEvo\": 30,\r\n            \"Speed\":
+    25,\r\n            \"SpeedEvo\": 3,\r\n            \"Agility\": 5,\r\n           
+    \"AgilityEvo\": 1\r\n          },\r\n          {\r\n            \"Header\": \"Thief\",\r\n           
+    \"Description\": \"A sly thief, using stealth and deception to pilfer valuable
+    goods and riches from those foolish enough to underestimate her.\",\r\n           
+    \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": false,\r\n           
+    \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Dagger\",\r\n           
+    \"WeeknessType\": \"Maze\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\":
+    100,\r\n            \"DamageEvo\": 50,\r\n            \"Speed\": 85,\r\n           
+    \"SpeedEvo\": 1,\r\n            \"Agility\": 25,\r\n            \"AgilityEvo\":
+    3\r\n          },\r\n          {\r\n            \"Header\": \"Cultist\",\r\n           
     \"Description\": \"A devout cultist, seeking out forbidden knowledge and ancient
     relics in the hopes of summoning powerful deities and unlocking the secrets of
     the universe.\",\r\n            \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\":
     true,\r\n            \"ExperienceToLvl\": 50,\r\n            \"AttackType\":
-    \"Magic\",\r\n            \"AttackAmount\": 4,\r\n            \"Damage\": 100,\r\n           
-    \"DamageEvo\": 15,\r\n            \"MaxHealth\": 80,\r\n            \"HealthEvo\":
-    8,\r\n            \"Speed\": 55,\r\n            \"SpeedEvo\": 7\r\n         
-    }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"051ddd3d-d3fb-42c8-8c18-965400182e73\"\r\n    },\r\n    \"rs\":
-    {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
-    null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
-    \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious creature, with
-    sharp teeth and razor-like claws to defend itself against larger predators.\",\r\n           
-    \"Type\": \"Combat\",\r\n            \"MinFloor\": 0,\r\n            \"AttackType\":
-    \"Beast\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
+    \"Magic\",\r\n            \"WeeknessType\": \"Beast\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 80,\r\n            \"HealthEvo\": 8,\r\n           
+    \"Damage\": 100,\r\n            \"DamageEvo\": 15,\r\n            \"Speed\":
+    55,\r\n            \"SpeedEvo\": 7,\r\n            \"Agility\": 20,\r\n           
+    \"AgilityEvo\": 1\r\n          },\r\n          {\r\n            \"Header\": \"Felin\",\r\n           
+    \"Description\": \"The warrior is a fierce and agile fighter, their feline features
+    giving them a deadly grace and speed in battle as they prowled through the battlefield.\",\r\n           
+    \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": false,\r\n           
+    \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Beast\",\r\n           
+    \"WeeknessType\": \"Sword\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"MaxHealth\": 90,\r\n            \"HealthEvo\": 9,\r\n            \"Damage\":
+    90,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 100,\r\n           
+    \"SpeedEvo\": 50,\r\n            \"Agility\": 33,\r\n            \"AgilityEvo\":
+    5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"e539397b-38be-4342-aacf-86fc71e12f99\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
+    {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
+    creature, with sharp teeth and razor-like claws to defend itself against larger
+    predators.\",\r\n            \"Type\": \"Combat\",\r\n            \"MinFloor\":
+    1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    \"Sword\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
     15,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 70,\r\n           
     \"DamageEvo\": 15,\r\n            \"Speed\": 50,\r\n            \"SpeedEvo\":
-    4,\r\n            \"ExperienceOnKill\": 10,\r\n            \"BlueCrystalsOnKill\":
-    10,\r\n            \"GoldCoinsOnKill\": 3\r\n          },\r\n          {\r\n           
-    \"Header\": \"Dog\",\r\n            \"Description\": \"A dangerous beast, its
-    teeth bared and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
-    \"Type\": \"Combat\",\r\n            \"Location\": \"Village\",\r\n           
-    \"MinFloor\": 0,\r\n            \"AttackType\": \"Beast\",\r\n            \"AttackAmount\":
+    4,\r\n            \"Agility\": 11,\r\n            \"AgilityEvo\": 0,\r\n           
+    \"ExperienceOnKill\": 10,\r\n            \"BlueCrystalsOnKill\": 10,\r\n           
+    \"GoldCoinsOnKill\": 3\r\n          },\r\n          {\r\n            \"Header\":
+    \"Dog\",\r\n            \"Description\": \"A dangerous beast, its teeth bared
+    and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Beast\",\r\n            \"WeeknessType\": \"Sword\",\r\n            \"AttackAmount\":
     3,\r\n            \"MaxHealth\": 35,\r\n            \"HealthEvo\": 15,\r\n           
     \"Damage\": 70,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 70,\r\n           
-    \"SpeedEvo\": 6,\r\n            \"ExperienceOnKill\": 13,\r\n            \"BlueCrystalsOnKill\":
+    \"SpeedEvo\": 6,\r\n            \"Agility\": 11,\r\n            \"AgilityEvo\":
+    0,\r\n            \"ExperienceOnKill\": 13,\r\n            \"BlueCrystalsOnKill\":
     20,\r\n            \"GoldCoinsOnKill\": 2\r\n          },\r\n          {\r\n           
     \"Header\": \"Bandit\",\r\n            \"Description\": \"A ruthless thief, preying
     on the weak and vulnerable as he roamed the land in search of plunder and riches.\",\r\n           
-    \"Type\": \"Combat\",\r\n            \"MinFloor\": 0,\r\n            \"AttackType\":
-    \"Dagger\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
-    45,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 70,\r\n           
-    \"DamageEvo\": 10,\r\n            \"Speed\": 30,\r\n            \"SpeedEvo\":
-    5,\r\n            \"ExperienceOnKill\": 16,\r\n            \"BlueCrystalsOnKill\":
+    \"Type\": \"Combat\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Dagger\",\r\n            \"WeeknessType\": \"Maze\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 45,\r\n            \"HealthEvo\": 5,\r\n           
+    \"Damage\": 70,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\": 30,\r\n           
+    \"SpeedEvo\": 5,\r\n            \"Agility\": 23,\r\n            \"AgilityEvo\":
+    3,\r\n            \"ExperienceOnKill\": 16,\r\n            \"BlueCrystalsOnKill\":
     20,\r\n            \"GoldCoinsOnKill\": 5\r\n          },\r\n          {\r\n           
-    \"Header\": \"Boss0\",\r\n            \"Description\": \"---\",\r\n           
-    \"Type\": \"Boss\",\r\n            \"Location\": \"Village\",\r\n           
-    \"MinFloor\": 0,\r\n            \"AttackType\": \"Beast\",\r\n            \"AttackAmount\":
-    4,\r\n            \"MaxHealth\": 55,\r\n            \"HealthEvo\": 3,\r\n           
-    \"Damage\": 100,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\":
-    80,\r\n            \"SpeedEvo\": 0,\r\n            \"ExperienceOnKill\": 33,\r\n           
-    \"BlueCrystalsOnKill\": 25,\r\n            \"GoldCoinsOnKill\": 10\r\n         
-    },\r\n          {\r\n            \"Header\": \"Boss1\",\r\n            \"Description\":
-    \"---\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\": \"Village\",\r\n           
-    \"MinFloor\": 0,\r\n            \"AttackType\": \"Beast\",\r\n            \"AttackAmount\":
-    4,\r\n            \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n           
-    \"Damage\": 80,\r\n            \"DamageEvo\": 3,\r\n            \"Speed\": 10,\r\n           
-    \"SpeedEvo\": 0,\r\n            \"ExperienceOnKill\": 33,\r\n            \"BlueCrystalsOnKill\":
-    10,\r\n            \"GoldCoinsOnKill\": 15\r\n          },\r\n          {\r\n           
-    \"Header\": \"Boss2\",\r\n            \"Description\": \"---\",\r\n           
-    \"Type\": \"Boss\",\r\n            \"Location\": \"Village\",\r\n           
-    \"MinFloor\": 0,\r\n            \"AttackType\": \"Dagger\",\r\n            \"AttackAmount\":
-    4,\r\n            \"MaxHealth\": 40,\r\n            \"HealthEvo\": 6,\r\n           
-    \"Damage\": 110,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\":
-    60,\r\n            \"SpeedEvo\": 0,\r\n            \"ExperienceOnKill\": 33,\r\n           
-    \"BlueCrystalsOnKill\": 38,\r\n            \"GoldCoinsOnKill\": 9\r\n         
-    },\r\n          {\r\n            \"Header\": \"LocationBoss0\",\r\n           
-    \"Description\": \"---\",\r\n            \"Type\": \"LocationBoss\",\r\n           
-    \"Location\": \"Village\",\r\n            \"MinFloor\": 0,\r\n            \"AttackType\":
-    \"Sword\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
-    100,\r\n            \"HealthEvo\": 20,\r\n            \"Damage\": 100,\r\n           
+    \"Header\": \"Void\",\r\n            \"Description\": \"The void is a monstrous
+    creature, twisted and corrupted by dark forces.\",\r\n            \"Type\": \"Boss\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    \"Sword\",\r\n            \"AttackAmount\": 1,\r\n            \"MaxHealth\":
+    333,\r\n            \"HealthEvo\": 0,\r\n            \"Damage\": 10,\r\n           
+    \"DamageEvo\": 1,\r\n            \"Speed\": 0,\r\n            \"SpeedEvo\": 0,\r\n           
+    \"Agility\": 11,\r\n            \"AgilityEvo\": 0,\r\n            \"ExperienceOnKill\":
+    33,\r\n            \"BlueCrystalsOnKill\": 250,\r\n            \"GoldCoinsOnKill\":
+    10\r\n          },\r\n          {\r\n            \"Header\": \"Errant\",\r\n           
+    \"Description\": \"The errant begged for alms and preyed on the pity of others,
+    using it as a tool to manipulate and deceive those around him.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"Location\": \"Village\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeeknessType\":
+    \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    15,\r\n            \"HealthEvo\": 13,\r\n            \"Damage\": 110,\r\n           
+    \"DamageEvo\": 10,\r\n            \"Speed\": 60,\r\n            \"SpeedEvo\":
+    4,\r\n            \"Agility\": 13,\r\n            \"AgilityEvo\": 0,\r\n           
+    \"ExperienceOnKill\": 11,\r\n            \"BlueCrystalsOnKill\": 7,\r\n           
+    \"GoldCoinsOnKill\": 5\r\n          },\r\n          {\r\n            \"Header\":
+    \"Butcher\",\r\n            \"Description\": \"The butcher is a dirt-covered
+    and corrupted figure, wielding his bloody cleaver with ease as he hacked apart
+    the flesh of his victims.\",\r\n            \"Type\": \"Combat\",\r\n           
+    \"Location\": \"Village\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Maze\",\r\n            \"WeeknessType\": \"Magic\",\r\n            \"AttackAmount\":
+    3,\r\n            \"MaxHealth\": 32,\r\n            \"HealthEvo\": 20,\r\n           
+    \"Damage\": 120,\r\n            \"DamageEvo\": 14,\r\n            \"Speed\":
+    15,\r\n            \"SpeedEvo\": 3,\r\n            \"Agility\": 0,\r\n           
+    \"AgilityEvo\": 0,\r\n            \"ExperienceOnKill\": 17,\r\n            \"BlueCrystalsOnKill\":
+    25,\r\n            \"GoldCoinsOnKill\": 9\r\n          },\r\n          {\r\n           
+    \"Header\": \"Thief\",\r\n            \"Description\": \"The thief is a fast
+    and nimble figure, slipping through the shadows and darting through the streets.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"Location\": \"Village\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeeknessType\":
+    \"Maze\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\": 28,\r\n           
+    \"HealthEvo\": 10,\r\n            \"Damage\": 100,\r\n            \"DamageEvo\":
+    5,\r\n            \"Speed\": 98,\r\n            \"SpeedEvo\": 0,\r\n           
+    \"Agility\": 23,\r\n            \"AgilityEvo\": 1,\r\n            \"ExperienceOnKill\":
+    15,\r\n            \"BlueCrystalsOnKill\": 30,\r\n            \"GoldCoinsOnKill\":
+    6\r\n          },\r\n          {\r\n            \"Header\": \"CorruptGuard\",\r\n           
+    \"Description\": \"The guard is a corrupt and ruthless figure, using his position
+    of authority to extort and abuse those under his watch.\",\r\n            \"Type\":
+    \"Boss\",\r\n            \"Location\": \"Village\",\r\n            \"MinFloor\":
+    1,\r\n            \"AttackType\": \"Maze\",\r\n            \"WeeknessType\":
+    \"Magic\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    75,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 80,\r\n           
+    \"DamageEvo\": 3,\r\n            \"Speed\": 10,\r\n            \"SpeedEvo\":
+    0,\r\n            \"Agility\": 0,\r\n            \"AgilityEvo\": 0,\r\n           
+    \"ExperienceOnKill\": 30,\r\n            \"BlueCrystalsOnKill\": 10,\r\n           
+    \"GoldCoinsOnKill\": 15\r\n          },\r\n          {\r\n            \"Header\":
+    \"Murder\",\r\n            \"Description\": \"The murderer was a ruthless killer,
+    driven by a cold and unfeeling desire to take lives.\",\r\n            \"Type\":
+    \"Boss\",\r\n            \"Location\": \"Village\",\r\n            \"MinFloor\":
+    1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeeknessType\":
+    \"Maze\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\": 40,\r\n           
+    \"HealthEvo\": 6,\r\n            \"Damage\": 110,\r\n            \"DamageEvo\":
+    10,\r\n            \"Speed\": 60,\r\n            \"SpeedEvo\": 0,\r\n           
+    \"Agility\": 23,\r\n            \"AgilityEvo\": 1,\r\n            \"ExperienceOnKill\":
+    40,\r\n            \"BlueCrystalsOnKill\": 38,\r\n            \"GoldCoinsOnKill\":
+    9\r\n          },\r\n          {\r\n            \"Header\": \"Contrabandist\",\r\n           
+    \"Description\": \"The sword contrabandist is a shadowy figure, trafficking in
+    illegal weapons and selling them to the highest bidder.\",\r\n            \"Type\":
+    \"LocationBoss\",\r\n            \"Location\": \"Village\",\r\n            \"MinFloor\":
+    1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeeknessType\":
+    \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    100,\r\n            \"HealthEvo\": 20,\r\n            \"Damage\": 140,\r\n           
     \"DamageEvo\": 20,\r\n            \"Speed\": 0,\r\n            \"SpeedEvo\":
+    0,\r\n            \"Agility\": 13,\r\n            \"AgilityEvo\": 1,\r\n           
+    \"ExperienceOnKill\": 0,\r\n            \"BlueCrystalsOnKill\": 150,\r\n           
+    \"GoldCoinsOnKill\": 50\r\n          },\r\n          {\r\n            \"Header\":
+    \"Cultist\",\r\n            \"Description\": \"The cultist is a corrupted and
+    fanatical devotee, willing to go to any lengths to achieve their twisted goals.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"Location\": \"Sewers\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Magic\",\r\n            \"WeeknessType\":
+    \"Beast\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    39,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 100,\r\n           
+    \"DamageEvo\": 10,\r\n            \"Speed\": 46,\r\n            \"SpeedEvo\":
+    2,\r\n            \"Agility\": 5,\r\n            \"AgilityEvo\": 2,\r\n           
+    \"ExperienceOnKill\": 14,\r\n            \"BlueCrystalsOnKill\": 15,\r\n           
+    \"GoldCoinsOnKill\": 10\r\n          },\r\n          {\r\n            \"Header\":
+    \"AmanitaBoy\",\r\n            \"Description\": \"A legendary hero from another
+    world. Under other circustances he could have been my friend.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"Location\": \"Sewers\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeeknessType\":
+    \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    27,\r\n            \"HealthEvo\": 13,\r\n            \"Damage\": 90,\r\n           
+    \"DamageEvo\": 15,\r\n            \"Speed\": 55,\r\n            \"SpeedEvo\":
+    1,\r\n            \"Agility\": 13,\r\n            \"AgilityEvo\": 1,\r\n           
+    \"ExperienceOnKill\": 14,\r\n            \"BlueCrystalsOnKill\": 17,\r\n           
+    \"GoldCoinsOnKill\": 6\r\n          },\r\n          {\r\n            \"Header\":
+    \"Undead\",\r\n            \"Description\": \"The undead is a disgusting and
+    repulsive creature, its rotting flesh a testament to the curse of undeath.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"Location\": \"Sewers\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeeknessType\":
+    \"Maze\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\": 36,\r\n           
+    \"HealthEvo\": 2,\r\n            \"Damage\": 110,\r\n            \"DamageEvo\":
+    5,\r\n            \"Speed\": 78,\r\n            \"SpeedEvo\": 0,\r\n           
+    \"Agility\": 23,\r\n            \"AgilityEvo\": 1,\r\n            \"ExperienceOnKill\":
+    19,\r\n            \"BlueCrystalsOnKill\": 2,\r\n            \"GoldCoinsOnKill\":
+    2\r\n          },\r\n          {\r\n            \"Header\": \"ForestNightmare\",\r\n           
+    \"Description\": \"The forest nightmare is a awfull creature that creeps along
+    the ground while spreads its tendrils to consume everything in its path.\",\r\n           
+    \"Type\": \"Boss\",\r\n            \"Location\": \"Sewers\",\r\n            \"MinFloor\":
+    1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    \"Sword\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
+    70,\r\n            \"HealthEvo\": 20,\r\n            \"Damage\": 90,\r\n           
+    \"DamageEvo\": 11,\r\n            \"Speed\": 30,\r\n            \"SpeedEvo\":
+    0,\r\n            \"Agility\": 11,\r\n            \"AgilityEvo\": 0,\r\n           
+    \"ExperienceOnKill\": 25,\r\n            \"BlueCrystalsOnKill\": 40,\r\n           
+    \"GoldCoinsOnKill\": 10\r\n          },\r\n          {\r\n            \"Header\":
+    \"DustDoctor\",\r\n            \"Description\": \"The doctor is a dark and sinister
+    figure, adept in the use of poison and other nefarious means to eliminate his
+    enemies.\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\": \"Sewers\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Magic\",\r\n            \"WeeknessType\":
+    \"Beast\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    55,\r\n            \"HealthEvo\": 7,\r\n            \"Damage\": 110,\r\n           
+    \"DamageEvo\": 7,\r\n            \"Speed\": 80,\r\n            \"SpeedEvo\":
+    0,\r\n            \"Agility\": 5,\r\n            \"AgilityEvo\": 2,\r\n           
+    \"ExperienceOnKill\": 41,\r\n            \"BlueCrystalsOnKill\": 0,\r\n           
+    \"GoldCoinsOnKill\": 0\r\n          },\r\n          {\r\n            \"Header\":
+    \"InfectedKnight\",\r\n            \"Description\": \"The knight is a fungus-infested
+    warrior, his once-noble armor now overrun with the grotesque growths.\",\r\n           
+    \"Type\": \"LocationBoss\",\r\n            \"Location\": \"Sewers\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    \"Sword\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
+    135,\r\n            \"HealthEvo\": 10,\r\n            \"Damage\": 120,\r\n           
+    \"DamageEvo\": 10,\r\n            \"Speed\": 50,\r\n            \"SpeedEvo\":
+    0,\r\n            \"Agility\": 11,\r\n            \"AgilityEvo\": 0,\r\n           
+    \"ExperienceOnKill\": 0,\r\n            \"BlueCrystalsOnKill\": 150,\r\n           
+    \"GoldCoinsOnKill\": 50\r\n          },\r\n          {\r\n            \"Header\":
+    \"Aristocrat\",\r\n            \"Description\": \"The aristocrat is a powerful
+    figure, wielding magic with grace and precision, they command respect and fear
+    from those around them.\",\r\n            \"Type\": \"Combat\",\r\n           
+    \"Location\": \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Magic\",\r\n            \"WeeknessType\": \"Beast\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 29,\r\n            \"HealthEvo\": 10,\r\n           
+    \"Damage\": 100,\r\n            \"DamageEvo\": 20,\r\n            \"Speed\":
+    60,\r\n            \"SpeedEvo\": 3,\r\n            \"Agility\": 5,\r\n           
+    \"AgilityEvo\": 2,\r\n            \"ExperienceOnKill\": 20,\r\n            \"BlueCrystalsOnKill\":
+    10,\r\n            \"GoldCoinsOnKill\": 12\r\n          },\r\n          {\r\n           
+    \"Header\": \"EastWarrior\",\r\n            \"Description\": \"The east warrior
+    is a stoic and stern figure, clad in heavy armor and armed with a weapon of his
+    choice.\",\r\n            \"Type\": \"Combat\",\r\n            \"Location\":
+    \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Sword\",\r\n            \"WeeknessType\": \"Dagger\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 30,\r\n            \"HealthEvo\": 7,\r\n           
+    \"Damage\": 80,\r\n            \"DamageEvo\": 20,\r\n            \"Speed\": 40,\r\n           
+    \"SpeedEvo\": 8,\r\n            \"Agility\": 15,\r\n            \"AgilityEvo\":
+    0,\r\n            \"ExperienceOnKill\": 10,\r\n            \"BlueCrystalsOnKill\":
+    9,\r\n            \"GoldCoinsOnKill\": 5\r\n          },\r\n          {\r\n           
+    \"Header\": \"Thug\",\r\n            \"Description\": \"The thug is a brute,
+    relying on raw strength and violence to intimidate and overpower their victims,
+    they are a menace to society.\",\r\n            \"Type\": \"Combat\",\r\n           
+    \"Location\": \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Maze\",\r\n            \"WeeknessType\": \"Magic\",\r\n            \"AttackAmount\":
+    3,\r\n            \"MaxHealth\": 42,\r\n            \"HealthEvo\": 20,\r\n           
+    \"Damage\": 135,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\":
+    7,\r\n            \"SpeedEvo\": 10,\r\n            \"Agility\": 0,\r\n           
+    \"AgilityEvo\": 0,\r\n            \"ExperienceOnKill\": 7,\r\n            \"BlueCrystalsOnKill\":
+    25,\r\n            \"GoldCoinsOnKill\": 19\r\n          },\r\n          {\r\n           
+    \"Header\": \"Shadow\",\r\n            \"Description\": \"This being is a shadow
+    among shadows, slipping into and out of places unseen, moving with stealth and
+    precision.\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
+    \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Dagger\",\r\n            \"WeeknessType\": \"Maze\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 85,\r\n            \"HealthEvo\": 8,\r\n           
+    \"Damage\": 90,\r\n            \"DamageEvo\": 5,\r\n            \"Speed\": 100,\r\n           
+    \"SpeedEvo\": 0,\r\n            \"Agility\": 23,\r\n            \"AgilityEvo\":
+    1,\r\n            \"ExperienceOnKill\": 33,\r\n            \"BlueCrystalsOnKill\":
+    16,\r\n            \"GoldCoinsOnKill\": 7\r\n          },\r\n          {\r\n           
+    \"Header\": \"Duelist\",\r\n            \"Description\": \"The duelist is a proud
+    and skilled warrior, honing their craft for years to become a master of their
+    chosen weapon.\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
+    \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Sword\",\r\n            \"WeeknessType\": \"Dagger\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 135,\r\n            \"HealthEvo\": 5,\r\n           
+    \"Damage\": 100,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\":
+    43,\r\n            \"SpeedEvo\": 0,\r\n            \"Agility\": 15,\r\n           
+    \"AgilityEvo\": 0,\r\n            \"ExperienceOnKill\": 33,\r\n            \"BlueCrystalsOnKill\":
+    17,\r\n            \"GoldCoinsOnKill\": 20\r\n          },\r\n          {\r\n           
+    \"Header\": \"CorruptedHero\",\r\n            \"Description\": \"A corrupted
+    and fallen figure, once respected and admired, now using their powers and abilities
+    for their own gain and self-interest.\",\r\n            \"Type\": \"LocationBoss\",\r\n           
+    \"Location\": \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Maze\",\r\n            \"WeeknessType\": \"Magic\",\r\n            \"AttackAmount\":
+    3,\r\n            \"MaxHealth\": 175,\r\n            \"HealthEvo\": 5,\r\n           
+    \"Damage\": 110,\r\n            \"DamageEvo\": 5,\r\n            \"Speed\": 10,\r\n           
+    \"SpeedEvo\": 0,\r\n            \"Agility\": 1,\r\n            \"AgilityEvo\":
     0,\r\n            \"ExperienceOnKill\": 0,\r\n            \"BlueCrystalsOnKill\":
     120,\r\n            \"GoldCoinsOnKill\": 50\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"238c5420-989e-47ae-a950-b54bddd826a7\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"1ec7be89-d9ab-4cde-8f3b-284ba4c28de4\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
@@ -189,7 +367,7 @@ MonoBehaviour:
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
     3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"6d0b1cd6-536c-4e61-8b4d-4aaa96368bc3\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"c0bbe8d3-b669-41ad-82d6-3c9d4a73433a\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
@@ -199,78 +377,140 @@ MonoBehaviour:
     \"SuccedMaxAmount\": 0,\r\n            \"FailHeader\": \"Insta Death\",\r\n           
     \"FailKind\": \"Health\",\r\n            \"FailAmount\": -100,\r\n           
     \"DeathMotive\": \"God\"\r\n          },\r\n          {\r\n            \"Active\":
-    true,\r\n            \"Concept\": \"Event_Corpse\",\r\n            \"Header\":
-    \"You see a corpse liying on the ground.\",\r\n            \"Action\": \"Loot
-    corpse\",\r\n            \"Chance\": 40,\r\n            \"SuccedHeader\": \"You
-    find some coins in the dead's pocked.\",\r\n            \"SuccedKind\": \"Gold
-    Coin\",\r\n            \"SuccedMinAmount\": 1,\r\n            \"SuccedMaxAmount\":
+    true,\r\n            \"Concept\": \"Event_Unknown\",\r\n            \"Header\":
+    \"???\",\r\n            \"Action\": \"?\",\r\n            \"Chance\": 50,\r\n           
+    \"SuccedHeader\": \":)\",\r\n            \"SuccedKind\": \"Blue Crystal\",\r\n           
+    \"SuccedMinAmount\": 0,\r\n            \"SuccedMaxAmount\": 999,\r\n           
+    \"FailHeader\": \":(\",\r\n            \"FailKind\": \"Health\",\r\n           
+    \"FailAmount\": -100,\r\n            \"DeathMotive\": \"?\"\r\n          },\r\n         
+    {\r\n            \"Active\": true,\r\n            \"Concept\": \"Event_Corpse\",\r\n           
+    \"Header\": \"You see a corpse lying on the ground.\",\r\n            \"Action\":
+    \"Loot corpse\",\r\n            \"Chance\": 40,\r\n            \"SuccedHeader\":
+    \"You find some coins in the dead's pocked.\",\r\n            \"SuccedKind\":
+    \"Gold Coin\",\r\n            \"SuccedMinAmount\": 1,\r\n            \"SuccedMaxAmount\":
     10,\r\n            \"FailHeader\": \"The sleeping Undead awakes and in a quick
     move scratches you! \",\r\n            \"FailKind\": \"Health\",\r\n           
     \"FailAmount\": -10,\r\n            \"DeathMotive\": \"Undead\"\r\n         
+    },\r\n          {\r\n            \"Concept\": \"Event_Beggar\",\r\n           
+    \"Header\": \"A pity beggar asks you for some coins.\",\r\n            \"Action\":
+    \"Give coins\",\r\n            \"Chance\": 30,\r\n            \"SuccedHeader\":
+    \"The beggar smiles and banishes, in the floor you see something.\",\r\n           
+    \"SuccedKind\": \"Blue Crystal\",\r\n            \"SuccedMinAmount\": 30,\r\n           
+    \"SuccedMaxAmount\": 50,\r\n            \"FailHeader\": \"You give the beggar
+    some coins.\",\r\n            \"FailKind\": \"Gold Coin\",\r\n            \"FailAmount\":
+    -3\r\n          },\r\n          {\r\n            \"Active\": true,\r\n           
+    \"Concept\": \"Event_GlowingFountain\",\r\n            \"Location\": \"Village\",\r\n           
+    \"Header\": \"You see a fountain with glowing water.\",\r\n            \"Action\":
+    \"Drink water\",\r\n            \"Chance\": 50,\r\n            \"SuccedHeader\":
+    \"You feel your body grow with energy.\",\r\n            \"SuccedKind\": \"Health\",\r\n           
+    \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 25,\r\n           
+    \"FailHeader\": \"The water taster dirty...\",\r\n            \"FailKind\": \"Health\",\r\n           
+    \"FailAmount\": -15,\r\n            \"DeathMotive\": \"Intoxication\"\r\n         
     },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
-    \"Event_GlowingFountain\",\r\n            \"Header\": \"You see a fountain with
-    glowing water.\",\r\n            \"Action\": \"Drink water\",\r\n           
-    \"Chance\": 50,\r\n            \"SuccedHeader\": \"You feel your body grow with
-    energy.\",\r\n            \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\":
-    15,\r\n            \"SuccedMaxAmount\": 25,\r\n            \"FailHeader\": \"The
-    water taster dirty...\",\r\n            \"FailKind\": \"Health\",\r\n           
-    \"FailAmount\": -15,\r\n            \"DeathMotive\": \"Poisoning\"\r\n         
-    },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
-    \"Event_Unknown\",\r\n            \"Header\": \"???\",\r\n            \"Action\":
-    \"?\",\r\n            \"Chance\": 50,\r\n            \"SuccedHeader\": \":)\",\r\n           
-    \"SuccedKind\": \"Blue Crystal\",\r\n            \"SuccedMinAmount\": 0,\r\n           
-    \"SuccedMaxAmount\": 999,\r\n            \"FailHeader\": \":(\",\r\n           
-    \"FailKind\": \"Health\",\r\n            \"FailAmount\": -99,\r\n           
-    \"DeathMotive\": \"?\"\r\n          },\r\n          {\r\n            \"Active\":
-    true,\r\n            \"Concept\": \"Event_InjuredDog\",\r\n            \"Location\":
-    \"Village\",\r\n            \"Header\": \"An injured dog approaches to you.\",\r\n           
-    \"Action\": \"Pet the dog\",\r\n            \"Chance\": 55,\r\n            \"SuccedHeader\":
-    \"The dog seems to be gratefull.\",\r\n            \"SuccedKind\": \"Blue Crystal\",\r\n           
+    \"Event_InjuredDog\",\r\n            \"Location\": \"Village\",\r\n           
+    \"Header\": \"An injured dog approaches to you.\",\r\n            \"Action\":
+    \"Pet the dog\",\r\n            \"Chance\": 55,\r\n            \"SuccedHeader\":
+    \"The dog seems to be grateful.\",\r\n            \"SuccedKind\": \"Blue Crystal\",\r\n           
     \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 20,\r\n           
-    \"FailHeader\": \"---\",\r\n            \"FailKind\": \"Gold Coin\",\r\n           
-    \"FailAmount\": -13\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"2262ec19-0f21-432f-aab0-08be5ce85e12\"\r\n   
+    \"FailHeader\": \"The dog tries to bite you, but instead breaks your coin pouch.\",\r\n           
+    \"FailKind\": \"Gold Coin\",\r\n            \"FailAmount\": -13\r\n         
+    },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
+    \"Event_Bubble\",\r\n            \"Location\": \"Sewers\",\r\n            \"Header\":
+    \"You see bubbles coming from a puddle.\",\r\n            \"Action\": \"Investigate\",\r\n           
+    \"Chance\": 30,\r\n            \"SuccedHeader\": \"You find a couple of dirty
+    gold coins.\",\r\n            \"SuccedKind\": \"Gold Coin\",\r\n            \"SuccedMinAmount\":
+    5,\r\n            \"SuccedMaxAmount\": 10,\r\n            \"FailHeader\": \"Your
+    hand gets covered in a very disgusting liquid... It hurts in your wounds.\",\r\n           
+    \"FailKind\": \"Health\",\r\n            \"FailAmount\": -10,\r\n           
+    \"DeathMotive\": \"Infection\"\r\n          },\r\n          {\r\n           
+    \"Active\": true,\r\n            \"Concept\": \"Event_Mushroom\",\r\n           
+    \"Location\": \"Sewers\",\r\n            \"Header\": \"You are starving. You
+    see a very appetizing mushroom growing on the mud.\",\r\n            \"Action\":
+    \"Eat\",\r\n            \"Chance\": 10,\r\n            \"SuccedHeader\": \"Tasty!\",\r\n           
+    \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\": 20,\r\n           
+    \"SuccedMaxAmount\": 30,\r\n            \"FailHeader\": \"A bit spicy, weird
+    taste, repugnant texture... A nauseating sensation invades you.\",\r\n           
+    \"FailKind\": \"Health\",\r\n            \"FailAmount\": -70,\r\n           
+    \"DeathMotive\": \"Parasit Micelle\"\r\n          },\r\n          {\r\n           
+    \"Active\": true,\r\n            \"Concept\": \"Event_Prisioner\",\r\n           
+    \"Location\": \"Dungeons\",\r\n            \"Header\": \"While exploring the
+    dungeons, you hear screams. Someone is being tortured.\",\r\n            \"Action\":
+    \"Help\",\r\n            \"Chance\": 55,\r\n            \"SuccedHeader\": \"In
+    a fast move, you incapacitate the guard and free the man being tortured.\",\r\n           
+    \"SuccedKind\": \"Gold Coin\",\r\n            \"SuccedMinAmount\": 10,\r\n           
+    \"SuccedMaxAmount\": 30,\r\n            \"FailHeader\": \"When trying to help,
+    you get caught. \",\r\n            \"FailKind\": \"Health\",\r\n            \"FailAmount\":
+    -25,\r\n            \"DeathMotive\": \"Torture\"\r\n          },\r\n         
+    {\r\n            \"Active\": true,\r\n            \"Concept\": \"Event_Light\",\r\n           
+    \"Location\": \"Dungeons\",\r\n            \"Header\": \"A floating light sphere
+    appears blocking your path.\",\r\n            \"Action\": \"Touch\",\r\n           
+    \"SuccedHeader\": \"The sphere stops shinning. You feel rejuvenated.\",\r\n           
+    \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\": 30,\r\n           
+    \"SuccedMaxAmount\": 35,\r\n            \"FailHeader\": \"The shining sphere
+    fades, and with it, you feel your pouch loss weight.\",\r\n            \"FailKind\":
+    \"Gold Coin\",\r\n            \"FailAmount\": -5\r\n          }\r\n        ]\r\n     
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"dc14b0b0-3b1c-4a98-8d36-9c19fef5cd93\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AttacksModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
-    {\r\n            \"Header\": \"Pinch\",\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"Damage\": 5,\r\n            \"CooldownTurns\": 0\r\n          },\r\n         
-    {\r\n            \"Header\": \"Swipe\",\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"Damage\": 11,\r\n            \"CooldownTurns\": 1\r\n          },\r\n         
-    {\r\n            \"Header\": \"Punch\",\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"Damage\": 13,\r\n            \"CooldownTurns\": 0\r\n          },\r\n         
-    {\r\n            \"Header\": \"Rush\",\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"Damage\": 13,\r\n            \"CooldownTurns\": 2\r\n          },\r\n         
-    {\r\n            \"Header\": \"DobleSlash\",\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"Damage\": 30,\r\n            \"CooldownTurns\": 4\r\n          },\r\n         
-    {\r\n            \"Header\": \"DaggerAttack0\",\r\n            \"AttackType\":
-    \"Dagger\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\": 0\r\n         
-    },\r\n          {\r\n            \"Header\": \"DaggerAttack1\",\r\n           
+    {\r\n            \"Header\": \"Perforation\",\r\n            \"AttackType\":
+    \"Sword\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\": 0\r\n         
+    },\r\n          {\r\n            \"Header\": \"Swipe\",\r\n            \"AttackType\":
+    \"Sword\",\r\n            \"Damage\": 11,\r\n            \"CooldownTurns\": 1\r\n         
+    },\r\n          {\r\n            \"Header\": \"BreakPoint\",\r\n            \"AttackType\":
+    \"Sword\",\r\n            \"Damage\": 13,\r\n            \"CooldownTurns\": 1\r\n         
+    },\r\n          {\r\n            \"Header\": \"Rush\",\r\n            \"AttackType\":
+    \"Sword\",\r\n            \"Damage\": 17,\r\n            \"CooldownTurns\": 2\r\n         
+    },\r\n          {\r\n            \"Header\": \"DoubleSlash\",\r\n           
+    \"AttackType\": \"Sword\",\r\n            \"Damage\": 25,\r\n            \"CooldownTurns\":
+    4\r\n          },\r\n          {\r\n            \"Header\": \"Faint\",\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 10,\r\n            \"CooldownTurns\":
+    0\r\n          },\r\n          {\r\n            \"Header\": \"QuickSwipe\",\r\n           
     \"AttackType\": \"Dagger\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
-    1\r\n          },\r\n          {\r\n            \"Header\": \"DaggerAttack2\",\r\n           
+    1\r\n          },\r\n          {\r\n            \"Header\": \"LowerHit\",\r\n           
     \"AttackType\": \"Dagger\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
-    1\r\n          },\r\n          {\r\n            \"Header\": \"DaggerAttack3\",\r\n           
-    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
-    4\r\n          },\r\n          {\r\n            \"Header\": \"DaggerAttack4\",\r\n           
+    1\r\n          },\r\n          {\r\n            \"Header\": \"Crossblade\",\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 22,\r\n            \"CooldownTurns\":
+    4\r\n          },\r\n          {\r\n            \"Header\": \"DaggerTrick\",\r\n           
     \"AttackType\": \"Dagger\",\r\n            \"Damage\": 35,\r\n            \"CooldownTurns\":
-    8\r\n          },\r\n          {\r\n            \"Header\": \"BeastAttack0\",\r\n           
+    8\r\n          },\r\n          {\r\n            \"Header\": \"Slap\",\r\n           
+    \"AttackType\": \"Maze\",\r\n            \"Damage\": 10,\r\n            \"CooldownTurns\":
+    1\r\n          },\r\n          {\r\n            \"Header\": \"Heavy Kick\",\r\n           
+    \"AttackType\": \"Maze\",\r\n            \"Damage\": 12,\r\n            \"CooldownTurns\":
+    4\r\n          },\r\n          {\r\n            \"Header\": \"Crunch\",\r\n           
+    \"AttackType\": \"Maze\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
+    5\r\n          },\r\n          {\r\n            \"Header\": \"Trauma\",\r\n           
+    \"AttackType\": \"Maze\",\r\n            \"Damage\": 20,\r\n            \"CooldownTurns\":
+    6\r\n          },\r\n          {\r\n            \"Header\": \"MazeBlast\",\r\n           
+    \"AttackType\": \"Maze\",\r\n            \"Damage\": 40,\r\n            \"CooldownTurns\":
+    9\r\n          },\r\n          {\r\n            \"Header\": \"PoisonRoot\",\r\n           
+    \"AttackType\": \"Magic\",\r\n            \"Damage\": 3,\r\n            \"CooldownTurns\":
+    0\r\n          },\r\n          {\r\n            \"Header\": \"Spark\",\r\n           
+    \"AttackType\": \"Magic\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\":
+    1\r\n          },\r\n          {\r\n            \"Header\": \"Corruption\",\r\n           
+    \"AttackType\": \"Magic\",\r\n            \"Damage\": 19,\r\n            \"CooldownTurns\":
+    2\r\n          },\r\n          {\r\n            \"Header\": \"Sacrifice\",\r\n           
+    \"AttackType\": \"Magic\",\r\n            \"Damage\": 22,\r\n            \"CooldownTurns\":
+    2\r\n          },\r\n          {\r\n            \"Header\": \"DarkOrb\",\r\n           
+    \"AttackType\": \"Magic\",\r\n            \"Damage\": 25,\r\n            \"CooldownTurns\":
+    3\r\n          },\r\n          {\r\n            \"Header\": \"Horn\",\r\n           
     \"AttackType\": \"Beast\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\":
     1\r\n          },\r\n          {\r\n            \"Header\": \"Bite\",\r\n           
-    \"AttackType\": \"Beast\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\":
-    1\r\n          },\r\n          {\r\n            \"Header\": \"BeastAttack1\",\r\n           
     \"AttackType\": \"Beast\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
-    3\r\n          },\r\n          {\r\n            \"Header\": \"Scratch\",\r\n           
-    \"AttackType\": \"Beast\",\r\n            \"Damage\": 10,\r\n            \"CooldownTurns\":
     2\r\n          },\r\n          {\r\n            \"Header\": \"Charge\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
+    4\r\n          },\r\n          {\r\n            \"Header\": \"Scratch\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 10,\r\n            \"CooldownTurns\":
+    3\r\n          },\r\n          {\r\n            \"Header\": \"Stampede\",\r\n           
     \"AttackType\": \"Beast\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
-    4\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"c5a7f93e-6655-4552-9efb-d8692636ed16\"\r\n   
+    5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f550b0f7-09b6-48dc-a66a-7be4861b63eb\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e3e08c01-7db9-4ec4-98f3-42485a350aa1\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"23c9b859-1b5d-48c9-926e-834beff5f829\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -291,7 +531,7 @@ MonoBehaviour:
     \"Blue Cristal\",\r\n            \"Price\": \"Gold Coin\",\r\n            \"PriceAmount\":
     1,\r\n            \"Reward\": \"Blue Crystal\",\r\n            \"RewardAmount\":
     100\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"64402b60-fed1-466e-a95a-8625140381f0\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"02ec937d-5c12-4191-9144-9dad3b944858\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": 0,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -331,97 +571,275 @@ MonoBehaviour:
     \"Header\": \"Clear 100 rooms\",\r\n            \"Amount\": 100,\r\n           
     \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 4000\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"4a2d2903-e014-408e-a0f0-ebb822a7b901\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"ba64f1d6-9eb7-4833-a9e8-c1f3393f8a8e\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
     the unknown reaches of the world in search of treasure and the thrill of discovery.\",\r\n           
     \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": true,\r\n           
     \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"AttackAmount\": 4,\r\n            \"Damage\": 100,\r\n            \"DamageEvo\":
-    25,\r\n            \"MaxHealth\": 100,\r\n            \"HealthEvo\": 10,\r\n           
-    \"Speed\": 50,\r\n            \"SpeedEvo\": 6\r\n          },\r\n          {\r\n           
-    \"Header\": \"Brute\",\r\n            \"Description\": \"A brute of a man, relying
-    on strength and brawn rather than wit and cunning as he sought out treasure and
-    glory in the far-flung corners of the world.\",\r\n            \"CanIgnoreEvents\":
-    false,\r\n            \"CanEscapeCombats\": false,\r\n            \"ExperienceToLvl\":
-    50,\r\n            \"AttackType\": \"Maze\",\r\n            \"AttackAmount\":
-    4,\r\n            \"Damage\": 100,\r\n            \"DamageEvo\": 30,\r\n           
-    \"MaxHealth\": 125,\r\n            \"HealthEvo\": 15,\r\n            \"Speed\":
-    25,\r\n            \"SpeedEvo\": 3\r\n          },\r\n          {\r\n           
-    \"Header\": \"Thief\",\r\n            \"Description\": \"A sly thief, using stealth
-    and deception to pilfer valuable goods and riches from those foolish enough to
-    underestimate her.\",\r\n            \"CanIgnoreEvents\": true,\r\n           
-    \"CanEscapeCombats\": false,\r\n            \"ExperienceToLvl\": 50,\r\n           
-    \"AttackType\": \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n           
-    \"Damage\": 100,\r\n            \"DamageEvo\": 50,\r\n            \"MaxHealth\":
-    75,\r\n            \"HealthEvo\": 5,\r\n            \"Speed\": 90,\r\n           
-    \"SpeedEvo\": 1\r\n          },\r\n          {\r\n            \"Header\": \"Cultist\",\r\n           
+    \"WeeknessType\": \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"MaxHealth\": 100,\r\n            \"HealthEvo\": 10,\r\n            \"Damage\":
+    100,\r\n            \"DamageEvo\": 25,\r\n            \"Speed\": 50,\r\n           
+    \"SpeedEvo\": 6,\r\n            \"Agility\": 15,\r\n            \"AgilityEvo\":
+    2\r\n          },\r\n          {\r\n            \"Header\": \"Brute\",\r\n           
+    \"Description\": \"A brute of a man, relying on strength and brawn rather than
+    wit and cunning as he sought out treasure and glory in the far-flung corners
+    of the world.\",\r\n            \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\":
+    false,\r\n            \"ExperienceToLvl\": 50,\r\n            \"AttackType\":
+    \"Maze\",\r\n            \"WeeknessType\": \"Mage\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 125,\r\n            \"HealthEvo\": 15,\r\n           
+    \"Damage\": 100,\r\n            \"DamageEvo\": 30,\r\n            \"Speed\":
+    25,\r\n            \"SpeedEvo\": 3,\r\n            \"Agility\": 5,\r\n           
+    \"AgilityEvo\": 1\r\n          },\r\n          {\r\n            \"Header\": \"Thief\",\r\n           
+    \"Description\": \"A sly thief, using stealth and deception to pilfer valuable
+    goods and riches from those foolish enough to underestimate her.\",\r\n           
+    \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": false,\r\n           
+    \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Dagger\",\r\n           
+    \"WeeknessType\": \"Maze\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\":
+    100,\r\n            \"DamageEvo\": 50,\r\n            \"Speed\": 85,\r\n           
+    \"SpeedEvo\": 1,\r\n            \"Agility\": 25,\r\n            \"AgilityEvo\":
+    3\r\n          },\r\n          {\r\n            \"Header\": \"Cultist\",\r\n           
     \"Description\": \"A devout cultist, seeking out forbidden knowledge and ancient
     relics in the hopes of summoning powerful deities and unlocking the secrets of
     the universe.\",\r\n            \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\":
     true,\r\n            \"ExperienceToLvl\": 50,\r\n            \"AttackType\":
-    \"Magic\",\r\n            \"AttackAmount\": 4,\r\n            \"Damage\": 100,\r\n           
-    \"DamageEvo\": 15,\r\n            \"MaxHealth\": 80,\r\n            \"HealthEvo\":
-    8,\r\n            \"Speed\": 55,\r\n            \"SpeedEvo\": 7\r\n         
-    }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"051ddd3d-d3fb-42c8-8c18-965400182e73\"\r\n    },\r\n    \"rs\":
-    {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
-    null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
-    \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious creature, with
-    sharp teeth and razor-like claws to defend itself against larger predators.\",\r\n           
-    \"Type\": \"Combat\",\r\n            \"MinFloor\": 0,\r\n            \"AttackType\":
-    \"Beast\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
+    \"Magic\",\r\n            \"WeeknessType\": \"Beast\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 80,\r\n            \"HealthEvo\": 8,\r\n           
+    \"Damage\": 100,\r\n            \"DamageEvo\": 15,\r\n            \"Speed\":
+    55,\r\n            \"SpeedEvo\": 7,\r\n            \"Agility\": 20,\r\n           
+    \"AgilityEvo\": 1\r\n          },\r\n          {\r\n            \"Header\": \"Felin\",\r\n           
+    \"Description\": \"The warrior is a fierce and agile fighter, their feline features
+    giving them a deadly grace and speed in battle as they prowled through the battlefield.\",\r\n           
+    \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": false,\r\n           
+    \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Beast\",\r\n           
+    \"WeeknessType\": \"Sword\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"MaxHealth\": 90,\r\n            \"HealthEvo\": 9,\r\n            \"Damage\":
+    90,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 100,\r\n           
+    \"SpeedEvo\": 50,\r\n            \"Agility\": 33,\r\n            \"AgilityEvo\":
+    5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"e539397b-38be-4342-aacf-86fc71e12f99\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
+    {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
+    creature, with sharp teeth and razor-like claws to defend itself against larger
+    predators.\",\r\n            \"Type\": \"Combat\",\r\n            \"MinFloor\":
+    1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    \"Sword\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
     15,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 70,\r\n           
     \"DamageEvo\": 15,\r\n            \"Speed\": 50,\r\n            \"SpeedEvo\":
-    4,\r\n            \"ExperienceOnKill\": 10,\r\n            \"BlueCrystalsOnKill\":
-    10,\r\n            \"GoldCoinsOnKill\": 3\r\n          },\r\n          {\r\n           
-    \"Header\": \"Dog\",\r\n            \"Description\": \"A dangerous beast, its
-    teeth bared and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
-    \"Type\": \"Combat\",\r\n            \"Location\": \"Village\",\r\n           
-    \"MinFloor\": 0,\r\n            \"AttackType\": \"Beast\",\r\n            \"AttackAmount\":
+    4,\r\n            \"Agility\": 11,\r\n            \"AgilityEvo\": 0,\r\n           
+    \"ExperienceOnKill\": 10,\r\n            \"BlueCrystalsOnKill\": 10,\r\n           
+    \"GoldCoinsOnKill\": 3\r\n          },\r\n          {\r\n            \"Header\":
+    \"Dog\",\r\n            \"Description\": \"A dangerous beast, its teeth bared
+    and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Beast\",\r\n            \"WeeknessType\": \"Sword\",\r\n            \"AttackAmount\":
     3,\r\n            \"MaxHealth\": 35,\r\n            \"HealthEvo\": 15,\r\n           
     \"Damage\": 70,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 70,\r\n           
-    \"SpeedEvo\": 6,\r\n            \"ExperienceOnKill\": 13,\r\n            \"BlueCrystalsOnKill\":
+    \"SpeedEvo\": 6,\r\n            \"Agility\": 11,\r\n            \"AgilityEvo\":
+    0,\r\n            \"ExperienceOnKill\": 13,\r\n            \"BlueCrystalsOnKill\":
     20,\r\n            \"GoldCoinsOnKill\": 2\r\n          },\r\n          {\r\n           
     \"Header\": \"Bandit\",\r\n            \"Description\": \"A ruthless thief, preying
     on the weak and vulnerable as he roamed the land in search of plunder and riches.\",\r\n           
-    \"Type\": \"Combat\",\r\n            \"MinFloor\": 0,\r\n            \"AttackType\":
-    \"Dagger\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
-    45,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 70,\r\n           
-    \"DamageEvo\": 10,\r\n            \"Speed\": 30,\r\n            \"SpeedEvo\":
-    5,\r\n            \"ExperienceOnKill\": 16,\r\n            \"BlueCrystalsOnKill\":
+    \"Type\": \"Combat\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Dagger\",\r\n            \"WeeknessType\": \"Maze\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 45,\r\n            \"HealthEvo\": 5,\r\n           
+    \"Damage\": 70,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\": 30,\r\n           
+    \"SpeedEvo\": 5,\r\n            \"Agility\": 23,\r\n            \"AgilityEvo\":
+    3,\r\n            \"ExperienceOnKill\": 16,\r\n            \"BlueCrystalsOnKill\":
     20,\r\n            \"GoldCoinsOnKill\": 5\r\n          },\r\n          {\r\n           
-    \"Header\": \"Boss0\",\r\n            \"Description\": \"---\",\r\n           
-    \"Type\": \"Boss\",\r\n            \"Location\": \"Village\",\r\n           
-    \"MinFloor\": 0,\r\n            \"AttackType\": \"Beast\",\r\n            \"AttackAmount\":
-    4,\r\n            \"MaxHealth\": 55,\r\n            \"HealthEvo\": 3,\r\n           
-    \"Damage\": 100,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\":
-    80,\r\n            \"SpeedEvo\": 0,\r\n            \"ExperienceOnKill\": 33,\r\n           
-    \"BlueCrystalsOnKill\": 25,\r\n            \"GoldCoinsOnKill\": 10\r\n         
-    },\r\n          {\r\n            \"Header\": \"Boss1\",\r\n            \"Description\":
-    \"---\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\": \"Village\",\r\n           
-    \"MinFloor\": 0,\r\n            \"AttackType\": \"Beast\",\r\n            \"AttackAmount\":
-    4,\r\n            \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n           
-    \"Damage\": 80,\r\n            \"DamageEvo\": 3,\r\n            \"Speed\": 10,\r\n           
-    \"SpeedEvo\": 0,\r\n            \"ExperienceOnKill\": 33,\r\n            \"BlueCrystalsOnKill\":
-    10,\r\n            \"GoldCoinsOnKill\": 15\r\n          },\r\n          {\r\n           
-    \"Header\": \"Boss2\",\r\n            \"Description\": \"---\",\r\n           
-    \"Type\": \"Boss\",\r\n            \"Location\": \"Village\",\r\n           
-    \"MinFloor\": 0,\r\n            \"AttackType\": \"Dagger\",\r\n            \"AttackAmount\":
-    4,\r\n            \"MaxHealth\": 40,\r\n            \"HealthEvo\": 6,\r\n           
-    \"Damage\": 110,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\":
-    60,\r\n            \"SpeedEvo\": 0,\r\n            \"ExperienceOnKill\": 33,\r\n           
-    \"BlueCrystalsOnKill\": 38,\r\n            \"GoldCoinsOnKill\": 9\r\n         
-    },\r\n          {\r\n            \"Header\": \"LocationBoss0\",\r\n           
-    \"Description\": \"---\",\r\n            \"Type\": \"LocationBoss\",\r\n           
-    \"Location\": \"Village\",\r\n            \"MinFloor\": 0,\r\n            \"AttackType\":
-    \"Sword\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
-    100,\r\n            \"HealthEvo\": 20,\r\n            \"Damage\": 100,\r\n           
+    \"Header\": \"Void\",\r\n            \"Description\": \"The void is a monstrous
+    creature, twisted and corrupted by dark forces.\",\r\n            \"Type\": \"Boss\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    \"Sword\",\r\n            \"AttackAmount\": 1,\r\n            \"MaxHealth\":
+    333,\r\n            \"HealthEvo\": 0,\r\n            \"Damage\": 10,\r\n           
+    \"DamageEvo\": 1,\r\n            \"Speed\": 0,\r\n            \"SpeedEvo\": 0,\r\n           
+    \"Agility\": 11,\r\n            \"AgilityEvo\": 0,\r\n            \"ExperienceOnKill\":
+    33,\r\n            \"BlueCrystalsOnKill\": 250,\r\n            \"GoldCoinsOnKill\":
+    10\r\n          },\r\n          {\r\n            \"Header\": \"Errant\",\r\n           
+    \"Description\": \"The errant begged for alms and preyed on the pity of others,
+    using it as a tool to manipulate and deceive those around him.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"Location\": \"Village\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeeknessType\":
+    \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    15,\r\n            \"HealthEvo\": 13,\r\n            \"Damage\": 110,\r\n           
+    \"DamageEvo\": 10,\r\n            \"Speed\": 60,\r\n            \"SpeedEvo\":
+    4,\r\n            \"Agility\": 13,\r\n            \"AgilityEvo\": 0,\r\n           
+    \"ExperienceOnKill\": 11,\r\n            \"BlueCrystalsOnKill\": 7,\r\n           
+    \"GoldCoinsOnKill\": 5\r\n          },\r\n          {\r\n            \"Header\":
+    \"Butcher\",\r\n            \"Description\": \"The butcher is a dirt-covered
+    and corrupted figure, wielding his bloody cleaver with ease as he hacked apart
+    the flesh of his victims.\",\r\n            \"Type\": \"Combat\",\r\n           
+    \"Location\": \"Village\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Maze\",\r\n            \"WeeknessType\": \"Magic\",\r\n            \"AttackAmount\":
+    3,\r\n            \"MaxHealth\": 32,\r\n            \"HealthEvo\": 20,\r\n           
+    \"Damage\": 120,\r\n            \"DamageEvo\": 14,\r\n            \"Speed\":
+    15,\r\n            \"SpeedEvo\": 3,\r\n            \"Agility\": 0,\r\n           
+    \"AgilityEvo\": 0,\r\n            \"ExperienceOnKill\": 17,\r\n            \"BlueCrystalsOnKill\":
+    25,\r\n            \"GoldCoinsOnKill\": 9\r\n          },\r\n          {\r\n           
+    \"Header\": \"Thief\",\r\n            \"Description\": \"The thief is a fast
+    and nimble figure, slipping through the shadows and darting through the streets.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"Location\": \"Village\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeeknessType\":
+    \"Maze\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\": 28,\r\n           
+    \"HealthEvo\": 10,\r\n            \"Damage\": 100,\r\n            \"DamageEvo\":
+    5,\r\n            \"Speed\": 98,\r\n            \"SpeedEvo\": 0,\r\n           
+    \"Agility\": 23,\r\n            \"AgilityEvo\": 1,\r\n            \"ExperienceOnKill\":
+    15,\r\n            \"BlueCrystalsOnKill\": 30,\r\n            \"GoldCoinsOnKill\":
+    6\r\n          },\r\n          {\r\n            \"Header\": \"CorruptGuard\",\r\n           
+    \"Description\": \"The guard is a corrupt and ruthless figure, using his position
+    of authority to extort and abuse those under his watch.\",\r\n            \"Type\":
+    \"Boss\",\r\n            \"Location\": \"Village\",\r\n            \"MinFloor\":
+    1,\r\n            \"AttackType\": \"Maze\",\r\n            \"WeeknessType\":
+    \"Magic\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    75,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 80,\r\n           
+    \"DamageEvo\": 3,\r\n            \"Speed\": 10,\r\n            \"SpeedEvo\":
+    0,\r\n            \"Agility\": 0,\r\n            \"AgilityEvo\": 0,\r\n           
+    \"ExperienceOnKill\": 30,\r\n            \"BlueCrystalsOnKill\": 10,\r\n           
+    \"GoldCoinsOnKill\": 15\r\n          },\r\n          {\r\n            \"Header\":
+    \"Murder\",\r\n            \"Description\": \"The murderer was a ruthless killer,
+    driven by a cold and unfeeling desire to take lives.\",\r\n            \"Type\":
+    \"Boss\",\r\n            \"Location\": \"Village\",\r\n            \"MinFloor\":
+    1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeeknessType\":
+    \"Maze\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\": 40,\r\n           
+    \"HealthEvo\": 6,\r\n            \"Damage\": 110,\r\n            \"DamageEvo\":
+    10,\r\n            \"Speed\": 60,\r\n            \"SpeedEvo\": 0,\r\n           
+    \"Agility\": 23,\r\n            \"AgilityEvo\": 1,\r\n            \"ExperienceOnKill\":
+    40,\r\n            \"BlueCrystalsOnKill\": 38,\r\n            \"GoldCoinsOnKill\":
+    9\r\n          },\r\n          {\r\n            \"Header\": \"Contrabandist\",\r\n           
+    \"Description\": \"The sword contrabandist is a shadowy figure, trafficking in
+    illegal weapons and selling them to the highest bidder.\",\r\n            \"Type\":
+    \"LocationBoss\",\r\n            \"Location\": \"Village\",\r\n            \"MinFloor\":
+    1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeeknessType\":
+    \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    100,\r\n            \"HealthEvo\": 20,\r\n            \"Damage\": 140,\r\n           
     \"DamageEvo\": 20,\r\n            \"Speed\": 0,\r\n            \"SpeedEvo\":
+    0,\r\n            \"Agility\": 13,\r\n            \"AgilityEvo\": 1,\r\n           
+    \"ExperienceOnKill\": 0,\r\n            \"BlueCrystalsOnKill\": 150,\r\n           
+    \"GoldCoinsOnKill\": 50\r\n          },\r\n          {\r\n            \"Header\":
+    \"Cultist\",\r\n            \"Description\": \"The cultist is a corrupted and
+    fanatical devotee, willing to go to any lengths to achieve their twisted goals.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"Location\": \"Sewers\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Magic\",\r\n            \"WeeknessType\":
+    \"Beast\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    39,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 100,\r\n           
+    \"DamageEvo\": 10,\r\n            \"Speed\": 46,\r\n            \"SpeedEvo\":
+    2,\r\n            \"Agility\": 5,\r\n            \"AgilityEvo\": 2,\r\n           
+    \"ExperienceOnKill\": 14,\r\n            \"BlueCrystalsOnKill\": 15,\r\n           
+    \"GoldCoinsOnKill\": 10\r\n          },\r\n          {\r\n            \"Header\":
+    \"AmanitaBoy\",\r\n            \"Description\": \"A legendary hero from another
+    world. Under other circustances he could have been my friend.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"Location\": \"Sewers\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeeknessType\":
+    \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    27,\r\n            \"HealthEvo\": 13,\r\n            \"Damage\": 90,\r\n           
+    \"DamageEvo\": 15,\r\n            \"Speed\": 55,\r\n            \"SpeedEvo\":
+    1,\r\n            \"Agility\": 13,\r\n            \"AgilityEvo\": 1,\r\n           
+    \"ExperienceOnKill\": 14,\r\n            \"BlueCrystalsOnKill\": 17,\r\n           
+    \"GoldCoinsOnKill\": 6\r\n          },\r\n          {\r\n            \"Header\":
+    \"Undead\",\r\n            \"Description\": \"The undead is a disgusting and
+    repulsive creature, its rotting flesh a testament to the curse of undeath.\",\r\n           
+    \"Type\": \"Combat\",\r\n            \"Location\": \"Sewers\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeeknessType\":
+    \"Maze\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\": 36,\r\n           
+    \"HealthEvo\": 2,\r\n            \"Damage\": 110,\r\n            \"DamageEvo\":
+    5,\r\n            \"Speed\": 78,\r\n            \"SpeedEvo\": 0,\r\n           
+    \"Agility\": 23,\r\n            \"AgilityEvo\": 1,\r\n            \"ExperienceOnKill\":
+    19,\r\n            \"BlueCrystalsOnKill\": 2,\r\n            \"GoldCoinsOnKill\":
+    2\r\n          },\r\n          {\r\n            \"Header\": \"ForestNightmare\",\r\n           
+    \"Description\": \"The forest nightmare is a awfull creature that creeps along
+    the ground while spreads its tendrils to consume everything in its path.\",\r\n           
+    \"Type\": \"Boss\",\r\n            \"Location\": \"Sewers\",\r\n            \"MinFloor\":
+    1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    \"Sword\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
+    70,\r\n            \"HealthEvo\": 20,\r\n            \"Damage\": 90,\r\n           
+    \"DamageEvo\": 11,\r\n            \"Speed\": 30,\r\n            \"SpeedEvo\":
+    0,\r\n            \"Agility\": 11,\r\n            \"AgilityEvo\": 0,\r\n           
+    \"ExperienceOnKill\": 25,\r\n            \"BlueCrystalsOnKill\": 40,\r\n           
+    \"GoldCoinsOnKill\": 10\r\n          },\r\n          {\r\n            \"Header\":
+    \"DustDoctor\",\r\n            \"Description\": \"The doctor is a dark and sinister
+    figure, adept in the use of poison and other nefarious means to eliminate his
+    enemies.\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\": \"Sewers\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Magic\",\r\n            \"WeeknessType\":
+    \"Beast\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
+    55,\r\n            \"HealthEvo\": 7,\r\n            \"Damage\": 110,\r\n           
+    \"DamageEvo\": 7,\r\n            \"Speed\": 80,\r\n            \"SpeedEvo\":
+    0,\r\n            \"Agility\": 5,\r\n            \"AgilityEvo\": 2,\r\n           
+    \"ExperienceOnKill\": 41,\r\n            \"BlueCrystalsOnKill\": 0,\r\n           
+    \"GoldCoinsOnKill\": 0\r\n          },\r\n          {\r\n            \"Header\":
+    \"InfectedKnight\",\r\n            \"Description\": \"The knight is a fungus-infested
+    warrior, his once-noble armor now overrun with the grotesque growths.\",\r\n           
+    \"Type\": \"LocationBoss\",\r\n            \"Location\": \"Sewers\",\r\n           
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    \"Sword\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
+    135,\r\n            \"HealthEvo\": 10,\r\n            \"Damage\": 120,\r\n           
+    \"DamageEvo\": 10,\r\n            \"Speed\": 50,\r\n            \"SpeedEvo\":
+    0,\r\n            \"Agility\": 11,\r\n            \"AgilityEvo\": 0,\r\n           
+    \"ExperienceOnKill\": 0,\r\n            \"BlueCrystalsOnKill\": 150,\r\n           
+    \"GoldCoinsOnKill\": 50\r\n          },\r\n          {\r\n            \"Header\":
+    \"Aristocrat\",\r\n            \"Description\": \"The aristocrat is a powerful
+    figure, wielding magic with grace and precision, they command respect and fear
+    from those around them.\",\r\n            \"Type\": \"Combat\",\r\n           
+    \"Location\": \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Magic\",\r\n            \"WeeknessType\": \"Beast\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 29,\r\n            \"HealthEvo\": 10,\r\n           
+    \"Damage\": 100,\r\n            \"DamageEvo\": 20,\r\n            \"Speed\":
+    60,\r\n            \"SpeedEvo\": 3,\r\n            \"Agility\": 5,\r\n           
+    \"AgilityEvo\": 2,\r\n            \"ExperienceOnKill\": 20,\r\n            \"BlueCrystalsOnKill\":
+    10,\r\n            \"GoldCoinsOnKill\": 12\r\n          },\r\n          {\r\n           
+    \"Header\": \"EastWarrior\",\r\n            \"Description\": \"The east warrior
+    is a stoic and stern figure, clad in heavy armor and armed with a weapon of his
+    choice.\",\r\n            \"Type\": \"Combat\",\r\n            \"Location\":
+    \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Sword\",\r\n            \"WeeknessType\": \"Dagger\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 30,\r\n            \"HealthEvo\": 7,\r\n           
+    \"Damage\": 80,\r\n            \"DamageEvo\": 20,\r\n            \"Speed\": 40,\r\n           
+    \"SpeedEvo\": 8,\r\n            \"Agility\": 15,\r\n            \"AgilityEvo\":
+    0,\r\n            \"ExperienceOnKill\": 10,\r\n            \"BlueCrystalsOnKill\":
+    9,\r\n            \"GoldCoinsOnKill\": 5\r\n          },\r\n          {\r\n           
+    \"Header\": \"Thug\",\r\n            \"Description\": \"The thug is a brute,
+    relying on raw strength and violence to intimidate and overpower their victims,
+    they are a menace to society.\",\r\n            \"Type\": \"Combat\",\r\n           
+    \"Location\": \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Maze\",\r\n            \"WeeknessType\": \"Magic\",\r\n            \"AttackAmount\":
+    3,\r\n            \"MaxHealth\": 42,\r\n            \"HealthEvo\": 20,\r\n           
+    \"Damage\": 135,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\":
+    7,\r\n            \"SpeedEvo\": 10,\r\n            \"Agility\": 0,\r\n           
+    \"AgilityEvo\": 0,\r\n            \"ExperienceOnKill\": 7,\r\n            \"BlueCrystalsOnKill\":
+    25,\r\n            \"GoldCoinsOnKill\": 19\r\n          },\r\n          {\r\n           
+    \"Header\": \"Shadow\",\r\n            \"Description\": \"This being is a shadow
+    among shadows, slipping into and out of places unseen, moving with stealth and
+    precision.\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
+    \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Dagger\",\r\n            \"WeeknessType\": \"Maze\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 85,\r\n            \"HealthEvo\": 8,\r\n           
+    \"Damage\": 90,\r\n            \"DamageEvo\": 5,\r\n            \"Speed\": 100,\r\n           
+    \"SpeedEvo\": 0,\r\n            \"Agility\": 23,\r\n            \"AgilityEvo\":
+    1,\r\n            \"ExperienceOnKill\": 33,\r\n            \"BlueCrystalsOnKill\":
+    16,\r\n            \"GoldCoinsOnKill\": 7\r\n          },\r\n          {\r\n           
+    \"Header\": \"Duelist\",\r\n            \"Description\": \"The duelist is a proud
+    and skilled warrior, honing their craft for years to become a master of their
+    chosen weapon.\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
+    \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Sword\",\r\n            \"WeeknessType\": \"Dagger\",\r\n            \"AttackAmount\":
+    4,\r\n            \"MaxHealth\": 135,\r\n            \"HealthEvo\": 5,\r\n           
+    \"Damage\": 100,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\":
+    43,\r\n            \"SpeedEvo\": 0,\r\n            \"Agility\": 15,\r\n           
+    \"AgilityEvo\": 0,\r\n            \"ExperienceOnKill\": 33,\r\n            \"BlueCrystalsOnKill\":
+    17,\r\n            \"GoldCoinsOnKill\": 20\r\n          },\r\n          {\r\n           
+    \"Header\": \"CorruptedHero\",\r\n            \"Description\": \"A corrupted
+    and fallen figure, once respected and admired, now using their powers and abilities
+    for their own gain and self-interest.\",\r\n            \"Type\": \"LocationBoss\",\r\n           
+    \"Location\": \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
+    \"Maze\",\r\n            \"WeeknessType\": \"Magic\",\r\n            \"AttackAmount\":
+    3,\r\n            \"MaxHealth\": 175,\r\n            \"HealthEvo\": 5,\r\n           
+    \"Damage\": 110,\r\n            \"DamageEvo\": 5,\r\n            \"Speed\": 10,\r\n           
+    \"SpeedEvo\": 0,\r\n            \"Agility\": 1,\r\n            \"AgilityEvo\":
     0,\r\n            \"ExperienceOnKill\": 0,\r\n            \"BlueCrystalsOnKill\":
     120,\r\n            \"GoldCoinsOnKill\": 50\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"238c5420-989e-47ae-a950-b54bddd826a7\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"1ec7be89-d9ab-4cde-8f3b-284ba4c28de4\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
@@ -440,7 +858,7 @@ MonoBehaviour:
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
     3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"6d0b1cd6-536c-4e61-8b4d-4aaa96368bc3\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"c0bbe8d3-b669-41ad-82d6-3c9d4a73433a\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
@@ -450,70 +868,132 @@ MonoBehaviour:
     \"SuccedMaxAmount\": 0,\r\n            \"FailHeader\": \"Insta Death\",\r\n           
     \"FailKind\": \"Health\",\r\n            \"FailAmount\": -100,\r\n           
     \"DeathMotive\": \"God\"\r\n          },\r\n          {\r\n            \"Active\":
-    true,\r\n            \"Concept\": \"Event_Corpse\",\r\n            \"Header\":
-    \"You see a corpse liying on the ground.\",\r\n            \"Action\": \"Loot
-    corpse\",\r\n            \"Chance\": 40,\r\n            \"SuccedHeader\": \"You
-    find some coins in the dead's pocked.\",\r\n            \"SuccedKind\": \"Gold
-    Coin\",\r\n            \"SuccedMinAmount\": 1,\r\n            \"SuccedMaxAmount\":
+    true,\r\n            \"Concept\": \"Event_Unknown\",\r\n            \"Header\":
+    \"???\",\r\n            \"Action\": \"?\",\r\n            \"Chance\": 50,\r\n           
+    \"SuccedHeader\": \":)\",\r\n            \"SuccedKind\": \"Blue Crystal\",\r\n           
+    \"SuccedMinAmount\": 0,\r\n            \"SuccedMaxAmount\": 999,\r\n           
+    \"FailHeader\": \":(\",\r\n            \"FailKind\": \"Health\",\r\n           
+    \"FailAmount\": -100,\r\n            \"DeathMotive\": \"?\"\r\n          },\r\n         
+    {\r\n            \"Active\": true,\r\n            \"Concept\": \"Event_Corpse\",\r\n           
+    \"Header\": \"You see a corpse lying on the ground.\",\r\n            \"Action\":
+    \"Loot corpse\",\r\n            \"Chance\": 40,\r\n            \"SuccedHeader\":
+    \"You find some coins in the dead's pocked.\",\r\n            \"SuccedKind\":
+    \"Gold Coin\",\r\n            \"SuccedMinAmount\": 1,\r\n            \"SuccedMaxAmount\":
     10,\r\n            \"FailHeader\": \"The sleeping Undead awakes and in a quick
     move scratches you! \",\r\n            \"FailKind\": \"Health\",\r\n           
     \"FailAmount\": -10,\r\n            \"DeathMotive\": \"Undead\"\r\n         
+    },\r\n          {\r\n            \"Concept\": \"Event_Beggar\",\r\n           
+    \"Header\": \"A pity beggar asks you for some coins.\",\r\n            \"Action\":
+    \"Give coins\",\r\n            \"Chance\": 30,\r\n            \"SuccedHeader\":
+    \"The beggar smiles and banishes, in the floor you see something.\",\r\n           
+    \"SuccedKind\": \"Blue Crystal\",\r\n            \"SuccedMinAmount\": 30,\r\n           
+    \"SuccedMaxAmount\": 50,\r\n            \"FailHeader\": \"You give the beggar
+    some coins.\",\r\n            \"FailKind\": \"Gold Coin\",\r\n            \"FailAmount\":
+    -3\r\n          },\r\n          {\r\n            \"Active\": true,\r\n           
+    \"Concept\": \"Event_GlowingFountain\",\r\n            \"Location\": \"Village\",\r\n           
+    \"Header\": \"You see a fountain with glowing water.\",\r\n            \"Action\":
+    \"Drink water\",\r\n            \"Chance\": 50,\r\n            \"SuccedHeader\":
+    \"You feel your body grow with energy.\",\r\n            \"SuccedKind\": \"Health\",\r\n           
+    \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 25,\r\n           
+    \"FailHeader\": \"The water taster dirty...\",\r\n            \"FailKind\": \"Health\",\r\n           
+    \"FailAmount\": -15,\r\n            \"DeathMotive\": \"Intoxication\"\r\n         
     },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
-    \"Event_GlowingFountain\",\r\n            \"Header\": \"You see a fountain with
-    glowing water.\",\r\n            \"Action\": \"Drink water\",\r\n           
-    \"Chance\": 50,\r\n            \"SuccedHeader\": \"You feel your body grow with
-    energy.\",\r\n            \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\":
-    15,\r\n            \"SuccedMaxAmount\": 25,\r\n            \"FailHeader\": \"The
-    water taster dirty...\",\r\n            \"FailKind\": \"Health\",\r\n           
-    \"FailAmount\": -15,\r\n            \"DeathMotive\": \"Poisoning\"\r\n         
-    },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
-    \"Event_Unknown\",\r\n            \"Header\": \"???\",\r\n            \"Action\":
-    \"?\",\r\n            \"Chance\": 50,\r\n            \"SuccedHeader\": \":)\",\r\n           
-    \"SuccedKind\": \"Blue Crystal\",\r\n            \"SuccedMinAmount\": 0,\r\n           
-    \"SuccedMaxAmount\": 999,\r\n            \"FailHeader\": \":(\",\r\n           
-    \"FailKind\": \"Health\",\r\n            \"FailAmount\": -99,\r\n           
-    \"DeathMotive\": \"?\"\r\n          },\r\n          {\r\n            \"Active\":
-    true,\r\n            \"Concept\": \"Event_InjuredDog\",\r\n            \"Location\":
-    \"Village\",\r\n            \"Header\": \"An injured dog approaches to you.\",\r\n           
-    \"Action\": \"Pet the dog\",\r\n            \"Chance\": 55,\r\n            \"SuccedHeader\":
-    \"The dog seems to be gratefull.\",\r\n            \"SuccedKind\": \"Blue Crystal\",\r\n           
+    \"Event_InjuredDog\",\r\n            \"Location\": \"Village\",\r\n           
+    \"Header\": \"An injured dog approaches to you.\",\r\n            \"Action\":
+    \"Pet the dog\",\r\n            \"Chance\": 55,\r\n            \"SuccedHeader\":
+    \"The dog seems to be grateful.\",\r\n            \"SuccedKind\": \"Blue Crystal\",\r\n           
     \"SuccedMinAmount\": 15,\r\n            \"SuccedMaxAmount\": 20,\r\n           
-    \"FailHeader\": \"---\",\r\n            \"FailKind\": \"Gold Coin\",\r\n           
-    \"FailAmount\": -13\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"2262ec19-0f21-432f-aab0-08be5ce85e12\"\r\n   
+    \"FailHeader\": \"The dog tries to bite you, but instead breaks your coin pouch.\",\r\n           
+    \"FailKind\": \"Gold Coin\",\r\n            \"FailAmount\": -13\r\n         
+    },\r\n          {\r\n            \"Active\": true,\r\n            \"Concept\":
+    \"Event_Bubble\",\r\n            \"Location\": \"Sewers\",\r\n            \"Header\":
+    \"You see bubbles coming from a puddle.\",\r\n            \"Action\": \"Investigate\",\r\n           
+    \"Chance\": 30,\r\n            \"SuccedHeader\": \"You find a couple of dirty
+    gold coins.\",\r\n            \"SuccedKind\": \"Gold Coin\",\r\n            \"SuccedMinAmount\":
+    5,\r\n            \"SuccedMaxAmount\": 10,\r\n            \"FailHeader\": \"Your
+    hand gets covered in a very disgusting liquid... It hurts in your wounds.\",\r\n           
+    \"FailKind\": \"Health\",\r\n            \"FailAmount\": -10,\r\n           
+    \"DeathMotive\": \"Infection\"\r\n          },\r\n          {\r\n           
+    \"Active\": true,\r\n            \"Concept\": \"Event_Mushroom\",\r\n           
+    \"Location\": \"Sewers\",\r\n            \"Header\": \"You are starving. You
+    see a very appetizing mushroom growing on the mud.\",\r\n            \"Action\":
+    \"Eat\",\r\n            \"Chance\": 10,\r\n            \"SuccedHeader\": \"Tasty!\",\r\n           
+    \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\": 20,\r\n           
+    \"SuccedMaxAmount\": 30,\r\n            \"FailHeader\": \"A bit spicy, weird
+    taste, repugnant texture... A nauseating sensation invades you.\",\r\n           
+    \"FailKind\": \"Health\",\r\n            \"FailAmount\": -70,\r\n           
+    \"DeathMotive\": \"Parasit Micelle\"\r\n          },\r\n          {\r\n           
+    \"Active\": true,\r\n            \"Concept\": \"Event_Prisioner\",\r\n           
+    \"Location\": \"Dungeons\",\r\n            \"Header\": \"While exploring the
+    dungeons, you hear screams. Someone is being tortured.\",\r\n            \"Action\":
+    \"Help\",\r\n            \"Chance\": 55,\r\n            \"SuccedHeader\": \"In
+    a fast move, you incapacitate the guard and free the man being tortured.\",\r\n           
+    \"SuccedKind\": \"Gold Coin\",\r\n            \"SuccedMinAmount\": 10,\r\n           
+    \"SuccedMaxAmount\": 30,\r\n            \"FailHeader\": \"When trying to help,
+    you get caught. \",\r\n            \"FailKind\": \"Health\",\r\n            \"FailAmount\":
+    -25,\r\n            \"DeathMotive\": \"Torture\"\r\n          },\r\n         
+    {\r\n            \"Active\": true,\r\n            \"Concept\": \"Event_Light\",\r\n           
+    \"Location\": \"Dungeons\",\r\n            \"Header\": \"A floating light sphere
+    appears blocking your path.\",\r\n            \"Action\": \"Touch\",\r\n           
+    \"SuccedHeader\": \"The sphere stops shinning. You feel rejuvenated.\",\r\n           
+    \"SuccedKind\": \"Health\",\r\n            \"SuccedMinAmount\": 30,\r\n           
+    \"SuccedMaxAmount\": 35,\r\n            \"FailHeader\": \"The shining sphere
+    fades, and with it, you feel your pouch loss weight.\",\r\n            \"FailKind\":
+    \"Gold Coin\",\r\n            \"FailAmount\": -5\r\n          }\r\n        ]\r\n     
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"dc14b0b0-3b1c-4a98-8d36-9c19fef5cd93\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AttacksModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
-    {\r\n            \"Header\": \"Pinch\",\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"Damage\": 5,\r\n            \"CooldownTurns\": 0\r\n          },\r\n         
-    {\r\n            \"Header\": \"Swipe\",\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"Damage\": 11,\r\n            \"CooldownTurns\": 1\r\n          },\r\n         
-    {\r\n            \"Header\": \"Punch\",\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"Damage\": 13,\r\n            \"CooldownTurns\": 0\r\n          },\r\n         
-    {\r\n            \"Header\": \"Rush\",\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"Damage\": 13,\r\n            \"CooldownTurns\": 2\r\n          },\r\n         
-    {\r\n            \"Header\": \"DobleSlash\",\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"Damage\": 30,\r\n            \"CooldownTurns\": 4\r\n          },\r\n         
-    {\r\n            \"Header\": \"DaggerAttack0\",\r\n            \"AttackType\":
-    \"Dagger\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\": 0\r\n         
-    },\r\n          {\r\n            \"Header\": \"DaggerAttack1\",\r\n           
+    {\r\n            \"Header\": \"Perforation\",\r\n            \"AttackType\":
+    \"Sword\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\": 0\r\n         
+    },\r\n          {\r\n            \"Header\": \"Swipe\",\r\n            \"AttackType\":
+    \"Sword\",\r\n            \"Damage\": 11,\r\n            \"CooldownTurns\": 1\r\n         
+    },\r\n          {\r\n            \"Header\": \"BreakPoint\",\r\n            \"AttackType\":
+    \"Sword\",\r\n            \"Damage\": 13,\r\n            \"CooldownTurns\": 1\r\n         
+    },\r\n          {\r\n            \"Header\": \"Rush\",\r\n            \"AttackType\":
+    \"Sword\",\r\n            \"Damage\": 17,\r\n            \"CooldownTurns\": 2\r\n         
+    },\r\n          {\r\n            \"Header\": \"DoubleSlash\",\r\n           
+    \"AttackType\": \"Sword\",\r\n            \"Damage\": 25,\r\n            \"CooldownTurns\":
+    4\r\n          },\r\n          {\r\n            \"Header\": \"Faint\",\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 10,\r\n            \"CooldownTurns\":
+    0\r\n          },\r\n          {\r\n            \"Header\": \"QuickSwipe\",\r\n           
     \"AttackType\": \"Dagger\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
-    1\r\n          },\r\n          {\r\n            \"Header\": \"DaggerAttack2\",\r\n           
+    1\r\n          },\r\n          {\r\n            \"Header\": \"LowerHit\",\r\n           
     \"AttackType\": \"Dagger\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
-    1\r\n          },\r\n          {\r\n            \"Header\": \"DaggerAttack3\",\r\n           
-    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
-    4\r\n          },\r\n          {\r\n            \"Header\": \"DaggerAttack4\",\r\n           
+    1\r\n          },\r\n          {\r\n            \"Header\": \"Crossblade\",\r\n           
+    \"AttackType\": \"Dagger\",\r\n            \"Damage\": 22,\r\n            \"CooldownTurns\":
+    4\r\n          },\r\n          {\r\n            \"Header\": \"DaggerTrick\",\r\n           
     \"AttackType\": \"Dagger\",\r\n            \"Damage\": 35,\r\n            \"CooldownTurns\":
-    8\r\n          },\r\n          {\r\n            \"Header\": \"BeastAttack0\",\r\n           
+    8\r\n          },\r\n          {\r\n            \"Header\": \"Slap\",\r\n           
+    \"AttackType\": \"Maze\",\r\n            \"Damage\": 10,\r\n            \"CooldownTurns\":
+    1\r\n          },\r\n          {\r\n            \"Header\": \"Heavy Kick\",\r\n           
+    \"AttackType\": \"Maze\",\r\n            \"Damage\": 12,\r\n            \"CooldownTurns\":
+    4\r\n          },\r\n          {\r\n            \"Header\": \"Crunch\",\r\n           
+    \"AttackType\": \"Maze\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
+    5\r\n          },\r\n          {\r\n            \"Header\": \"Trauma\",\r\n           
+    \"AttackType\": \"Maze\",\r\n            \"Damage\": 20,\r\n            \"CooldownTurns\":
+    6\r\n          },\r\n          {\r\n            \"Header\": \"MazeBlast\",\r\n           
+    \"AttackType\": \"Maze\",\r\n            \"Damage\": 40,\r\n            \"CooldownTurns\":
+    9\r\n          },\r\n          {\r\n            \"Header\": \"PoisonRoot\",\r\n           
+    \"AttackType\": \"Magic\",\r\n            \"Damage\": 3,\r\n            \"CooldownTurns\":
+    0\r\n          },\r\n          {\r\n            \"Header\": \"Spark\",\r\n           
+    \"AttackType\": \"Magic\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\":
+    1\r\n          },\r\n          {\r\n            \"Header\": \"Corruption\",\r\n           
+    \"AttackType\": \"Magic\",\r\n            \"Damage\": 19,\r\n            \"CooldownTurns\":
+    2\r\n          },\r\n          {\r\n            \"Header\": \"Sacrifice\",\r\n           
+    \"AttackType\": \"Magic\",\r\n            \"Damage\": 22,\r\n            \"CooldownTurns\":
+    2\r\n          },\r\n          {\r\n            \"Header\": \"DarkOrb\",\r\n           
+    \"AttackType\": \"Magic\",\r\n            \"Damage\": 25,\r\n            \"CooldownTurns\":
+    3\r\n          },\r\n          {\r\n            \"Header\": \"Horn\",\r\n           
     \"AttackType\": \"Beast\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\":
     1\r\n          },\r\n          {\r\n            \"Header\": \"Bite\",\r\n           
-    \"AttackType\": \"Beast\",\r\n            \"Damage\": 5,\r\n            \"CooldownTurns\":
-    1\r\n          },\r\n          {\r\n            \"Header\": \"BeastAttack1\",\r\n           
     \"AttackType\": \"Beast\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
-    3\r\n          },\r\n          {\r\n            \"Header\": \"Scratch\",\r\n           
-    \"AttackType\": \"Beast\",\r\n            \"Damage\": 10,\r\n            \"CooldownTurns\":
     2\r\n          },\r\n          {\r\n            \"Header\": \"Charge\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 7,\r\n            \"CooldownTurns\":
+    4\r\n          },\r\n          {\r\n            \"Header\": \"Scratch\",\r\n           
+    \"AttackType\": \"Beast\",\r\n            \"Damage\": 10,\r\n            \"CooldownTurns\":
+    3\r\n          },\r\n          {\r\n            \"Header\": \"Stampede\",\r\n           
     \"AttackType\": \"Beast\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
-    4\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
+    5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"12851c75-924b-434b-8415-bd82991e2400\",\r\n   
     \"name\": \"development\",\r\n    \"id\": \"8b45dece-9500-4f4d-ae7c-15c09ebbfb65\",\r\n   
     \"isDefault\": false,\r\n    \"createdAt\": \"2023-01-15T10:43:45Z\",\r\n   

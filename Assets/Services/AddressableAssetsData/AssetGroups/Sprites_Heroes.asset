@@ -18,19 +18,23 @@ MonoBehaviour:
   m_GUID: 71a1683f1ea313444b298e8ae62c032a
   m_SerializeEntries:
   - m_GUID: f2665ca4dc7b37541ac6b5d91433a910
-    m_Address: Errant
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 11f974bb50da27b4aafae514b743e4f8
     m_Address: Thief
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 9cdb9cc3ff3911e4795081d66cad9837
-    m_Address: Brute
+  - m_GUID: 9949b83782e0ce646ab1efbd8dc2ddcd
+    m_Address: Felin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 11f974bb50da27b4aafae514b743e4f8
+    m_Address: Errant
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 6452d67076175614091c2d6d8882e784
     m_Address: Cultist
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9cdb9cc3ff3911e4795081d66cad9837
+    m_Address: Brute
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

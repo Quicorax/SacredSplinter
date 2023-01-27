@@ -17,32 +17,80 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 910618ecb0b3f9e4ca8803218d8f1383
   m_SerializeEntries:
+  - m_GUID: 7893bbcb475f7bd42a1607d7d32eed0a
+    m_Address: CorruptGuard
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7456f138ff526c649b5780e2277298a6
+    m_Address: CorruptedHero
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fd5e600dea73c114b9c76a2355fdc343
+    m_Address: Contrabandist
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 90776efa196369841963e741cdfcf29b
+    m_Address: Butcher
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 1db95f0e2d1f38a42b011d9525d61a3e
     m_Address: Bandit
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 87d21eafc5dd815498c4aa0267988c6e
+    m_Address: Aristocrat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3c8475811e04cf242824964db0d8a148
+    m_Address: AmanitaBoy
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: d767666f36c77b74eada945d5357e3ac
     m_Address: Dog
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: bc84b6f09fb82fa49a9f5f12755f7d47
+    m_Address: Duelist
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 759cb4390881f2d4894ab6853bddcf2d
+    m_Address: DustDoctor
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 27ab7b70bd463174d9282063c6379850
+    m_Address: EastWarrior
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cd8cad3ec2aa67f4f8342076a57544cc
+    m_Address: ForestNightmare
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d0437d66ba552b647bc00cfbe128eb81
+    m_Address: InfectedKnight
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 31a9956b5610d8a419888687f4a822a8
+    m_Address: Murder
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: 170aa2261b872904da7cc5dc50504856
     m_Address: Rat
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 1249ddc717fcee946939a1bccb0cab45
-    m_Address: Boss0
+  - m_GUID: 78ce13f41689c3f4c9db2e64f084eddd
+    m_Address: Shadow
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: fef9b4060b4e3624aa80720a4fcf065b
-    m_Address: Boss1
+  - m_GUID: 0b38886c4c970324bbe091d8514d9e52
+    m_Address: Thug
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 1565ff87a19909a47948eddd312d2007
-    m_Address: Boss2
+  - m_GUID: 9ab467695fc716b4eb0fe5eafe45f8da
+    m_Address: Undead
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 829c7ccf43e4b5f4cb8c22ff0c7e56b2
-    m_Address: LocationBoss0
+  - m_GUID: 41e35323b349b2c41ab8f63b40b7ba9a
+    m_Address: Void
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

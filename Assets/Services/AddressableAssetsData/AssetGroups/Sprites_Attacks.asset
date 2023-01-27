@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Sprites_Attacks
+  m_EditorClassIdentifier: 
+  m_GroupName: Sprites_Attacks
+  m_Data:
+    m_SerializedData: []
+  m_GUID: a7cb7ee8f4f5a6b46bb315f61eb20d52
+  m_SerializeEntries:
+  - m_GUID: d2470f3da8be85e459aa103b3ffe7905
+    m_Address: Crossblade
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 24f587d2f2dd9c942bc318e50d03888d
+    m_Address: Bite
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 70eabefef70c68d4680742ed0d7f2aad
+    m_Address: Charge
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1b5012cb425574e4294104e791e35319
+    m_Address: Corruption
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b8d4dcf4d94d8f34ebc4b2c3a8319d58
+    m_Address: Crunch
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ba46bae4e97ef3e4eb705fa647f59285
+    m_Address: DaggerTrick
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c88dc1b629769e544acb6755d95ef154
+    m_Address: DarkOrb
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1de61c71d1fd7b046a44936596517265
+    m_Address: DoubleSlash
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d32085b3030cf484d91ddd6360c17fb7
+    m_Address: Faint
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7a8e08744f834d347950ea48e6560323
+    m_Address: Heavy Kick
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0518cfcff582e1f4ea0fd63064495abd
+    m_Address: Horn
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6f3c55508a7f54c4fba93c73213ab396
+    m_Address: LowerHit
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 048098ceafaae74478617e27510e74c1
+    m_Address: MazeBlast
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f9e2b5b2392034744b12b262e8ab2992
+    m_Address: Perforation
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 35719002df6600c4e9d3e8d035ed15a2
+    m_Address: PoisonRoot
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2d4e92173311bd44e8397ac9050d73a9
+    m_Address: BreakPoint
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cc2f479ee49e4f9429492ed5aa7f110d
+    m_Address: QuickSwipe
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 42bae66c6a7d2b34a98a832445b31a12
+    m_Address: Rush
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0447e45493d823c4d946629c14b88357
+    m_Address: Sacrifice
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 918dc11f84e29104183cd56b2710f516
+    m_Address: Scratch
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bd4f82842b4f1644fa30f5e32d5311f0
+    m_Address: Slap
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: da09c25689b27274bb9dee24d04fdaf3
+    m_Address: Spark
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f6121f4cb52a9c34aba484a0c67f680a
+    m_Address: Stampede
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ff8023f53f9870842b19a752059565c8
+    m_Address: Swipe
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2bf5ac7304fb223449d2ac2791c915ac
+    m_Address: Trauma
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 302e75e9dfc5e1140b39ed4656a4d0a3, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 82adacc5c814e724e933fda4b4df6db6, type: 2}
+    - {fileID: 11400000, guid: 9ed4086ba2dd53e4582022aa04c552f8, type: 2}

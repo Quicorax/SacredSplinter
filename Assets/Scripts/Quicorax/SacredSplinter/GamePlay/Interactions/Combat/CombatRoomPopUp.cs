@@ -32,7 +32,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         private CombatInstance _combatInstance;
 
         private int _enemyMaxHealth;
-
+        
         protected override void Initialize()
         {
             GetCommonServices();

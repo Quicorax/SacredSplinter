@@ -29,16 +29,12 @@ MonoBehaviour:
     m_Address: Hero License
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: ab30585bbe38a414db25255ffb07f635
+  - m_GUID: 83fd1a013d2c3ff4c8427ae451687e8c
     m_Address: Combat_Icon
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 40832a86ec222f642af963a541eda2ea
     m_Address: Unknown_Icon
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 9d0199f9f8a1a3b47be9c0b294ff78f5
-    m_Address: Event_Icon
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b07256cb0ac24eb499213114f71637cd
@@ -47,6 +43,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: 4c7d34434233c1f40bbbdfa53946c40a
     m_Address: LocationBoss_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5f98ceb26d2da0c4db8bfc0b0c1f9e39
+    m_Address: Event_Icon
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

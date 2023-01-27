@@ -7,9 +7,12 @@ namespace Quicorax.SacredSplinter.Services
     {
         const string _enviroment = "development";
         //const string _enviroment = "production";
+        private Action<string> _onElementLoaded;
 
         public async Task LoadServices(ServiceElements elements, Action<string> onElementLoaded)
         {
+            _onElementLoaded = onElementLoaded;
+            
             var servicesInitializer = new ServicesInitializer(_enviroment);
 
             var loginService = new LoginGameService();
@@ -34,17 +37,17 @@ namespace Quicorax.SacredSplinter.Services
             ServiceLocator.RegisterService(adventureProgress);
             ServiceLocator.RegisterService(addressables);
 
-            onElementLoaded.Invoke("Sharpening Swords");
+            _onElementLoaded.Invoke("Sharpening Swords");
             await servicesInitializer.Initialize();
-            onElementLoaded.Invoke("Setting Artifacts");
+           _onElementLoaded.Invoke("Setting Artifacts");
             await loginService.Initialize();
-            onElementLoaded.Invoke("Invoking Monsters");
+           _onElementLoaded.Invoke("Invoking Monsters");
             await remoteConfig.Initialize();
-            onElementLoaded.Invoke("Defining Relics");
+           _onElementLoaded.Invoke("Defining Relics");
             await gameProgressionProvider.Initialize();
-            onElementLoaded.Invoke("Calling Warriors");
+           _onElementLoaded.Invoke("Calling Warriors");
             await addressables.Initialize(elements.AssetsToPrewarm.Assets);
-            onElementLoaded.Invoke("Casting Spells");
+           _onElementLoaded.Invoke("Casting Spells");
             
             gameConfig.Initialize(remoteConfig);
             gameProgression.Initialize(saveLoad);

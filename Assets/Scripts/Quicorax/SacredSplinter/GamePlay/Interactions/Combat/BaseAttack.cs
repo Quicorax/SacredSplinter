@@ -24,7 +24,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             _onUse = onUse;
             _useButton.onClick.AddListener(OnUse);
 
-            //LoadSpriteAsync().ManageTaskException(); //TODO: Addressables sprite
+            LoadSpriteAsync().ManageTaskException();
         }
 
         private async Task LoadSpriteAsync() =>

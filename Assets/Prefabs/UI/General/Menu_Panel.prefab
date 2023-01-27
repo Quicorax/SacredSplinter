@@ -343,6 +343,7 @@ MonoBehaviour:
   _encyclopedia:
     PopUp: {fileID: 6047510094785837639, guid: a35513e251bec5e45b0e24c38cc2843a, type: 3}
     Button: {fileID: 2107639537469123409}
+  _curtain: {fileID: 0}
 --- !u!1 &8983565603863016280
 GameObject:
   m_ObjectHideFlags: 0

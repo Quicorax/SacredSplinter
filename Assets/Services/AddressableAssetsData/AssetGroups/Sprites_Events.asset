@@ -17,16 +17,36 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 3db2ef6848435984eb6d0df55d216ce9
   m_SerializeEntries:
-  - m_GUID: 6664067138003c5459cd579ca2e4ee96
-    m_Address: Event_Corpse
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 23c20172e6cb4da40b808aa8a7615d00
+  - m_GUID: 919cd87b00fe2af418be904c984b2926
     m_Address: Event_GlowingFountain
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 8105e96d04a08d74bb66326dddfdcb47
+  - m_GUID: 069094cbf325653418613fe37af05311
+    m_Address: Event_Corpse
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7459c79c8c48a724689bd6019c99c47f
+    m_Address: Event_Bubble
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 84c950efd10d95b4da0e357802720059
+    m_Address: Event_Beggar
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1640da25b5cacc44e89d2731daded8ed
     m_Address: Event_InjuredDog
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 455df4f824d6b844686502164fdfd096
+    m_Address: Event_Light
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 55c5a8a517939a84da13e0d7e72df445
+    m_Address: Event_Mushroom
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8ae3d9f5cb4da434f92cf695b8adeb9c
+    m_Address: Event_Prisioner
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e3c1d606d60786d4eaa8843a724edd38
