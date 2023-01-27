@@ -10,7 +10,7 @@ namespace Quicorax.RuntimeTools
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.F11))
+            if (Input.GetKeyDown(KeyCode.S))
                 ResolutionScreenShot();
         }
 

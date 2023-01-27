@@ -369,6 +369,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 163712749510324944, guid: b59884edbe398ca45bcb84eaac28192f, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1599735178549005728, guid: b59884edbe398ca45bcb84eaac28192f, type: 3}
       propertyPath: m_Name
       value: SacredSplinter_Canvas
