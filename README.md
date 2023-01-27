@@ -56,7 +56,7 @@ Excel -> JSON -> Unity Gaming Services
 ### Modelos remotos en el Unity Gaming Services
 ![REmote Config](ReadmeImages/RemoteConfig.JPG)
 
-Adjunto en formato JSON los modelos remotos en el repositorio Git.
+Adjunto en formato JSON los modelos remotos en el repositorio Git. [Local Remote Models](RemoteModels)
 - Cloud Save: Otra funcionalidad implementada de los Unity Gaming Services en Sacred Splinter es el "Cloud Save". Funcionalidad que nos permite salvar el progreso de los usuarios en la nube.
 
 ## ---Enlazes---
