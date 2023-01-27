@@ -43,12 +43,17 @@ Sacred Splinter está estructurado en 3 escenas: Carga de servicios, Menú y Jue
 Al completar, morir o escapar de una aventura, el usuario vuelve a la escena de menú.
 
 ## ---Características Técnicas---
-- Data Driven: La gran mayoría de sistemas que conforman Sacred Splinter han sido desarrollados para que el sistema sea independiente a su contendido. Esto nos permite modificar el input que recibe sistema sin tener que hacer cambios en el entorno lógico.  
+- Data Driven: La gran mayoría de sistemas que conforman Sacred Splinter han sido desarrollados para que el sistema sea independiente a su contendido. Esto nos permite modificar el input que recibe sistema sin tener que hacer cambios en el entorno lógico.
+  ![Data Driven](ReadmeImages/QuestPopUp.JPG)
+
 - Remote Config: Los sistemas que siguen la arquitectura "data-driven" nos permiten desacoplar la información de dicho sistema del proyecto. Sacred Splinter está conectado a los Unity Gaming Services (UGS), de forma que los modelos de información de las características "data-driven", son alojados de forma remota en la funcionalidad "Remote Config" de los UGS. 
 Esto no solo nos permite modificar los parámetros de los modelos de forma totalmente ajena al proyecto, sino que nos permite alterar dichos modelos en builds del proyecto que ya hayan sido publicadas (siempre que la estructura de datos sea la misma).
 Tener los modelos en remoto supone un gran veneficio en cuanto al proyecto por la fácil adición de nuevo contenido sin necesidad de actualizar la build.
+![Data Model](ReadmeImages/DataModel.JPG)
+![REmote Config](ReadmeImages/RemoteConfig.JPG)
+
 Adjunto en formato JSON los modelos remotos en el repositorio Git.
-- Cloud Save: Otra funcionalidad en implementada de los Unity Gaming Services en Sacred Splinter es el "Cloud Save". Funcionalidad que nos permite salvar el progreso de los usuarios en la nube.
+- Cloud Save: Otra funcionalidad implementada de los Unity Gaming Services en Sacred Splinter es el "Cloud Save". Funcionalidad que nos permite salvar el progreso de los usuarios en la nube.
 
 ## ---Enlazes---
 - Vídeo:
