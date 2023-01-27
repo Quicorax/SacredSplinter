@@ -32,9 +32,12 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         private CombatInstance _combatInstance;
 
         private int _enemyMaxHealth;
-        
+        private bool _canTryEscape;
+
         protected override void Initialize()
         {
+            _canTryEscape = false;
+
             GetCommonServices();
 
             _enemyCombatData = new EnemyInstance(CurrentFloor);
@@ -60,7 +63,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             _escapeButton.interactable = AdventureConfig.GetHeroData().CanEscapeCombats;
 
             if (_escapeButton.interactable)
-                _escapeButton.onClick.AddListener(Complete);
+                _escapeButton.onClick.AddListener(TryEscape);
 
             _skipTurnButton.onClick.AddListener(SkipTurn);
         }
@@ -73,6 +76,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             _skipTurnButton.interactable = false;
             _combatInstance.OnPlayerSkipTurn();
         }
+
         private void PrintEnemyData()
         {
             _enemyName.text = _enemyData.Header;
@@ -98,9 +102,13 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
         private void PlayerTurn(bool playerTurn)
         {
-            if(playerTurn)
+            _canTryEscape = playerTurn;
+
+            if (playerTurn)
+            {
                 _skipTurnButton.interactable = true;
-            
+            }
+
             foreach (var attack in _availableAttacks)
                 attack.TryAwake(playerTurn);
         }
@@ -109,13 +117,14 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         {
             _skipTurnButton.interactable = false;
             _combatInstance.OnPlayerAttackSelected(attack);
-        } 
+        }
 
         private void OnCombatEnded(bool enemyDead) => StartCoroutine(DelayedCombatEnded(enemyDead));
+
         private IEnumerator DelayedCombatEnded(bool enemyDead)
         {
             yield return new WaitForSeconds(1f);
-            
+
             OnResourcesUpdated.NotifyEvent();
 
             if (enemyDead)
@@ -151,11 +160,17 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
         private void HitAnimation(Image target)
         {
-            target.transform.DOPunchScale(Vector3.one  * 0.2f, 0.5f, 8, 0.5f);
+            target.transform.DOPunchScale(Vector3.one * 0.2f, 0.5f, 8, 0.5f);
             target.DOColor(Color.red, 0.4f).OnComplete(() => target.DOColor(Color.white, 0.3f));
         }
 
-        private void AttackAnimation(Transform target) => 
+        private void AttackAnimation(Transform target) =>
             target.DOPunchPosition(Vector3.up * 50, 0.5f, 1).SetRelative();
+
+        private void TryEscape()
+        {
+            if (_canTryEscape)
+                Complete();
+        }
     }
 }
