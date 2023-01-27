@@ -45,7 +45,7 @@ Al completar, morir o escapar de una aventura, el usuario vuelve a la escena de 
 ## ---Características Técnicas---
 - Data Driven: La gran mayoría de sistemas que conforman Sacred Splinter han sido desarrollados para que el sistema sea independiente a su contendido. Esto nos permite modificar el input que recibe sistema sin tener que hacer cambios en el entorno lógico.
 ### Lógica de generación de misiones Data-Driven
- ![Data Driven](ReadmeImages/QuestLogic.JPG)
+ ![Data Driven](ReadmeImages/QuestsLogic.JPG)
 ### Panel de misiones in-game
  ![Quests](ReadmeImages/QuestsPopUp.JPG)
 
