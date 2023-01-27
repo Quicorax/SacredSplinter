@@ -62,7 +62,7 @@ Adjunto en formato JSON los modelos remotos en el repositorio Git. [Local Remote
 - Cloud Save: Otra funcionalidad implementada de los Unity Gaming Services en Sacred Splinter es el "Cloud Save". Funcionalidad que nos permite salvar el progreso de los usuarios en la nube.
 
 ## ---Enlazes---
-- Vídeo:            ---
+- Vídeo:            https://youtu.be/xIFy0Zn8en8
 - Google Play:      https://play.google.com/store/apps/details?id=com.Quicorax.SacredSplinter
 - Repositorio Git:  https://gitlab.com/qcolobrans/pec-4-quimcolobrans
 
