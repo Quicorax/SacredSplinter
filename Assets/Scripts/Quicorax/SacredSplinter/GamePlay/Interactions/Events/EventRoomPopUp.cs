@@ -67,10 +67,10 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
         private async Task OnInteractAsync()
         {
             var success = Random.Range(0, 100) <= _currentEvent.Chance;
-            var header = success ? _currentEvent.SuccedHeader : _currentEvent.FailHeader;
-            var kind = success ? _currentEvent.SuccedKind : _currentEvent.FailKind;
+            var header = success ? _currentEvent.SucceedHeader : _currentEvent.FailHeader;
+            var kind = success ? _currentEvent.SucceedKind : _currentEvent.FailKind;
             var amount = success
-                ? Random.Range(_currentEvent.SuccedMinAmount, _currentEvent.SuccedMaxAmount)
+                ? Random.Range(_currentEvent.SucceedMinAmount, _currentEvent.SucceedMaxAmount)
                 : _currentEvent.FailAmount;
 
             OnEventResult(kind, amount, _currentEvent.DeathMotive);

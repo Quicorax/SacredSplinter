@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
-using UnityEngine.Serialization;
 
 namespace Quicorax.SacredSplinter.Models
 {

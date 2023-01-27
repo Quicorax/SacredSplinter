@@ -124,7 +124,7 @@ namespace Quicorax.SacredSplinter.Services
 
             _currentHeroSpeed = _selectedHero.Speed + _selectedHero.SpeedEvo * _currentHeroLevel;
             _currentHeroDamage = _selectedHero.Damage + _selectedHero.DamageEvo * _currentHeroLevel;
-            
+
             _onHealthUpdate?.Invoke();
         }
 
@@ -144,9 +144,16 @@ namespace Quicorax.SacredSplinter.Services
         {
             ResetRoomCount();
             ResetFloorCount();
+            ResetHeroExperience();
         }
 
         private void ResetFloorCount() => _currentFloor = 0;
+
+        private void ResetHeroExperience()
+        {
+            _currentHeroLevel = 0;
+            _currentHeroExperience = 0;
+        }
 
         private void PlayerDead(string deathReason) => _onPlayerDeath.NotifyEvent(deathReason);
     }

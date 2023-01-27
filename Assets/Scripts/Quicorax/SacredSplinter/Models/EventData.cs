@@ -15,10 +15,10 @@ namespace Quicorax.SacredSplinter.Models
         public string Action;
         public int Chance;
 
-        public string SuccedHeader;
-        public string SuccedKind;
-        public int SuccedMinAmount;
-        public int SuccedMaxAmount;
+        public string SucceedHeader;
+        public string SucceedKind;
+        public int SucceedMinAmount;
+        public int SucceedMaxAmount;
         
         public string FailHeader;
         public string FailKind;
