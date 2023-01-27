@@ -52,6 +52,7 @@ Esto no solo nos permite modificar los parámetros de los modelos de forma total
 Tener los modelos en remoto supone un gran veneficio en cuanto al proyecto por la fácil adición de nuevo contenido sin necesidad de actualizar la build.
 ### Modelo remoto: Heroes 
 ![Data Model](ReadmeImages/DataModel.JPG)
+Excel -> JSON -> Unity Gaming Services
 ### Modelos remotos en el Unity Gaming Services
 ![REmote Config](ReadmeImages/RemoteConfig.JPG)
 
@@ -59,17 +60,18 @@ Adjunto en formato JSON los modelos remotos en el repositorio Git.
 - Cloud Save: Otra funcionalidad implementada de los Unity Gaming Services en Sacred Splinter es el "Cloud Save". Funcionalidad que nos permite salvar el progreso de los usuarios en la nube.
 
 ## ---Enlazes---
-- Vídeo:
-- Google Play:		https://play.google.com/store/apps/details?id=com.Quicorax.SacredSplinter
-- Repositorio Git:	https://gitlab.com/qcolobrans/pec-4-quimcolobrans
+- Vídeo:            ---
+- Google Play:      https://play.google.com/store/apps/details?id=com.Quicorax.SacredSplinter
+- Repositorio Git:  https://gitlab.com/qcolobrans/pec-4-quimcolobrans
 
 ## ---Créditos---
-- Desarrollado por:  	Quim Colobran Ramirez - @quicorax
+- Desarrollado por: Quim Colobran Ramirez - @quicorax
 
-- Icon Sprites por: 	Game-icons.net
-- Font por: 		Juan Casco (Por Siempre Gotica)
+- Icon Sprites por: Game-icons.net
+- Font por:         Juan Casco (Por Siempre Gotica)
 
 - Sobre el arte:
+
 Sacred Splinter usa elementos artísticos generados con la herramienta Midjourney. Que posteriormente han sido alterados para que encajen dentro del contexto del proyecto.
 El uso de esta herramienta para el desarrollo artístico de este proyecto prototipo se justifica en cuanto que el peso y la importancia de Sacred Splinter reside en su característica técnica, que el proyecto ha sido desarrollado en aproximadamente 30 días, por un único desarrollador y sin fines económicos.
 
