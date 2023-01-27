@@ -45,7 +45,9 @@ Al completar, morir o escapar de una aventura, el usuario vuelve a la escena de 
 ## ---Características Técnicas---
 - Data Driven: La gran mayoría de sistemas que conforman Sacred Splinter han sido desarrollados para que el sistema sea independiente a su contendido. Esto nos permite modificar el input que recibe sistema sin tener que hacer cambios en el entorno lógico.
 ### Lógica de generación de misiones Data-Driven
- ![Data Driven](ReadmeImages/QuestPopUp.JPG)
+ ![Data Driven](ReadmeImages/QuestLogic.JPG)
+### Panel de misiones in-game
+ ![Quests](ReadmeImages/QuestsPopUp.JPG)
 
 - Remote Config: Los sistemas que siguen la arquitectura "data-driven" nos permiten desacoplar la información de dicho sistema del proyecto. Sacred Splinter está conectado a los Unity Gaming Services (UGS), de forma que los modelos de información de las características "data-driven", son alojados de forma remota en la funcionalidad "Remote Config" de los UGS. 
 Esto no solo nos permite modificar los parámetros de los modelos de forma totalmente ajena al proyecto, sino que nos permite alterar dichos modelos en builds del proyecto que ya hayan sido publicadas (siempre que la estructura de datos sea la misma).
