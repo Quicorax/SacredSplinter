@@ -45,7 +45,7 @@ Al completar, morir o escapar de una aventura, el usuario vuelve a la escena de 
 ## ---Características Técnicas---
 - Data Driven: La gran mayoría de sistemas que conforman Sacred Splinter han sido desarrollados para que el sistema sea independiente a su contendido. Esto nos permite modificar el input que recibe sistema sin tener que hacer cambios en el entorno lógico.
 ### Lógica de generación de misiones Data-Driven
- ![Data Driven](ReadmeImages/QuestLogic.JPG)
+ ![Data Driven](ReadmeImages/QuestsLogic.JPG)
 ### Panel de misiones in-game
  ![Quests](ReadmeImages/QuestsPopUp.JPG)
 
@@ -62,7 +62,7 @@ Adjunto en formato JSON los modelos remotos en el repositorio Git. [Local Remote
 - Cloud Save: Otra funcionalidad implementada de los Unity Gaming Services en Sacred Splinter es el "Cloud Save". Funcionalidad que nos permite salvar el progreso de los usuarios en la nube.
 
 ## ---Enlazes---
-- Vídeo:            ---
+- Vídeo:            https://youtu.be/xIFy0Zn8en8
 - Google Play:      https://play.google.com/store/apps/details?id=com.Quicorax.SacredSplinter
 - Repositorio Git:  https://gitlab.com/qcolobrans/pec-4-quimcolobrans
 
