@@ -27,6 +27,8 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         {
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
             _gameProgression = ServiceLocator.GetService<GameProgressionService>();
+
+            GameManager.Instance.Audio.Initialize();
             
             _config.Button.onClick.AddListener(OpenConfiguration);
             _resources.Button.onClick.AddListener(OpenResources);

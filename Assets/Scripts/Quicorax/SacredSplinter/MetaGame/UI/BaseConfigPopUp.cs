@@ -1,3 +1,4 @@
+using Quicorax.SacredSplinter.Initialization;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
@@ -17,14 +18,18 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _progression.SetSoundOn(isOn);
 
             TurnAudio(isOn);
-        }       
-        
+        }
+
         protected void SetSound(GameProgressionService progression)
         {
             _progression = progression;
             TurnAudio(_progression.GetSoundOff());
         }
-        
-        private void TurnAudio(bool isOn) => _audioON.SetActive(isOn);
+
+        private void TurnAudio(bool isOn)
+        {
+            _audioON.SetActive(isOn);
+            GameManager.Instance.Audio.ToggleMuteAudio(!isOn);
+        }
     }
 }
