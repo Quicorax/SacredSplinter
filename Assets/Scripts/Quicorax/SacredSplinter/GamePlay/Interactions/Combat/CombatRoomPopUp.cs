@@ -69,7 +69,8 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         }
 
         private void StartCombat() => _combatInstance =
-            new CombatInstance(_enemyCombatData, PlayerTurn, OnDamageEnemy, OnDamagePlayer, OnCombatEnded, _combatLog);
+            new CombatInstance(_heroData, _enemyCombatData, PlayerTurn, OnDamageEnemy, OnDamagePlayer, OnCombatEnded,
+                _combatLog);
 
         private void SkipTurn()
         {

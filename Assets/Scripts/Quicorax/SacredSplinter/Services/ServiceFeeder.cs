@@ -5,8 +5,9 @@ namespace Quicorax.SacredSplinter.Services
 {
     public class ServiceFeeder
     {
-        const string _enviroment = "development";
-        //const string _enviroment = "production";
+        //const string _enviroment = "development";
+        const string _enviroment = "production";
+        
         private Action<string> _onElementLoaded;
 
         public async Task LoadServices(ServiceElements elements, Action<string> onElementLoaded)

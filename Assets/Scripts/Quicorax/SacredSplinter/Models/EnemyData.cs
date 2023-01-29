@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine.Serialization;
 
 namespace Quicorax.SacredSplinter.Models
 {
@@ -9,6 +10,7 @@ namespace Quicorax.SacredSplinter.Models
         public string Description;
         
         public string Type;
+        public string WeaknessType;
         
         public string Location;
         public int MinFloor;
@@ -25,6 +27,9 @@ namespace Quicorax.SacredSplinter.Models
         public int Speed;
         public int SpeedEvo;
         
+        public int Agility;
+        public int AgilityEvo;
+        
         public int ExperienceOnKill;
         public int BlueCrystalsOnKill;
         public int GoldCoinsOnKill;
@@ -33,6 +38,7 @@ namespace Quicorax.SacredSplinter.Models
         public int CurrentHealth;
         public int CurrentDamage;
         public int CurrentSpeed;
+        public int CurrentAgility;
         
         public int TempBlueCrystalReward;
         public int TempGoldCoinReward;

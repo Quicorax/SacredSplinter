@@ -14,6 +14,7 @@ namespace Quicorax.SacredSplinter.Models
         public int ExperienceToLvl;
 
         public string AttackType;
+        public string WeaknessType;
         public int AttackAmount;
         
         public int Damage;
@@ -24,6 +25,9 @@ namespace Quicorax.SacredSplinter.Models
             
         public int Speed;
         public int SpeedEvo;
+        
+        public int Agility;
+        public int AgilityEvo;
         
         //Dynamic properties
         public List<AttackData> Attacks;

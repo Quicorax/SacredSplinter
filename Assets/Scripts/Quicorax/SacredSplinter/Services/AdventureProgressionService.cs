@@ -24,6 +24,7 @@ namespace Quicorax.SacredSplinter.Services
 
         private int _currentHeroSpeed;
         private int _currentHeroDamage;
+        private int _currentHeroAgility;
 
         private int _currentFloor;
         private int _currentFloorRooms;
@@ -59,6 +60,7 @@ namespace Quicorax.SacredSplinter.Services
 
         public int GetCurrentHeroSpeed() => _currentHeroSpeed;
         public int GetCurrentHeroDamage() => _currentHeroDamage;
+        public int GetCurrentHeroAgility() => _currentHeroAgility;
 
         public void AddHeroExperience(int amount)
         {
@@ -124,6 +126,7 @@ namespace Quicorax.SacredSplinter.Services
 
             _currentHeroSpeed = _selectedHero.Speed + _selectedHero.SpeedEvo * _currentHeroLevel;
             _currentHeroDamage = _selectedHero.Damage + _selectedHero.DamageEvo * _currentHeroLevel;
+            _currentHeroAgility = _selectedHero.Agility + _selectedHero.AgilityEvo * _currentHeroLevel;
 
             _onHealthUpdate?.Invoke();
         }

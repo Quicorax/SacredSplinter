@@ -9,6 +9,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 {
     public class CombatInstance
     {
+        private HeroData _hero;
         private EnemyData _enemy;
         private EnemyInstance _enemyCombat;
         private Action<bool> _onPlayerTurn;
@@ -20,9 +21,10 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         private AdventureProgressionService _adventureProgression;
         private GameProgressionService _gameProgression;
 
-        public CombatInstance(EnemyInstance enemy, Action<bool> onPlayerPlayerTurn, Action onDamageEnemy,
+        public CombatInstance(HeroData hero, EnemyInstance enemy, Action<bool> onPlayerPlayerTurn, Action onDamageEnemy,
             Action<int> onDamagePlayer, Action<bool> onCombatEnded, CombatLog combatLog)
         {
+            _hero = hero;
             _enemyCombat = enemy;
             _onPlayerTurn = onPlayerPlayerTurn;
             _onDamageEnemy = onDamageEnemy;
@@ -40,33 +42,42 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
         public void OnPlayerAttackSelected(AttackData attack)
         {
-            var finalDamage =
-                Mathf.FloorToInt(attack.Damage * ((float)_adventureProgression.GetCurrentHeroDamage() / 100));
-            _enemy.CurrentHealth -= finalDamage;
-            _combatLog.SetCombatLog("Hero", _enemy.Header, finalDamage, attack.Header);
-
-            if (_enemy.CurrentHealth <= 0)
+            if (Random.Range(0, 100) > _enemy.CurrentAgility)
             {
-                _enemy.CurrentHealth = 0;
+                var onWeaknessDamage = attack.AttackType == _enemy.WeaknessType ? 1.5f : 1;
+                var heroDamage = (float)_adventureProgression.GetCurrentHeroDamage() / 100;
+                var finalDamage = Mathf.FloorToInt(attack.Damage * heroDamage * onWeaknessDamage);
 
-                _onDamageEnemy?.Invoke();
+                _enemy.CurrentHealth -= finalDamage;
+                _combatLog.SetCombatLog("Hero", _enemy.Header, finalDamage, attack.Header);
 
-                _adventureProgression.AddHeroExperience(_enemy.ExperienceOnKill);
+                if (_enemy.CurrentHealth <= 0)
+                {
+                    _enemy.CurrentHealth = 0;
 
-                var blueCrystalReward = RandomizeResourceAmount(_enemy.BlueCrystalsOnKill);
-                var goldCoinReward = RandomizeResourceAmount(_enemy.GoldCoinsOnKill);
+                    _onDamageEnemy?.Invoke();
 
-                _enemy.TempBlueCrystalReward = blueCrystalReward;
-                _enemy.TempGoldCoinReward = goldCoinReward;
+                    _adventureProgression.AddHeroExperience(_enemy.ExperienceOnKill);
 
-                _gameProgression.SetAmountOfResource("Blue Crystal", blueCrystalReward);
-                _gameProgression.SetAmountOfResource("Gold Coin", goldCoinReward);
+                    var blueCrystalReward = RandomizeResourceAmount(_enemy.BlueCrystalsOnKill);
+                    var goldCoinReward = RandomizeResourceAmount(_enemy.GoldCoinsOnKill);
 
-                _onCombatEnded?.Invoke(true);
-                return;
+                    _enemy.TempBlueCrystalReward = blueCrystalReward;
+                    _enemy.TempGoldCoinReward = goldCoinReward;
+
+                    _gameProgression.SetAmountOfResource("Blue Crystal", blueCrystalReward);
+                    _gameProgression.SetAmountOfResource("Gold Coin", goldCoinReward);
+
+                    _onCombatEnded?.Invoke(true);
+                    return;
+                }
+                else
+                    _onDamageEnemy?.Invoke();
             }
             else
-                _onDamageEnemy?.Invoke();
+            {
+                _combatLog.SetAttackAvoidedLog(_enemy.Header);
+            }
 
             SetTurn(false).ManageTaskException();
         }
@@ -76,7 +87,6 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             _combatLog.SkipTurnLog("Hero");
             SetTurn(false).ManageTaskException();
         }
-
 
         private int RandomizeResourceAmount(int initialAmount) =>
             Mathf.FloorToInt(initialAmount * Random.Range(0.5f, 1.5f));
@@ -93,10 +103,20 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
                 if (attack != null)
                 {
-                    var finalDamage = Mathf.FloorToInt(attack.Damage * ((float)_enemy.CurrentDamage / 100));
-                    _onDamagePlayer?.Invoke(-finalDamage);
+                    if (Random.Range(0, 100) > _adventureProgression.GetCurrentHeroAgility())
+                    {
+                        var onWeaknessDamage = attack.AttackType == _hero.WeaknessType ? 1.5f : 1;
+                        var enemyDamage = ((float)_enemy.CurrentDamage / 100);
+                        var finalDamage = Mathf.FloorToInt(attack.Damage * enemyDamage * onWeaknessDamage);
 
-                    _combatLog.SetCombatLog(_enemy.Header, "Hero", finalDamage, attack.Header);
+                        _onDamagePlayer?.Invoke(-finalDamage);
+
+                        _combatLog.SetCombatLog(_enemy.Header, "Hero", finalDamage, attack.Header);
+                    }
+                    else
+                    {
+                        _combatLog.SetAttackAvoidedLog(_hero.Header);
+                    }
                 }
                 else
                     _combatLog.SkipTurnLog(_enemy.Header);
