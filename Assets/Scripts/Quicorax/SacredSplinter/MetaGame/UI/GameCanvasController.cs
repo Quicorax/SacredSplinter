@@ -15,17 +15,19 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         [SerializeField] private AdventureProgressionLoop _adventureLoop;
         [SerializeField] private Image _background, _hero;
         [SerializeField] private TMP_Text _header, _floorNumber, _health;
-        [SerializeField] private Slider _healthSlider;
         [SerializeField] private PopUpLauncher _deathPopUp;
         [SerializeField] private CurtainTransition _curtain;
         [SerializeField] private TMP_Text _heroLvl;
-        [SerializeField] private Slider _experienceSlider;
+        [SerializeField] private Image _healthFiller;
+        [SerializeField] private Image _experienceFiller;
 
         [SerializeField] private StringEventBus _onPlayerDeath;
 
         private AdventureProgressionService _adventureProgress;
         private AdventureConfigurationService _adventureConfig;
         private AddressablesService _addressables;
+
+        public void UpdateFloorNumber() => _floorNumber.text = _adventureProgress.GetCurrentFloor().ToString();
 
         private void Awake() => _onPlayerDeath.Event += PlayerDeath;
         private void OnDestroy() => _onPlayerDeath.Event -= PlayerDeath;
@@ -54,23 +56,24 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _background.sprite = await _addressables.LoadAddrssAsset<Sprite>(location.Header);
             _hero.sprite = await _addressables.LoadAddrssAsset<Sprite>(_adventureConfig.GetHeroData().Header);
         }
-        
+
         private void SetHealthData()
         {
-            _healthSlider.maxValue = _adventureProgress.GetMaxHealth();
-
+            var currentMaxHealth = _adventureProgress.GetMaxHealth();
             var currentHealth = _adventureProgress.GetCurrentHealth();
-            
-            _healthSlider.value = currentHealth;
-            _health.text = $"{currentHealth} / {_adventureProgress.GetMaxHealth()}";
+
+            _health.text = $"{currentHealth} / {currentMaxHealth}";
+
+            var fillAmount = (float)currentHealth / currentMaxHealth;
+            _healthFiller.fillAmount = fillAmount;
         }
 
-        public void UpdateFloorNumber() => _floorNumber.text = _adventureProgress.GetCurrentFloor().ToString();
-
-        public void UpdateExperience(int heroLevel, int heroExperience)
+        private void UpdateExperience(int heroLevel, int heroExperience)
         {
             _heroLvl.text = heroLevel.ToString();
-            _experienceSlider.value = heroExperience;
+
+            var fillAmount = (float)heroExperience / _adventureProgress.GetHeroExperienceToLevelUp();
+            _experienceFiller.fillAmount = fillAmount;
         }
 
         private void PlayerDeath(string deathReason) =>

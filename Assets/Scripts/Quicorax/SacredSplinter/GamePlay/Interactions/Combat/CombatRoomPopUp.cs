@@ -15,7 +15,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
     {
         [SerializeField] private TMP_Text _enemyName, _enemyHealthDisplay;
         [SerializeField] private Image _enemy, _hero;
-        [SerializeField] private Slider _enemyHealth;
+        [SerializeField] private Image _enemyHealthFiller;
         [SerializeField] private Button _escapeButton;
         [SerializeField] private Button _skipTurnButton;
         [SerializeField] private BaseAttack _baseAttack;
@@ -83,7 +83,8 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             _enemyName.text = _enemyData.Header;
 
             _enemyMaxHealth = _enemyData.CurrentHealth;
-            _enemyHealth.maxValue = _enemyMaxHealth;
+            _enemyHealthFiller.fillAmount = 1;
+            
             GameProgression.SetEnemyDiscovered(_enemyData.Header);
             UpdateEnemyHealthDisplay();
         }
@@ -155,7 +156,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
         private void UpdateEnemyHealthDisplay()
         {
-            _enemyHealth.value = _enemyData.CurrentHealth;
+            _enemyHealthFiller.fillAmount = (float)_enemyData.CurrentHealth / _enemyMaxHealth;
             _enemyHealthDisplay.text = $"{_enemyData.CurrentHealth} / {_enemyMaxHealth}";
         }
 

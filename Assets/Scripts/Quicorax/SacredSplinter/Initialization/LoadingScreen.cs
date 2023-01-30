@@ -10,16 +10,19 @@ namespace Quicorax.SacredSplinter.Initialization
     public class LoadingScreen : MonoBehaviour
     {
         [SerializeField] private ServiceElements _servicesElements;
-        [SerializeField] private Slider _progressionBar;
         [SerializeField] private TMP_Text _progressionText;
         [SerializeField] private CurtainTransition _curtain;
-        [SerializeField] private Transform _appNotDeadDebug;
-        [SerializeField] private float _animPunch;
 
-        private Tween _animationTween;
+        [SerializeField] private Image _progressionBar;
+        [SerializeField] private Image _appNotDeadDebug;
+
+        [SerializeField] private int _totalServicesCount = 5;
+
+        private Tween _appNotDeadTween, _progressionTween;
         private ServiceFeeder _serviceFeeder;
 
         private int _servicesLoadedCount;
+        private bool _faded;
 
         private void Awake()
         {
@@ -27,8 +30,7 @@ namespace Quicorax.SacredSplinter.Initialization
 
             Initialize().ManageTaskException();
 
-            _progressionBar.maxValue = 5;
-            _progressionBar.value = 0;
+            _progressionBar.fillAmount = 0;
 
             AnimateNotDeathAppImage();
         }
@@ -39,7 +41,8 @@ namespace Quicorax.SacredSplinter.Initialization
 
             _curtain.CurtainON(() =>
             {
-                _animationTween.Kill();
+                _appNotDeadTween.Kill();
+                _progressionTween.Kill();
                 ServiceLocator.GetService<NavigationService>().NavigateToMenu();
             });
         }
@@ -47,11 +50,17 @@ namespace Quicorax.SacredSplinter.Initialization
         private void UpdateProgression(string message)
         {
             _progressionText.text = message;
-            _progressionBar.value = _servicesLoadedCount++;
+
+            var amount = (float)_servicesLoadedCount++ / _totalServicesCount;
+            _progressionTween = _progressionBar.DOFillAmount(amount, 1);
         }
 
-        private void AnimateNotDeathAppImage() =>
-            _animationTween = _appNotDeadDebug.DOPunchPosition(Vector3.up * _animPunch, 1f, 1, 1)
+        private void AnimateNotDeathAppImage()
+        {
+            _faded = !_faded;
+
+            _appNotDeadTween = _appNotDeadDebug.DOFade(_faded ? 1 : 0, 1)
                 .OnComplete(AnimateNotDeathAppImage);
+        }
     }
 }

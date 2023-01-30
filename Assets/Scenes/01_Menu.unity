@@ -194,6 +194,10 @@ PrefabInstance:
       propertyPath: _curtain
       value: 
       objectReference: {fileID: 986977448}
+    - target: {fileID: 7155609777841681898, guid: b59884edbe398ca45bcb84eaac28192f, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8133581635620102243, guid: b59884edbe398ca45bcb84eaac28192f, type: 3}
       propertyPath: m_Pivot.x
       value: 0

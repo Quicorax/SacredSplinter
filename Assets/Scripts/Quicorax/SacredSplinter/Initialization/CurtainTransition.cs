@@ -9,7 +9,7 @@ namespace Quicorax.SacredSplinter.Initialization
     {
         [SerializeField] private Image _inputBlocker;
         [SerializeField] private Transform _viewBlocker;
-        [SerializeField] private GameObject _viewBackground;
+        [SerializeField] private Canvas _curtainCanvas;
 
         [SerializeField] private float _transitionTime = 1;
 
@@ -44,6 +44,6 @@ namespace Quicorax.SacredSplinter.Initialization
         private void SetInitialPosition() =>
             _viewBlocker.position = new(Screen.width / 2, Screen.height / 2, 0);
 
-        private void SetObjectActive(bool active) => _viewBackground.SetActive(active);
+        private void SetObjectActive(bool active) => _curtainCanvas.enabled = active;
     }
 }

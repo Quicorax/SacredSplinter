@@ -61,6 +61,7 @@ namespace Quicorax.SacredSplinter.Services
         public int GetCurrentHeroSpeed() => _currentHeroSpeed;
         public int GetCurrentHeroDamage() => _currentHeroDamage;
         public int GetCurrentHeroAgility() => _currentHeroAgility;
+        public int GetHeroExperienceToLevelUp() => _selectedHero.ExperienceToLvl;
 
         public void AddHeroExperience(int amount)
         {
