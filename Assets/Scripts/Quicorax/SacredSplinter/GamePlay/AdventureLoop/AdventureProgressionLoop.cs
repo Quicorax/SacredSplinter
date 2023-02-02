@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
 using Quicorax.SacredSplinter.GamePlay.Rooms;
 using Quicorax.SacredSplinter.Initialization;
 using Quicorax.SacredSplinter.MetaGame.UI;

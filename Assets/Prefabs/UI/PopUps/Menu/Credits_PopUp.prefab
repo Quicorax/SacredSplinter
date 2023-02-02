@@ -469,20 +469,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7023749314817009417}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -7343584447077849752}
-        m_TargetAssemblyTypeName: Quicorax.SacredSplinter.MetaGame.UI.CreditsPopUp,
-          Assembly-CSharp
-        m_MethodName: OpenIconsLink
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &4187283869389176256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,20 +1014,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8996931357266108913}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -7343584447077849752}
-        m_TargetAssemblyTypeName: Quicorax.SacredSplinter.MetaGame.UI.CreditsPopUp,
-          Assembly-CSharp
-        m_MethodName: OpenFontLink
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &6001184247905764524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,20 +1271,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8409107147115917494}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -7343584447077849752}
-        m_TargetAssemblyTypeName: Quicorax.SacredSplinter.MetaGame.UI.CreditsPopUp,
-          Assembly-CSharp
-        m_MethodName: OpenFontLink
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7124444533352903067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,20 +1606,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 183785188566290995}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -7343584447077849752}
-        m_TargetAssemblyTypeName: Quicorax.SacredSplinter.MetaGame.UI.CreditsPopUp,
-          Assembly-CSharp
-        m_MethodName: OpenDeveloperLink
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &8138026741688991945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,6 +1919,10 @@ PrefabInstance:
       value: -321.25
       objectReference: {fileID: 0}
     - target: {fileID: 2142229585986928154, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142229585986928154, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: -7343584447077849752}
@@ -2210,7 +2162,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3626a8144700344a7cf0592675f65f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _closeButton: {fileID: 2462395469487403816}
   _canvasGroup: {fileID: 6440468336172182926}
+  _developerButton: {fileID: 2786294314973924341}
+  _iconsButton: {fileID: 8732171639893537371}
+  _fontButton: {fileID: 2922286896882007632}
+  _musicButton: {fileID: 6708383445575527749}
+--- !u!114 &2462395469487403816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2142229585986928154, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+  m_PrefabInstance: {fileID: 4582014422809496882}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3442521451290317035 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1175684496277937625, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}

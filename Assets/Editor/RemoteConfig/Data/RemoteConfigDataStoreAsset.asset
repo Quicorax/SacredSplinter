@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"772fd825-4b60-47e6-ae13-b4b0bcaec8e8\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8b5c6f68-de08-4aa6-94bb-228d6f62b810\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e17132c8-d86e-41e8-aed4-7bb45a0a0a32\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"435e3ab0-689d-473d-b83c-f9e0193feaf8\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -37,7 +37,7 @@ MonoBehaviour:
     \"Gold Coins x 1000\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
     \"PriceAmount\": 10000,\r\n            \"Reward\": \"Gold Coin\",\r\n           
     \"RewardAmount\": 1000\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"4697ca0c-0b9f-4a6c-80f4-7154bc9746f9\"\r\n   
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"4b51997b-e9b3-4425-b053-60bfc661b3d3\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": 0,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -77,7 +77,7 @@ MonoBehaviour:
     \"Header\": \"Clear 100 rooms\",\r\n            \"Amount\": 100,\r\n           
     \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 4000\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"3ce1e3f9-76a4-479d-bdaf-25af5516223e\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"c5346527-692f-4985-a651-73fda119a0be\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
@@ -125,7 +125,7 @@ MonoBehaviour:
     90,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 100,\r\n           
     \"SpeedEvo\": 50,\r\n            \"Agility\": 33,\r\n            \"AgilityEvo\":
     5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"5d17cdcf-ae15-4963-9c4f-e4cdc1fdd178\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"6bddf37f-19be-40b1-a1f9-0e960f327120\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
@@ -345,7 +345,7 @@ MonoBehaviour:
     \"SpeedEvo\": 0,\r\n            \"Agility\": 1,\r\n            \"AgilityEvo\":
     0,\r\n            \"ExperienceOnKill\": 0,\r\n            \"BlueCrystalsOnKill\":
     120,\r\n            \"GoldCoinsOnKill\": 50\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"77a47caf-f69e-49cc-9a39-f548ddf55a46\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f770f9f6-401c-4ee9-b819-390dacadb9c7\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
@@ -364,7 +364,7 @@ MonoBehaviour:
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
     3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"cf397b13-0118-4fe6-a1ab-1ce7600fd71c\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"52bbc581-fca0-4b34-b965-7e2ff8f6bc99\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
@@ -446,7 +446,7 @@ MonoBehaviour:
     \"SucceedMaxAmount\": 35,\r\n            \"FailHeader\": \"The shining sphere
     fades, and with it, you feel your pouch loss weight.\",\r\n            \"FailKind\":
     \"Gold Coin\",\r\n            \"FailAmount\": -5\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e45011f9-2393-4f3d-bf0f-1589fbfe0421\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"1cb33a03-2a0d-4d46-ada7-e29197391d36\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AttacksModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Perforation\",\r\n            \"AttackType\":
@@ -500,14 +500,14 @@ MonoBehaviour:
     3\r\n          },\r\n          {\r\n            \"Header\": \"Stampede\",\r\n           
     \"AttackType\": \"Beast\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
     5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"772fd825-4b60-47e6-ae13-b4b0bcaec8e8\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8b5c6f68-de08-4aa6-94bb-228d6f62b810\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e17132c8-d86e-41e8-aed4-7bb45a0a0a32\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"435e3ab0-689d-473d-b83c-f9e0193feaf8\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -525,7 +525,7 @@ MonoBehaviour:
     \"Gold Coins x 1000\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
     \"PriceAmount\": 10000,\r\n            \"Reward\": \"Gold Coin\",\r\n           
     \"RewardAmount\": 1000\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"4697ca0c-0b9f-4a6c-80f4-7154bc9746f9\"\r\n   
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"4b51997b-e9b3-4425-b053-60bfc661b3d3\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": 0,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -565,7 +565,7 @@ MonoBehaviour:
     \"Header\": \"Clear 100 rooms\",\r\n            \"Amount\": 100,\r\n           
     \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 4000\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"3ce1e3f9-76a4-479d-bdaf-25af5516223e\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"c5346527-692f-4985-a651-73fda119a0be\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
@@ -613,7 +613,7 @@ MonoBehaviour:
     90,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 100,\r\n           
     \"SpeedEvo\": 50,\r\n            \"Agility\": 33,\r\n            \"AgilityEvo\":
     5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"5d17cdcf-ae15-4963-9c4f-e4cdc1fdd178\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"6bddf37f-19be-40b1-a1f9-0e960f327120\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
@@ -833,7 +833,7 @@ MonoBehaviour:
     \"SpeedEvo\": 0,\r\n            \"Agility\": 1,\r\n            \"AgilityEvo\":
     0,\r\n            \"ExperienceOnKill\": 0,\r\n            \"BlueCrystalsOnKill\":
     120,\r\n            \"GoldCoinsOnKill\": 50\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"77a47caf-f69e-49cc-9a39-f548ddf55a46\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f770f9f6-401c-4ee9-b819-390dacadb9c7\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
@@ -852,7 +852,7 @@ MonoBehaviour:
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
     3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"cf397b13-0118-4fe6-a1ab-1ce7600fd71c\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"52bbc581-fca0-4b34-b965-7e2ff8f6bc99\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
@@ -934,7 +934,7 @@ MonoBehaviour:
     \"SucceedMaxAmount\": 35,\r\n            \"FailHeader\": \"The shining sphere
     fades, and with it, you feel your pouch loss weight.\",\r\n            \"FailKind\":
     \"Gold Coin\",\r\n            \"FailAmount\": -5\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e45011f9-2393-4f3d-bf0f-1589fbfe0421\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"1cb33a03-2a0d-4d46-ada7-e29197391d36\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AttacksModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Perforation\",\r\n            \"AttackType\":

@@ -39,7 +39,7 @@ namespace Quicorax.SacredSplinter.Initialization
         {
             await _serviceFeeder.LoadServices(_servicesElements, UpdateProgression);
 
-            _curtain.CurtainON(() =>
+            _curtain.CurtainOn(() =>
             {
                 _appNotDeadTween.Kill();
                 _progressionTween.Kill();

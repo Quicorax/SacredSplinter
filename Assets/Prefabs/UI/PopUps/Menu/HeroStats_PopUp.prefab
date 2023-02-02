@@ -2663,6 +2663,10 @@ PrefabInstance:
       value: -321.25
       objectReference: {fileID: 0}
     - target: {fileID: 2142229585986928154, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142229585986928154, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1435419954439330040}
@@ -2898,6 +2902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33231afa0edcf794e97912ee7834a135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _closeButton: {fileID: 2462395469487403816}
   _canvasGroup: {fileID: 6440468336172182926}
   _heroClass: {fileID: 1239056602834477975}
   _attackType: {fileID: 5308237154236445645}
@@ -2909,6 +2914,17 @@ MonoBehaviour:
   _evoSpeed: {fileID: 8229365406933730486}
   _canIgnoreEvents: {fileID: 9058905985503339053}
   _canEscapeCombats: {fileID: 6976680855245635387}
+--- !u!114 &2462395469487403816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2142229585986928154, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+  m_PrefabInstance: {fileID: 4582014422809496882}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3442521451290317035 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1175684496277937625, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}

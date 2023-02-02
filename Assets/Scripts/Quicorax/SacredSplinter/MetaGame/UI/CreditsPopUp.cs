@@ -1,5 +1,6 @@
 ﻿using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Quicorax.SacredSplinter.MetaGame.UI
 {
@@ -10,9 +11,22 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         private const string FontURL = "https://www.juancasco.net/";
         private const string MusicURL = "https://pixabay.com/es/users/gioelefazzeri-16466931/";
 
-        public void OpenDeveloperLink() => Application.OpenURL(DeveloperURL);
-        public void OpenIconsLink() => Application.OpenURL(IconsURL);
-        public void OpenFontLink() => Application.OpenURL(FontURL);
-        public void OpenMusicLink() => Application.OpenURL(MusicURL);
+        [SerializeField] private Button _developerButton;
+        [SerializeField] private Button _iconsButton;
+        [SerializeField] private Button _fontButton;
+        [SerializeField] private Button _musicButton;
+
+        private void Start()
+        {
+            _developerButton.onClick.AddListener(OpenDeveloperLink);
+            _iconsButton.onClick.AddListener(OpenIconsLink);
+            _fontButton.onClick.AddListener(OpenFontLink);
+            _musicButton.onClick.AddListener(OpenMusicLink);
+        }
+
+        private void OpenDeveloperLink() => Application.OpenURL(DeveloperURL);
+        private void OpenIconsLink() => Application.OpenURL(IconsURL);
+        private void OpenFontLink() => Application.OpenURL(FontURL);
+        private void OpenMusicLink() => Application.OpenURL(MusicURL);
     }
 }

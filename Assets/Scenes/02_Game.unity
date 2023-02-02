@@ -484,6 +484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game_Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 7257791141593461590, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8964644780444915597, guid: 3eecb85bffca3d843bdd7386315e0174, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -463,10 +463,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd39a7ca09473ca4398eb38fce876dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _closeButton: {fileID: 2462395469487403816}
   _canvasGroup: {fileID: 6440468336172182926}
   _crystalsAmount: {fileID: 3933629022806638180}
   _coinsAmount: {fileID: 6619752596001929966}
   _heroLicense: {fileID: 5279243544904345451}
+--- !u!114 &2462395469487403816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2142229585986928154, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
+  m_PrefabInstance: {fileID: 4582014422809496882}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3442521451290317035 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1175684496277937625, guid: d5ce6f46315ab5948a20dd9602901b01, type: 3}
@@ -491,6 +503,10 @@ PrefabInstance:
     - target: {fileID: 623969875622991013, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2388829041573473057, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2388829041573473057, guid: 79f5a8af9fd139e498e7bb63242fef01, type: 3}
       propertyPath: m_RaycastTarget

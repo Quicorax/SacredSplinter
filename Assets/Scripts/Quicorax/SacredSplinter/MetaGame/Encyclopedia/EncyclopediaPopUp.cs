@@ -18,11 +18,10 @@ namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
         private readonly Color _darkGray = new(0.09f, 0.09f, 0.09f);
 
         private Dictionary<int, EnemyData> _enemies = new();
-        private EnemyData _currentEnemy;
-
-        private bool _elementDiscovered;
 
         private GameProgressionService _gameProgression;
+
+        private bool _elementDiscovered;
 
         public override void Initialize(Action<string> onSelect = null, Action onCancel = null)
         {
@@ -53,10 +52,10 @@ namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
 
         protected override void ElementChanged()
         {
-            _currentEnemy = _enemies[ActualIndex];
-            _elementDiscovered = _gameProgression.GetEnemyDiscovered(_currentEnemy.Header);
+            var currentEnemy = _enemies[ActualIndex];
 
-            PrintElementData(_currentEnemy.Header, _currentEnemy.Description);
+            _elementDiscovered = _gameProgression.GetEnemyDiscovered(currentEnemy.Header);
+            PrintElementData(currentEnemy.Header, currentEnemy.Description);
         }
 
         protected override void OnMiddleOfFade()

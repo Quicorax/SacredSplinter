@@ -4,12 +4,14 @@ using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 {
     public class ConfirmHeroUnlockPopUp : BasePopUp
     {
         [SerializeField] private PopUpLauncher _notEnoughResourcesPopUp;
+        [SerializeField] private Button _tryUnlockButton;
 
         [SerializeField] private TMP_Text _heroClass, _availableHeroLicenses;
 
@@ -22,13 +24,15 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
             _onConfirm = onConfirm;
             _heroClass.text = product;
 
+            _tryUnlockButton.onClick.AddListener(TryUnlock);
+            
             _availableLicenses = ServiceLocator.GetService<GameProgressionService>()
                 .GetAmountOfResource("Hero License");
 
             _availableHeroLicenses.text = _availableLicenses.ToString();
         }
 
-        public void TryUnlock()
+        private void TryUnlock()
         {
             if (_availableLicenses > 0)
             {

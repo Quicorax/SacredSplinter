@@ -7,6 +7,8 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
 {
     public abstract class BasePopUp : MonoBehaviour
     {
+        [SerializeField] private Button _closeButton;
+
         [SerializeField] internal CanvasGroup _canvasGroup;
 
         private Action<Button> _onClosePopUp;
@@ -16,6 +18,8 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
         {
             _selfPopUp = popUpBundle;
             _onClosePopUp = onClosePopUp;
+            
+            _closeButton?.onClick.AddListener(CloseSelf);
 
             _canvasGroup.DOFade(0, 0.2f).From();
         }

@@ -29,22 +29,26 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
             _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
             _addressables = ServiceLocator.GetService<AddressablesService>();
 
+            _locationSelectionPack.Launcher.Button.onClick.AddListener(OpenLocationSelector);
+            _heroSelectionPack.Launcher.Button.onClick.AddListener(OpenHeroSelector);
+            _engageOnAdventureButton.onClick.AddListener(EngageOnAdventure);
+            
             _adventureConfig.ResetSelection();
-
+            
             TurnObjectOn(_locationSelectionPack.Image.gameObject, false);
             TurnObjectOn(_heroSelectionPack.Image.gameObject, false);
 
             ActivateButton(_engageOnAdventureButton, false);
         }
 
-        public void EngageOnAdventure()
+        private void EngageOnAdventure()
         {
             CloseSelf();
             _onEngage?.Invoke();
         }
 
-        public void OpenLocationSelector() => SpawnSelectorPopUp<LocationSelectorPopUp>(_locationSelectionPack);
-        public void OpenHeroSelector() => SpawnSelectorPopUp<HeroSelectorPopUp>(_heroSelectionPack);
+        private void OpenLocationSelector() => SpawnSelectorPopUp<LocationSelectorPopUp>(_locationSelectionPack);
+        private void OpenHeroSelector() => SpawnSelectorPopUp<HeroSelectorPopUp>(_heroSelectionPack);
 
         private void SpawnSelectorPopUp<T>(SelectorPack pack) where T : HorizontalSelectablePopUp
         {

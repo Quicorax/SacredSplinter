@@ -16,26 +16,30 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         [SerializeField] private PopUpLauncher _adventureSelector, _quests, _shop, _encyclopedia;
 
         [SerializeField] private CurtainTransition _curtain;
-        
+
         private void Start()
         {
             _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
 
-            _adventureSelector.Button.onClick.AddListener(OpenAdventureSelector);
+            SetButtonsListener();
+        }
+
+        private void SetButtonsListener()
+        {
             _quests.Button.onClick.AddListener(OpenQuests);
             _shop.Button.onClick.AddListener(OpenShop);
             _encyclopedia.Button.onClick.AddListener(OpenEncyclopedia);
+            _adventureSelector.Button.onClick.AddListener(OpenAdventureSelector);
         }
 
-        public void OpenAdventureSelector() =>
+        private void OpenQuests() => _popUpSpawner.SpawnPopUp<QuestsPopUp>(_quests).Initialize();
+        private void OpenShop() => _popUpSpawner.SpawnPopUp<ShopPopUp>(_shop).Initialize();
+        private void OpenEncyclopedia() => _popUpSpawner.SpawnPopUp<EncyclopediaPopUp>(_encyclopedia).Initialize();
+
+        private void OpenAdventureSelector() =>
             _popUpSpawner.SpawnPopUp<AdventureSelectorPopUp>(_adventureSelector).Initialize(EngageOnAdventure);
 
-        public void OpenQuests() => _popUpSpawner.SpawnPopUp<QuestsPopUp>(_quests).Initialize();
-        public void OpenShop() => _popUpSpawner.SpawnPopUp<ShopPopUp>(_shop).Initialize();
-
-        public void OpenEncyclopedia() => _popUpSpawner.SpawnPopUp<EncyclopediaPopUp>(_encyclopedia).Initialize();
-
         private void EngageOnAdventure() =>
-            _curtain.CurtainON(() => ServiceLocator.GetService<NavigationService>().NavigateToGame());
+            _curtain.CurtainOn(() => ServiceLocator.GetService<NavigationService>().NavigateToGame());
     }
 }

@@ -11,6 +11,8 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
 {
     public class ConfirmPurchasePopUp : BasePopUp
     {
+        [SerializeField] private Button _confirmButton;
+        
         [SerializeField] private TMP_Text _priceAmount, _rewardAmount;
         [SerializeField] private Image _priceImage, _rewardImage;
 
@@ -25,6 +27,8 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
             _onConfirm = onConfirm;
             _addressables = addressables;
             
+            _confirmButton.onClick.AddListener(OnConfirm);
+            
             PrintData().ManageTaskException();
         }
 
@@ -37,7 +41,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
             _rewardImage.sprite = await _addressables.LoadAddrssAsset<Sprite>(_product.Reward);
         }
 
-        public void OnConfirm()
+        private void OnConfirm()
         {
             _onConfirm?.Invoke();
             CloseSelf();

@@ -1473,6 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f537605fdbc7e3a41afbf3e87202a03d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _closeButton: {fileID: 7458232846669837919}
   _canvasGroup: {fileID: 2075591204145572089}
   _header: {fileID: 857717860437859749}
   _description: {fileID: 3891704147727512183}

@@ -71,6 +71,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
         }
 
         private void SetSprites(string header) => SetSpritesAsync(header).ManageTaskException();
+
         private async Task SetSpritesAsync(string header) =>
             _image.sprite = await _addressables.LoadAddrssAsset<Sprite>(header);
 
@@ -84,6 +85,7 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
         {
             _header.text = header;
         }
+
         private void SetButtons()
         {
             _select?.onClick.AddListener(SelectElement);

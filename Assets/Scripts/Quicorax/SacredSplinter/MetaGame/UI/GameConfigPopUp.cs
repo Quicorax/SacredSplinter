@@ -1,18 +1,26 @@
 ﻿using System;
-using Quicorax.SacredSplinter.Services;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Quicorax.SacredSplinter.MetaGame.UI
 {
-    public class GameConfigPopUp : BaseConfigPopUp
+    public sealed class GameConfigPopUp : BaseConfigPopUp
     {
+        [SerializeField] private Button _exitButton;
+
         private Action _onReturnToMenu;
-        public void Initialize(Action onReturnToMenu) => _onReturnToMenu = onReturnToMenu;
+
+        public void Initialize(Action onReturnToMenu)
+        {
+            _onReturnToMenu = onReturnToMenu;
+            
+            _exitButton.onClick.AddListener(Exit);
+        }
+
         public void Exit()
         {
             CloseSelf();
             _onReturnToMenu?.Invoke();
         }
-        
-        private void Start() => SetSound(ServiceLocator.GetService<GameProgressionService>());
     }
 }

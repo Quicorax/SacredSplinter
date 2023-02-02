@@ -29,25 +29,30 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _gameProgression = ServiceLocator.GetService<GameProgressionService>();
 
             GameManager.Instance.Audio.Initialize();
-            
-            _config.Button.onClick.AddListener(OpenConfiguration);
-            _resources.Button.onClick.AddListener(OpenResources);
 
+            SetButtonsListener();
             SetItemAmount();
         }
-
+        
         private void Awake() => _onResourcesUpdated.Event += SetItemAmount;
         private void OnDestroy() => _onResourcesUpdated.Event -= SetItemAmount;
+        
+        private void SetButtonsListener()
+        {
+            _config.Button.onClick.AddListener(OpenConfiguration);
+            _resources.Button.onClick.AddListener(OpenResources);
+        }
         private void OpenConfiguration()
         {
             if (_config.PopUp.GetType() == typeof(GameConfigPopUp))
             {
                 _popUpSpawner.SpawnPopUp<GameConfigPopUp>(_config).Initialize(() =>
-                    _curtain.CurtainON(() => ServiceLocator.GetService<NavigationService>().NavigateToMenu()));
+                    _curtain.CurtainOn(() => ServiceLocator.GetService<NavigationService>().NavigateToMenu()));
             }
             else
-                _popUpSpawner.SpawnPopUp(_config);
+                _popUpSpawner.SpawnPopUp<MenuConfigPopUp>(_config).Initialize();
         }
+
         private void OpenResources() => _popUpSpawner.SpawnPopUp(_resources);
 
         private void SetItemAmount()
