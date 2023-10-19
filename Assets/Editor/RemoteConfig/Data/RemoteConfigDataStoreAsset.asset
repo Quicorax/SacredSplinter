@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8b5c6f68-de08-4aa6-94bb-228d6f62b810\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"158a34ba-9dc3-4ece-8d9e-2848cb9ac87b\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"435e3ab0-689d-473d-b83c-f9e0193feaf8\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"58b8d917-8b7d-4e9b-88dc-a742fdddfe61\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -29,15 +29,15 @@ MonoBehaviour:
     \"PriceAmount\": 10,\r\n            \"Reward\": \"Gold Coin\",\r\n           
     \"RewardAmount\": 1\r\n          },\r\n          {\r\n            \"Header\":
     \"Gold Coins x 10\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
-    \"PriceAmount\": 100,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"PriceAmount\": 98,\r\n            \"Reward\": \"Gold Coin\",\r\n           
     \"RewardAmount\": 10\r\n          },\r\n          {\r\n            \"Header\":
     \"Gold Coins x 100\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
-    \"PriceAmount\": 1000,\r\n            \"Reward\": \"Gold Coin\",\r\n           
-    \"RewardAmount\": 100\r\n          },\r\n          {\r\n            \"Header\":
+    \"PriceAmount\": 898,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"RewardAmount\": 99\r\n          },\r\n          {\r\n            \"Header\":
     \"Gold Coins x 1000\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
-    \"PriceAmount\": 10000,\r\n            \"Reward\": \"Gold Coin\",\r\n           
-    \"RewardAmount\": 1000\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"4b51997b-e9b3-4425-b053-60bfc661b3d3\"\r\n   
+    \"PriceAmount\": 9897,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"RewardAmount\": 1001\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"041e7ad4-397c-44f7-b8b2-3366a7b948b8\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": 0,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -77,14 +77,14 @@ MonoBehaviour:
     \"Header\": \"Clear 100 rooms\",\r\n            \"Amount\": 100,\r\n           
     \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 4000\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"c5346527-692f-4985-a651-73fda119a0be\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"0507c7f0-c100-4a79-a0cb-27d532dfa781\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
     the unknown reaches of the world in search of treasure and the thrill of discovery.\",\r\n           
     \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": true,\r\n           
     \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"WeeknessType\": \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"WeaknessType\": \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n           
     \"MaxHealth\": 100,\r\n            \"HealthEvo\": 10,\r\n            \"Damage\":
     100,\r\n            \"DamageEvo\": 25,\r\n            \"Speed\": 50,\r\n           
     \"SpeedEvo\": 6,\r\n            \"Agility\": 15,\r\n            \"AgilityEvo\":
@@ -93,7 +93,7 @@ MonoBehaviour:
     wit and cunning as he sought out treasure and glory in the far-flung corners
     of the world.\",\r\n            \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\":
     false,\r\n            \"ExperienceToLvl\": 50,\r\n            \"AttackType\":
-    \"Maze\",\r\n            \"WeeknessType\": \"Mage\",\r\n            \"AttackAmount\":
+    \"Maze\",\r\n            \"WeaknessType\": \"Mage\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 125,\r\n            \"HealthEvo\": 15,\r\n           
     \"Damage\": 100,\r\n            \"DamageEvo\": 30,\r\n            \"Speed\":
     25,\r\n            \"SpeedEvo\": 3,\r\n            \"Agility\": 5,\r\n           
@@ -102,7 +102,7 @@ MonoBehaviour:
     goods and riches from those foolish enough to underestimate her.\",\r\n           
     \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": false,\r\n           
     \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Dagger\",\r\n           
-    \"WeeknessType\": \"Maze\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"WeaknessType\": \"Maze\",\r\n            \"AttackAmount\": 4,\r\n           
     \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\":
     100,\r\n            \"DamageEvo\": 50,\r\n            \"Speed\": 85,\r\n           
     \"SpeedEvo\": 1,\r\n            \"Agility\": 25,\r\n            \"AgilityEvo\":
@@ -111,7 +111,7 @@ MonoBehaviour:
     relics in the hopes of summoning powerful deities and unlocking the secrets of
     the universe.\",\r\n            \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\":
     true,\r\n            \"ExperienceToLvl\": 50,\r\n            \"AttackType\":
-    \"Magic\",\r\n            \"WeeknessType\": \"Beast\",\r\n            \"AttackAmount\":
+    \"Magic\",\r\n            \"WeaknessType\": \"Beast\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 80,\r\n            \"HealthEvo\": 8,\r\n           
     \"Damage\": 100,\r\n            \"DamageEvo\": 15,\r\n            \"Speed\":
     55,\r\n            \"SpeedEvo\": 7,\r\n            \"Agility\": 20,\r\n           
@@ -120,18 +120,18 @@ MonoBehaviour:
     giving them a deadly grace and speed in battle as they prowled through the battlefield.\",\r\n           
     \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": false,\r\n           
     \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Beast\",\r\n           
-    \"WeeknessType\": \"Sword\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"WeaknessType\": \"Sword\",\r\n            \"AttackAmount\": 4,\r\n           
     \"MaxHealth\": 90,\r\n            \"HealthEvo\": 9,\r\n            \"Damage\":
     90,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 100,\r\n           
     \"SpeedEvo\": 50,\r\n            \"Agility\": 33,\r\n            \"AgilityEvo\":
     5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"6bddf37f-19be-40b1-a1f9-0e960f327120\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"44f7a775-754c-4bf7-96d9-96a9b8c739c1\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
     creature, with sharp teeth and razor-like claws to defend itself against larger
     predators.\",\r\n            \"Type\": \"Combat\",\r\n            \"MinFloor\":
-    1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeaknessType\":
     \"Sword\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
     15,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 70,\r\n           
     \"DamageEvo\": 15,\r\n            \"Speed\": 50,\r\n            \"SpeedEvo\":
@@ -141,7 +141,7 @@ MonoBehaviour:
     \"Dog\",\r\n            \"Description\": \"A dangerous beast, its teeth bared
     and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Beast\",\r\n            \"WeeknessType\": \"Sword\",\r\n            \"AttackAmount\":
+    \"Beast\",\r\n            \"WeaknessType\": \"Sword\",\r\n            \"AttackAmount\":
     3,\r\n            \"MaxHealth\": 35,\r\n            \"HealthEvo\": 15,\r\n           
     \"Damage\": 70,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 70,\r\n           
     \"SpeedEvo\": 6,\r\n            \"Agility\": 11,\r\n            \"AgilityEvo\":
@@ -150,7 +150,7 @@ MonoBehaviour:
     \"Header\": \"Bandit\",\r\n            \"Description\": \"A ruthless thief, preying
     on the weak and vulnerable as he roamed the land in search of plunder and riches.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Dagger\",\r\n            \"WeeknessType\": \"Maze\",\r\n            \"AttackAmount\":
+    \"Dagger\",\r\n            \"WeaknessType\": \"Maze\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 45,\r\n            \"HealthEvo\": 5,\r\n           
     \"Damage\": 70,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\": 30,\r\n           
     \"SpeedEvo\": 5,\r\n            \"Agility\": 23,\r\n            \"AgilityEvo\":
@@ -158,7 +158,7 @@ MonoBehaviour:
     20,\r\n            \"GoldCoinsOnKill\": 5\r\n          },\r\n          {\r\n           
     \"Header\": \"Void\",\r\n            \"Description\": \"The void is a monstrous
     creature, twisted and corrupted by dark forces.\",\r\n            \"Type\": \"Boss\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeaknessType\":
     \"Sword\",\r\n            \"AttackAmount\": 1,\r\n            \"MaxHealth\":
     333,\r\n            \"HealthEvo\": 0,\r\n            \"Damage\": 10,\r\n           
     \"DamageEvo\": 1,\r\n            \"Speed\": 0,\r\n            \"SpeedEvo\": 0,\r\n           
@@ -168,7 +168,7 @@ MonoBehaviour:
     \"Description\": \"The errant begged for alms and preyed on the pity of others,
     using it as a tool to manipulate and deceive those around him.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"Location\": \"Village\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeaknessType\":
     \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
     15,\r\n            \"HealthEvo\": 13,\r\n            \"Damage\": 110,\r\n           
     \"DamageEvo\": 10,\r\n            \"Speed\": 60,\r\n            \"SpeedEvo\":
@@ -179,7 +179,7 @@ MonoBehaviour:
     and corrupted figure, wielding his bloody cleaver with ease as he hacked apart
     the flesh of his victims.\",\r\n            \"Type\": \"Combat\",\r\n           
     \"Location\": \"Village\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Maze\",\r\n            \"WeeknessType\": \"Magic\",\r\n            \"AttackAmount\":
+    \"Maze\",\r\n            \"WeaknessType\": \"Magic\",\r\n            \"AttackAmount\":
     3,\r\n            \"MaxHealth\": 32,\r\n            \"HealthEvo\": 20,\r\n           
     \"Damage\": 120,\r\n            \"DamageEvo\": 14,\r\n            \"Speed\":
     15,\r\n            \"SpeedEvo\": 3,\r\n            \"Agility\": 0,\r\n           
@@ -188,7 +188,7 @@ MonoBehaviour:
     \"Header\": \"Thief\",\r\n            \"Description\": \"The thief is a fast
     and nimble figure, slipping through the shadows and darting through the streets.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"Location\": \"Village\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeaknessType\":
     \"Maze\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\": 28,\r\n           
     \"HealthEvo\": 10,\r\n            \"Damage\": 100,\r\n            \"DamageEvo\":
     5,\r\n            \"Speed\": 98,\r\n            \"SpeedEvo\": 0,\r\n           
@@ -198,7 +198,7 @@ MonoBehaviour:
     \"Description\": \"The guard is a corrupt and ruthless figure, using his position
     of authority to extort and abuse those under his watch.\",\r\n            \"Type\":
     \"Boss\",\r\n            \"Location\": \"Village\",\r\n            \"MinFloor\":
-    1,\r\n            \"AttackType\": \"Maze\",\r\n            \"WeeknessType\":
+    1,\r\n            \"AttackType\": \"Maze\",\r\n            \"WeaknessType\":
     \"Magic\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
     75,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 80,\r\n           
     \"DamageEvo\": 3,\r\n            \"Speed\": 10,\r\n            \"SpeedEvo\":
@@ -208,7 +208,7 @@ MonoBehaviour:
     \"Murder\",\r\n            \"Description\": \"The murderer was a ruthless killer,
     driven by a cold and unfeeling desire to take lives.\",\r\n            \"Type\":
     \"Boss\",\r\n            \"Location\": \"Village\",\r\n            \"MinFloor\":
-    1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeeknessType\":
+    1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeaknessType\":
     \"Maze\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\": 40,\r\n           
     \"HealthEvo\": 6,\r\n            \"Damage\": 110,\r\n            \"DamageEvo\":
     10,\r\n            \"Speed\": 60,\r\n            \"SpeedEvo\": 0,\r\n           
@@ -218,7 +218,7 @@ MonoBehaviour:
     \"Description\": \"The sword contrabandist is a shadowy figure, trafficking in
     illegal weapons and selling them to the highest bidder.\",\r\n            \"Type\":
     \"LocationBoss\",\r\n            \"Location\": \"Village\",\r\n            \"MinFloor\":
-    1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeeknessType\":
+    1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeaknessType\":
     \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
     100,\r\n            \"HealthEvo\": 20,\r\n            \"Damage\": 140,\r\n           
     \"DamageEvo\": 20,\r\n            \"Speed\": 0,\r\n            \"SpeedEvo\":
@@ -228,7 +228,7 @@ MonoBehaviour:
     \"Cultist\",\r\n            \"Description\": \"The cultist is a corrupted and
     fanatical devotee, willing to go to any lengths to achieve their twisted goals.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"Location\": \"Sewers\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Magic\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Magic\",\r\n            \"WeaknessType\":
     \"Beast\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
     39,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 100,\r\n           
     \"DamageEvo\": 10,\r\n            \"Speed\": 46,\r\n            \"SpeedEvo\":
@@ -238,7 +238,7 @@ MonoBehaviour:
     \"AmanitaBoy\",\r\n            \"Description\": \"A legendary hero from another
     world. Under other circustances he could have been my friend.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"Location\": \"Sewers\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeaknessType\":
     \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
     27,\r\n            \"HealthEvo\": 13,\r\n            \"Damage\": 90,\r\n           
     \"DamageEvo\": 15,\r\n            \"Speed\": 55,\r\n            \"SpeedEvo\":
@@ -248,7 +248,7 @@ MonoBehaviour:
     \"Undead\",\r\n            \"Description\": \"The undead is a disgusting and
     repulsive creature, its rotting flesh a testament to the curse of undeath.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"Location\": \"Sewers\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeaknessType\":
     \"Maze\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\": 36,\r\n           
     \"HealthEvo\": 2,\r\n            \"Damage\": 110,\r\n            \"DamageEvo\":
     5,\r\n            \"Speed\": 78,\r\n            \"SpeedEvo\": 0,\r\n           
@@ -258,7 +258,7 @@ MonoBehaviour:
     \"Description\": \"The forest nightmare is a awfull creature that creeps along
     the ground while spreads its tendrils to consume everything in its path.\",\r\n           
     \"Type\": \"Boss\",\r\n            \"Location\": \"Sewers\",\r\n            \"MinFloor\":
-    1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeaknessType\":
     \"Sword\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
     70,\r\n            \"HealthEvo\": 20,\r\n            \"Damage\": 90,\r\n           
     \"DamageEvo\": 11,\r\n            \"Speed\": 30,\r\n            \"SpeedEvo\":
@@ -268,7 +268,7 @@ MonoBehaviour:
     \"DustDoctor\",\r\n            \"Description\": \"The doctor is a dark and sinister
     figure, adept in the use of poison and other nefarious means to eliminate his
     enemies.\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\": \"Sewers\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Magic\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Magic\",\r\n            \"WeaknessType\":
     \"Beast\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
     55,\r\n            \"HealthEvo\": 7,\r\n            \"Damage\": 110,\r\n           
     \"DamageEvo\": 7,\r\n            \"Speed\": 80,\r\n            \"SpeedEvo\":
@@ -278,7 +278,7 @@ MonoBehaviour:
     \"InfectedKnight\",\r\n            \"Description\": \"The knight is a fungus-infested
     warrior, his once-noble armor now overrun with the grotesque growths.\",\r\n           
     \"Type\": \"LocationBoss\",\r\n            \"Location\": \"Sewers\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeaknessType\":
     \"Sword\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
     135,\r\n            \"HealthEvo\": 10,\r\n            \"Damage\": 120,\r\n           
     \"DamageEvo\": 10,\r\n            \"Speed\": 50,\r\n            \"SpeedEvo\":
@@ -289,7 +289,7 @@ MonoBehaviour:
     figure, wielding magic with grace and precision, they command respect and fear
     from those around them.\",\r\n            \"Type\": \"Combat\",\r\n           
     \"Location\": \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Magic\",\r\n            \"WeeknessType\": \"Beast\",\r\n            \"AttackAmount\":
+    \"Magic\",\r\n            \"WeaknessType\": \"Beast\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 29,\r\n            \"HealthEvo\": 10,\r\n           
     \"Damage\": 100,\r\n            \"DamageEvo\": 20,\r\n            \"Speed\":
     60,\r\n            \"SpeedEvo\": 3,\r\n            \"Agility\": 5,\r\n           
@@ -299,7 +299,7 @@ MonoBehaviour:
     is a stoic and stern figure, clad in heavy armor and armed with a weapon of his
     choice.\",\r\n            \"Type\": \"Combat\",\r\n            \"Location\":
     \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Sword\",\r\n            \"WeeknessType\": \"Dagger\",\r\n            \"AttackAmount\":
+    \"Sword\",\r\n            \"WeaknessType\": \"Dagger\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 30,\r\n            \"HealthEvo\": 7,\r\n           
     \"Damage\": 80,\r\n            \"DamageEvo\": 20,\r\n            \"Speed\": 40,\r\n           
     \"SpeedEvo\": 8,\r\n            \"Agility\": 15,\r\n            \"AgilityEvo\":
@@ -309,7 +309,7 @@ MonoBehaviour:
     relying on raw strength and violence to intimidate and overpower their victims,
     they are a menace to society.\",\r\n            \"Type\": \"Combat\",\r\n           
     \"Location\": \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Maze\",\r\n            \"WeeknessType\": \"Magic\",\r\n            \"AttackAmount\":
+    \"Maze\",\r\n            \"WeaknessType\": \"Magic\",\r\n            \"AttackAmount\":
     3,\r\n            \"MaxHealth\": 42,\r\n            \"HealthEvo\": 20,\r\n           
     \"Damage\": 135,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\":
     7,\r\n            \"SpeedEvo\": 10,\r\n            \"Agility\": 0,\r\n           
@@ -319,7 +319,7 @@ MonoBehaviour:
     among shadows, slipping into and out of places unseen, moving with stealth and
     precision.\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
     \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Dagger\",\r\n            \"WeeknessType\": \"Maze\",\r\n            \"AttackAmount\":
+    \"Dagger\",\r\n            \"WeaknessType\": \"Maze\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 85,\r\n            \"HealthEvo\": 8,\r\n           
     \"Damage\": 90,\r\n            \"DamageEvo\": 5,\r\n            \"Speed\": 100,\r\n           
     \"SpeedEvo\": 0,\r\n            \"Agility\": 23,\r\n            \"AgilityEvo\":
@@ -329,7 +329,7 @@ MonoBehaviour:
     and skilled warrior, honing their craft for years to become a master of their
     chosen weapon.\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
     \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Sword\",\r\n            \"WeeknessType\": \"Dagger\",\r\n            \"AttackAmount\":
+    \"Sword\",\r\n            \"WeaknessType\": \"Dagger\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 135,\r\n            \"HealthEvo\": 5,\r\n           
     \"Damage\": 100,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\":
     43,\r\n            \"SpeedEvo\": 0,\r\n            \"Agility\": 15,\r\n           
@@ -339,13 +339,13 @@ MonoBehaviour:
     and fallen figure, once respected and admired, now using their powers and abilities
     for their own gain and self-interest.\",\r\n            \"Type\": \"LocationBoss\",\r\n           
     \"Location\": \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Maze\",\r\n            \"WeeknessType\": \"Magic\",\r\n            \"AttackAmount\":
+    \"Maze\",\r\n            \"WeaknessType\": \"Magic\",\r\n            \"AttackAmount\":
     3,\r\n            \"MaxHealth\": 175,\r\n            \"HealthEvo\": 5,\r\n           
     \"Damage\": 110,\r\n            \"DamageEvo\": 5,\r\n            \"Speed\": 10,\r\n           
     \"SpeedEvo\": 0,\r\n            \"Agility\": 1,\r\n            \"AgilityEvo\":
     0,\r\n            \"ExperienceOnKill\": 0,\r\n            \"BlueCrystalsOnKill\":
     120,\r\n            \"GoldCoinsOnKill\": 50\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f770f9f6-401c-4ee9-b819-390dacadb9c7\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"b87e1eee-149c-4fe4-a742-ee4ed01ccf93\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
@@ -364,7 +364,7 @@ MonoBehaviour:
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
     3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"52bbc581-fca0-4b34-b965-7e2ff8f6bc99\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"15745963-57ec-4735-a447-05fade47f0ce\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
@@ -446,7 +446,7 @@ MonoBehaviour:
     \"SucceedMaxAmount\": 35,\r\n            \"FailHeader\": \"The shining sphere
     fades, and with it, you feel your pouch loss weight.\",\r\n            \"FailKind\":
     \"Gold Coin\",\r\n            \"FailAmount\": -5\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"1cb33a03-2a0d-4d46-ada7-e29197391d36\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"7966992b-f535-41a4-8e73-92ae4b79b1c4\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AttacksModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Perforation\",\r\n            \"AttackType\":
@@ -500,14 +500,14 @@ MonoBehaviour:
     3\r\n          },\r\n          {\r\n            \"Header\": \"Stampede\",\r\n           
     \"AttackType\": \"Beast\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
     5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"8b5c6f68-de08-4aa6-94bb-228d6f62b810\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"158a34ba-9dc3-4ece-8d9e-2848cb9ac87b\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"InitialResourcesModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Key\": \"Blue Crystal\",\r\n            \"Amount\":
     1000\r\n          },\r\n          {\r\n            \"Key\": \"Gold Coin\",\r\n           
     \"Amount\": 100\r\n          },\r\n          {\r\n            \"Key\": \"Hero
     License\",\r\n            \"Amount\": 1\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"435e3ab0-689d-473d-b83c-f9e0193feaf8\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"58b8d917-8b7d-4e9b-88dc-a742fdddfe61\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"ShopModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Hero License\",\r\n            \"Price\": \"Gold
@@ -517,15 +517,15 @@ MonoBehaviour:
     \"PriceAmount\": 10,\r\n            \"Reward\": \"Gold Coin\",\r\n           
     \"RewardAmount\": 1\r\n          },\r\n          {\r\n            \"Header\":
     \"Gold Coins x 10\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
-    \"PriceAmount\": 100,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"PriceAmount\": 98,\r\n            \"Reward\": \"Gold Coin\",\r\n           
     \"RewardAmount\": 10\r\n          },\r\n          {\r\n            \"Header\":
     \"Gold Coins x 100\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
-    \"PriceAmount\": 1000,\r\n            \"Reward\": \"Gold Coin\",\r\n           
-    \"RewardAmount\": 100\r\n          },\r\n          {\r\n            \"Header\":
+    \"PriceAmount\": 898,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"RewardAmount\": 99\r\n          },\r\n          {\r\n            \"Header\":
     \"Gold Coins x 1000\",\r\n            \"Price\": \"Blue Crystal\",\r\n           
-    \"PriceAmount\": 10000,\r\n            \"Reward\": \"Gold Coin\",\r\n           
-    \"RewardAmount\": 1000\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
-    {\r\n    \"metadata\": {\r\n      \"entityId\": \"4b51997b-e9b3-4425-b053-60bfc661b3d3\"\r\n   
+    \"PriceAmount\": 9897,\r\n            \"Reward\": \"Gold Coin\",\r\n           
+    \"RewardAmount\": 1001\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n 
+    {\r\n    \"metadata\": {\r\n      \"entityId\": \"041e7ad4-397c-44f7-b8b2-3366a7b948b8\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"QuestsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Index\": 0,\r\n            \"Concept\": \"Adventure\",\r\n           
@@ -565,14 +565,14 @@ MonoBehaviour:
     \"Header\": \"Clear 100 rooms\",\r\n            \"Amount\": 100,\r\n           
     \"Reward\": \"Gold Coin\",\r\n            \"RewardAmount\": 4000\r\n         
     }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"c5346527-692f-4985-a651-73fda119a0be\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"0507c7f0-c100-4a79-a0cb-27d532dfa781\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"HeroesModel\",\r\n      \"type\": \"json\",\r\n      \"schemaId\":
     null,\r\n      \"value\": {\r\n        \"data\": [\r\n          {\r\n           
     \"Header\": \"Errant\",\r\n            \"Description\": \"A wandering soul, exploring
     the unknown reaches of the world in search of treasure and the thrill of discovery.\",\r\n           
     \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": true,\r\n           
     \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Sword\",\r\n           
-    \"WeeknessType\": \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"WeaknessType\": \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n           
     \"MaxHealth\": 100,\r\n            \"HealthEvo\": 10,\r\n            \"Damage\":
     100,\r\n            \"DamageEvo\": 25,\r\n            \"Speed\": 50,\r\n           
     \"SpeedEvo\": 6,\r\n            \"Agility\": 15,\r\n            \"AgilityEvo\":
@@ -581,7 +581,7 @@ MonoBehaviour:
     wit and cunning as he sought out treasure and glory in the far-flung corners
     of the world.\",\r\n            \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\":
     false,\r\n            \"ExperienceToLvl\": 50,\r\n            \"AttackType\":
-    \"Maze\",\r\n            \"WeeknessType\": \"Mage\",\r\n            \"AttackAmount\":
+    \"Maze\",\r\n            \"WeaknessType\": \"Mage\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 125,\r\n            \"HealthEvo\": 15,\r\n           
     \"Damage\": 100,\r\n            \"DamageEvo\": 30,\r\n            \"Speed\":
     25,\r\n            \"SpeedEvo\": 3,\r\n            \"Agility\": 5,\r\n           
@@ -590,7 +590,7 @@ MonoBehaviour:
     goods and riches from those foolish enough to underestimate her.\",\r\n           
     \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": false,\r\n           
     \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Dagger\",\r\n           
-    \"WeeknessType\": \"Maze\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"WeaknessType\": \"Maze\",\r\n            \"AttackAmount\": 4,\r\n           
     \"MaxHealth\": 75,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\":
     100,\r\n            \"DamageEvo\": 50,\r\n            \"Speed\": 85,\r\n           
     \"SpeedEvo\": 1,\r\n            \"Agility\": 25,\r\n            \"AgilityEvo\":
@@ -599,7 +599,7 @@ MonoBehaviour:
     relics in the hopes of summoning powerful deities and unlocking the secrets of
     the universe.\",\r\n            \"CanIgnoreEvents\": false,\r\n            \"CanEscapeCombats\":
     true,\r\n            \"ExperienceToLvl\": 50,\r\n            \"AttackType\":
-    \"Magic\",\r\n            \"WeeknessType\": \"Beast\",\r\n            \"AttackAmount\":
+    \"Magic\",\r\n            \"WeaknessType\": \"Beast\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 80,\r\n            \"HealthEvo\": 8,\r\n           
     \"Damage\": 100,\r\n            \"DamageEvo\": 15,\r\n            \"Speed\":
     55,\r\n            \"SpeedEvo\": 7,\r\n            \"Agility\": 20,\r\n           
@@ -608,18 +608,18 @@ MonoBehaviour:
     giving them a deadly grace and speed in battle as they prowled through the battlefield.\",\r\n           
     \"CanIgnoreEvents\": true,\r\n            \"CanEscapeCombats\": false,\r\n           
     \"ExperienceToLvl\": 50,\r\n            \"AttackType\": \"Beast\",\r\n           
-    \"WeeknessType\": \"Sword\",\r\n            \"AttackAmount\": 4,\r\n           
+    \"WeaknessType\": \"Sword\",\r\n            \"AttackAmount\": 4,\r\n           
     \"MaxHealth\": 90,\r\n            \"HealthEvo\": 9,\r\n            \"Damage\":
     90,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 100,\r\n           
     \"SpeedEvo\": 50,\r\n            \"Agility\": 33,\r\n            \"AgilityEvo\":
     5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"6bddf37f-19be-40b1-a1f9-0e960f327120\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"44f7a775-754c-4bf7-96d9-96a9b8c739c1\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"EnemiesModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Rat\",\r\n            \"Description\": \"A vicious
     creature, with sharp teeth and razor-like claws to defend itself against larger
     predators.\",\r\n            \"Type\": \"Combat\",\r\n            \"MinFloor\":
-    1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeaknessType\":
     \"Sword\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
     15,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 70,\r\n           
     \"DamageEvo\": 15,\r\n            \"Speed\": 50,\r\n            \"SpeedEvo\":
@@ -629,7 +629,7 @@ MonoBehaviour:
     \"Dog\",\r\n            \"Description\": \"A dangerous beast, its teeth bared
     and ready to rip into the flesh of any who dared to cross its path.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Beast\",\r\n            \"WeeknessType\": \"Sword\",\r\n            \"AttackAmount\":
+    \"Beast\",\r\n            \"WeaknessType\": \"Sword\",\r\n            \"AttackAmount\":
     3,\r\n            \"MaxHealth\": 35,\r\n            \"HealthEvo\": 15,\r\n           
     \"Damage\": 70,\r\n            \"DamageEvo\": 22,\r\n            \"Speed\": 70,\r\n           
     \"SpeedEvo\": 6,\r\n            \"Agility\": 11,\r\n            \"AgilityEvo\":
@@ -638,7 +638,7 @@ MonoBehaviour:
     \"Header\": \"Bandit\",\r\n            \"Description\": \"A ruthless thief, preying
     on the weak and vulnerable as he roamed the land in search of plunder and riches.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Dagger\",\r\n            \"WeeknessType\": \"Maze\",\r\n            \"AttackAmount\":
+    \"Dagger\",\r\n            \"WeaknessType\": \"Maze\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 45,\r\n            \"HealthEvo\": 5,\r\n           
     \"Damage\": 70,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\": 30,\r\n           
     \"SpeedEvo\": 5,\r\n            \"Agility\": 23,\r\n            \"AgilityEvo\":
@@ -646,7 +646,7 @@ MonoBehaviour:
     20,\r\n            \"GoldCoinsOnKill\": 5\r\n          },\r\n          {\r\n           
     \"Header\": \"Void\",\r\n            \"Description\": \"The void is a monstrous
     creature, twisted and corrupted by dark forces.\",\r\n            \"Type\": \"Boss\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeaknessType\":
     \"Sword\",\r\n            \"AttackAmount\": 1,\r\n            \"MaxHealth\":
     333,\r\n            \"HealthEvo\": 0,\r\n            \"Damage\": 10,\r\n           
     \"DamageEvo\": 1,\r\n            \"Speed\": 0,\r\n            \"SpeedEvo\": 0,\r\n           
@@ -656,7 +656,7 @@ MonoBehaviour:
     \"Description\": \"The errant begged for alms and preyed on the pity of others,
     using it as a tool to manipulate and deceive those around him.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"Location\": \"Village\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeaknessType\":
     \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
     15,\r\n            \"HealthEvo\": 13,\r\n            \"Damage\": 110,\r\n           
     \"DamageEvo\": 10,\r\n            \"Speed\": 60,\r\n            \"SpeedEvo\":
@@ -667,7 +667,7 @@ MonoBehaviour:
     and corrupted figure, wielding his bloody cleaver with ease as he hacked apart
     the flesh of his victims.\",\r\n            \"Type\": \"Combat\",\r\n           
     \"Location\": \"Village\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Maze\",\r\n            \"WeeknessType\": \"Magic\",\r\n            \"AttackAmount\":
+    \"Maze\",\r\n            \"WeaknessType\": \"Magic\",\r\n            \"AttackAmount\":
     3,\r\n            \"MaxHealth\": 32,\r\n            \"HealthEvo\": 20,\r\n           
     \"Damage\": 120,\r\n            \"DamageEvo\": 14,\r\n            \"Speed\":
     15,\r\n            \"SpeedEvo\": 3,\r\n            \"Agility\": 0,\r\n           
@@ -676,7 +676,7 @@ MonoBehaviour:
     \"Header\": \"Thief\",\r\n            \"Description\": \"The thief is a fast
     and nimble figure, slipping through the shadows and darting through the streets.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"Location\": \"Village\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeaknessType\":
     \"Maze\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\": 28,\r\n           
     \"HealthEvo\": 10,\r\n            \"Damage\": 100,\r\n            \"DamageEvo\":
     5,\r\n            \"Speed\": 98,\r\n            \"SpeedEvo\": 0,\r\n           
@@ -686,7 +686,7 @@ MonoBehaviour:
     \"Description\": \"The guard is a corrupt and ruthless figure, using his position
     of authority to extort and abuse those under his watch.\",\r\n            \"Type\":
     \"Boss\",\r\n            \"Location\": \"Village\",\r\n            \"MinFloor\":
-    1,\r\n            \"AttackType\": \"Maze\",\r\n            \"WeeknessType\":
+    1,\r\n            \"AttackType\": \"Maze\",\r\n            \"WeaknessType\":
     \"Magic\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
     75,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 80,\r\n           
     \"DamageEvo\": 3,\r\n            \"Speed\": 10,\r\n            \"SpeedEvo\":
@@ -696,7 +696,7 @@ MonoBehaviour:
     \"Murder\",\r\n            \"Description\": \"The murderer was a ruthless killer,
     driven by a cold and unfeeling desire to take lives.\",\r\n            \"Type\":
     \"Boss\",\r\n            \"Location\": \"Village\",\r\n            \"MinFloor\":
-    1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeeknessType\":
+    1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeaknessType\":
     \"Maze\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\": 40,\r\n           
     \"HealthEvo\": 6,\r\n            \"Damage\": 110,\r\n            \"DamageEvo\":
     10,\r\n            \"Speed\": 60,\r\n            \"SpeedEvo\": 0,\r\n           
@@ -706,7 +706,7 @@ MonoBehaviour:
     \"Description\": \"The sword contrabandist is a shadowy figure, trafficking in
     illegal weapons and selling them to the highest bidder.\",\r\n            \"Type\":
     \"LocationBoss\",\r\n            \"Location\": \"Village\",\r\n            \"MinFloor\":
-    1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeeknessType\":
+    1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeaknessType\":
     \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
     100,\r\n            \"HealthEvo\": 20,\r\n            \"Damage\": 140,\r\n           
     \"DamageEvo\": 20,\r\n            \"Speed\": 0,\r\n            \"SpeedEvo\":
@@ -716,7 +716,7 @@ MonoBehaviour:
     \"Cultist\",\r\n            \"Description\": \"The cultist is a corrupted and
     fanatical devotee, willing to go to any lengths to achieve their twisted goals.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"Location\": \"Sewers\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Magic\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Magic\",\r\n            \"WeaknessType\":
     \"Beast\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
     39,\r\n            \"HealthEvo\": 5,\r\n            \"Damage\": 100,\r\n           
     \"DamageEvo\": 10,\r\n            \"Speed\": 46,\r\n            \"SpeedEvo\":
@@ -726,7 +726,7 @@ MonoBehaviour:
     \"AmanitaBoy\",\r\n            \"Description\": \"A legendary hero from another
     world. Under other circustances he could have been my friend.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"Location\": \"Sewers\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Sword\",\r\n            \"WeaknessType\":
     \"Dagger\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
     27,\r\n            \"HealthEvo\": 13,\r\n            \"Damage\": 90,\r\n           
     \"DamageEvo\": 15,\r\n            \"Speed\": 55,\r\n            \"SpeedEvo\":
@@ -736,7 +736,7 @@ MonoBehaviour:
     \"Undead\",\r\n            \"Description\": \"The undead is a disgusting and
     repulsive creature, its rotting flesh a testament to the curse of undeath.\",\r\n           
     \"Type\": \"Combat\",\r\n            \"Location\": \"Sewers\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Dagger\",\r\n            \"WeaknessType\":
     \"Maze\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\": 36,\r\n           
     \"HealthEvo\": 2,\r\n            \"Damage\": 110,\r\n            \"DamageEvo\":
     5,\r\n            \"Speed\": 78,\r\n            \"SpeedEvo\": 0,\r\n           
@@ -746,7 +746,7 @@ MonoBehaviour:
     \"Description\": \"The forest nightmare is a awfull creature that creeps along
     the ground while spreads its tendrils to consume everything in its path.\",\r\n           
     \"Type\": \"Boss\",\r\n            \"Location\": \"Sewers\",\r\n            \"MinFloor\":
-    1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeaknessType\":
     \"Sword\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
     70,\r\n            \"HealthEvo\": 20,\r\n            \"Damage\": 90,\r\n           
     \"DamageEvo\": 11,\r\n            \"Speed\": 30,\r\n            \"SpeedEvo\":
@@ -756,7 +756,7 @@ MonoBehaviour:
     \"DustDoctor\",\r\n            \"Description\": \"The doctor is a dark and sinister
     figure, adept in the use of poison and other nefarious means to eliminate his
     enemies.\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\": \"Sewers\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Magic\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Magic\",\r\n            \"WeaknessType\":
     \"Beast\",\r\n            \"AttackAmount\": 4,\r\n            \"MaxHealth\":
     55,\r\n            \"HealthEvo\": 7,\r\n            \"Damage\": 110,\r\n           
     \"DamageEvo\": 7,\r\n            \"Speed\": 80,\r\n            \"SpeedEvo\":
@@ -766,7 +766,7 @@ MonoBehaviour:
     \"InfectedKnight\",\r\n            \"Description\": \"The knight is a fungus-infested
     warrior, his once-noble armor now overrun with the grotesque growths.\",\r\n           
     \"Type\": \"LocationBoss\",\r\n            \"Location\": \"Sewers\",\r\n           
-    \"MinFloor\": 1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeeknessType\":
+    \"MinFloor\": 1,\r\n            \"AttackType\": \"Beast\",\r\n            \"WeaknessType\":
     \"Sword\",\r\n            \"AttackAmount\": 3,\r\n            \"MaxHealth\":
     135,\r\n            \"HealthEvo\": 10,\r\n            \"Damage\": 120,\r\n           
     \"DamageEvo\": 10,\r\n            \"Speed\": 50,\r\n            \"SpeedEvo\":
@@ -777,7 +777,7 @@ MonoBehaviour:
     figure, wielding magic with grace and precision, they command respect and fear
     from those around them.\",\r\n            \"Type\": \"Combat\",\r\n           
     \"Location\": \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Magic\",\r\n            \"WeeknessType\": \"Beast\",\r\n            \"AttackAmount\":
+    \"Magic\",\r\n            \"WeaknessType\": \"Beast\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 29,\r\n            \"HealthEvo\": 10,\r\n           
     \"Damage\": 100,\r\n            \"DamageEvo\": 20,\r\n            \"Speed\":
     60,\r\n            \"SpeedEvo\": 3,\r\n            \"Agility\": 5,\r\n           
@@ -787,7 +787,7 @@ MonoBehaviour:
     is a stoic and stern figure, clad in heavy armor and armed with a weapon of his
     choice.\",\r\n            \"Type\": \"Combat\",\r\n            \"Location\":
     \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Sword\",\r\n            \"WeeknessType\": \"Dagger\",\r\n            \"AttackAmount\":
+    \"Sword\",\r\n            \"WeaknessType\": \"Dagger\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 30,\r\n            \"HealthEvo\": 7,\r\n           
     \"Damage\": 80,\r\n            \"DamageEvo\": 20,\r\n            \"Speed\": 40,\r\n           
     \"SpeedEvo\": 8,\r\n            \"Agility\": 15,\r\n            \"AgilityEvo\":
@@ -797,7 +797,7 @@ MonoBehaviour:
     relying on raw strength and violence to intimidate and overpower their victims,
     they are a menace to society.\",\r\n            \"Type\": \"Combat\",\r\n           
     \"Location\": \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Maze\",\r\n            \"WeeknessType\": \"Magic\",\r\n            \"AttackAmount\":
+    \"Maze\",\r\n            \"WeaknessType\": \"Magic\",\r\n            \"AttackAmount\":
     3,\r\n            \"MaxHealth\": 42,\r\n            \"HealthEvo\": 20,\r\n           
     \"Damage\": 135,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\":
     7,\r\n            \"SpeedEvo\": 10,\r\n            \"Agility\": 0,\r\n           
@@ -807,7 +807,7 @@ MonoBehaviour:
     among shadows, slipping into and out of places unseen, moving with stealth and
     precision.\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
     \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Dagger\",\r\n            \"WeeknessType\": \"Maze\",\r\n            \"AttackAmount\":
+    \"Dagger\",\r\n            \"WeaknessType\": \"Maze\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 85,\r\n            \"HealthEvo\": 8,\r\n           
     \"Damage\": 90,\r\n            \"DamageEvo\": 5,\r\n            \"Speed\": 100,\r\n           
     \"SpeedEvo\": 0,\r\n            \"Agility\": 23,\r\n            \"AgilityEvo\":
@@ -817,7 +817,7 @@ MonoBehaviour:
     and skilled warrior, honing their craft for years to become a master of their
     chosen weapon.\",\r\n            \"Type\": \"Boss\",\r\n            \"Location\":
     \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Sword\",\r\n            \"WeeknessType\": \"Dagger\",\r\n            \"AttackAmount\":
+    \"Sword\",\r\n            \"WeaknessType\": \"Dagger\",\r\n            \"AttackAmount\":
     4,\r\n            \"MaxHealth\": 135,\r\n            \"HealthEvo\": 5,\r\n           
     \"Damage\": 100,\r\n            \"DamageEvo\": 10,\r\n            \"Speed\":
     43,\r\n            \"SpeedEvo\": 0,\r\n            \"Agility\": 15,\r\n           
@@ -827,13 +827,13 @@ MonoBehaviour:
     and fallen figure, once respected and admired, now using their powers and abilities
     for their own gain and self-interest.\",\r\n            \"Type\": \"LocationBoss\",\r\n           
     \"Location\": \"Dungeons\",\r\n            \"MinFloor\": 1,\r\n            \"AttackType\":
-    \"Maze\",\r\n            \"WeeknessType\": \"Magic\",\r\n            \"AttackAmount\":
+    \"Maze\",\r\n            \"WeaknessType\": \"Magic\",\r\n            \"AttackAmount\":
     3,\r\n            \"MaxHealth\": 175,\r\n            \"HealthEvo\": 5,\r\n           
     \"Damage\": 110,\r\n            \"DamageEvo\": 5,\r\n            \"Speed\": 10,\r\n           
     \"SpeedEvo\": 0,\r\n            \"Agility\": 1,\r\n            \"AgilityEvo\":
     0,\r\n            \"ExperienceOnKill\": 0,\r\n            \"BlueCrystalsOnKill\":
     120,\r\n            \"GoldCoinsOnKill\": 50\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"f770f9f6-401c-4ee9-b819-390dacadb9c7\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"b87e1eee-149c-4fe4-a742-ee4ed01ccf93\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"LocationsModel\",\r\n      \"type\":
     \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\":
     [\r\n          {\r\n            \"Header\": \"Village\",\r\n            \"Description\":
@@ -852,7 +852,7 @@ MonoBehaviour:
     seemed to seep into one's very soul, where the air was thick with the stench
     of fear and death.\",\r\n            \"RoomsPerFloor\": 5,\r\n            \"FloorsPerLocation\":
     3\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
-    {\r\n      \"entityId\": \"52bbc581-fca0-4b34-b965-7e2ff8f6bc99\"\r\n    },\r\n   
+    {\r\n      \"entityId\": \"15745963-57ec-4735-a447-05fade47f0ce\"\r\n    },\r\n   
     \"rs\": {\r\n      \"key\": \"AdventureEventsModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Active\": false,\r\n            \"Concept\": \"Insta Death\",\r\n           
@@ -934,7 +934,7 @@ MonoBehaviour:
     \"SucceedMaxAmount\": 35,\r\n            \"FailHeader\": \"The shining sphere
     fades, and with it, you feel your pouch loss weight.\",\r\n            \"FailKind\":
     \"Gold Coin\",\r\n            \"FailAmount\": -5\r\n          }\r\n        ]\r\n     
-    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"1cb33a03-2a0d-4d46-ada7-e29197391d36\"\r\n   
+    }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"7966992b-f535-41a4-8e73-92ae4b79b1c4\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"AttacksModel\",\r\n      \"type\": \"json\",\r\n     
     \"schemaId\": null,\r\n      \"value\": {\r\n        \"data\": [\r\n         
     {\r\n            \"Header\": \"Perforation\",\r\n            \"AttackType\":
@@ -989,10 +989,9 @@ MonoBehaviour:
     \"AttackType\": \"Beast\",\r\n            \"Damage\": 15,\r\n            \"CooldownTurns\":
     5\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"12851c75-924b-434b-8415-bd82991e2400\",\r\n   
+    \"name\": \"production\",\r\n    \"id\": \"fab55fe1-3cf4-473c-a4ad-40e932e389f6\",\r\n   
+    \"isDefault\": true,\r\n    \"createdAt\": \"2023-01-15T09:15:51Z\",\r\n    \"updatedAt\":
+    \"2023-01-15T09:15:51Z\"\r\n  },\r\n  {\r\n    \"projectId\": \"12851c75-924b-434b-8415-bd82991e2400\",\r\n   
     \"name\": \"development\",\r\n    \"id\": \"8b45dece-9500-4f4d-ae7c-15c09ebbfb65\",\r\n   
     \"isDefault\": false,\r\n    \"createdAt\": \"2023-01-15T10:43:45Z\",\r\n   
-    \"updatedAt\": \"2023-01-15T10:43:45Z\"\r\n  },\r\n  {\r\n    \"projectId\":
-    \"12851c75-924b-434b-8415-bd82991e2400\",\r\n    \"name\": \"production\",\r\n   
-    \"id\": \"fab55fe1-3cf4-473c-a4ad-40e932e389f6\",\r\n    \"isDefault\": true,\r\n   
-    \"createdAt\": \"2023-01-15T09:15:51Z\",\r\n    \"updatedAt\": \"2023-01-15T09:15:51Z\"\r\n 
-    }\r\n]"
+    \"updatedAt\": \"2023-01-15T10:43:45Z\"\r\n  }\r\n]"
