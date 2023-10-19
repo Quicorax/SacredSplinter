@@ -3,25 +3,24 @@ using System.Linq;
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 {
     public class EnemyInstance
     {
-        private EnemyData _enemyData;
-        private List<AvailableAttack> _attackOfMyType = new();
+        [Inject] private IAdventureConfigurationService _adventureConfig;
+        [Inject] private IAdventureProgressionService _adventureProgression;
+        [Inject] private IGameConfigService _gameConfig;
 
-        private AdventureConfigurationService _adventureConfig;
-        private AdventureProgressionService _adventureProgression;
-
-        private int _currentFloor;
+        private readonly EnemyData _enemyData;
+        private readonly List<AvailableAttack> _attackOfMyType = new();
+        
+        private readonly int _currentFloor;
 
         public EnemyInstance(int floor)
         {
             _currentFloor = floor;
-
-            _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
-            _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
 
             _enemyData = SetEnemy();
             SetEnemyStats();
@@ -42,7 +41,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             EnemyData enemy = null;
             var enemySelected = false;
 
-            var dataList = ServiceLocator.GetService<GameConfigService>().Enemies;
+            var dataList = _gameConfig.Enemies;
 
             while (!enemySelected)
             {
@@ -67,7 +66,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 
         private void SetRandomAttacks()
         {
-            var attacks = ServiceLocator.GetService<GameConfigService>().Attacks;
+            var attacks = _gameConfig.Attacks;
             var tempAttacksOfKind = attacks.Where(attack => attack.AttackType == _enemyData.AttackType).ToList();
 
             while (tempAttacksOfKind.Count > _enemyData.AttackAmount)

@@ -1,4 +1,5 @@
 using UnityEngine;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.Services
 {
@@ -6,20 +7,24 @@ namespace Quicorax.SacredSplinter.Services
     {
         [SerializeField] private AudioSource _source;
         [SerializeField] private AudioClip _mainMusic;
+        
+        [Inject] private IGameProgressionService _gameProgression;
 
         private bool _initialized;
         
         public void Initialize()
         {
             if (_initialized)
+            {
                 return;
+            }
 
             _initialized = true;
             
             _source.clip = _mainMusic;
             _source.Play();
 
-            bool audioOff = ServiceLocator.GetService<GameProgressionService>().GetSoundOff();
+            var audioOff = _gameProgression.GetSoundOff();
             ToggleMuteAudio(!audioOff);
         }
 

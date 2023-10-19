@@ -3,23 +3,24 @@ using System.Threading.Tasks;
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
+using Zenject;
 using Random = UnityEngine.Random;
 
 namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 {
     public class CombatInstance
     {
-        private HeroData _hero;
-        private EnemyData _enemy;
-        private EnemyInstance _enemyCombat;
-        private Action<bool> _onPlayerTurn;
-        private Action _onDamageEnemy;
-        private Action<int> _onDamagePlayer;
-        private Action<bool> _onCombatEnded;
-        private CombatLog _combatLog;
+        private readonly HeroData _hero;
+        private readonly EnemyData _enemy;
+        private readonly EnemyInstance _enemyCombat;
+        private readonly Action<bool> _onPlayerTurn;
+        private readonly Action _onDamageEnemy;
+        private readonly Action<int> _onDamagePlayer;
+        private readonly Action<bool> _onCombatEnded;
+        private readonly CombatLog _combatLog;
 
-        private AdventureProgressionService _adventureProgression;
-        private GameProgressionService _gameProgression;
+        [Inject] private IAdventureProgressionService _adventureProgression;
+        [Inject] private IGameProgressionService _gameProgression;
 
         public CombatInstance(HeroData hero, EnemyInstance enemy, Action<bool> onPlayerPlayerTurn, Action onDamageEnemy,
             Action<int> onDamagePlayer, Action<bool> onCombatEnded, CombatLog combatLog)
@@ -31,9 +32,6 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
             _onDamagePlayer = onDamagePlayer;
             _onCombatEnded = onCombatEnded;
             _combatLog = combatLog;
-
-            _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
-            _gameProgression = ServiceLocator.GetService<GameProgressionService>();
 
             _enemy = _enemyCombat.GetEnemy();
 

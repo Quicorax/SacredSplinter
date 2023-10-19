@@ -3,6 +3,7 @@ using System.Linq;
 using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
 using Quicorax.SacredSplinter.Models;
 using UnityEngine;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.Services
 {
@@ -18,6 +19,8 @@ namespace Quicorax.SacredSplinter.Services
     
     public class AdventureConfigurationService : IAdventureConfigurationService
     {
+        [Inject] private IGameConfigService _gameConfig;
+        
         private HeroData _heroData;
         private LocationsData _locationData;
 
@@ -41,10 +44,9 @@ namespace Quicorax.SacredSplinter.Services
 
         private List<AttackData> SetRandomAttacks()
         {
-            var attacks = ServiceLocator.GetService<GameConfigService>().Attacks;
-            List<AttackData> tempAttacksOfKind = new();
+            var tempAttacksOfKind = new List<AttackData>();
 
-            foreach (var attack in attacks)
+            foreach (var attack in _gameConfig.Attacks)
             {
                 if (attack.AttackType == _heroData.AttackType)
                     tempAttacksOfKind.Add(attack);

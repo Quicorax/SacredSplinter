@@ -1,9 +1,11 @@
 using System;
 using System.Linq;
+using System.Runtime.InteropServices;
 using Quicorax.SacredSplinter.GamePlay.Interactions;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 using Random = UnityEngine.Random;
 
 
@@ -24,15 +26,11 @@ namespace Quicorax.SacredSplinter.GamePlay.Rooms
         private int _furtherRooms;
         private int _currentFloor;
 
-        private PopUpSpawnerService _popUpSpawner;
-        private AdventureProgressionService _adventureProgression;
+        [Inject] private IPopUpSpawnerService _popUpSpawner;
+        [Inject] private IAdventureProgressionService _adventureProgression;
 
-        public void Initialize(int currentFloor, Action onRoomSelected, Action<int> onRoomComplete,
-            string forceRoom = null)
+        public void Initialize(int currentFloor, Action onRoomSelected, Action<int> onRoomComplete, string forceRoom = null)
         {
-            _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
-            _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
-
             _currentFloor = currentFloor;
             _onRoomComplete = onRoomComplete;
             _onRoomSelected = onRoomSelected;
@@ -46,7 +44,9 @@ namespace Quicorax.SacredSplinter.GamePlay.Rooms
             if (forceRoom != "Boss" && forceRoom != "LocationBoss")
             {
                 for (var i = 0; i < _furtherRooms; i++)
+                {
                     Instantiate(_furtherRoom, _roomHolder).Initialize();
+                }
             }
         }
 

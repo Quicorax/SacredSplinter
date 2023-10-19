@@ -38,6 +38,12 @@ namespace Quicorax.SacredSplinter.Services
             return CheckConflictingData(localData, remoteData);
         }
 
+        public void Save(string text)
+        {
+            _local.Save(text);
+            _remote.Save(text);
+        }
+
         private string CheckConflictingData(string localData, string remoteData)
         {
             var localObject = JsonUtility.FromJson<TicksDeSerializator>(localData);
@@ -47,12 +53,6 @@ namespace Quicorax.SacredSplinter.Services
                 return remoteData;
 
             return localData;
-        }
-
-        public void Save(string text)
-        {
-            _local.Save(text);
-            _remote.Save(text);
         }
     }
 }

@@ -4,6 +4,7 @@ using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
 {
@@ -12,11 +13,15 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
         [SerializeField] private Image _splinterImage, _locationImage;
         [SerializeField] private TMP_Text _location, _blueCrystalAmount, _goldCoinAmount;
         
+        [Inject] private IAdventureConfigurationService _adventureConfiguration;
+        [Inject] private IGameProgressionService _progression;
+        [Inject] private IAddressablesService _addressables;
+        
         public void Initialize(CurtainTransition curtain)
         {
             SetData(curtain);
                                    
-            var locationName = ServiceLocator.GetService<AdventureConfigurationService>().GetLocation().Header;
+            var locationName = _adventureConfiguration.GetLocation().Header;
             
             _location.text = locationName;
             SetImage(locationName).ManageTaskException();
@@ -24,7 +29,7 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
             _blueCrystalAmount.text = AdventureProgression.GetBlueCrystalsBalance().ToString();
             _goldCoinAmount.text = AdventureProgression.GetGoldCoinsBalance().ToString();
 
-            if (!ServiceLocator.GetService<GameProgressionService>().GetLocationCompleted(locationName))
+            if (!_progression.GetLocationCompleted(locationName))
             {
                 AdventureProgression.SetLocationCompleted();
             }
@@ -35,7 +40,7 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
         private async Task SetImage(string locationName)
         {
             _locationImage.sprite =
-                await ServiceLocator.GetService<AddressablesService>().LoadAddrssAsset<Sprite>(locationName);
+                await _addressables.LoadAddrssAsset<Sprite>(locationName);
         }
     }
 }

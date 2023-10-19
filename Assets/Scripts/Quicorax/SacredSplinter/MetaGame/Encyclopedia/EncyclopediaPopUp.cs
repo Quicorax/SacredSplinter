@@ -7,6 +7,7 @@ using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
 {
@@ -19,17 +20,16 @@ namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
 
         private Dictionary<int, EnemyData> _enemies = new();
 
-        private GameProgressionService _gameProgression;
+        [Inject] private IGameProgressionService _gameProgression;
+        [Inject] private IGameConfigService _gameConfig;
 
         private bool _elementDiscovered;
 
         public override void Initialize(Action<string> onSelect = null, Action onCancel = null)
         {
-            _gameProgression = ServiceLocator.GetService<GameProgressionService>();
-
             base.Initialize(onSelect, onCancel);
 
-            var enemies = ServiceLocator.GetService<GameConfigService>().Enemies;
+            var enemies = _gameConfig.Enemies;
 
             SetListCount(enemies.Count);
 

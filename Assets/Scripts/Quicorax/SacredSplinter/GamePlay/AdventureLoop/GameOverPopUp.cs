@@ -3,6 +3,7 @@ using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
 {
@@ -11,19 +12,20 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
         [SerializeField] private Button _returnButton;
     
         private CurtainTransition _curtain;
-        protected AdventureProgressionService AdventureProgression;
+        
+       [Inject] protected IAdventureProgressionService AdventureProgression;
+       [Inject] private INavigationService _navigation;
 
         protected void SetData(CurtainTransition curtain)
         {
             _curtain = curtain;
-            AdventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
-
             _returnButton.onClick.AddListener(Return);
         }
-        protected void Return()
+        
+        private void Return()
         {
             base.CloseSelf();
-            _curtain.CurtainOn(()=> ServiceLocator.GetService<NavigationService>().NavigateToMenu());
+            _curtain.CurtainOn(()=> _navigation.NavigateToMenu());
         }
     }
 }

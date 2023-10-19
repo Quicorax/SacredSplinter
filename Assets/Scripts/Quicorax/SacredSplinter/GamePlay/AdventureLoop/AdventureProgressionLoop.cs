@@ -5,6 +5,7 @@ using Quicorax.SacredSplinter.MetaGame.UI;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
 {
@@ -19,21 +20,13 @@ namespace Quicorax.SacredSplinter.GamePlay.AdventureLoop
 
         private readonly List<RoomController> _rooms = new();
 
-        private AdventureProgressionService _adventureProgression;
-        private PopUpSpawnerService _popUpSpawner;
+        [Inject] private IAdventureProgressionService _adventureProgression;
+        [Inject] private IPopUpSpawnerService _popUpSpawner;
 
         private bool _nextIsBoss;
         private bool _nextIsLocationBoss;
 
-        public void Initialize()
-        {
-            _adventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
-            _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
-
-            InitialRoomPopulation();
-        }
-
-        private void InitialRoomPopulation() => PopulateRooms(Random.Range(1, 3));
+        public void InitialRoomPopulation() => PopulateRooms(Random.Range(1, 3));
         
         private void PopulateRooms(int nextRoomAmount, string forceRoom = null)
         {

@@ -5,6 +5,7 @@ using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 {
@@ -15,6 +16,9 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         [SerializeField] private TMP_Text _heroClass, _availableHeroLicenses;
 
+        [Inject] private IGameProgressionService _progression;
+        [Inject] private IPopUpSpawnerService _popUps;
+        
         private Action _onConfirm;
 
         private int _availableLicenses;
@@ -26,8 +30,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
             _tryUnlockButton.onClick.AddListener(TryUnlock);
             
-            _availableLicenses = ServiceLocator.GetService<GameProgressionService>()
-                .GetAmountOfResource("Hero License");
+            _availableLicenses = _progression.GetAmountOfResource("Hero License");
 
             _availableHeroLicenses.text = _availableLicenses.ToString();
         }
@@ -40,8 +43,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
             }
             else
             {
-                ServiceLocator.GetService<PopUpSpawnerService>()
-                    .SpawnPopUp<NotEnoughResources>(_notEnoughResourcesPopUp).Initialize();
+                _popUps.SpawnPopUp<NotEnoughResources>(_notEnoughResourcesPopUp).Initialize();
             }
 
             CloseSelf();

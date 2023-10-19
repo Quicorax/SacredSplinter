@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 {
     public class LocationSelectorPopUp : HorizontalSelectablePopUp
     {
         [SerializeField] private GameObject _artifactCheck;
+        [Inject] private IGameConfigService _gameConfig;
+        [Inject] private IGameProgressionService _gameProgression;
 
         private Dictionary<int, LocationsData> _locations = new();
         private LocationsData _currentLocation;
@@ -18,7 +22,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         {
             base.Initialize(onSelect, onCancel);
 
-            var locations = ServiceLocator.GetService<GameConfigService>().Locations;
+            var locations = _gameConfig.Locations;
 
             SetListCount(locations.Count);
 
@@ -33,8 +37,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
             _currentLocation = _locations[ActualIndex];
             PrintElementData( _currentLocation.Header, _currentLocation.Description);
             
-            _artifactCheck.SetActive(ServiceLocator.GetService<GameProgressionService>()
-                .GetLocationCompleted(_currentLocation.Header));
+            _artifactCheck.SetActive(_gameProgression.GetLocationCompleted(_currentLocation.Header));
         }
 
         protected override void SelectElement()

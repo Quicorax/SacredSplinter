@@ -7,6 +7,7 @@ using Quicorax.SacredSplinter.Services.EventBus;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.UI
 {
@@ -23,9 +24,10 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 
         [SerializeField] private StringEventBus _onPlayerDeath;
 
-        private AdventureProgressionService _adventureProgress;
-        private AdventureConfigurationService _adventureConfig;
-        private AddressablesService _addressables;
+        [Inject] private IAdventureProgressionService _adventureProgress;
+        [Inject] private IAdventureConfigurationService _adventureConfig;
+        [Inject] private IAddressablesService _addressables;
+        [Inject] private IPopUpSpawnerService _popUps;
 
         public void UpdateFloorNumber() => _floorNumber.text = _adventureProgress.GetCurrentFloor().ToString();
 
@@ -34,17 +36,13 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 
         private void Start()
         {
-            _adventureProgress = ServiceLocator.GetService<AdventureProgressionService>();
-            _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
-            _addressables = ServiceLocator.GetService<AddressablesService>();
-
             _adventureProgress.StartAdventure(_adventureConfig.GetLocation(), _adventureConfig.GetHeroData(),
                 SetHealthData, UpdateExperience);
 
             SetHealthData();
             SetLevelVisualData().ManageTaskException();
 
-            _adventureLoop.Initialize();
+            _adventureLoop.InitialRoomPopulation();
         }
 
         private async Task SetLevelVisualData()
@@ -76,8 +74,6 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _experienceFiller.fillAmount = fillAmount;
         }
 
-        private void PlayerDeath(string deathReason) =>
-            ServiceLocator.GetService<PopUpSpawnerService>().SpawnPopUp<DeathPopUp>(_deathPopUp)
-                .Initialize(deathReason, _curtain);
+        private void PlayerDeath(string deathReason) => _popUps.SpawnPopUp<DeathPopUp>(_deathPopUp).Initialize(deathReason, _curtain);
     }
 }

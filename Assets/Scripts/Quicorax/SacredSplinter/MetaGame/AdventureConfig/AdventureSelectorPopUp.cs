@@ -5,6 +5,7 @@ using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 {
@@ -16,18 +17,15 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         private SelectorPack _currentSelectorPack;
 
-        private PopUpSpawnerService _popUpSpawner;
-        private AdventureConfigurationService _adventureConfig;
-        private AddressablesService _addressables;
+        [Inject] private IPopUpSpawnerService _popUpSpawner;
+        [Inject] private IAdventureConfigurationService _adventureConfig;
+        [Inject] private IAddressablesService _addressables;
 
         private Action _onEngage;
 
         public void Initialize(Action onEngage)
         {
             _onEngage = onEngage;
-            _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
-            _adventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
-            _addressables = ServiceLocator.GetService<AddressablesService>();
 
             _locationSelectionPack.Launcher.Button.onClick.AddListener(OpenLocationSelector);
             _heroSelectionPack.Launcher.Button.onClick.AddListener(OpenHeroSelector);

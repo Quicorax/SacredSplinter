@@ -2,6 +2,7 @@
 using Quicorax.SacredSplinter.Services;
 using Quicorax.SacredSplinter.Services.EventBus;
 using UnityEngine;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.GamePlay.Interactions
 {
@@ -9,21 +10,11 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions
     {
         [SerializeField] protected SimpleEventBus OnResourcesUpdated;
 
-        protected AdventureConfigurationService AdventureConfig;
-        protected GameProgressionService GameProgression;
-        protected AddressablesService Addressables;
-        protected AdventureProgressionService AdventureProgression;
-        protected PopUpSpawnerService PopUpSpawner;
-
-
-        protected void GetCommonServices()        
-        {
-            AdventureProgression = ServiceLocator.GetService<AdventureProgressionService>();
-            AdventureConfig = ServiceLocator.GetService<AdventureConfigurationService>();
-            GameProgression = ServiceLocator.GetService<GameProgressionService>();
-            Addressables = ServiceLocator.GetService<AddressablesService>();
-            PopUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
-        }
+        [Inject] protected IAdventureConfigurationService AdventureConfig;
+        [Inject] protected IGameProgressionService GameProgression;
+        [Inject] protected IAddressablesService Addressables;
+        [Inject] protected IAdventureProgressionService AdventureProgression;
+        [Inject] protected IPopUpSpawnerService PopUpSpawner;
 
         protected void ExecuteCommonMethods()
         {

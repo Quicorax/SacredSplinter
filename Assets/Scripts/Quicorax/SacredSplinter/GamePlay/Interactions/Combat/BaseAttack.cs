@@ -4,6 +4,7 @@ using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
 {
@@ -12,6 +13,8 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         [SerializeField] private Button _useButton;
         [SerializeField] private Image _attackIcon;
         [SerializeField] private TMP_Text _cooldown;
+        
+        [Inject] private IAddressablesService _addressables;
 
         private AttackData _attackData;
         private Action<AttackData> _onUse;
@@ -28,8 +31,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         }
 
         private async Task LoadSpriteAsync() =>
-            _attackIcon.sprite = await ServiceLocator.GetService<AddressablesService>()
-                .LoadAddrssAsset<Sprite>(_attackData.Header);
+            _attackIcon.sprite = await _addressables.LoadAddrssAsset<Sprite>(_attackData.Header);
 
         public void TryAwake(bool awake)
         {

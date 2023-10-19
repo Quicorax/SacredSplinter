@@ -4,6 +4,7 @@ using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.Initialization
 {
@@ -17,6 +18,8 @@ namespace Quicorax.SacredSplinter.Initialization
         [SerializeField] private Image _appNotDeadDebug;
 
         [SerializeField] private int _totalServicesCount = 5;
+        
+        [Inject] private INavigationService _navigation;
 
         private Tween _appNotDeadTween, _progressionTween;
         private ServiceFeeder _serviceFeeder;
@@ -43,7 +46,7 @@ namespace Quicorax.SacredSplinter.Initialization
             {
                 _appNotDeadTween.Kill();
                 _progressionTween.Kill();
-                ServiceLocator.GetService<NavigationService>().NavigateToMenu();
+                _navigation.NavigateToMenu();
             });
         }
 

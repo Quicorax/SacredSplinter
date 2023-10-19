@@ -6,21 +6,22 @@ using Quicorax.SacredSplinter.MetaGame.Shop;
 using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.UI
 {
     public class MenuCanvasController : MonoBehaviour
     {
-        private PopUpSpawnerService _popUpSpawner;
 
         [SerializeField] private PopUpLauncher _adventureSelector, _quests, _shop, _encyclopedia;
 
         [SerializeField] private CurtainTransition _curtain;
+        
+        [Inject] private IPopUpSpawnerService _popUpSpawner;
+        [Inject] private INavigationService _navigation;
 
         private void Start()
         {
-            _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
-
             SetButtonsListener();
         }
 
@@ -32,14 +33,13 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
             _adventureSelector.Button.onClick.AddListener(OpenAdventureSelector);
         }
 
-        private void OpenQuests() => _popUpSpawner.SpawnPopUp<QuestsPopUp>(_quests).Initialize();
-        private void OpenShop() => _popUpSpawner.SpawnPopUp<ShopPopUp>(_shop).Initialize();
+        private void OpenQuests() => _popUpSpawner.SpawnPopUp<QuestsPopUp>(_quests).SpawnElements();
+        private void OpenShop() => _popUpSpawner.SpawnPopUp<ShopPopUp>(_shop).SpawnElements();
         private void OpenEncyclopedia() => _popUpSpawner.SpawnPopUp<EncyclopediaPopUp>(_encyclopedia).Initialize();
 
         private void OpenAdventureSelector() =>
             _popUpSpawner.SpawnPopUp<AdventureSelectorPopUp>(_adventureSelector).Initialize(EngageOnAdventure);
 
-        private void EngageOnAdventure() =>
-            _curtain.CurtainOn(() => ServiceLocator.GetService<NavigationService>().NavigateToGame());
+        private void EngageOnAdventure() => _curtain.CurtainOn(() => _navigation.NavigateToGame());
     }
 }

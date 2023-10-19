@@ -5,6 +5,7 @@ using Quicorax.SacredSplinter.Services;
 using Quicorax.SacredSplinter.Services.EventBus;
 using TMPro;
 using UnityEngine;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.UI
 {
@@ -18,16 +19,14 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 
         [SerializeField] private CurtainTransition _curtain;
 
-        private PopUpSpawnerService _popUpSpawner;
-        private GameProgressionService _gameProgression;
+        [Inject] private IPopUpSpawnerService _popUpSpawner;
+        [Inject] private IGameProgressionService _gameProgression;
+        [Inject] private INavigationService _navigation;
 
         private bool _onTween;
 
         private void Start()
         {
-            _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
-            _gameProgression = ServiceLocator.GetService<GameProgressionService>();
-
             GameManager.Instance.Audio.Initialize();
 
             SetButtonsListener();
@@ -44,10 +43,10 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         }
         private void OpenConfiguration()
         {
-            if (_config.PopUp.GetType() == typeof(GameConfigPopUp))
+            if (_config.PopUp is GameConfigPopUp)
             {
                 _popUpSpawner.SpawnPopUp<GameConfigPopUp>(_config).Initialize(() =>
-                    _curtain.CurtainOn(() => ServiceLocator.GetService<NavigationService>().NavigateToMenu()));
+                    _curtain.CurtainOn(() => _navigation.NavigateToMenu()));
             }
             else
                 _popUpSpawner.SpawnPopUp<MenuConfigPopUp>(_config).Initialize();

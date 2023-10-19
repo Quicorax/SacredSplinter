@@ -6,6 +6,7 @@ using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.Shop
 {
@@ -16,22 +17,15 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
         [SerializeField] private TMP_Text _header, _priceAmount, _rewardAmount;
         [SerializeField] private Image _priceIcon, _rewardIcon;
 
+        [Inject] private IGameProgressionService _progression;
+        [Inject] private IPopUpSpawnerService _popUpSpawner;
+        [Inject] private IAddressablesService _addressables;
+
         private ProductData _product;
-
-        private GameProgressionService _progression;
-        private PopUpSpawnerService _popUpSpawner;
-        private AddressablesService _addressables;
-
         private Action _onTransactionCompleted;
 
-        public async Task Initialize(ProductData data, Action onTransactionCompleted, GameProgressionService progression,
-            PopUpSpawnerService popUpSpawner, AddressablesService addressables)
+        public async Task Initialize(ProductData data, Action onTransactionCompleted)
         {
-            _progression = progression;
-            _popUpSpawner = popUpSpawner;
-            _addressables = addressables;
-
-
             _product = data;
             _onTransactionCompleted = onTransactionCompleted;
 
@@ -46,8 +40,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
 
         public void TryBuy()
         {
-            _popUpSpawner.SpawnPopUp<ConfirmPurchasePopUp>(_confirmPurchasePopUp)
-                .Initialize(_product, PurchaseConfirmed, _addressables);
+            _popUpSpawner.SpawnPopUp<ConfirmPurchasePopUp>(_confirmPurchasePopUp).Initialize(_product, PurchaseConfirmed);
         }
 
         private void PurchaseConfirmed()

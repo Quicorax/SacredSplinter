@@ -6,6 +6,7 @@ using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.Shop
 {
@@ -19,13 +20,12 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
         private Action _onConfirm;
         private ProductData _product;
 
-        private AddressablesService _addressables;
+        [Inject] private IAddressablesService _addressables;
 
-        public void Initialize(ProductData product, Action onConfirm, AddressablesService addressables)
+        public void Initialize(ProductData product, Action onConfirm)
         {
             _product = product;
             _onConfirm = onConfirm;
-            _addressables = addressables;
             
             _confirmButton.onClick.AddListener(OnConfirm);
             

@@ -19,5 +19,9 @@ namespace Quicorax.SacredSplinter.Services
             Container.Bind<IGameProgressionProvider>().To<GameProgressionProvider>().AsSingle();
             Container.Bind<IAddressablesService>().To<AddressablesService>().AsSingle();
         }
+
+        private void InitializeServices()
+        {
+        }
     }
 }

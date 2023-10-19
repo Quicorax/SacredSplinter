@@ -3,6 +3,7 @@ using Quicorax.SacredSplinter.MetaGame.UI.PopUps;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.UI
 {
@@ -12,14 +13,11 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
 
         [SerializeField] private GameObject _audioON;
 
-        private GameProgressionService _progression;
+        [Inject] private IGameProgressionService _progression;
 
         private void Start()
         {
-            _progression = ServiceLocator.GetService<GameProgressionService>();
-            
             _soundButton.onClick.AddListener(ToggleAudio);
-            
             SetSound();
         }
 

@@ -5,6 +5,7 @@ using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
 {
@@ -16,14 +17,13 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
         [SerializeField] private Button _ignoreButton;
         [SerializeField] private Button _actionButton;
 
+        [Inject] private IGameConfigService _gameConfig;
+        
         private EventData _currentEvent;
 
         
         protected override void Initialize()
         {
-            GetCommonServices();
-            
-            
             _currentEvent = SetEvent();
             ExecuteCommonMethods();
             
@@ -49,7 +49,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Events
             EventData data = null;
             var dataSelected = false;
             
-            var dataList = ServiceLocator.GetService<GameConfigService>().Events;
+            var dataList = _gameConfig.Events;
 
             while (!dataSelected)
             {

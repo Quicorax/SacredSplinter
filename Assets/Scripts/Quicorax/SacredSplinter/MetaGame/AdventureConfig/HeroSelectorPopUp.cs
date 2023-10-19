@@ -7,6 +7,7 @@ using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 {
@@ -20,20 +21,19 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         private bool _elementUnlocked;
 
-        private GameProgressionService _progression;
-        private PopUpSpawnerService _popUpSpawner;
+        [Inject] private IGameProgressionService _progression;
+        [Inject] private IPopUpSpawnerService _popUpSpawner;
+        [Inject] private IGameConfigService _gameConfig;
 
         private Dictionary<int, HeroData> _heroes = new();
         private HeroData _currentHero;
 
         public override void Initialize(Action<string> onSelect, Action onCancel)
         {
-            _progression = ServiceLocator.GetService<GameProgressionService>();
-            _popUpSpawner = ServiceLocator.GetService<PopUpSpawnerService>();
 
             base.Initialize(onSelect, onCancel);
 
-            var heroes = ServiceLocator.GetService<GameConfigService>().Heroes;
+            var heroes = _gameConfig.Heroes;
 
             SetListCount(heroes.Count);
             _stats.onClick.AddListener(ShowHeroStats);

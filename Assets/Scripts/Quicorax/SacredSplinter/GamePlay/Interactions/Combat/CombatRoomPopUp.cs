@@ -37,9 +37,7 @@ namespace Quicorax.SacredSplinter.GamePlay.Interactions.Combat
         protected override void Initialize()
         {
             _canTryEscape = false;
-
-            GetCommonServices();
-
+            
             _enemyCombatData = new EnemyInstance(CurrentFloor);
             _enemyData = _enemyCombatData.GetEnemy();
 

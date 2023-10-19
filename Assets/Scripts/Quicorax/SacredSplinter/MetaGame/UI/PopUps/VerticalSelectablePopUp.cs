@@ -1,6 +1,7 @@
 ﻿using Quicorax.SacredSplinter.Services;
 using Quicorax.SacredSplinter.Services.EventBus;
 using UnityEngine;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
 {
@@ -9,19 +10,10 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
         [SerializeField] private SimpleEventBus _onResourcesUpdated;
         [SerializeField] protected Transform _elementsHolder;
 
-        protected GameProgressionService Progression;
-        protected AddressablesService Addressables;
-        protected GameConfigService Config;
+        [Inject] protected IAddressablesService Addressables;
+        [Inject] protected IGameConfigService Config;
 
-        public void Initialize()
-        {
-            Addressables = ServiceLocator.GetService<AddressablesService>();
-            Progression = ServiceLocator.GetService<GameProgressionService>();
-            Config = ServiceLocator.GetService<GameConfigService>();
-            SpawnElements();
-        }
-
-        protected abstract void SpawnElements();
+        public abstract void SpawnElements();
         protected void UpdateUI() => _onResourcesUpdated.NotifyEvent();
     }
 }

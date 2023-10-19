@@ -5,6 +5,7 @@ using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.Quests
 {
@@ -16,29 +17,24 @@ namespace Quicorax.SacredSplinter.MetaGame.Quests
         [SerializeField] private Button _button;
         [SerializeField] private Image _rewardIcon;
 
-        private QuestData _quest;
+        [Inject] private IGameProgressionService _progression;
+        [Inject] private IAddressablesService _addressables;
 
         private bool _completed;
         private bool _claimed;
 
+        private QuestData _quest;
         private Action _onTransactionCompleted;
 
-        private GameProgressionService _progression;
-        private AddressablesService _addressables;
-
-        public async Task Initialize(QuestData data, Action onTransactionCompleted, GameProgressionService gameProgression,
-            AddressablesService addressables)
+        public async Task Initialize(QuestData data, Action onTransactionCompleted)
         {
-            _progression = gameProgression;
-            _addressables = addressables;
-            
             _quest = data;
             _onTransactionCompleted = onTransactionCompleted;
 
             _header.text = data.Header;
 
             _rewardAmount.text = data.RewardAmount.ToString();
-            _rewardIcon.sprite = await addressables.LoadAddrssAsset<Sprite>(data.Reward);
+            _rewardIcon.sprite = await _addressables.LoadAddrssAsset<Sprite>(data.Reward);
 
             _progressionPerCent.text = GetProgression();
 
