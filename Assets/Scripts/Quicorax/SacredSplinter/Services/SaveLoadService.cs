@@ -4,7 +4,14 @@ using UnityEngine;
 
 namespace Quicorax.SacredSplinter.Services
 {
-    public class SaveLoadService : IService
+    public interface ISaveLoadService
+    {
+        void Initialize(GameConfigService config, GameProgressionService progression, IGameProgressionProvider progressionProvider);
+        void Save() ;
+        void DeleteLocalFiles();
+    }
+    
+    public class SaveLoadService : ISaveLoadService
     {
         private static readonly string SavePathKey = Application.persistentDataPath + "/gameProgression.json";
 
@@ -30,7 +37,9 @@ namespace Quicorax.SacredSplinter.Services
         public void DeleteLocalFiles()
         {
             if (File.Exists(SavePathKey))
+            {
                 File.Delete(SavePathKey);
+            }
         }
         
         private async void SaveBuffer()

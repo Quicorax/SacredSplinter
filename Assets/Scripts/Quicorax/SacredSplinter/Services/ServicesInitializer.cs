@@ -4,18 +4,19 @@ using Unity.Services.Core.Environments;
 
 namespace Quicorax.SacredSplinter.Services
 {
-    public class ServicesInitializer
+    public interface IServicesInitializer
     {
-        private readonly string _environmentId;
-
-        public ServicesInitializer(string environmentId) => _environmentId = environmentId;
-
-        public async Task Initialize()
+        Task Initialize(string environmentId);
+    }
+    
+    public class ServicesInitializer : IServicesInitializer
+    {
+        public async Task Initialize(string environmentId)
         {
             var options = new InitializationOptions();
-            if (!string.IsNullOrEmpty(_environmentId))
+            if (!string.IsNullOrEmpty(environmentId))
             {
-                options.SetEnvironmentName(_environmentId);
+                options.SetEnvironmentName(environmentId);
             }
 
             await UnityServices.InitializeAsync(options);

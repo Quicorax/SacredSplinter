@@ -7,7 +7,7 @@ namespace Quicorax.SacredSplinter.MetaGame.Quests
     {
         protected override void SpawnElements()
         {
-            foreach (var quest in ServiceLocator.GetService<GameConfigService>().Quests)
+            foreach (var quest in Config.Quests)
             {
                 Addressables.LoadAddrssComponentObject<QuestElement>("QuestElement", _elementsHolder, questData =>
                     questData.Initialize(quest, UpdateUI, Progression, Addressables).ManageTaskException());

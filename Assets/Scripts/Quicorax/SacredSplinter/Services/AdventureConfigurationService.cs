@@ -6,7 +6,17 @@ using UnityEngine;
 
 namespace Quicorax.SacredSplinter.Services
 {
-    public class AdventureConfigurationService : IService
+    public interface IAdventureConfigurationService
+    {
+        void SetHero(HeroData hero);
+        void SetLocation(LocationsData location);
+        LocationsData GetLocation();
+        HeroData GetHeroData();
+        bool ReadyToEngage();
+        void ResetSelection();
+    }
+    
+    public class AdventureConfigurationService : IAdventureConfigurationService
     {
         private HeroData _heroData;
         private LocationsData _locationData;

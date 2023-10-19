@@ -6,7 +6,15 @@ using UnityEngine.AddressableAssets;
 
 namespace Quicorax.SacredSplinter.Services
 {
-    public class AddressablesService : IService
+    public interface IAddressablesService
+    {
+        Task Initialize(List<Sprite> assets);
+        void LoadAddrssComponentObject<T>(string key, Transform parent, Action<T> taskAction);
+        Task<T> LoadAddrssAsset<T>(string key);
+        void ReleaseAddressable(GameObject addressableInstance);
+    }
+
+    public class AddressablesService : IAddressablesService
     {
         public async Task Initialize(List<Sprite> assets)
         {
@@ -15,11 +23,13 @@ namespace Quicorax.SacredSplinter.Services
                 await LoadAddrssAsset<Sprite>(asset.name);
             }
         }
-        
+
         public void LoadAddrssComponentObject<T>(string key, Transform parent, Action<T> taskAction) =>
             LoadAddrssOfComponentAsync(key, parent, taskAction).ManageTaskException();
 
         public async Task<T> LoadAddrssAsset<T>(string key) => await Addressables.LoadAssetAsync<T>(key).Task;
+        
+        public void ReleaseAddressable(GameObject addressableInstance) => Addressables.Release(addressableInstance);
 
         private async Task LoadAddrssOfComponentAsync<T>(string key, Transform parent, Action<T> taskAction)
         {
@@ -28,8 +38,5 @@ namespace Quicorax.SacredSplinter.Services
 
             taskAction?.Invoke(loadedAsset.GetComponent<T>());
         }
-
-        public void ReleaseAddressable(GameObject addressableInstance) =>
-            Addressables.Release(addressableInstance);
     }
 }

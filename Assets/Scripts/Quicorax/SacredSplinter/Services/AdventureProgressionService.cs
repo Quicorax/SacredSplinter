@@ -5,7 +5,33 @@ using UnityEngine;
 
 namespace Quicorax.SacredSplinter.Services
 {
-    public class AdventureProgressionService : IService
+    public interface IAdventureProgressionService
+    {
+        void Initialize(GameProgressionService gameProgression, StringEventBus onPlayerDeath);
+        void StartAdventure(LocationsData location, HeroData selectedHero, Action onHealthUpdate, Action<int, int> onHeroExperience);
+        int GetMaxHealth();
+        int GetCurrentHealth();
+        int GetCurrentFloor();
+        int GetCurrentHeroSpeed();
+        int GetCurrentHeroDamage();
+        int GetCurrentHeroAgility();
+        int GetHeroExperienceToLevelUp();
+        void AddHeroExperience(int amount);
+        void AddFloor();
+        void SetLocationCompleted();
+        void AddRoom();
+        void ResetRoomCount(); 
+        bool IsFloorBoosTime();
+        bool IsLocationBoosTime();
+        void UpdateRawHealth(int amount, string damageReason);
+        void UpdateProportionalHealth(int percent, string damageReason);
+        int GetGoldCoinsBalance();
+        int GetBlueCrystalsBalance(); 
+        void SetCombatType(string type);
+         string GetCombatType(); 
+    }
+    
+    public class AdventureProgressionService : IAdventureProgressionService
     {
         private HeroData _selectedHero;
         private LocationsData _selectedLocation;

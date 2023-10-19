@@ -5,7 +5,15 @@ using UnityEngine.SceneManagement;
 
 namespace Quicorax.SacredSplinter.Services
 {
-    public class NavigationService : IService
+    public interface INavigationService
+    {
+        void NavigateToMenu();
+        void NavigateToGame();
+        void ReloadActualScene();
+        void ExitGame();
+    }
+    
+    public class NavigationService : INavigationService
     {
         public void NavigateToMenu() => SceneManager.LoadScene("01_Menu");
         public void NavigateToGame() => SceneManager.LoadScene("02_Game");

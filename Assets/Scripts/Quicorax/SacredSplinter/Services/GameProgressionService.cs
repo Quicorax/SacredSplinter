@@ -6,17 +6,40 @@ using UnityEngine;
 
 namespace Quicorax.SacredSplinter.Services
 {
+    public interface IGameProgressionService
+    {
+        void Initialize(SaveLoadService saveLoadService);
+        void DeserializeModels();
+        void SerializeModels(Action onComplete);
+        void LoadInitialResources(GameConfigService config);
+        void SetAmountOfResource(string resource, int amount);
+        int GetAmountOfResource(string resource);
+        void SetQuestCompleted(int quest);
+        bool GetQuestCompleted(int quest);
+        void SetHeroUnlocked(string hero);
+        bool GetHeroUnlocked(string hero);
+        void SetEnemyDiscovered(string enemy);
+        bool GetEnemyDiscovered(string enemy); 
+        int GetAmountOfProgression(string concept);
+        void SetRoomCompleted();
+        int GetRoomsCompleted();
+        bool GetLocationCompleted(string location);
+        void SetEnemyKilled();
+        void SetLocationProgress(string location, int floor);
+        void SetLocationCompleted(string location);
+        void SetSoundOn(bool on);
+        bool GetSoundOff(); 
+    }
+    
     [Serializable]
-    public class GameProgressionService : IService
+    public class GameProgressionService : IGameProgressionService
     {
         private SaveLoadService _saveLoadService;
-
-        [SerializeField] private int _ticksPlayed = 0;
 
         [SerializeField] private List<ResourceElement> _resources = new();
         [SerializeField] private List<ProgressionOnLevel> _levelsProgression = new();
 
-        [SerializeField] private List<string> _unlockedHeros = new();
+        [SerializeField] private List<string> _unlockedHeroes = new();
         [SerializeField] private List<string> _discoveredEnemies = new();
 
         [SerializeField] private List<int> _completedQuestIndex = new();
@@ -63,7 +86,7 @@ namespace Quicorax.SacredSplinter.Services
                 _sortedLevelsProgression.Add(location.LevelName, location);
             }
 
-            _unlockedHeros.Add(config.Heroes[0].Header);
+            _unlockedHeroes.Add(config.Heroes[0].Header);
             _saveLoadService.Save();
         }
 
@@ -76,8 +99,6 @@ namespace Quicorax.SacredSplinter.Services
 
             _sortedResources[resource].Amount = finalAmount;
 
-            _ticksPlayed++;
-
             _saveLoadService.Save();
         }
 
@@ -85,8 +106,6 @@ namespace Quicorax.SacredSplinter.Services
 
         public void SetQuestCompleted(int quest)
         {
-            _ticksPlayed++;
-
             _completedQuestIndex.Add(quest);
             _saveLoadService.Save();
         }
@@ -95,20 +114,16 @@ namespace Quicorax.SacredSplinter.Services
 
         public void SetHeroUnlocked(string hero)
         {
-            _ticksPlayed++;
-
-            _unlockedHeros.Add(hero);
+            _unlockedHeroes.Add(hero);
             _saveLoadService.Save();
         }
 
-        public bool GetHeroUnlocked(string hero) => _unlockedHeros.Contains(hero);
+        public bool GetHeroUnlocked(string hero) => _unlockedHeroes.Contains(hero);
 
         public void SetEnemyDiscovered(string enemy)
         {
             if (_discoveredEnemies.Contains(enemy))
                 return;
-
-            _ticksPlayed++;
 
             _discoveredEnemies.Add(enemy);
             _saveLoadService.Save();
@@ -130,7 +145,6 @@ namespace Quicorax.SacredSplinter.Services
             };
         }
 
-        private int GetHigherLevelReached() => _sortedLevelsProgression.Values.Select(level => level.MaxLevel).Max();
         public void SetRoomCompleted() => _totalRoomsCleared++;
         public int GetRoomsCompleted() => _totalRoomsCleared;
         public bool GetLocationCompleted(string location) => _sortedLevelsProgression[location].Completed;
@@ -138,38 +152,38 @@ namespace Quicorax.SacredSplinter.Services
 
         public void SetLocationProgress(string location, int floor)
         {
-            _ticksPlayed++;
-
             var level = _sortedLevelsProgression[location];
 
             if (level.MaxLevel < floor)
+            {
                 level.MaxLevel = floor;
+            }
 
             _saveLoadService.Save();
         }
 
         public void SetLocationCompleted(string location)
         {
-            _ticksPlayed++;
-
             _sortedLevelsProgression[location].Completed = true;
             _saveLoadService.Save();
         }
 
         public void SetSoundOn(bool on)
         {
-            _ticksPlayed++;
-
             _soundOn = on;
             _saveLoadService.Save();
         }
 
         public bool GetSoundOff() => _soundOn;
+        
+        private int GetHigherLevelReached() => _sortedLevelsProgression.Values.Select(level => level.MaxLevel).Max();
 
         private void DeserializeResources(List<ResourceElement> resources)
         {
             foreach (var resource in resources)
+            {
                 _sortedResources.Add(resource.Key, resource);
+            }
         }
     }
 }

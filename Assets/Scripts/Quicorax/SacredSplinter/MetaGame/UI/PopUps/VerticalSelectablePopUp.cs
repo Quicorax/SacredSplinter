@@ -11,11 +11,13 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
 
         protected GameProgressionService Progression;
         protected AddressablesService Addressables;
+        protected GameConfigService Config;
 
         public void Initialize()
         {
             Addressables = ServiceLocator.GetService<AddressablesService>();
             Progression = ServiceLocator.GetService<GameProgressionService>();
+            Config = ServiceLocator.GetService<GameConfigService>();
             SpawnElements();
         }
 

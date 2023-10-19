@@ -14,11 +14,9 @@ namespace Quicorax.SacredSplinter.Services
         {
             _onElementLoaded = onElementLoaded;
             
-            var servicesInitializer = new ServicesInitializer(_enviroment);
-
+            var servicesInitializer = new ServicesInitializer();
             var loginService = new LoginGameService();
             var remoteConfig = new RemoteConfigService();
-
             var gameConfig = new GameConfigService();
             var gameProgression = new GameProgressionService();
             var saveLoad = new SaveLoadService();
@@ -29,17 +27,8 @@ namespace Quicorax.SacredSplinter.Services
             var gameProgressionProvider = new GameProgressionProvider();
             var addressables = new AddressablesService();
 
-            ServiceLocator.RegisterService(gameConfig);
-            ServiceLocator.RegisterService(gameProgression);
-            ServiceLocator.RegisterService(saveLoad);
-            ServiceLocator.RegisterService(navigation);
-            ServiceLocator.RegisterService(popUpSpawner);
-            ServiceLocator.RegisterService(adventureConfig);
-            ServiceLocator.RegisterService(adventureProgress);
-            ServiceLocator.RegisterService(addressables);
-
             _onElementLoaded.Invoke("Sharpening Swords");
-            await servicesInitializer.Initialize();
+            await servicesInitializer.Initialize(_enviroment);
            _onElementLoaded.Invoke("Setting Artifacts");
             await loginService.Initialize();
            _onElementLoaded.Invoke("Invoking Monsters");

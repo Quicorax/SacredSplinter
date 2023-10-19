@@ -4,7 +4,12 @@ using Quicorax.SacredSplinter.Models;
 
 namespace Quicorax.SacredSplinter.Services
 {
-    public class GameConfigService : IService
+    public interface IGameConfigService
+    {
+        void Initialize(RemoteConfigService dataProvider);
+    }
+    
+    public class GameConfigService : IGameConfigService
     {
         private RemoteConfigService _dataProvider;
 

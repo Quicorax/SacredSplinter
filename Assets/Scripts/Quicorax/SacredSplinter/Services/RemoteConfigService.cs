@@ -2,10 +2,17 @@
 using System.Threading.Tasks;
 using Unity.Services.RemoteConfig;
 using UnityEngine;
+using RemoteConfig = Unity.Services.RemoteConfig;
 
 namespace Quicorax.SacredSplinter.Services
 {
-    public class RemoteConfigService : IService
+    public interface IRemoteConfigService
+    {
+        Task Initialize();
+        T GetFromJSON<T>(string key, T defaultValue = default);
+    }
+    
+    public class RemoteConfigService : IRemoteConfigService
     {
         private struct appData { }
         private struct userData { }
@@ -15,12 +22,14 @@ namespace Quicorax.SacredSplinter.Services
 
         private RuntimeConfig _config;
 
-        public async Task Initialize() => 
-            _config = await Unity.Services.RemoteConfig.RemoteConfigService.Instance.FetchConfigsAsync(new userData(), new appData());
+        public async Task Initialize()
+        {
+            _config = await RemoteConfig.RemoteConfigService.Instance.FetchConfigsAsync(new userData(), new appData());
+        }
 
         public T GetFromJSON<T>(string key, T defaultValue = default)
         {
-            string data = _config?.GetJson(key, "{}");
+            var data = _config?.GetJson(key, "{}");
 
             if (string.IsNullOrEmpty(data))
                 return defaultValue;

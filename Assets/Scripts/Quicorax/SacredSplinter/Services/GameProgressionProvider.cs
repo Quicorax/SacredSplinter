@@ -3,6 +3,13 @@ using UnityEngine;
 
 namespace Quicorax.SacredSplinter.Services
 {
+    public interface IGameProgressionProvider
+    {
+        Task<bool> Initialize();
+        string Load();
+        void Save(string text);
+    }
+    
     public class GameProgressionProvider : IGameProgressionProvider
     {
         private LocalGameProgressionProvider _local = new();
