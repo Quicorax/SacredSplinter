@@ -17,16 +17,19 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
         [SerializeField] private TMP_Text _header, _priceAmount, _rewardAmount;
         [SerializeField] private Image _priceIcon, _rewardIcon;
 
-        [Inject] private IGameProgressionService _progression;
-        [Inject] private IPopUpSpawnerService _popUpSpawner;
-        [Inject] private IAddressablesService _addressables;
+        private IGameProgressionService _progression;
+        private IPopUpSpawnerService _popUpSpawner;
 
         private ProductData _product;
         private Action _onTransactionCompleted;
 
-        public async Task Initialize(ProductData data, Action onTransactionCompleted)
+        public async Task Initialize(IGameProgressionService progression, IPopUpSpawnerService popUpSpawner,
+            IAddressablesService addressables, ProductData data, Action onTransactionCompleted)
         {
+            _progression = progression;
+            _popUpSpawner = popUpSpawner;
             _product = data;
+            
             _onTransactionCompleted = onTransactionCompleted;
 
             _header.text = _product.Header;
@@ -34,13 +37,14 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
             _priceAmount.text = _product.PriceAmount.ToString();
             _rewardAmount.text = _product.RewardAmount.ToString();
 
-            _priceIcon.sprite = await _addressables.LoadAddrssAsset<Sprite>(_product.Price);
-            _rewardIcon.sprite = await _addressables.LoadAddrssAsset<Sprite>(_product.Reward);
+            _priceIcon.sprite = await addressables.LoadAddrssAsset<Sprite>(_product.Price);
+            _rewardIcon.sprite = await addressables.LoadAddrssAsset<Sprite>(_product.Reward);
         }
 
         public void TryBuy()
         {
-            _popUpSpawner.SpawnPopUp<ConfirmPurchasePopUp>(_confirmPurchasePopUp).Initialize(_product, PurchaseConfirmed);
+            _popUpSpawner.SpawnPopUp<ConfirmPurchasePopUp>(_confirmPurchasePopUp)
+                .Initialize(_product, PurchaseConfirmed);
         }
 
         private void PurchaseConfirmed()

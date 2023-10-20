@@ -5,12 +5,14 @@ namespace Quicorax.SacredSplinter.MetaGame.Quests
 {
     public class QuestsPopUp : VerticalSelectablePopUp
     {
-        public override void SpawnElements()
+        public override void SpawnElements(IAddressablesService addressables, IGameConfigService config, IGameProgressionService progression)
         {
+            base.SpawnElements(addressables, config, progression);
+            
             foreach (var quest in Config.Quests)
             {
                 Addressables.LoadAddrssComponentObject<QuestElement>("QuestElement", _elementsHolder, questData =>
-                    questData.Initialize(quest, UpdateUI).ManageTaskException());
+                    questData.Initialize(progression, addressables, quest, UpdateUI).ManageTaskException());
             }
         }
     }

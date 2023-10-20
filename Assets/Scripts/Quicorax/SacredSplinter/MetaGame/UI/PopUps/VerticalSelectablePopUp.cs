@@ -10,10 +10,15 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
         [SerializeField] private SimpleEventBus _onResourcesUpdated;
         [SerializeField] protected Transform _elementsHolder;
 
-        [Inject] protected IAddressablesService Addressables;
-        [Inject] protected IGameConfigService Config;
+        protected IAddressablesService Addressables;
+        protected IGameConfigService Config;
 
-        public abstract void SpawnElements();
+        public virtual void SpawnElements(IAddressablesService addressables, IGameConfigService config, IGameProgressionService progression)
+        {
+            Addressables = addressables;
+            Config = config;
+        }
+
         protected void UpdateUI() => _onResourcesUpdated.NotifyEvent();
     }
 }

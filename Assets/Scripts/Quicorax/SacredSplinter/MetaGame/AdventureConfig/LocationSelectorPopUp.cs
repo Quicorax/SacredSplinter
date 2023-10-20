@@ -12,22 +12,28 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
     public class LocationSelectorPopUp : HorizontalSelectablePopUp
     {
         [SerializeField] private GameObject _artifactCheck;
+        
         [Inject] private IGameConfigService _gameConfig;
         [Inject] private IGameProgressionService _gameProgression;
 
-        private Dictionary<int, LocationsData> _locations = new();
+        private readonly Dictionary<int, LocationsData> _locations = new();
         private LocationsData _currentLocation;
 
-        public override void Initialize(Action<string> onSelect, Action onCancel)
+        public override void Initialize(
+            IAdventureConfigurationService adventureConfiguration,
+            IAddressablesService addressables,
+            Action<string> onSelect = null, Action onCancel = null)
         {
-            base.Initialize(onSelect, onCancel);
+            base.Initialize(adventureConfiguration, addressables,onSelect, onCancel);
 
             var locations = _gameConfig.Locations;
 
             SetListCount(locations.Count);
 
             for (var i = 0; i < locations.Count; i++)
+            {
                 _locations.Add(i, locations[i]);
+            }
 
             ElementChanged();
         }
@@ -35,14 +41,14 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         protected override void ElementChanged()
         {
             _currentLocation = _locations[ActualIndex];
-            PrintElementData( _currentLocation.Header, _currentLocation.Description);
+            PrintElementData(_currentLocation.Header, _currentLocation.Description);
             
             _artifactCheck.SetActive(_gameProgression.GetLocationCompleted(_currentLocation.Header));
         }
 
         protected override void SelectElement()
         {
-            _adventureConfiguration.SetLocation(_currentLocation);
+            AdventureConfiguration.SetLocation(_currentLocation);
             _onSelect?.Invoke(_currentLocation.Header);
 
             CloseSelf();

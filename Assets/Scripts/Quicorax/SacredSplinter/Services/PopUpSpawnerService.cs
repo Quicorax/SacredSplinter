@@ -13,37 +13,41 @@ namespace Quicorax.SacredSplinter.Services
 
     public class PopUpSpawnerService : IPopUpSpawnerService
     {
-    private Transform _parent;
+        private Transform _parent;
 
-    public void Initialize(Transform parent) => _parent = parent;
+        public void Initialize(Transform parent) => _parent = parent;
 
-    public void SpawnPopUp(PopUpLauncher popUpBundle)
-    {
-        if (popUpBundle.Button != null)
-            ActivateButton(popUpBundle.Button, false);
-
-        Object.Instantiate(popUpBundle.PopUp, _parent).BaseInitialize(popUpBundle, DeSpawnPopUp);
-    }
-
-    public T SpawnPopUp<T>(PopUpLauncher popUpBundle) where T : BasePopUp
-    {
-        if (popUpBundle.Button != null)
+        public void SpawnPopUp(PopUpLauncher popUpBundle)
         {
-            ActivateButton(popUpBundle.Button, false);
+            if (popUpBundle.Button != null)
+            {
+                ActivateButton(popUpBundle.Button, false);
+            }
+
+            Object.Instantiate(popUpBundle.PopUp, _parent).BaseInitialize(popUpBundle, DeSpawnPopUp);
         }
 
-        var newPopUp = Object.Instantiate(popUpBundle.PopUp, _parent);
-        newPopUp.BaseInitialize(popUpBundle, DeSpawnPopUp);
+        public T SpawnPopUp<T>(PopUpLauncher popUpBundle) where T : BasePopUp
+        {
+            if (popUpBundle.Button != null)
+            {
+                ActivateButton(popUpBundle.Button, false);
+            }
 
-        return (T)newPopUp;
-    }
+            var newPopUp = Object.Instantiate(popUpBundle.PopUp, _parent);
+            newPopUp.BaseInitialize(popUpBundle, DeSpawnPopUp);
 
-    private void DeSpawnPopUp(Button button)
-    {
-        if (button != null)
-            ActivateButton(button, true);
-    }
+            return (T)newPopUp;
+        }
 
-    private void ActivateButton(Button button, bool activate) => button.interactable = activate;
+        private void DeSpawnPopUp(Button button)
+        {
+            if (button != null)
+            {
+                ActivateButton(button, true);
+            }
+        }
+
+        private void ActivateButton(Button button, bool activate) => button.interactable = activate;
     }
 }

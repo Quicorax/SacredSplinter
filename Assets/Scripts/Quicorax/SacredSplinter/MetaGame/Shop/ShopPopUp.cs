@@ -5,12 +5,21 @@ namespace Quicorax.SacredSplinter.MetaGame.Shop
 {
     public class ShopPopUp : VerticalSelectablePopUp
     {
-        public override void SpawnElements()
+        private IPopUpSpawnerService _popUpSpawner;
+
+        public void SetDependencies(IPopUpSpawnerService popUpSpawner)
         {
+            _popUpSpawner = popUpSpawner;
+        }
+
+        public override void SpawnElements(IAddressablesService addressables, IGameConfigService config, IGameProgressionService progression)
+        {
+            base.SpawnElements(addressables, config, progression);
+
             foreach (var product in Config.Shop)
             {
                 Addressables.LoadAddrssComponentObject<ShopProduct>("ShopProduct", _elementsHolder, productData =>
-                    productData.Initialize(product, UpdateUI).ManageTaskException());
+                    productData.Initialize(progression, _popUpSpawner, addressables, product, UpdateUI).ManageTaskException());
             }
         }
     }

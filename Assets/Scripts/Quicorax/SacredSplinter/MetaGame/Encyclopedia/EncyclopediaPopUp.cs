@@ -18,16 +18,19 @@ namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
 
         private readonly Color _darkGray = new(0.09f, 0.09f, 0.09f);
 
-        private Dictionary<int, EnemyData> _enemies = new();
+        private readonly Dictionary<int, EnemyData> _enemies = new();
 
-        [Inject] private IGameProgressionService _gameProgression;
-        [Inject] private IGameConfigService _gameConfig;
+        private IGameProgressionService _gameProgression;
+        private IGameConfigService _gameConfig;
 
         private bool _elementDiscovered;
 
-        public override void Initialize(Action<string> onSelect = null, Action onCancel = null)
+        public override void Initialize(
+            IAdventureConfigurationService adventureConfiguration,
+            IAddressablesService addressables,
+            Action<string> onSelect = null, Action onCancel = null)
         {
-            base.Initialize(onSelect, onCancel);
+            base.Initialize(adventureConfiguration, addressables, onSelect, onCancel);
 
             var enemies = _gameConfig.Enemies;
 
@@ -37,6 +40,12 @@ namespace Quicorax.SacredSplinter.MetaGame.Encyclopedia
                 _enemies.Add(i, enemies[i]);
 
             ElementChanged();
+        }
+
+        public void SetDependencies(IGameProgressionService gameProgression, IGameConfigService gameConfig)
+        {
+            _gameProgression = gameProgression;
+            _gameConfig = gameConfig;
         }
 
         protected override void SetHeader(string header)

@@ -1,12 +1,10 @@
 using System;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using DG.Tweening;
 using Quicorax.SacredSplinter.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
 {
@@ -17,8 +15,8 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
 
         [SerializeField] private Button _select, _next, _previous, _close;
 
-        [Inject] protected IAdventureConfigurationService _adventureConfiguration;
-        [Inject] private IAddressablesService _addressables;
+        protected IAdventureConfigurationService AdventureConfiguration;
+        private IAddressablesService _addressables;
 
         private Action _onCancel;
         protected Action<string> _onSelect;
@@ -31,8 +29,14 @@ namespace Quicorax.SacredSplinter.MetaGame.UI.PopUps
         protected abstract void OnMiddleOfFade();
         protected abstract void SelectElement();
 
-        public virtual void Initialize(Action<string> onSelect = null, Action onCancel = null)
+        public virtual void Initialize(
+            IAdventureConfigurationService adventureConfiguration,
+            IAddressablesService addressables,
+            Action<string> onSelect = null, Action onCancel = null)
         {
+            AdventureConfiguration = adventureConfiguration;
+            _addressables = addressables;
+            
             SetButtons();
 
             _onCancel = onCancel;

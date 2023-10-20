@@ -28,10 +28,12 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         private Dictionary<int, HeroData> _heroes = new();
         private HeroData _currentHero;
 
-        public override void Initialize(Action<string> onSelect, Action onCancel)
+        public override void Initialize(
+            IAdventureConfigurationService adventureConfiguration,
+            IAddressablesService addressables,
+            Action<string> onSelect = null, Action onCancel = null)
         {
-
-            base.Initialize(onSelect, onCancel);
+            base.Initialize(adventureConfiguration, addressables, onSelect, onCancel);
 
             var heroes = _gameConfig.Heroes;
 
@@ -61,7 +63,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
         {
             if (_elementUnlocked)
             {
-                _adventureConfiguration.SetHero(_currentHero);
+                AdventureConfiguration.SetHero(_currentHero);
                 _onSelect?.Invoke(_currentHero.Header);
                 CloseSelf();
             }

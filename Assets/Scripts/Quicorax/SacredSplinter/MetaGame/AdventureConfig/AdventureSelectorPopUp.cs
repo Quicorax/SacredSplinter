@@ -5,7 +5,6 @@ using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services;
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 
 namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 {
@@ -60,7 +59,7 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
             ActivateButton(pack.Launcher.Button, false);
 
-            _popUpSpawner.SpawnPopUp<T>(pack.Launcher).Initialize(OnSelectionSuccess, OnSelectionFailed);
+            _popUpSpawner.SpawnPopUp<T>(pack.Launcher).Initialize(_adventureConfig, _addressables, OnSelectionSuccess, OnSelectionFailed);
         }
 
         private void OnSelectionSuccess(string header)
