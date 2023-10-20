@@ -1,12 +1,13 @@
 using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.Services
 {
     public interface ISaveLoadService
     {
-        void Initialize(GameConfigService config, GameProgressionService progression, IGameProgressionProvider progressionProvider);
+        void Initialize();
         void Save() ;
         void DeleteLocalFiles();
     }
@@ -15,21 +16,23 @@ namespace Quicorax.SacredSplinter.Services
     {
         private static readonly string SavePathKey = Application.persistentDataPath + "/gameProgression.json";
 
-        private GameProgressionService _progression;
-        private GameConfigService _config;
-        private IGameProgressionProvider _progressionProvider;
+        [Inject] private IGameProgressionService _progression;
+        [Inject] private IGameConfigService _config;
+        [Inject] private IGameProgressionProvider _progressionProvider;
         
         private bool _saving;
         private readonly int _saveBufferDelayMS = 200;
         
-        public void Initialize(GameConfigService config, GameProgressionService progression,
-            IGameProgressionProvider progressionProvider)
+        public void Initialize()
         {
-            _progression = progression;
-            _config = config;
-            _progressionProvider = progressionProvider;
-
-            Load();
+            var data = _progressionProvider.Load();
+            if (string.IsNullOrEmpty(data))
+                _progression.LoadInitialResources();
+            else
+            {
+                JsonUtility.FromJsonOverwrite(data, _progression);
+                _progression.DeserializeModels();
+            }
         }
 
         public void Save() => SaveBuffer();
@@ -54,19 +57,5 @@ namespace Quicorax.SacredSplinter.Services
             _progression.SerializeModels(() => _progressionProvider.Save(JsonUtility.ToJson(_progression)));
             _saving = false;
         }
-        
-        private void Load()
-        {
-            var data = _progressionProvider.Load();
-            if (string.IsNullOrEmpty(data))
-                _progression.LoadInitialResources(_config);
-            else
-            {
-                JsonUtility.FromJsonOverwrite(data, _progression);
-                _progression.DeserializeModels();
-            }
-        }
-
-
     }
 }

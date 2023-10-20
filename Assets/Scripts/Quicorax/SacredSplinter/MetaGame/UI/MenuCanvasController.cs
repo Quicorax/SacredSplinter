@@ -19,6 +19,8 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         
         [Inject] private IPopUpSpawnerService _popUpSpawner;
         [Inject] private INavigationService _navigation;
+        [Inject] private IAdventureConfigurationService _adventureConfig;
+        [Inject] private IAddressablesService _addressables;
 
         private void Start()
         {
@@ -37,8 +39,11 @@ namespace Quicorax.SacredSplinter.MetaGame.UI
         private void OpenShop() => _popUpSpawner.SpawnPopUp<ShopPopUp>(_shop).SpawnElements();
         private void OpenEncyclopedia() => _popUpSpawner.SpawnPopUp<EncyclopediaPopUp>(_encyclopedia).Initialize();
 
-        private void OpenAdventureSelector() =>
-            _popUpSpawner.SpawnPopUp<AdventureSelectorPopUp>(_adventureSelector).Initialize(EngageOnAdventure);
+        private void OpenAdventureSelector() 
+        {
+            _popUpSpawner.SpawnPopUp<AdventureSelectorPopUp>(_adventureSelector)
+                .Initialize(EngageOnAdventure, _popUpSpawner, _adventureConfig, _addressables);
+        }
 
         private void EngageOnAdventure() => _curtain.CurtainOn(() => _navigation.NavigateToGame());
     }

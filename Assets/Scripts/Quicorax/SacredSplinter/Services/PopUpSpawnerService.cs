@@ -12,7 +12,6 @@ namespace Quicorax.SacredSplinter.Services
     }
 
     public class PopUpSpawnerService : IPopUpSpawnerService
-
     {
     private Transform _parent;
 

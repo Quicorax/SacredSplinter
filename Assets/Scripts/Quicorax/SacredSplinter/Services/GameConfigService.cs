@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Quicorax.SacredSplinter.GamePlay.Interactions.Combat;
 using Quicorax.SacredSplinter.Models;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.Services
 {
@@ -15,12 +16,12 @@ namespace Quicorax.SacredSplinter.Services
         List<EventData> Events { get; set; }
         List<AttackData> Attacks { get; set; }
         
-        void Initialize(RemoteConfigService dataProvider);
+        void Initialize();
     }
     
     public class GameConfigService : IGameConfigService
     {
-        private RemoteConfigService _dataProvider;
+        [Inject] private IRemoteConfigService _dataProvider;
 
         public List<ResourceElement> InitialResources { get; set; }
         public List<QuestData> Quests { get; set; }
@@ -32,10 +33,8 @@ namespace Quicorax.SacredSplinter.Services
         public List<AttackData> Attacks { get; set; }
 
 
-        public void Initialize(RemoteConfigService dataProvider)
+        public void Initialize()
         {
-            _dataProvider = dataProvider;
-
             InitialResources = FromJsonToList<ResourceElement>("InitialResourcesModel");
             Quests = FromJsonToList<QuestData>("QuestsModel");
             Shop = FromJsonToList<ProductData>("ShopModel");

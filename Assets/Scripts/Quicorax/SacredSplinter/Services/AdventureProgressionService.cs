@@ -2,12 +2,13 @@
 using Quicorax.SacredSplinter.Models;
 using Quicorax.SacredSplinter.Services.EventBus;
 using UnityEngine;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.Services
 {
     public interface IAdventureProgressionService
     {
-        void Initialize(GameProgressionService gameProgression, StringEventBus onPlayerDeath);
+        void Initialize(StringEventBus onPlayerDeath);
         void StartAdventure(LocationsData location, HeroData selectedHero, Action onHealthUpdate, Action<int, int> onHeroExperience);
         int GetMaxHealth();
         int GetCurrentHealth();
@@ -33,12 +34,13 @@ namespace Quicorax.SacredSplinter.Services
     
     public class AdventureProgressionService : IAdventureProgressionService
     {
+        [Inject] private IGameProgressionService _gameProgression;
+        
         private HeroData _selectedHero;
         private LocationsData _selectedLocation;
 
         private Action _onHealthUpdate;
         private StringEventBus _onPlayerDeath;
-        private GameProgressionService _gameProgression;
 
         private Action<int, int> _onHeroExperience;
 
@@ -58,9 +60,8 @@ namespace Quicorax.SacredSplinter.Services
 
         private string _combatType;
 
-        public void Initialize(GameProgressionService gameProgression, StringEventBus onPlayerDeath)
+        public void Initialize(StringEventBus onPlayerDeath)
         {
-            _gameProgression = gameProgression;
             _onPlayerDeath = onPlayerDeath;
         }
 

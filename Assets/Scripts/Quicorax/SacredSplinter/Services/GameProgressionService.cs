@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using Quicorax.SacredSplinter.Models;
 using UnityEngine;
+using Zenject;
 
 namespace Quicorax.SacredSplinter.Services
 {
     public interface IGameProgressionService
     {
-        void Initialize(SaveLoadService saveLoadService);
         void DeserializeModels();
         void SerializeModels(Action onComplete);
-        void LoadInitialResources(GameConfigService config);
+        void LoadInitialResources();
         void SetAmountOfResource(string resource, int amount);
         int GetAmountOfResource(string resource);
         void SetQuestCompleted(int quest);
@@ -34,7 +34,8 @@ namespace Quicorax.SacredSplinter.Services
     [Serializable]
     public class GameProgressionService : IGameProgressionService
     {
-        private SaveLoadService _saveLoadService;
+        [Inject] private ISaveLoadService _saveLoadService;
+        [Inject] private IGameConfigService _gameConfigService;
 
         [SerializeField] private List<ResourceElement> _resources = new();
         [SerializeField] private List<ProgressionOnLevel> _levelsProgression = new();
@@ -51,8 +52,6 @@ namespace Quicorax.SacredSplinter.Services
 
         private Dictionary<string, ResourceElement> _sortedResources = new();
         private Dictionary<string, ProgressionOnLevel> _sortedLevelsProgression = new();
-
-        public void Initialize(SaveLoadService saveLoadService) => _saveLoadService = saveLoadService;
 
         public void DeserializeModels()
         {
@@ -76,17 +75,17 @@ namespace Quicorax.SacredSplinter.Services
             onComplete?.Invoke();
         }
 
-        public void LoadInitialResources(GameConfigService config)
+        public void LoadInitialResources()
         {
-            DeserializeResources(config.InitialResources);
+            DeserializeResources(_gameConfigService.InitialResources);
 
-            foreach (var level in config.Locations)
+            foreach (var level in _gameConfigService.Locations)
             {
                 var location = new ProgressionOnLevel(level.Header, 0, false);
                 _sortedLevelsProgression.Add(location.LevelName, location);
             }
 
-            _unlockedHeroes.Add(config.Heroes[0].Header);
+            _unlockedHeroes.Add(_gameConfigService.Heroes[0].Header);
             _saveLoadService.Save();
         }
 

@@ -17,22 +17,28 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
 
         private SelectorPack _currentSelectorPack;
 
-        [Inject] private IPopUpSpawnerService _popUpSpawner;
-        [Inject] private IAdventureConfigurationService _adventureConfig;
-        [Inject] private IAddressablesService _addressables;
+        private IPopUpSpawnerService _popUpSpawner;
+        private IAdventureConfigurationService _adventureConfig;
+        private IAddressablesService _addressables;
 
         private Action _onEngage;
 
-        public void Initialize(Action onEngage)
+        public void Initialize(Action onEngage,
+            IPopUpSpawnerService popUpSpawnerService,
+            IAdventureConfigurationService adventureConfigurationService,
+            IAddressablesService addressablesService)
         {
             _onEngage = onEngage;
+            _popUpSpawner = popUpSpawnerService;
+            _adventureConfig = adventureConfigurationService;
+            _addressables = addressablesService;
 
             _locationSelectionPack.Launcher.Button.onClick.AddListener(OpenLocationSelector);
             _heroSelectionPack.Launcher.Button.onClick.AddListener(OpenHeroSelector);
             _engageOnAdventureButton.onClick.AddListener(EngageOnAdventure);
-            
+
             _adventureConfig.ResetSelection();
-            
+
             TurnObjectOn(_locationSelectionPack.Image.gameObject, false);
             TurnObjectOn(_heroSelectionPack.Image.gameObject, false);
 
@@ -67,7 +73,9 @@ namespace Quicorax.SacredSplinter.MetaGame.AdventureConfig
             ActivateButton(_currentSelectorPack.Launcher.Button, true);
 
             if (_adventureConfig.ReadyToEngage())
+            {
                 ActivateButton(_engageOnAdventureButton, true);
+            }
         }
 
         private async Task SetImage(string header) =>
